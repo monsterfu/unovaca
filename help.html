@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style type="text/css">
+            * {
+                font-family: "Helvetica";
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                margin: 10px;
+            }
+			
+			.hidden {
+				display: none;
+			}
+            
+            h2 {
+                margin-top: 10px;
+            }
+            
+            h3 {
+                margin-top: 5px;
+            }
+            
+            p {
+                margin-bottom: 10px;
+            }
+        </style>
+		<script type="text/javascript">
+		function toggleHidden(id)
+		{
+			if (document.getElementById(id).style.display == 'none')
+			{
+				document.getElementById(id).style.display = 'block';				
+			}
+			else
+			{
+				document.getElementById(id).style.display = 'none';
+			}
+		}
+		</script>
+    </head>
+<body>
+<h2>About</a></h2>
+<div id="about">
+    <p><strong>App version:</strong> $VERSION</p>
+    <p>nRF Temp is an app designed to receive temperature readings from Nordic Semiconductor's temperature sensors. Advertising temperature value, battery value, and an id directly, these sensors don't require a <em>Bluetooth&#174; </em>connection.</p>
+	<p>Please note that this app will not receive any measurements if it's in the background.</p>
+</div>
+    
+<h2>Usage</h2>
+<div id="usage">
+<p>To show new sensors, you have to press the add-button in the upper right corner. New sensors will be shown, with their signal strength. Tap the one you want to add, and repeat for all needed sensors.
+Tapping an added sensor will show you its details and allow you to change its name, see and graph historic data or delete the sensor and its data entirely.</p>
+</div>
+    
+    <h2>Attribution</h2>
+    <p>This app is built in part with the <a href="http://code.google.com/p/core-plot">Core Plot framework</a>, licensed under the <a href="http://opensource.org/licenses/BSD-3-Clause">New BSD License</a>.</p>
+</body>
+</html>

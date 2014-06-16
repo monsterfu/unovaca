@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'nRF Temp' target in the 'nRF Temp' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreBluetooth/CoreBluetooth.h>
+    #import <CoreData/CoreData.h>
+
+    #import "CorePlot-CocoaTouch.h"
+#endif

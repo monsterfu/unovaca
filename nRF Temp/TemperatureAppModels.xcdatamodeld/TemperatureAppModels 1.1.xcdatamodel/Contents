@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PersonDetailInfo" representedClassName="PersonDetailInfo" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="blood" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="high" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TemperatureFob" representedClassName="TemperatureFob" syncable="YES">
+        <attribute name="batteryLevel" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idString" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="location" attributeType="String" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="readings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TemperatureReading" inverseName="fob" inverseEntity="TemperatureReading" syncable="YES"/>
+    </entity>
+    <entity name="TemperatureReading" representedClassName="TemperatureReading" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="value" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="fob" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemperatureFob" inverseName="readings" inverseEntity="TemperatureFob" syncable="YES"/>
+    </entity>
+    <fetchRequest name="PersonFobs" entity="PersonDetailInfo"/>
+    <elements>
+        <element name="TemperatureFob" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TemperatureReading" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PersonDetailInfo" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
