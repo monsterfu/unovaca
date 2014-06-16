@@ -40,7 +40,7 @@
     return nil;
 }
 
-+ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name
++ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name 
 {
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -169,14 +169,32 @@
     return nil;
 }
 
-- (TemperatureFob *) createFobWithName:(NSString *)Name
+- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
+    [request setFetchLimit:1];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"uuid LIKE %@", uuid]];
+    NSError *error;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error)
+    {
+        NSLog(@"Fetching readings failed: %@", error);
+    }
+    if ([array count]) {
+        return [array objectAtIndex:0];
+    }
+    return nil;
+}
+
+- (TemperatureFob *) createFobWithName:(NSString *)name UUid:(NSString*)uuid;
 {
     TemperatureFob *fob = (TemperatureFob *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureFob" inManagedObjectContext:self.managedObjectContext];
-    fob.idString = Name;
+    fob.idString = name;
     fob.isSaved = NO;
     
     // Set default name and location to known value.
-    fob.location = Name;//@"unova";
+    fob.location = name;//@"unova";
+    fob.uuid = uuid;
     return fob;
 }
 

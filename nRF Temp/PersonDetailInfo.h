@@ -27,7 +27,8 @@
 
 - (BOOL)addFob:(TemperatureFob*)fob;
 - (TemperatureFob *) foundFobWithName:(NSString*)name;
-- (TemperatureFob *) createFobWithName:(NSString *)Name;
+- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid;
+- (TemperatureFob *) createFobWithName:(NSString *)name UUid:(NSString*)uuid;
 - (NSArray *) allFoundFobs;
 - (NSArray *) allStoredFobs;
 

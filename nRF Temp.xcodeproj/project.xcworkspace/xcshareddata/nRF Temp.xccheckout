@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FEBF719E-BCF0-4460-BA44-C464B427FA1E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>nRF Temp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ED58764C-F00C-4160-B749-9429C0AE0BBF</key>
+		<string>https://github.com/monsterfu/unovaca.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>nRF Temp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ED58764C-F00C-4160-B749-9429C0AE0BBF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/monsterfu/unovaca.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ED58764C-F00C-4160-B749-9429C0AE0BBF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ED58764C-F00C-4160-B749-9429C0AE0BBF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>unovaca</string>
+		</dict>
+	</array>
+</dict>
+</plist>

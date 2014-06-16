@@ -75,6 +75,11 @@ static ConnectionManager *sharedConnectionManager;
 {
     NSLog(@"[peripheral name]:%@",[peripheral name]);
 }
+
+//蓝色 1 9FA2778C-D2FD-40B8-0341-3197B672CB93
+//蓝色 2 F37D9244-B190-C0FB-AFD5-9254D1B5C108
+//白色UM F3D5A878-6C14-7A43-1B5A-7107652B65E4
+//红色 1 5A2C44D4-2A77-D6A2-B3D9-897A66E9597E
 - (void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     NSDictionary *serviceData = [advertisementData objectForKey:@"kCBAdvDataServiceData"];
@@ -89,7 +94,7 @@ static ConnectionManager *sharedConnectionManager;
     NSLog(@"Discovered peripheral, name %@, data: %@, RSSI: %f, peripheral.identifier:%@", [peripheral name], advertisementData, RSSI.floatValue,peripheral.identifier);
 
     PersonDetailInfo* personInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
-    TemperatureFob *fob = [personInfo foundFobWithName:peripheral.name];
+    TemperatureFob *fob = [personInfo foundFobWithUUid:[peripheral.identifier UUIDString]];
 
     if (fob == nil && !self.acceptNewFobs)
     {
@@ -98,7 +103,7 @@ static ConnectionManager *sharedConnectionManager;
     
     if (fob == nil)
     {
-        fob = [personInfo createFobWithName:[peripheral name]];
+        fob = [personInfo createFobWithName:[peripheral name] UUid:[[peripheral identifier]UUIDString]];
         [self.delegate didDiscoverFob:fob];
     }
     

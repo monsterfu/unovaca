@@ -25,7 +25,7 @@
 @property (nonatomic, retain) NSString *location;
 @property (nonatomic, retain) NSNumber *signalStrength;
 @property (nonatomic, retain) NSSet *readings;
-
+@property (nonatomic, retain) NSString* uuid;
 @property (nonatomic, assign) BOOL active;
 
 
