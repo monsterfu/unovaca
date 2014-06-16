@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="dfu_file_name_label">文件名:</string>
+    <string name="dfu_file_size_label">文件大小:</string>
+    <string name="dfu_device_name_label">体温计:</string>
+    <string name="dfu_file_size_text">%d 字节</string>
+    <string name="dfu_action_upload">开始升级</string>
+    
+    <string name="dfu_status_connecting">建立连接&#8230;</string>
+    <string name="dfu_status_starting">开始升级&#8230;</string>
+    <string name="dfu_status_uploading">上传固件&#8230;</string>
+    <string name="dfu_status_validating">正在验证&#8230;</string>
+    <string name="dfu_status_disconnecting">断开连接&#8230;</string>
+    <string name="dfu_status_completed">升级完成</string>
+    <string name="dfu_status_abored">中止</string>
+    <string name="dfu_status_error">升级失败</string>
+    
+    <string name="dfu_status_connecting_msg">连接到 %s&#8230;</string>
+    <string name="dfu_status_starting_msg">正在初始化&#8230;</string>
+    <string name="dfu_status_uploading_msg">传输固件到 %s&#8230;</string>
+    <string name="dfu_status_validating_msg">验证固件&#8230;</string>
+    <string name="dfu_status_completed_msg">固件已成功发送.</string>
+    <string name="dfu_status_aborted_msg">已取消上传固件.</string>
+    <string name="dfu_status_disconnecting_msg">与 %s 的连接断开&#8230;</string>
+    <string name="dfu_status_error_msg">升级失败.</string>
+    
+    <string name="dfu_uploading_label">上传状态:</string>
+    <string name="dfu_uploading_percentage_label">0%</string>
+    <string name="dfu_uploading_percentage">%d%%</string>
+    <string name="dfu_default_name">无体温计</string>
+    <string name="dfu_confirmation_dialog_title">设备固件升级</string>
+    <string name="dfu_confirmation_dialog_exit_message">您确定要退出?</string>
+    <string name="dfu_upload_dialog_cancel_message">您确定要取消升级?</string>
+    
+    <string name="scanner_subtitle__not_bonded">可用体温计:</string>
+    <string name="scanner_title">选择体温计:</string>
+    <string name="scanner_empty">没有发现体温计</string>
+    <string name="scanner_action_scan">扫描体温计</string>
+    <string name="scanner_subtitle_bonded">绑定设备:</string>
+     <string name="progress">%d%%</string>
+	<string name="permission_log_label">读写日志</string>
+	<string name="permission_log_description">允许应用从传感器读写事件日志</string>
+	
+	<string name="firmware_upgrade_success_message">固件升级成功!</string>
+	<string name="firmware_upgrade_canceled_message">固件升级已被取消!</string>
+	<string name="firmware_upgrade_error_message">固件升级失败,请确认体温计处于升级模式!</string>
+</resources>

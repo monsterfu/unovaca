@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/setting_item_bg_pressed" />
+
+    <padding
+        android:bottom="@dimen/setting_item_padding"
+        android:left="@dimen/setting_item_padding"
+        android:right="@dimen/setting_item_padding"
+        android:top="@dimen/setting_item_padding" />
+
+    <corners
+        android:bottomLeftRadius="@dimen/setting_item_round_corner"
+        android:bottomRightRadius="@dimen/setting_item_round_corner"
+        android:topLeftRadius="0.0dip"
+        android:topRightRadius="0.0dip" />
+
+</shape>

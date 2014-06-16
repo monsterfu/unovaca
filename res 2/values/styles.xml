@@ -1,0 +1,103 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/main_bg</item>
+    </style>
+    
+<!--     <style name="AppTheme.Fullscreen" parent="@android:style/Theme.Holo.NoActionBar">
+    </style> -->
+    
+    <style name="edittext_default">
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:padding">8.0dip</item>
+    </style>
+    
+	<style name="title_text">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@color/title_bar_text_color</item>
+        <item name="android:singleLine">@drawable/divider_title</item>
+        <item name="android:shadowColor">@color/title_bar_text_shadow_color</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">0.5</item>
+    </style>
+    
+	<style name="dialog_title_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/title_bar_text_color</item>
+        <item name="android:singleLine">@drawable/divider_title</item>
+        <item name="android:shadowColor">@color/title_bar_text_shadow_color</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">0.5</item>
+    </style>
+    
+	<style name="listitem_title_text_style">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@drawable/default_text_color</item>
+    </style>
+    
+	<style name="listitem_title_sub_text_style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">@drawable/default_summary_text_color</item>
+    </style>
+    <style name="My_Theme_Dialog_Alert">
+	        <item name="android:windowBackground">@android:color/transparent</item>
+	        <item name="android:windowContentOverlay">@null</item>
+	        <item name="android:backgroundDimEnabled">true</item>
+	        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+	</style>
+	<style name="DialogWindowTitle">
+	        <item name="android:maxLines">1</item>
+	        <item name="android:scrollHorizontally">true</item>
+	        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+	</style>
+	
+	<style name="TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+	<style name="style_listview">
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@null</item>
+    </style>
+    
+    <style name="style_listview_fireware_update">
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    
+   <style name="settings_item">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@drawable/default_text_color</item>
+    </style>
+    <style name="text_black">
+        <item name="android:textColor">@drawable/default_text_color</item>
+    </style>    
+    <style name="text_black_small" parent="@style/text_black">
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+    
+    <style name="text_black_big" parent="@style/text_black">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="button_default">
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/button_text_default</item>
+        <item name="android:background">@drawable/selector_button_bg_default</item>
+        <item name="android:padding">@dimen/button_padding</item>
+    </style>
+</resources>

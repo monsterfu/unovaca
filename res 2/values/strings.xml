@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unova Thermometer</string>
+	<string name="back">back</string>
+	
+    <string name="start_periodic_scan_br_label">Start periodic scan Broadcast Receiver</string>
+    <string name="stop_periodic_scan_br_label">Stop periodic scan Broadcast Receiver</string>
+    <string name="scaner_br_label">Scanner Broadcast Receiver</string>
+    
+    <string name="no_sensors_stored">Scan and add device!</string><!-- You have 0 temperature sensors. -->
+    <string name="no_ble">Device doesn\'t have BLE support!</string>
+    <string name="settings">Settings</string>
+    <string name="menu_add">Find new device</string>
+    <string name="menu_graph">View as graph</string>
+    <string name="menu_list">View as list</string>
+    <string name="menu_remove">Remove device</string>
+    <string name="menu_show_period">Zoom to&#8230;</string>
+    <string name="menu_day">1 Day</string>
+    <string name="menu_week">1 Week</string>
+    <string name="menu_month">1 Month</string>
+    <string name="menu_all">Show all</string>
+    
+    <string name="scanning">Scanning for devices&#8230;</string>
+    
+    <string name="settings_bluetooth">Settings</string>
+    <string name="settings_scan_in_background_title">Scan in background</string>
+    <string name="settings_scan_in_background_summary">Application will contiunue to scan for device readings when closed</string>
+    <string name="settings_scan_interval_summary">Measure temperature periodically and record in database</string>
+    <string name="settings_scan_period_title">Scanning interval background</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_title">Smart Thermometer</string>
+    <string-array name="settings_periods">
+        <!-- <item>5 Seconds</item>
+		<item>10 Seconds</item> -->
+        <item>5 Minutes</item>
+        <item>10 Minutes</item>
+        <item>15 Minutes</item>
+        <item>30 Minutes</item>
+        <item>1 Hour</item>
+    </string-array>
+    <string-array name="settings_periods_values">
+        <!-- <item>5000</item>
+		<item>10000</item> -->
+        <item>300000</item>
+        <item>600000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+    </string-array>
+    
+    <string-array name="kid_genders">
+        <item>Male</item>
+		<item>Female</item>
+    </string-array>
+    
+    <string-array name="kid_blood_types">
+        <item>A</item>
+		<item>B</item>
+		<item>AB</item>
+		<item>O</item>
+    </string-array>
+
+    <string name="status_updated">Recently updated</string>
+    <string name="status_not_found">Not in range</string>
+    
+    <string name="battery">%d%%</string>
+    <string name="temp">%.1f℃</string>
+    <string name="kid_merge_age">%d years old</string>
+    <string name="kid_merge_weight">%s Kg</string>
+    <string name="kid_merge_height">%s Cm</string>
+    <string name="datetime">%1$te %1$tb %1$tR</string>
+    <string name="time">%tR</string>
+    <string name="date">%1$te %1$tb</string>
+    
+    <string name="alert_remove_sensor_msg">Are you sure to delete thermometer and data? </string><!-- All sensor data will be lost. Do you want to proceed? -->
+    <string name="alert_set_current_sensor_msg">If you want to set the thermometer to current use? </string>
+    <string name="alert_dialog_title">Kindly reminder</string>
+    <string name="about_title">About</string>
+    <string name="about_text"><b>Smart Thermometer</b>\nThe software developed by umeoxtech.
+       Based on Android 4.3.For Smart Thermometer use.Main focus on body temperature data monitoring,to take care of your baby health.\n\n\n
+        <b>Umeox Technology</b>\nwww.umeoxtech.com</string>
+    <string name="manager_sensor">Manage device</string>
+    <string name="manager_sensor_history">Device temperature record</string>
+    <string name="temp_empty_text">No record is received</string>
+    <string name="start_scan">Start scan</string>
+    <string name="stop_scan">Stop scan</string>
+    <string name="mac_address">MAC address：%1$s</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="remove_sensor">Delete device</string>
+    <string name="button_close_alert">Close temperature alert</string>
+    <!-- zhangyq add -->
+    <string name="setting_item_alarm">Temperature alert</string>
+    <string name="setting_item_reminder">Reminder</string>
+    <string name="setting_item_knowledge">Fever knowledge</string>
+    <string name="setting_item_help">Help</string>
+    <string name="tab_item_clfs">Measuring mode</string>
+    <string name="tab_item_wljw">Physical cooling</string>
+    <string name="tab_item_tsy">Antipyretic</string>
+    <string name="tab_item_xgjb">Fever related diseases</string>
+    <string name="physics_title">Appropriate elevated temperature can improve the immunity of patients, help the body to resist the invasion of pathogens. If the temperature is below 38.5 ℃,and the patient\'s mental status is good, there is not necessory to take the antipyretic.Physical cooling is helpful. </string>
+    <string name="physics_title1">Wet towel cooling</string>
+    <string name="physics_string1">Put a cool wet towel on the forehead and change often. Wet towel to help reducing body temperature. Hot wet towel can reduce fever. However, if the patient feel too hot and uncomfortable, it should be replaced by wet and cold towel. Put a wet towel on the forehead, the wrists and legs, the other parts shall be covered with clothes. The body temperature rises to more than 39.4C, do not use hot towel. It should be treated by cool wet towel to avoid the temperature to rise continously.</string>
+    <string name="physics_title2">Alcohol bath</string>
+    <string name="physics_string2" formatted="false">Now this method uses less often,please pay attention to the alcohol strength , 25% to 50% is appropriate, otherwise the skin will be stimulated, and absorb plenty of moisture, causing damage of the skin.</string>
+    <string name="physics_title3">Supplement of liquid</string>
+    <string name="physics_string3">The body will turn off the sweat glands in fever to prevent further loss of water. Thus it will be more difficult to deal with fever. The solution is to replenish liquid. Water, fruit juice, scented tea,etc.Enough water can not only meet the needs of the metabolism, but also can take heat away while the body sweating or excretion, and help the body cooling down.</string>
+    <string name="physics_title4">Supplement of nutrition </string>
+    <string name="physics_string4">To eat lightly seasoned and variety food in three meals a day.</string>
+    <string name="measure_title1">Axillary temperature(Above 37℃ is considered as a fever)</string>
+    <string name="measure_title2">Ear temperature (Above 38℃  is considered as a fever)</string>
+    <string name="measure_title3">Oral temperature (Above 38℃ is considered as a fever)</string>
+    <string name="measure_title4">Forehead temperature(Above 38℃ is considered as a fever)</string>
+    <string name="measure_title5">Rectal temperature(Above 37.5℃is considered as a fever)</string>
+    <string name="measure_method_string1">The average measurement value is lower  about 0.8 ℃ than the center temperature.Above 37 ℃ is considered as a fever. The standard mercury thermometer needs 3 to10 minutes to get the data. This product can be used to measure axillary temperature, it can measure continuously without taking out the thermometer.</string>
+    <string name="measure_method_string2">Because the eardrum is located at lower visual area, close to the central temperature, and linked to  arteria carotid, the measurement of ear is central temperature of human body. But it is not recommended to use for 3 months baby because it has less relationship with them.</string>
+    <string name="measure_method_string3">Oral average temperature is lower about 0.5 ℃ than central temperature. Oral temperature is not suitable for small babies,because it needs baby to cooperate.Please do not use mercury thermometer for oral temperature to avoid accident causing by broken . Do not drink hot or cool water 15 minutes before measuring to avoid error.</string>
+    <string name="measure_method_string4">The forehead temperature measurement is usually lower than central, because it will be impacted by environment. Please pay more attention to the room temperature change,distance between skin and sensor. Please measure at 10 ℃ to 40 ℃.</string>
+	<string name="measure_method_string5">Rectal temperature is close to the central temperature. Insert thermometer into the anus(1.5 to 2.5 cm) after cleaning, above 38 ℃ is considered as a fever.</string>
+    
+    <string name="more">More</string>
+    <string name="kids_list_prompt">Click photo to check or modify baby detail information</string>
+    <string name="baby_info">Baby information</string>
+    <string name="headicon">Photo</string>
+    
+    <string name="kid_nickname">Nickname</string>
+    <string name="kid_birthday">Birthday</string>
+    <string name="kid_gender">Gender</string>
+    <string name="kid_height">Height</string>
+    <string name="kid_weight">Weight</string>
+    <string name="kid_blood_type">Blood Type</string>
+    
+    
+    <string name="set_name_info_first">Please set baby information first</string>
+    <string name="set_kid_info_hint">Please fill in baby information</string>
+    <string name="set_kid_info_dlg_error">Input can not be empty</string>
+    
+    <string name="tack_photo_title">Change photo</string>
+    <string name="tack_head_photo">Take a photo</string>
+    <string name="pick_head_photo">Choose from album</string>
+    <string name="save_success">Saved Successfully</string>
+    <string name="kids_list">Baby List</string>
+    <string name="kids_birthday_error">Please enter valid date of birth!</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="alert_remove_kid_msg">Are you sure to delete the baby information? </string>
+    <string name="alert_remove_kid_error">Delete failed,one baby information need at least!</string>
+    <string name="start_kid_activity_error">Open KidsInfoActivity failed,Intent parameter error!</string>
+    
+    <string name="reminder_fever_highest">HighestFever</string>
+    <string name="reminder_fever_high">HighFever</string>
+    <string name="reminder_fever_middle">MildFever</string>
+    <string name="reminder_fever_low">LowFever</string>
+    <string name="reminder_fever_normal">Normal</string>
+    <string name="reminder_fever_lowtemp">Low</string>
+    <string name="reminder_placement_error_online">Can not detect normal temperature!</string>
+    <string name="reminder_placement_error_offline">Can not detect temperature!</string>
+    <string name="reminder_detecting_thermometer">Detecting thermometer(%ds)....</string>
+    <string name="reminder_detecting_status">Detecting...</string>
+	<string name="reminder_detection_status">Baby in %s</string>
+	<string name="start_monitor">"Start service"</string>
+	<string name="stop_monitor">"Stop service"</string>
+	<string name="reminder_wait_monitor">Temperature is lower than 34.5℃,please wait!</string>
+	<string name="kids_history_graph_title">Baby temperature record</string>
+	<string name="reminder_day">%d日</string>
+	<string name="open_history_graph_error">Program abnormal,date error！</string>
+	<string name="open_history_graph_highest_temp">"  (Highest temperature: %.1f℃)"</string>
+	<string name="end_temp">·End temperature:%.1f℃</string>
+	
+	<string name="remind_title">Title:</string>
+	<string name="remind_title_dialog">Title</string>
+    <string name="remind_time">Time:</string>
+    <string name="remind_repeat">Repeat:</string>
+    <string name="remind_title_hint">Please input</string>
+    <string name="remind_time_hint">Please choose time</string>
+    <string name="remind_repeat_hint">Please select </string>
+    <string name="start_set_remind_activity_error">Open RemindSetActivity error，Intent parameter error!</string>
+    <string name="remind_ok">OK</string>
+    <string name="remind_alert_title">Thermometer alert</string>
+    <string name="remind_remove_alert">Are you sure to delete the reminder? </string>
+    <string name="remind_remove_alert_error">Delete error!</string>
+    <string name="remind_power_on_msg">"Set reminder to alert after %1$s %2$s."</string>
+    <string name="remind_power_on_zero_time_msg">"Set reminder to alert in 1 minute."</string>
+    <string name="remind_power_off_msg">Reminder off</string>
+    <string name="minutes">"%s minutes"</string>
+    <string name="hours">"%s hours"</string>
+    <string name="minute">"1 minute"</string>
+    <string name="hour">"1 hour"</string>
+    <string name="remind_everyday">Remind everyday</string>
+    <string name="remind_once">Remind once</string>
+    <string name="set_hight_temp_dlg_error">Please input effective warning temperature between 36℃ to 42℃!</string>
+    <string name="hight_temp_alert">( %.1f℃ )</string>
+    <string name="remind_save_error_msg">Please input effective title and time!</string>
+    <string name="current_month_history_goto_new">"Go to the newest record"</string>
+    <string name="date_picker_dialog_title">Set date</string>
+    
+    <string name="app_check_update">App update</string>
+    <string name="app_feedback">App feedback</string>
+    <string name="app_os_update">Device hardware update</string>
+    
+     <string name="alert_title">"Temperature alert"</string>
+    <string name="alert_notification_content">"Baby temperature%1$.1f℃"</string>
+    <string name="alert_notification_subtext_normal">Baby in low fever,please pay attention to baby body status!</string>
+    <string name="alert_notification_subtext_danger">Baby in high fever,please take measures to cool down!</string>
+    <string name="alert_notification_subtext_defined">Baby temperature exceeds warning setting,please pay attention to baby body status!</string>
+    
+    <string name="alert_start_monitor_background_msg">Are you sure to start running temperature measurement on background?\nAfter starting, program will measure temperature according to interval setting. In this status,it will consume more power,so please set longer time intervals.</string>
+    <string name="alert_stop_monitor_background_msg">Are you sure to stop running temperature measurement on background?\nAfter stopping, program will measure temperature on current interface only. It will not influence power consumption in this status.</string>
+
+	<string name="thermometer_name">Thermometer name</string>
+    <string name="thermometer_status">Detecting status</string>
+    <string name="thermometer_battery">Battery</string>
+    <string name="thermometer_rssi">Signal</string>
+    <string name="thermometer_status_online">Online</string>
+    <string name="thermometer_status_offline">Offline</string>
+    <string name="thermometer_status_detecting">Detecting，wait %d seconds</string>
+    <string name="thermometer_detecting">Scanning</string>
+</resources>

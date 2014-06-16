@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unova智能体温计</string>
+	<string name="back">返回</string>
+	
+	<string name="start_periodic_scan_br_label">开始定期扫描广播接收器</string>
+    <string name="stop_periodic_scan_br_label">停止定期扫描广播接收器</string>
+    <string name="scaner_br_label">扫描广播接收器</string>
+    
+    <string name="no_sensors_stored">请扫描并添加体温计！</string><!-- You have 0 temperature sensors. -->
+    <string name="no_ble">手机不支持低功耗蓝牙设备！</string><!-- Device doesn\'t have BLE support! -->
+    <string name="settings">设置</string>
+    <string name="menu_add">搜索新设备</string>
+    <string name="menu_graph">查看示图</string>
+    <string name="menu_list">查看列表</string>
+    <string name="menu_remove">移除智能体温计</string>
+    <string name="menu_show_period">放大到&#8230;</string>
+    <string name="menu_day">1天</string>
+    <string name="menu_week">1周</string>
+    <string name="menu_month">1个月</string>
+    <string name="menu_all">显示所有</string>
+    
+    <string name="scanning">扫描智能体温计&#8230;</string>
+    
+    <string name="settings_bluetooth">设置</string>
+    <string name="settings_scan_in_background_title">后台监测</string>
+    <string name="settings_scan_in_background_summary">当关闭此应用时，后台继续监测体温数据。</string>
+    <string name="settings_scan_interval_summary">周期测量体温并记入数据库</string>
+    <string name="settings_scan_period_title">后台测量周期</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_about_title">智能体温计</string>
+    <string-array name="settings_periods">
+        <!-- <item>5 秒钟</item>
+		<item>10 秒钟</item> -->
+        <item>5 分钟</item>
+        <item>10 分钟</item>
+        <item>15 分钟</item>
+        <item>30 分钟</item>
+        <item>1 小时</item>
+    </string-array>
+    <string-array name="settings_periods_values">
+        <!-- <item>5000</item>
+		<item>10000</item> -->
+        <item>300000</item>
+        <item>600000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+    </string-array>
+    
+    <string-array name="kid_genders">
+        <item>男</item>
+		<item>女</item>
+    </string-array>
+    
+    <string-array name="kid_blood_types">
+        <item>A型</item>
+		<item>B型</item>
+		<item>AB型</item>
+		<item>O型</item>
+    </string-array>
+
+    <string name="status_updated">实时数据</string><!-- Recently updated -->
+    <string name="status_not_found">历史数据</string><!-- Not in range -->
+    
+    <string name="battery">%d%%</string>
+    <string name="temp">%.1f℃</string>
+    <string name="kid_merge_age">%d 岁</string>
+    <string name="kid_merge_weight">%s Kg</string>
+    <string name="kid_merge_height">%s Cm</string>
+    <string name="datetime">%1$te %1$tb %1$tR</string>
+    <string name="time">%tR</string>
+    <string name="date">%1$te %1$tb</string>
+    
+    <string name="alert_remove_sensor_msg">您确定要删除此体温计及其数据? </string><!-- All sensor data will be lost. Do you want to proceed? -->
+    <string name="alert_set_current_sensor_msg">您是否要设置此体温计为当前监测体温计? </string>
+    <string name="alert_dialog_title">温馨提示</string>
+    <string name="about_title">关于</string>
+    <string name="about_text"><b>智能体温计</b>\n本软件由深圳市新美来创新科技有限公司负责研发，
+        是基于Android 4.3及以上系统开发的一款应用软件，与本公司生产销售的智能体温计配套使用。主要用于接收智能体温计实时监测到的体温数据，为您的宝贝健康导航！\n\n\n
+        <b>深圳市新美来创新科技有限公司</b>\n网址:www.umeoxtech.com</string>
+    <string name="manager_sensor">设备管理</string>
+    <string name="manager_sensor_history">设备体温记录</string>
+    <string name="temp_empty_text">无监测记录</string>
+    <string name="start_scan">开始扫描</string>
+    <string name="stop_scan">停止扫描</string>
+    <string name="mac_address">MAC地址：%1$s</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="remove_sensor">删除体温计</string>
+    <string name="button_close_alert">关闭高温报警</string>
+    <!-- zhangyq add -->
+    <string name="setting_item_alarm">温度超限报警</string>
+    <string name="setting_item_reminder">提醒事件</string>
+    <string name="setting_item_knowledge">发烧一点通</string>
+    <string name="setting_item_help">使用帮助</string>
+    <string name="tab_item_clfs">测量方式</string>
+    <string name="tab_item_wljw">物理降温</string>
+    <string name="tab_item_tsy">退烧药</string>
+    <string name="tab_item_xgjb">发烧相关疾病</string>
+    <string name="physics_title">适当升高的体温可以提高患者免疫力，帮助人体抵御入侵的病原体。如果体温低于38.5℃，患者精神状况很好，不需服用退热药。可用物理降温:</string>
+    <string name="physics_title1">湿敷降温</string>
+    <string name="physics_string1">在额头上敷一条湿凉毛巾，经常更换。湿敷帮助降低体温。热的湿敷可退烧。但是当病人觉得热得很不舒服时，应以冷湿敷取代。在额头、手腕、小腿上各放一湿冷毛巾，其他部位应以衣物盖住。体温上升到39.4C以上，切勿使用热敷退烧。应以冷敷处理，以免体温继续升高。</string>
+    <string name="physics_title2">酒精擦浴</string>
+    <string name="physics_string2" formatted="false">现在这种方法用得比较少，需要注意的是酒精浓度在25%~50%为宜，否则容易刺激皮肤，吸收表皮大量的水分，对皮肤造成伤害。</string>
+    <string name="physics_title3">补充液体</string>
+    <string name="physics_string3">发烧了，身体会关闭汗腺，以阻止进一步的水分流失。这使你更难对付发烧。解决之道就是补充液体。可选用白开水、果菜汁、草茶、菩提花茶、柳树皮（茶）、黑接骨木等。大量的水不仅可以满足机体高代谢的需要，而且可以在体表发汗或排泄时带走大量的热量，帮助人体降温。</string>
+    <string name="physics_title4">多增加营养</string>
+    <string name="physics_string4">三餐食物品种多一些，清淡一些即可。</string>
+    <string name="measure_title1">腋温(37℃以上算发烧)</string>
+    <string name="measure_title2">耳温(38℃以上算发烧)</string>
+    <string name="measure_title3">口温(38℃以上算发烧)</string>
+    <string name="measure_title4">额温(38℃以上算发烧)</string>
+    <string name="measure_title5">肛温(37.5℃以上算发烧)</string>
+    <string name="measure_method_string1">平均测量值低于中心体温约0.8℃,37℃以上算发烧.一般玻璃制水银体温计要测量3-10分钟读取数据.本产品适用测量腋温,连续测量无需取出体温计.</string>
+    <string name="measure_method_string2">由于耳膜位于头骨肉接近体温调节中枢-下视区的位置,且与颈动脉的血流相通,所以量耳温可以说是人体中的中心体温.但三月以下婴儿与中心体温关系不大,不建议使用.</string>
+    <string name="measure_method_string3">口温平均值低于中心体温约0.5℃.测量口温需要宝宝配合,不适合较小婴儿使用.禁止使用玻璃制水银温度计测量口温,以免温度计破裂发生意外.注意测量前15分钟不要饮用热/冷水以免出现误差.</string>
+    <string name="measure_method_string4">在额头测量表皮温度时,均有低于中心体温的现象.一般额温枪比较容易受环境因素干扰,测量时多注意探头与皮肤表面的距离,室温变化等因素.请在10℃-40℃环境温度下测量</string>
+	<string name="measure_method_string5">肛温与中心温度接近.清洁体温计后伸入肛门1.5至2.5厘米,测量温度38℃以上算发烧</string>
+    
+    <string name="more">更多</string>
+    <string name="kids_list_prompt">点击头像，查看或修改宝贝详细信息</string>
+    <string name="baby_info">宝贝信息</string>
+    <string name="headicon">照片</string>
+    
+    <string name="kid_nickname">昵称</string>
+    <string name="kid_birthday">生日</string>
+    <string name="kid_gender">性别</string>
+    <string name="kid_height">身高</string>
+    <string name="kid_weight">体重</string>
+    <string name="kid_blood_type">血型</string>
+    
+    
+    <string name="set_name_info_first">请先设置宝贝信息</string>
+    <string name="set_kid_info_hint">请填写宝贝信息</string>
+    <string name="set_kid_info_dlg_error">输入框不能为空</string>
+    
+    <string name="tack_photo_title">更换头像</string>
+    <string name="tack_head_photo">拍照</string>
+    <string name="pick_head_photo">从相册选择</string>
+    <string name="save_success">保存成功</string>
+    <string name="kids_list">宝贝列表</string>
+    <string name="kids_birthday_error">请输入有效的生日日期!</string>
+    <string name="delete">删除</string>
+    <string name="save">保存</string>
+    <string name="alert_remove_kid_msg">您确定要删除此宝贝及其数据? </string>
+    <string name="alert_remove_kid_error">删除失败，至少保存一个宝贝信息!</string>
+    <string name="start_kid_activity_error">打开KidsInfoActivity失败，传入Intent参数错误!</string>
+    
+    <string name="reminder_fever_highest">超高热</string>
+    <string name="reminder_fever_high">高热</string>
+    <string name="reminder_fever_middle">中热</string>
+    <string name="reminder_fever_low">低热</string>
+    <string name="reminder_fever_normal">正常</string>
+    <string name="reminder_fever_lowtemp">低温</string>
+    <string name="reminder_placement_error_online">没有检测到正常体温！</string>
+    <string name="reminder_placement_error_offline">没有检测到体温！</string>
+    <string name="reminder_detecting_thermometer">正在扫描体温计(%d秒)....</string>
+    <string name="reminder_detecting_status">检测中...</string>
+	<string name="reminder_detection_status">宝贝体温处于%s状态</string>
+	<string name="start_monitor">"开启后台"</string>
+	<string name="stop_monitor">"关闭后台"</string>
+	<string name="reminder_wait_monitor">当前体温小于34.5℃，\n请等待！</string>
+	<string name="kids_history_graph_title">宝贝体温记录</string>
+	<string name="reminder_day">%d日</string>
+	<string name="open_history_graph_error">程序异常：日期获取错误！</string>
+	<string name="open_history_graph_highest_temp">"  (最高温度：%.1f℃)"</string>
+	<string name="end_temp">·结束温度：%.1f℃</string>
+	
+	<string name="remind_title">标题：</string>
+	<string name="remind_title_dialog">标题</string>
+    <string name="remind_time">时间：</string>
+    <string name="remind_repeat">重复：</string>
+    <string name="remind_title_hint">请输入</string>
+    <string name="remind_time_hint">请选择时间</string>
+    <string name="remind_repeat_hint">请选择</string>
+    <string name="start_set_remind_activity_error">打开RemindSetActivity失败，传入Intent参数错误!</string>
+    <string name="remind_ok">知道了</string>
+    <string name="remind_alert_title">体温计提醒</string>
+    <string name="remind_remove_alert">您确定要删除此提醒事件? </string>
+    <string name="remind_remove_alert_error">删除失败!</string>
+    <string name="remind_power_on_msg">"已将提醒设置为从现在起 %1$s %2$s 后提醒。"</string>
+    <string name="remind_power_on_zero_time_msg">"已将提醒设置为从现在起不到1分钟后提醒。"</string>
+    <string name="remind_power_off_msg">已关闭提醒</string>
+    <string name="minutes">"%s 分钟"</string>
+    <string name="hours">"%s 小时"</string>
+    <string name="minute">"1 分钟"</string>
+    <string name="hour">"1 小时"</string>
+    <string name="remind_everyday">每天提醒</string>
+    <string name="remind_once">提醒一次</string>
+    <string name="set_hight_temp_dlg_error">请输入36℃至42℃的有效报警温度！</string>
+    <string name="hight_temp_alert">( %.1f℃ )</string>
+    <string name="remind_save_error_msg">请输入有效标题和时间！</string>
+    <string name="current_month_history_goto_new">"回到最新记录"</string>
+    <string name="date_picker_dialog_title">设置年月</string>
+    
+    <string name="app_check_update">应用更新</string>
+    <string name="app_feedback">意见反馈</string>
+    <string name="app_os_update">设备固件升级</string>
+    
+     <string name="alert_title">"高温报警"</string>
+    <string name="alert_notification_content">"宝贝体温%1$.1f℃"</string>
+    <string name="alert_notification_subtext_normal">宝贝处于低烧状态,请密切注意宝贝身体状况!</string>
+    <string name="alert_notification_subtext_danger">宝贝处于高烧状态,请尽快采取降温措施!</string>
+    <string name="alert_notification_subtext_defined">宝贝体温超过报警温度,请密切注意宝贝身体状况!</string>
+    
+    <string name="alert_start_monitor_background_msg">你确定要开启后台测量体温？\n开启后，程序将根据所设置的后台测量周期在后台周期测量体温。\n此状态下对手机电量的消耗偏大，建议将后台测量周期调大。</string>
+    <string name="alert_stop_monitor_background_msg">你确定要关闭后台测量体温？\n关闭后，程序仅在当前应用界面测量体温，将不会在后台周期测量体温。\n此状态下不影响手机电量的消耗。</string>
+
+	<string name="thermometer_name">体温计名称</string>
+    <string name="thermometer_status">检测状态</string>
+    <string name="thermometer_battery">剩余电量</string>
+    <string name="thermometer_rssi">信号强度</string>
+    <string name="thermometer_status_online">在线</string>
+    <string name="thermometer_status_offline">离线</string>
+    <string name="thermometer_status_detecting">正在检测，等待%d秒</string>
+    <string name="thermometer_detecting">正在扫描</string>
+</resources>

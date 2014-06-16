@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/setting_item_group_bg" />
+
+    <stroke
+        android:width="@dimen/setting_item_group_line_width"
+        android:color="@color/setting_item_line" />
+
+    <padding
+        android:bottom="@dimen/setting_item_group_line_padding"
+        android:left="@dimen/setting_item_group_line_padding"
+        android:right="@dimen/setting_item_group_line_padding"
+        android:top="@dimen/setting_item_group_line_padding" />
+
+    <corners android:radius="@dimen/setting_item_round_corner" />
+
+</shape>

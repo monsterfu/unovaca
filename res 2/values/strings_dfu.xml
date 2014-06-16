@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="dfu_file_name_label">File Name:</string>
+    <string name="dfu_file_size_label">File Size:</string>
+    <string name="dfu_device_name_label">Device Name:</string>
+    <string name="dfu_file_size_text">%d bytes</string>
+    <string name="dfu_action_upload">Start upload</string>
+    
+    <string name="dfu_status_connecting">Connecting&#8230;</string>
+    <string name="dfu_status_starting">Starting DFU&#8230;</string>
+    <string name="dfu_status_uploading">Uploading&#8230;</string>
+    <string name="dfu_status_validating">Validating&#8230;</string>
+    <string name="dfu_status_disconnecting">Disconnecting&#8230;</string>
+    <string name="dfu_status_completed">Done</string>
+    <string name="dfu_status_abored">Aborted</string>
+    <string name="dfu_status_error">Upload failed</string>
+    
+    <string name="dfu_status_connecting_msg">Connecting to %s&#8230;</string>
+    <string name="dfu_status_starting_msg">Initializing DFU process&#8230;</string>
+    <string name="dfu_status_uploading_msg">Transmitting application to %s&#8230;</string>
+    <string name="dfu_status_validating_msg">Validating application&#8230;</string>
+    <string name="dfu_status_completed_msg">Application has been send successfully.</string>
+    <string name="dfu_status_aborted_msg">Application upload has been canceled.</string>
+    <string name="dfu_status_disconnecting_msg">Disconnecting from %s&#8230;</string>
+    <string name="dfu_status_error_msg">DFU process failed.</string>
+    
+    <string name="dfu_uploading_label">Upload Status:</string>
+    <string name="dfu_uploading_percentage_label">0%</string>
+    <string name="dfu_uploading_percentage">%d%%</string>
+    <string name="dfu_default_name">No device</string>
+    <string name="dfu_confirmation_dialog_title">Application Uploading</string>
+    <string name="dfu_confirmation_dialog_exit_message">Are you sure to exit?</string>
+    <string name="dfu_upload_dialog_cancel_message">Are you sure to cancel upload?</string>
+    
+    <string name="scanner_subtitle__not_bonded">Available devices:</string>
+    <string name="scanner_title">Select device:</string>
+    <string name="scanner_empty">No device found</string>
+    <string name="scanner_action_scan">Scan device</string>
+    <string name="scanner_subtitle_bonded">Bonded devices:</string>
+     <string name="progress">%d%%</string>
+	<string name="permission_log_label">read and write log</string>
+	<string name="permission_log_description">Allows the app to write and read from Nordic Semiconductor Event log</string>
+	
+	<string name="firmware_upgrade_success_message">Application has been transfered successfully.</string>
+	<string name="firmware_upgrade_canceled_message">Uploading of the application has been canceled.</string>
+	<string name="firmware_upgrade_error_message">固件升级失败,请确认体温计处于升级模式!</string>
+</resources>
