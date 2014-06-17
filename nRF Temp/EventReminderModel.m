@@ -16,6 +16,25 @@
 @dynamic repeat;
 @dynamic index;
 
++ (BOOL) deleteEventReminder:(EventReminderModel *)EventReminder
+{
+    NSManagedObjectContext *moc = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    [moc deleteObject:EventReminder];
+    
+    NSError *error;
+    [moc save:&error];
+    if (error)
+    {
+        NSLog(@"Error deleting fob: %@", error);
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 + (NSMutableArray *) allEventReminderModel
 {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
@@ -32,7 +51,7 @@
 {
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"EventReminderModel"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"index LIKE %@", index]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"index == %d", index]];
     NSError *error;
     NSArray *array = [managedObjectContext executeFetchRequest:request error:&error];
     if (error)

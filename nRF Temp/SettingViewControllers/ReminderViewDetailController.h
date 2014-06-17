@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (assign, nonatomic) BOOL isAdd;
 
 - (IBAction)datePickerChanged:(UIDatePicker *)sender;
 

@@ -49,11 +49,16 @@
         ReminderViewDetailController* eventViewController = (ReminderViewDetailController *)[segue destinationViewController];
         
         eventViewController.reminderModel = [EventReminderModel foundEventReminderModelWithIndex:self.tableView.indexPathForSelectedRow.row];
+        
+        eventViewController.isAdd = NO;
+        
     }else if ([[segue identifier] isEqualToString:@"addEventViewController"])
     {
         ReminderViewDetailController* eventViewController = (ReminderViewDetailController *)[segue destinationViewController];
         
         eventViewController.reminderModel = [EventReminderModel createEventReminderModelWithIndex:_allEventReminderModelArray.count content:nil date:[NSDate date] repeat:YES];
+        
+        eventViewController.isAdd = YES;
     }
 }
 #pragma mark -

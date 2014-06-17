@@ -22,12 +22,12 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    _textField.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    _textField.delegate = self;
     // Configure the view for the selected state
 }
 
