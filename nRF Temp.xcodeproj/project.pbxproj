@@ -84,6 +84,13 @@
 		640670A9195022BF00928CAB /* btn_radio_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670A7195022BF00928CAB /* btn_radio_off.png */; };
 		640670AA195022BF00928CAB /* btn_radio_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670A8195022BF00928CAB /* btn_radio_on.png */; };
 		640670AC1950315300928CAB /* default_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670AB1950315300928CAB /* default_head.png */; };
+		640670AF19503B5100928CAB /* reminder_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670AE19503B5100928CAB /* reminder_alarm.png */; };
+		640670B219503CA800928CAB /* eventReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670B119503CA800928CAB /* eventReminderCell.m */; };
+		640670B91950419E00928CAB /* ReminderViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670B81950419E00928CAB /* ReminderViewDetailController.m */; };
+		640670BC1950449000928CAB /* eventContentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670BB1950449000928CAB /* eventContentViewCell.m */; };
+		640670BF195044A900928CAB /* eventTimeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670BE195044A900928CAB /* eventTimeViewCell.m */; };
+		640670C2195044C200928CAB /* eventRepeatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670C1195044C200928CAB /* eventRepeatViewCell.m */; };
+		640670C81950659900928CAB /* EventReminderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670C71950659900928CAB /* EventReminderModel.m */; };
 		6407987318ED33BA00A21F74 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987218ED33BA00A21F74 /* PersonViewController.m */; };
 		6407987618ED39B900A21F74 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987518ED39B900A21F74 /* PersonListViewController.m */; };
 		64097C5919050AEC00C0E49D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2519050AEC00C0E49D /* 0.png */; };
@@ -315,6 +322,19 @@
 		640670A7195022BF00928CAB /* btn_radio_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_radio_off.png; sourceTree = "<group>"; };
 		640670A8195022BF00928CAB /* btn_radio_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_radio_on.png; sourceTree = "<group>"; };
 		640670AB1950315300928CAB /* default_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_head.png; sourceTree = "<group>"; };
+		640670AE19503B5100928CAB /* reminder_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder_alarm.png; sourceTree = "<group>"; };
+		640670B019503CA800928CAB /* eventReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventReminderCell.h; sourceTree = "<group>"; };
+		640670B119503CA800928CAB /* eventReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventReminderCell.m; sourceTree = "<group>"; };
+		640670B71950419E00928CAB /* ReminderViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderViewDetailController.h; path = SettingViewControllers/ReminderViewDetailController.h; sourceTree = "<group>"; };
+		640670B81950419E00928CAB /* ReminderViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderViewDetailController.m; path = SettingViewControllers/ReminderViewDetailController.m; sourceTree = "<group>"; };
+		640670BA1950449000928CAB /* eventContentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventContentViewCell.h; sourceTree = "<group>"; };
+		640670BB1950449000928CAB /* eventContentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventContentViewCell.m; sourceTree = "<group>"; };
+		640670BD195044A900928CAB /* eventTimeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventTimeViewCell.h; sourceTree = "<group>"; };
+		640670BE195044A900928CAB /* eventTimeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventTimeViewCell.m; sourceTree = "<group>"; };
+		640670C0195044C200928CAB /* eventRepeatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventRepeatViewCell.h; sourceTree = "<group>"; };
+		640670C1195044C200928CAB /* eventRepeatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventRepeatViewCell.m; sourceTree = "<group>"; };
+		640670C61950659900928CAB /* EventReminderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventReminderModel.h; sourceTree = "<group>"; };
+		640670C71950659900928CAB /* EventReminderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventReminderModel.m; sourceTree = "<group>"; };
 		6407987118ED33BA00A21F74 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		6407987218ED33BA00A21F74 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		6407987418ED39B900A21F74 /* PersonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListViewController.h; sourceTree = "<group>"; };
@@ -626,6 +646,7 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				640670AE19503B5100928CAB /* reminder_alarm.png */,
 				640670AB1950315300928CAB /* default_head.png */,
 				640670A7195022BF00928CAB /* btn_radio_off.png */,
 				640670A8195022BF00928CAB /* btn_radio_on.png */,
@@ -644,6 +665,20 @@
 				640670A51950204A00928CAB /* UIImage+scaleToSize.m */,
 			);
 			name = "UIImage+scaleToSize";
+			sourceTree = "<group>";
+		};
+		640670AD1950362800928CAB /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		640670B319503E5300928CAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		641D78B718FFEDCB008F62D3 /* Toast */ = {
@@ -700,6 +735,8 @@
 			isa = PBXGroup;
 			children = (
 				64D7977D190F4C2E007442CE /* tabbar */,
+				640670B71950419E00928CAB /* ReminderViewDetailController.h */,
+				640670B81950419E00928CAB /* ReminderViewDetailController.m */,
 				649BB773190A08DC0049E5C8 /* ReminderViewController.h */,
 				649BB774190A08DC0049E5C8 /* ReminderViewController.m */,
 				649E5FA418F54FD00057E235 /* TimeGapViewController.h */,
@@ -960,6 +997,8 @@
 			isa = PBXGroup;
 			children = (
 				93449C43162FE0E80061440A /* TemperatureAppModels.xcdatamodeld */,
+				640670C61950659900928CAB /* EventReminderModel.h */,
+				640670C71950659900928CAB /* EventReminderModel.m */,
 				649A85751921FF0300ED7445 /* PersonDetailInfo.h */,
 				649A85761921FF0300ED7445 /* PersonDetailInfo.m */,
 				93581AB116302C71004BF458 /* TemperatureFob.h */,
@@ -1051,6 +1090,14 @@
 		9380AA2517E0B77A00DDB73E /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				640670C0195044C200928CAB /* eventRepeatViewCell.h */,
+				640670C1195044C200928CAB /* eventRepeatViewCell.m */,
+				640670BD195044A900928CAB /* eventTimeViewCell.h */,
+				640670BE195044A900928CAB /* eventTimeViewCell.m */,
+				640670BA1950449000928CAB /* eventContentViewCell.h */,
+				640670BB1950449000928CAB /* eventContentViewCell.m */,
+				640670B019503CA800928CAB /* eventReminderCell.h */,
+				640670B119503CA800928CAB /* eventReminderCell.m */,
 				5EBDB76D18E9711E00491B74 /* PersonInfoCell.h */,
 				5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */,
 				931D1AA3162D9994007F8617 /* TemperatureFobCell.h */,
@@ -1107,20 +1154,22 @@
 		93E4E1EE162D5E2000974286 /* nRF Temp */ = {
 			isa = PBXGroup;
 			children = (
+				640670AD1950362800928CAB /* iPad */,
+				640670B319503E5300928CAB /* Model */,
 				640670A31950202600928CAB /* UIImage+scaleToSize */,
 				649B060C1929A33D002B642E /* NSDate+JBCommon */,
-				0F19CAD91914001200BF9312 /* MainStoryboard.storyboard */,
 				649B7213190F8F59005E4F2E /* SBJson */,
 				64D79786190F5051007442CE /* readXml */,
 				64E1E2491908FC9F00D274A1 /* embedded_firmwares */,
-				6407987718ED6D2C00A21F74 /* PublicDefine.h */,
-				93E4E1F7162D5E2000974286 /* AppDelegate.h */,
-				93E4E1F8162D5E2000974286 /* AppDelegate.m */,
 				933C8DC71636DACB0041D15F /* Data storage */,
 				933C8DC61636DAB50041D15F /* Singletons */,
 				64E1E22E1908FBBA00D274A1 /* appLoader */,
 				933C8DC41636DA940041D15F /* ViewControllers */,
 				9380AA2517E0B77A00DDB73E /* Custom Views */,
+				0F19CAD91914001200BF9312 /* MainStoryboard.storyboard */,
+				6407987718ED6D2C00A21F74 /* PublicDefine.h */,
+				93E4E1F7162D5E2000974286 /* AppDelegate.h */,
+				93E4E1F8162D5E2000974286 /* AppDelegate.m */,
 				9380A9CE17DF4A4B00DDB73E /* Images.xcassets */,
 				93E4E1EF162D5E2000974286 /* Supporting Files */,
 			);
@@ -1274,6 +1323,7 @@
 				64097C6419050AEC00C0E49D /* Default@2x.png in Resources */,
 				64097C5D19050AEC00C0E49D /* 4.png in Resources */,
 				0F2AF3EE1915436B00B71443 /* plot@2x.png in Resources */,
+				640670AF19503B5100928CAB /* reminder_alarm.png in Resources */,
 				0F19CA7C1913E2F200BF9312 /* a0.png in Resources */,
 				641A721619061C2500CC7041 /* delete@2x.png in Resources */,
 				0F19CAB51913E44700BF9312 /* a间隔icon.png in Resources */,
@@ -1366,12 +1416,15 @@
 				64D79783190F4EE3007442CE /* feverKnowsViewController.m in Sources */,
 				5EBDB76F18E9711E00491B74 /* PersonInfoCell.m in Sources */,
 				641D78BA18FFEDCB008F62D3 /* Toast+UIView.m in Sources */,
+				640670C2195044C200928CAB /* eventRepeatViewCell.m in Sources */,
 				649A505818F67D21001FD7D5 /* LimitWarningViewController.m in Sources */,
 				640D9CB61919E3770097386B /* oneKnowsViewController.m in Sources */,
+				640670B219503CA800928CAB /* eventReminderCell.m in Sources */,
 				93E4E1F5162D5E2000974286 /* main.m in Sources */,
 				649BB775190A08DC0049E5C8 /* ReminderViewController.m in Sources */,
 				64E1E2481908FC5700D274A1 /* TargetSelectionViewController.m in Sources */,
 				93E4E1F9162D5E2000974286 /* AppDelegate.m in Sources */,
+				640670C81950659900928CAB /* EventReminderModel.m in Sources */,
 				649B722F190F8F59005E4F2E /* SBJsonStreamParser.m in Sources */,
 				64E1E2471908FC5700D274A1 /* ProgressViewController.m in Sources */,
 				640670A61950204A00928CAB /* UIImage+scaleToSize.m in Sources */,
@@ -1387,10 +1440,12 @@
 				64E9021E18EEA49C00E9E72B /* SettingViewController.m in Sources */,
 				6407987318ED33BA00A21F74 /* PersonViewController.m in Sources */,
 				93E4E208162D5E2000974286 /* FobViewController.m in Sources */,
+				640670BF195044A900928CAB /* eventTimeViewCell.m in Sources */,
 				640D9CC01919FF690097386B /* threeKnowsViewController.m in Sources */,
 				64252E821926116800D454D4 /* NewGraphViewController.m in Sources */,
 				6407987618ED39B900A21F74 /* PersonListViewController.m in Sources */,
 				64E1E2441908FC5700D274A1 /* DFUTargetAdapter.m in Sources */,
+				640670BC1950449000928CAB /* eventContentViewCell.m in Sources */,
 				0FBC579B191FC74A006AEA01 /* RecordViewController.m in Sources */,
 				0F40EEC8191A963B0054894B /* fourDetalViewController.m in Sources */,
 				931D1AA5162D9994007F8617 /* TemperatureFobCell.m in Sources */,
@@ -1415,6 +1470,7 @@
 				649B7231190F8F59005E4F2E /* SBJsonStreamParserAdapter.m in Sources */,
 				649A505B18F69657001FD7D5 /* LastHistoryCell.m in Sources */,
 				649B060F1929A380002B642E /* NSDate+JBCommon.m in Sources */,
+				640670B91950419E00928CAB /* ReminderViewDetailController.m in Sources */,
 				64E1E2421908FC5700D274A1 /* DeviceInformationCell.m in Sources */,
 				64252E8519261D2900D454D4 /* GraphView.m in Sources */,
 				649B7235190F8F59005E4F2E /* SBJsonStreamWriterState.m in Sources */,
@@ -1528,6 +1584,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1552,6 +1609,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

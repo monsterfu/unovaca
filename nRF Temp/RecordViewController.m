@@ -34,7 +34,6 @@
     _recordsOfMonthArray = [NSMutableArray array];
     [_datePicker setFrame:CGRectMake(0, DEVICE_HEIGHT, DEVICE_WIDTH, 216)];
     
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
