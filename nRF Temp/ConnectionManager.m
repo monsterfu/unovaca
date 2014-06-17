@@ -118,7 +118,7 @@ static ConnectionManager *sharedConnectionManager;
         NSLog(@"Threw away reading, too little time since last.");
     }
     
-    if ([peripheral.name isEqualToString:[USER_DEFAULT stringForKey:KEY_FOBNAME]]) {
+    if ([[[peripheral identifier]UUIDString] isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]]) {
         [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
     }
 }

@@ -109,8 +109,8 @@
     _detailInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
     
     
-    if ([USER_DEFAULT stringForKey:KEY_FOBNAME]) {
-        _fob = [_detailInfo foundFobWithName:[USER_DEFAULT stringForKey:KEY_FOBNAME]];
+    if ([USER_DEFAULT stringForKey:KEY_FOBUUID]) {
+        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_FOBUUID]];
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];

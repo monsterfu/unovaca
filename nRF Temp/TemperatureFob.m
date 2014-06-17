@@ -77,25 +77,25 @@
     }
     
     
-    if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
-    {
-        return false;
-    }
-    
-    uint32_t raw;
-    [rawData getBytes:&raw length:4];
-    
-    int8_t exponent = (raw & 0xFF000000) >> 24;
-    int32_t mantissa = (raw & 0x00FFFFFF);
-    if (mantissa & 0x00800000)
-    {
-        mantissa |= (0xFF000000);
-    }
-    
-    CGFloat value = mantissa * pow(10.0, exponent);
-    if (value < 35.0f || value > 42.0f) {
-        return NO;
-    }
+//    if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
+//    {
+//        return false;
+//    }
+//    
+//    uint32_t raw;
+//    [rawData getBytes:&raw length:4];
+//    
+//    int8_t exponent = (raw & 0xFF000000) >> 24;
+//    int32_t mantissa = (raw & 0x00FFFFFF);
+//    if (mantissa & 0x00800000)
+//    {
+//        mantissa |= (0xFF000000);
+//    }
+//    
+//    CGFloat value = mantissa * pow(10.0, exponent);
+//    if (value < 35.0f || value > 42.0f) {
+//        return NO;
+//    }
     
     TemperatureReading *reading = (TemperatureReading *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureReading" inManagedObjectContext:self.managedObjectContext];
     [reading setDate:[NSDate date]];
@@ -132,15 +132,15 @@
 {
     NSString *imageName;
     if (self.signalStrength.floatValue > -40.0)
-        imageName = @"3-BARS.png";
+        imageName = @"ic_signal_3.png";
     else if (self.signalStrength.floatValue > -60.0)
-        imageName = @"2-BARS.png";
+        imageName = @"ic_signal_2.png";
     else if (self.signalStrength.floatValue > -100.0)
-        imageName = @"1-BAR.png";
+        imageName = @"ic_signal_1.png";
     else
-        imageName = @"0-BARS.png";
-    
-    return [UIImage imageNamed:imageName];
+        imageName = @"ic_signal_0.png";
+    UIImage* image = [UIImage imageNamed:imageName];
+    return [image scaleToSize:image size:CGSizeMake(30, 30)];
 }
 
 - (TemperatureReading *) lastReading

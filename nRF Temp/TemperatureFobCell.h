@@ -10,12 +10,28 @@
 
 #import "TemperatureFob.h"
 
+
+@protocol TemperatureFobCellDelegate <NSObject>
+
+-(void)selectedFobButtonTouched:(TemperatureFob*)fob;
+
+@end
+
 @interface TemperatureFobCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *signalImage;
-@property (weak, nonatomic) IBOutlet UILabel *w;
+{
+    id<TemperatureFobCellDelegate>delegate;
+    TemperatureFob* _fob;
+}
+
+@property (weak, nonatomic) id<TemperatureFobCellDelegate>delegate;
+@property (weak, nonatomic) IBOutlet UIButton *selectedButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateTimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *signalImageView;
+
+
+- (IBAction)selectedButtonTouch:(UIButton *)sender;
 
 - (void) setFob:(TemperatureFob*) fob;
 

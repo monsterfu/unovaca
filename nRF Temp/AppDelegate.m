@@ -20,6 +20,7 @@
     if (![USER_DEFAULT stringForKey:KEY_USERNAME]) {
         //没有则创建一个
         PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝"];
+        _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
         
         NSError *error = nil;

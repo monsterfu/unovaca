@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PersonDetailInfo.h"
 
-@interface DeviceDetailViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface DeviceDetailViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     NSTimer* _scanTimer;
     UITableViewCell* _scanTableViewCell;

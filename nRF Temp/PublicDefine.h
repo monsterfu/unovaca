@@ -12,6 +12,7 @@
 #import "XMLReader.h"
 #import "SBJson/SBJson.h"
 #import "NSDate+JBCommon.h"
+#import "UIImage+scaleToSize.h"
 
 #define DEVICE_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define DEVICE_HEIGHT  [UIScreen mainScreen].bounds.size.height
@@ -30,7 +31,9 @@
 //main
 #define KEY_USERNAME       @"key_username"
 #define KEY_FOBNAME       @"key_fobname"
+#define KEY_FOBUUID         @"key_fobuuid"
 
+#define KEY_SELECED_FOB        @"key_selected_fob"
 //setting
 
 #define KEY_GAPTIMER_STR   @"key_gaptimer_str"   //时间间隔

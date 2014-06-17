@@ -180,23 +180,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TemperatureFobCell *cell;
+    
     TemperatureFob *fob;
     
     if (indexPath.section == STORED_FOBS_SECTION)
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"TemperatureCell" forIndexPath:indexPath];
+        _storeFobCell = [tableView dequeueReusableCellWithIdentifier:@"TemperatureCell" forIndexPath:indexPath];
         fob = [_fobArray objectAtIndex:indexPath.row];
+        _storeFobCell.delegate = self;
+        [_storeFobCell setFob:fob];
+        return _storeFobCell;
     }
     else
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"NewFobCell" forIndexPath:indexPath];
+        _newFobCell = [tableView dequeueReusableCellWithIdentifier:@"NewFobCell" forIndexPath:indexPath];
         fob = [self.foundFobs objectAtIndex:indexPath.row];
+        [_newFobCell setFob:fob];
+        return _newFobCell;
     }
-    
-    [cell setFob:fob];
-    
-    return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -208,11 +209,16 @@
     selectedFob.isSaved = YES;
     selectedFob.delegate = self;
     
-    [USER_DEFAULT removeObjectForKey:KEY_FOBNAME];
-    [USER_DEFAULT setObject:selectedFob.idString forKey:KEY_FOBNAME];
+    [USER_DEFAULT removeObjectForKey:KEY_FOBUUID];
+    [USER_DEFAULT setObject:selectedFob.uuid forKey:KEY_FOBUUID];
     [USER_DEFAULT synchronize];
     
-    TemperatureFob* fob = [_detailInfo foundFobWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
+    if (![USER_DEFAULT objectForKey:KEY_SELECED_FOB]) {
+        [USER_DEFAULT setObject:selectedFob.uuid forKey:KEY_SELECED_FOB];
+        [USER_DEFAULT synchronize];
+    }
+    
+    TemperatureFob* fob = [_detailInfo foundFobWithUUid:selectedFob.uuid];
     if (fob == nil) {
         [_detailInfo addFob:selectedFob];
     }
@@ -240,7 +246,28 @@
     [self.addActivityIndicator stopAnimating];
     self.navigationItem.rightBarButtonItem = self.addButton;
 }
+#pragma mark - TemperatureFobCellDelegate
 
+-(void)selectedFobButtonTouched:(TemperatureFob *)fob
+{
+    if (![fob.uuid isEqualToString:[USER_DEFAULT objectForKey:KEY_SELECED_FOB]]) {
+        _fob = fob;
+        _alertView = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"您是否要设置此温度计为当前监测体温计？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [_alertView show];
+    }
+    
+}
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [USER_DEFAULT removeObjectForKey:KEY_SELECED_FOB];
+        [USER_DEFAULT setObject:_fob.uuid forKey:KEY_SELECED_FOB];
+        [USER_DEFAULT synchronize];
+        [_tableView reloadData];
+    }
+}
+#pragma mark -ConnectionManagerDelegate
 - (void) didDiscoverFob:(TemperatureFob *)fob
 {
     fob.delegate = self;

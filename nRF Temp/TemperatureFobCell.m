@@ -10,32 +10,30 @@
 
 @implementation TemperatureFobCell
 
+- (IBAction)selectedButtonTouch:(UIButton *)sender {
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(selectedFobButtonTouched:)]) {
+        [self.delegate selectedFobButtonTouched:_fob];
+    }
+}
+
 - (void) setFob:(TemperatureFob*) fob
 {
+    _fob = fob;
     TemperatureReading *lastReading = [fob lastReading];
-    [self.locationLabel setText:fob.location];
-
-    [self.signalImage setImage:[fob currentSignalStrengthImage]];
-    
-    [self.temperatureLabel setText:[NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue]];
-    
-    NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:lastReading.date];
-    NSString *ageText;
-    if (interval < 2*60.0)
-    {
-        ageText = @"刚刚更新";
+    if ([USER_DEFAULT objectForKey:fob.uuid]) {
+        [_nameLabel setText:[USER_DEFAULT objectForKey:fob.uuid]];
+    }else{
+        [_nameLabel setText:fob.location];
     }
-    else if (interval > 60.0*60.0)
-    {
-        ageText = @"很久之前更新";
-    }
-    else
-    {
-        ageText = [NSString stringWithFormat:@"%.f 分钟", (interval / 60)];
-    }
+    [_tempLabel setText:[NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue]];
     
-    [self.ageLabel setText:ageText];
+    NSString* dateStr = [NSString stringWithFormat:@"(%@)",[lastReading.date.description substringToIndex:19]];
+    [_dateTimeLabel setText:dateStr];
+    [_signalImageView setImage:[fob currentSignalStrengthImage]];
     
-    [self.w setText:fob.idString];
+    [_selectedButton setImage:[UIImage imageNamed:@"btn_radio_off.png"] forState:UIControlStateNormal];
+    if ([[USER_DEFAULT objectForKey:KEY_SELECED_FOB] isEqualToString:fob.uuid]) {
+        [_selectedButton setImage:[UIImage imageNamed:@"btn_radio_on.png"] forState:UIControlStateNormal];
+    }
 }
 @end

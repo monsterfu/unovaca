@@ -109,10 +109,18 @@ static NSUInteger scanInt = 16;
     
     if (indexPath.row == 0) {
         UITextField* _textField = [[UITextField alloc]initWithFrame:CGRectMake(120, 12, 185, 30)];
-        _textField.enabled = NO;
-        _textField.text = [_fob idString];
+        _textField.enabled = YES;
+        
+        if ([USER_DEFAULT objectForKey:_fob.uuid]) {
+            _textField.text = [USER_DEFAULT objectForKey:_fob.uuid];
+        }else{
+            _textField.text = [_fob idString];
+        }
         _textField.textAlignment = NSTextAlignmentCenter;
-        _textField.borderStyle = UITextBorderStyleBezel;
+        _textField.borderStyle = UITextBorderStyleRoundedRect;
+        _textField.delegate = self;
+        _textField.returnKeyType = UIReturnKeyDone;
+        _textField.enablesReturnKeyAutomatically = YES;
         [cell addSubview:_textField];
     }else if(indexPath.row == 1)
     {
@@ -148,8 +156,33 @@ static NSUInteger scanInt = 16;
 {
     if(buttonIndex == 1) {
         [_person deleteFob:self.fob];
-        
+        [USER_DEFAULT removeObjectForKey:_fob.uuid];
+        [USER_DEFAULT synchronize];
         [[self navigationController] popViewControllerAnimated:YES];
     }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField.text length]) {
+        [USER_DEFAULT removeObjectForKey:_fob.uuid];
+        [USER_DEFAULT setObject:textField.text forKey:_fob.uuid];
+        [USER_DEFAULT synchronize];
+    }else{
+        UIAlertView* question = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                           message:[NSString stringWithFormat:@"您修改的温度计名字不能为空"]
+                                                          delegate:self
+                                                 cancelButtonTitle:@"确定"
+                                                 otherButtonTitles:nil, nil];
+        [question show];
+    }
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

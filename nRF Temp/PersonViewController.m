@@ -102,8 +102,13 @@
     NSManagedObjectContext *context = _detailInfo.managedObjectContext;
     
     if ([USER_DEFAULT stringForKey:KEY_NICKNAME_STR] == nil) {
-        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"昵称不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
+        if (_detailInfo.name) {
+            [USER_DEFAULT setObject:_detailInfo.name forKey:KEY_NICKNAME_STR];
+            [USER_DEFAULT synchronize];
+        }else{
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"昵称不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }
         return;
     }
     

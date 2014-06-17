@@ -70,23 +70,20 @@
 		0FB517D819212B760070344F /* battery_80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517D119212B760070344F /* battery_80@2x.png */; };
 		0FB517D919212B760070344F /* graph_main_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517D219212B760070344F /* graph_main_bg@2x.png */; };
 		0FB517DB19212F700070344F /* morehl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517DA19212F700070344F /* morehl@2x.png */; };
-		0FBC5787191F4BBE006AEA01 /* 0-BARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5778191F4BBE006AEA01 /* 0-BARS.png */; };
-		0FBC5788191F4BBE006AEA01 /* 0-BARS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5779191F4BBE006AEA01 /* 0-BARS@2x.png */; };
-		0FBC5789191F4BBE006AEA01 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC577A191F4BBE006AEA01 /* Contents.json */; };
-		0FBC578A191F4BBE006AEA01 /* 1-BAR.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC577C191F4BBE006AEA01 /* 1-BAR.png */; };
-		0FBC578B191F4BBE006AEA01 /* 1-BAR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC577D191F4BBE006AEA01 /* 1-BAR@2x.png */; };
-		0FBC578C191F4BBE006AEA01 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC577E191F4BBE006AEA01 /* Contents.json */; };
-		0FBC578D191F4BBE006AEA01 /* 2-BARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5780191F4BBE006AEA01 /* 2-BARS.png */; };
-		0FBC578E191F4BBE006AEA01 /* 2-BARS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5781191F4BBE006AEA01 /* 2-BARS@2x.png */; };
-		0FBC578F191F4BBE006AEA01 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5782191F4BBE006AEA01 /* Contents.json */; };
-		0FBC5790191F4BBE006AEA01 /* 3-BARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5784191F4BBE006AEA01 /* 3-BARS.png */; };
-		0FBC5791191F4BBE006AEA01 /* 3-BARS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5785191F4BBE006AEA01 /* 3-BARS@2x.png */; };
-		0FBC5792191F4BBE006AEA01 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC5786191F4BBE006AEA01 /* Contents.json */; };
 		0FBC5795191F9385006AEA01 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC5794191F9385006AEA01 /* DeviceDetailViewController.m */; };
 		0FBC5798191FC690006AEA01 /* recordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC5797191FC690006AEA01 /* recordCell.m */; };
 		0FBC579B191FC74A006AEA01 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC579A191FC74A006AEA01 /* RecordViewController.m */; };
 		5EBDB76F18E9711E00491B74 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */; };
 		5EBDB77218E9747700491B74 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB77118E9747700491B74 /* MainViewController.m */; };
+		6406709A1950160400928CAB /* TemperatureNewFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670991950160400928CAB /* TemperatureNewFobCell.m */; };
+		6406709F19501DF400928CAB /* ic_signal_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709B19501DF400928CAB /* ic_signal_0.png */; };
+		640670A019501DF400928CAB /* ic_signal_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709C19501DF400928CAB /* ic_signal_1.png */; };
+		640670A119501DF400928CAB /* ic_signal_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709D19501DF400928CAB /* ic_signal_2.png */; };
+		640670A219501DF400928CAB /* ic_signal_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709E19501DF400928CAB /* ic_signal_3.png */; };
+		640670A61950204A00928CAB /* UIImage+scaleToSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670A51950204A00928CAB /* UIImage+scaleToSize.m */; };
+		640670A9195022BF00928CAB /* btn_radio_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670A7195022BF00928CAB /* btn_radio_off.png */; };
+		640670AA195022BF00928CAB /* btn_radio_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670A8195022BF00928CAB /* btn_radio_on.png */; };
+		640670AC1950315300928CAB /* default_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 640670AB1950315300928CAB /* default_head.png */; };
 		6407987318ED33BA00A21F74 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987218ED33BA00A21F74 /* PersonViewController.m */; };
 		6407987618ED39B900A21F74 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987518ED39B900A21F74 /* PersonListViewController.m */; };
 		64097C5919050AEC00C0E49D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2519050AEC00C0E49D /* 0.png */; };
@@ -297,18 +294,6 @@
 		0FB517D119212B760070344F /* battery_80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_80@2x.png"; sourceTree = "<group>"; };
 		0FB517D219212B760070344F /* graph_main_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_main_bg@2x.png"; sourceTree = "<group>"; };
 		0FB517DA19212F700070344F /* morehl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morehl@2x.png"; sourceTree = "<group>"; };
-		0FBC5778191F4BBE006AEA01 /* 0-BARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0-BARS.png"; sourceTree = "<group>"; };
-		0FBC5779191F4BBE006AEA01 /* 0-BARS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0-BARS@2x.png"; sourceTree = "<group>"; };
-		0FBC577A191F4BBE006AEA01 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		0FBC577C191F4BBE006AEA01 /* 1-BAR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-BAR.png"; sourceTree = "<group>"; };
-		0FBC577D191F4BBE006AEA01 /* 1-BAR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-BAR@2x.png"; sourceTree = "<group>"; };
-		0FBC577E191F4BBE006AEA01 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		0FBC5780191F4BBE006AEA01 /* 2-BARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-BARS.png"; sourceTree = "<group>"; };
-		0FBC5781191F4BBE006AEA01 /* 2-BARS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-BARS@2x.png"; sourceTree = "<group>"; };
-		0FBC5782191F4BBE006AEA01 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		0FBC5784191F4BBE006AEA01 /* 3-BARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-BARS.png"; sourceTree = "<group>"; };
-		0FBC5785191F4BBE006AEA01 /* 3-BARS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-BARS@2x.png"; sourceTree = "<group>"; };
-		0FBC5786191F4BBE006AEA01 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		0FBC5793191F9385006AEA01 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
 		0FBC5794191F9385006AEA01 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		0FBC5796191FC690006AEA01 /* recordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordCell.h; sourceTree = "<group>"; };
@@ -319,6 +304,17 @@
 		5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
 		5EBDB77018E9747700491B74 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5EBDB77118E9747700491B74 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		640670981950160400928CAB /* TemperatureNewFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureNewFobCell.h; sourceTree = "<group>"; };
+		640670991950160400928CAB /* TemperatureNewFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureNewFobCell.m; sourceTree = "<group>"; };
+		6406709B19501DF400928CAB /* ic_signal_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_signal_0.png; sourceTree = "<group>"; };
+		6406709C19501DF400928CAB /* ic_signal_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_signal_1.png; sourceTree = "<group>"; };
+		6406709D19501DF400928CAB /* ic_signal_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_signal_2.png; sourceTree = "<group>"; };
+		6406709E19501DF400928CAB /* ic_signal_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_signal_3.png; sourceTree = "<group>"; };
+		640670A41950204A00928CAB /* UIImage+scaleToSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+scaleToSize.h"; sourceTree = "<group>"; };
+		640670A51950204A00928CAB /* UIImage+scaleToSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+scaleToSize.m"; sourceTree = "<group>"; };
+		640670A7195022BF00928CAB /* btn_radio_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_radio_off.png; sourceTree = "<group>"; };
+		640670A8195022BF00928CAB /* btn_radio_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_radio_on.png; sourceTree = "<group>"; };
+		640670AB1950315300928CAB /* default_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_head.png; sourceTree = "<group>"; };
 		6407987118ED33BA00A21F74 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		6407987218ED33BA00A21F74 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		6407987418ED39B900A21F74 /* PersonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListViewController.h; sourceTree = "<group>"; };
@@ -630,52 +626,24 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
-				0FBC5777191F4BBE006AEA01 /* 0-BARS.imageset */,
-				0FBC577B191F4BBE006AEA01 /* 1-BAR.imageset */,
-				0FBC577F191F4BBE006AEA01 /* 2-BARS.imageset */,
-				0FBC5783191F4BBE006AEA01 /* 3-BARS.imageset */,
+				640670AB1950315300928CAB /* default_head.png */,
+				640670A7195022BF00928CAB /* btn_radio_off.png */,
+				640670A8195022BF00928CAB /* btn_radio_on.png */,
+				6406709B19501DF400928CAB /* ic_signal_0.png */,
+				6406709C19501DF400928CAB /* ic_signal_1.png */,
+				6406709D19501DF400928CAB /* ic_signal_2.png */,
+				6406709E19501DF400928CAB /* ic_signal_3.png */,
 			);
 			path = original;
 			sourceTree = "<group>";
 		};
-		0FBC5777191F4BBE006AEA01 /* 0-BARS.imageset */ = {
+		640670A31950202600928CAB /* UIImage+scaleToSize */ = {
 			isa = PBXGroup;
 			children = (
-				0FBC5778191F4BBE006AEA01 /* 0-BARS.png */,
-				0FBC5779191F4BBE006AEA01 /* 0-BARS@2x.png */,
-				0FBC577A191F4BBE006AEA01 /* Contents.json */,
+				640670A41950204A00928CAB /* UIImage+scaleToSize.h */,
+				640670A51950204A00928CAB /* UIImage+scaleToSize.m */,
 			);
-			path = "0-BARS.imageset";
-			sourceTree = "<group>";
-		};
-		0FBC577B191F4BBE006AEA01 /* 1-BAR.imageset */ = {
-			isa = PBXGroup;
-			children = (
-				0FBC577C191F4BBE006AEA01 /* 1-BAR.png */,
-				0FBC577D191F4BBE006AEA01 /* 1-BAR@2x.png */,
-				0FBC577E191F4BBE006AEA01 /* Contents.json */,
-			);
-			path = "1-BAR.imageset";
-			sourceTree = "<group>";
-		};
-		0FBC577F191F4BBE006AEA01 /* 2-BARS.imageset */ = {
-			isa = PBXGroup;
-			children = (
-				0FBC5780191F4BBE006AEA01 /* 2-BARS.png */,
-				0FBC5781191F4BBE006AEA01 /* 2-BARS@2x.png */,
-				0FBC5782191F4BBE006AEA01 /* Contents.json */,
-			);
-			path = "2-BARS.imageset";
-			sourceTree = "<group>";
-		};
-		0FBC5783191F4BBE006AEA01 /* 3-BARS.imageset */ = {
-			isa = PBXGroup;
-			children = (
-				0FBC5784191F4BBE006AEA01 /* 3-BARS.png */,
-				0FBC5785191F4BBE006AEA01 /* 3-BARS@2x.png */,
-				0FBC5786191F4BBE006AEA01 /* Contents.json */,
-			);
-			path = "3-BARS.imageset";
+			name = "UIImage+scaleToSize";
 			sourceTree = "<group>";
 		};
 		641D78B718FFEDCB008F62D3 /* Toast */ = {
@@ -1087,6 +1055,8 @@
 				5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */,
 				931D1AA3162D9994007F8617 /* TemperatureFobCell.h */,
 				931D1AA4162D9994007F8617 /* TemperatureFobCell.m */,
+				640670981950160400928CAB /* TemperatureNewFobCell.h */,
+				640670991950160400928CAB /* TemperatureNewFobCell.m */,
 				9380AA2217E0B76A00DDB73E /* BatteryView.m */,
 				9380AA2117E0B76A00DDB73E /* BatteryView.h */,
 				64AAE3C718F3D90900036D0F /* PersonPhotoCell.h */,
@@ -1137,6 +1107,7 @@
 		93E4E1EE162D5E2000974286 /* nRF Temp */ = {
 			isa = PBXGroup;
 			children = (
+				640670A31950202600928CAB /* UIImage+scaleToSize */,
 				649B060C1929A33D002B642E /* NSDate+JBCommon */,
 				0F19CAD91914001200BF9312 /* MainStoryboard.storyboard */,
 				649B7213190F8F59005E4F2E /* SBJson */,
@@ -1251,10 +1222,10 @@
 				0F19CAB21913E44700BF9312 /* a返回2.png in Resources */,
 				649EB9BD18FCDE0400C3D6FB /* 宝贝体温记录-20140411.psd in Resources */,
 				0F19CA7D1913E2F200BF9312 /* a1.png in Resources */,
-				0FBC5791191F4BBE006AEA01 /* 3-BARS@2x.png in Resources */,
+				640670A9195022BF00928CAB /* btn_radio_off.png in Resources */,
 				0F19CAAB1913E44700BF9312 /* a常识icon.png in Resources */,
 				64097C8019050AEC00C0E49D /* 设置.png in Resources */,
-				0FBC5787191F4BBE006AEA01 /* 0-BARS.png in Resources */,
+				640670A119501DF400928CAB /* ic_signal_2.png in Resources */,
 				649EB9D718FCDE0400C3D6FB /* 设置.psd in Resources */,
 				93E4E1F3162D5E2000974286 /* InfoPlist.strings in Resources */,
 				641A721519061C2500CC7041 /* color@2x.png in Resources */,
@@ -1277,11 +1248,12 @@
 				0F19CAC31913E44700BF9312 /* a温度警报icon.png in Resources */,
 				0F19CA851913E2F200BF9312 /* a9.png in Resources */,
 				0FB517D519212B760070344F /* battery_20@2x.png in Resources */,
+				640670A019501DF400928CAB /* ic_signal_1.png in Resources */,
 				64097C6019050AEC00C0E49D /* 7.png in Resources */,
 				641A720F190616C200CC7041 /* save@2x.png in Resources */,
 				64097C8219050AEC00C0E49D /* 提醒2icon.png in Resources */,
+				640670AA195022BF00928CAB /* btn_radio_on.png in Resources */,
 				641A721819061C2500CC7041 /* temperatureGap@2x.png in Resources */,
-				0FBC5789191F4BBE006AEA01 /* Contents.json in Resources */,
 				64097C5B19050AEC00C0E49D /* 2.png in Resources */,
 				9380A9CF17DF4A4B00DDB73E /* Images.xcassets in Resources */,
 				64097C8C19050AEC00C0E49D /* 自定义提醒icon.png in Resources */,
@@ -1289,7 +1261,6 @@
 				0FB517DB19212F700070344F /* morehl@2x.png in Resources */,
 				0F19CAB81913E44700BF9312 /* a结束按钮2.png in Resources */,
 				64D6F8CD190E47980070F8C5 /* 1024.png in Resources */,
-				0FBC578C191F4BBE006AEA01 /* Contents.json in Resources */,
 				0F19CA811913E2F200BF9312 /* a5.png in Resources */,
 				0F19CA7E1913E2F200BF9312 /* a2.png in Resources */,
 				0F19CABE1913E44700BF9312 /* a设置.png in Resources */,
@@ -1298,15 +1269,13 @@
 				0F19CABD1913E44700BF9312 /* a删除2.png in Resources */,
 				64097C6819050AEC00C0E49D /* 保存2.png in Resources */,
 				64097C6C19050AEC00C0E49D /* 点击头像状态.png in Resources */,
-				0FBC5792191F4BBE006AEA01 /* Contents.json in Resources */,
+				640670AC1950315300928CAB /* default_head.png in Resources */,
 				64E1E24F1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin in Resources */,
 				64097C6419050AEC00C0E49D /* Default@2x.png in Resources */,
 				64097C5D19050AEC00C0E49D /* 4.png in Resources */,
-				0FBC578E191F4BBE006AEA01 /* 2-BARS@2x.png in Resources */,
 				0F2AF3EE1915436B00B71443 /* plot@2x.png in Resources */,
 				0F19CA7C1913E2F200BF9312 /* a0.png in Resources */,
 				641A721619061C2500CC7041 /* delete@2x.png in Resources */,
-				0FBC578B191F4BBE006AEA01 /* 1-BAR@2x.png in Resources */,
 				0F19CAB51913E44700BF9312 /* a间隔icon.png in Resources */,
 				64097C5C19050AEC00C0E49D /* 3.png in Resources */,
 				0F19CAC51913E44700BF9312 /* a新增提醒icon.png in Resources */,
@@ -1319,7 +1288,6 @@
 				64D6F8D6190E47980070F8C5 /* icon.psd in Resources */,
 				0F19CAC91913E44700BF9312 /* a自定义提醒icon.png in Resources */,
 				64097C6E19050AEC00C0E49D /* 度.png in Resources */,
-				0FBC5790191F4BBE006AEA01 /* 3-BARS.png in Resources */,
 				641A721B1906382D00CC7041 /* backhl@2x.png in Resources */,
 				64097C8419050AEC00C0E49D /* 头像.png in Resources */,
 				64097C6619050AEC00C0E49D /* 宝贝体温记录-20140411.png in Resources */,
@@ -1327,12 +1295,10 @@
 				0F19CABF1913E44700BF9312 /* a时间刻度.png in Resources */,
 				0F40EEB9191A78050054894B /* 4031.wav in Resources */,
 				640D9CC6191A0F650097386B /* fourTableViewController.xib in Resources */,
-				0FBC578A191F4BBE006AEA01 /* 1-BAR.png in Resources */,
 				0F19CAC21913E44700BF9312 /* a头像.png in Resources */,
 				641A72241906556600CC7041 /* more@2x.png in Resources */,
 				64097C8B19050AEC00C0E49D /* 状态底图.png in Resources */,
 				64E1E24D1908FC9F00D274A1 /* binary_list.json in Resources */,
-				0FBC578F191F4BBE006AEA01 /* Contents.json in Resources */,
 				0F19CA831913E2F200BF9312 /* a7.png in Resources */,
 				64097C6219050AEC00C0E49D /* 9.png in Resources */,
 				0F19CACD1913E4AC00BF9312 /* a宝贝体温记录-20140411.png in Resources */,
@@ -1342,13 +1308,11 @@
 				64097C7B19050AEC00C0E49D /* 刻度页面.png in Resources */,
 				0F19CABC1913E44700BF9312 /* a删除.png in Resources */,
 				649B7210190F7E6D005E4F2E /* disease in Resources */,
-				0FBC578D191F4BBE006AEA01 /* 2-BARS.png in Resources */,
 				64D7977C190F412C007442CE /* panel@2x.png in Resources */,
 				649EB9C618FCDE0400C3D6FB /* 数字.psd in Resources */,
 				649A856F1921E3BD00ED7445 /* a开关1.png in Resources */,
 				64097C7C19050AEC00C0E49D /* 历史记录icon.png in Resources */,
 				0F19CAB41913E44700BF9312 /* a更多2.png in Resources */,
-				0FBC5788191F4BBE006AEA01 /* 0-BARS@2x.png in Resources */,
 				649A85701921E3BD00ED7445 /* a开关2.png in Resources */,
 				0FB517D619212B760070344F /* battery_40@2x.png in Resources */,
 				0F19CACF1913E4AC00BF9312 /* a点击状态.png in Resources */,
@@ -1373,6 +1337,8 @@
 				64097C7819050AEC00C0E49D /* 开关2.png in Resources */,
 				93799D2F166E961700351938 /* help.html in Resources */,
 				0F19CAB61913E44700BF9312 /* a箭头.png in Resources */,
+				640670A219501DF400928CAB /* ic_signal_3.png in Resources */,
+				6406709F19501DF400928CAB /* ic_signal_0.png in Resources */,
 				0F40EEC9191A963B0054894B /* fourDetalViewController.xib in Resources */,
 				0F19CAB01913E44700BF9312 /* a度.png in Resources */,
 				0F02E1F7191936C000722AFA /* medicine-2 in Resources */,
@@ -1408,9 +1374,11 @@
 				93E4E1F9162D5E2000974286 /* AppDelegate.m in Sources */,
 				649B722F190F8F59005E4F2E /* SBJsonStreamParser.m in Sources */,
 				64E1E2471908FC5700D274A1 /* ProgressViewController.m in Sources */,
+				640670A61950204A00928CAB /* UIImage+scaleToSize.m in Sources */,
 				640D9CCE191A210D0097386B /* soundVibrateManager.m in Sources */,
 				640D9CBB1919F9290097386B /* twoKnowsViewController.m in Sources */,
 				0F40EEBC191A7D720054894B /* threeView.m in Sources */,
+				6406709A1950160400928CAB /* TemperatureNewFobCell.m in Sources */,
 				649B7236190F8F59005E4F2E /* SBJsonTokeniser.m in Sources */,
 				93E4E205162D5E2000974286 /* ListViewController.m in Sources */,
 				649B7237190F8F59005E4F2E /* SBJsonUTF8Stream.m in Sources */,

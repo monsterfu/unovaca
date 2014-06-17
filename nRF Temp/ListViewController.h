@@ -14,10 +14,18 @@
 #import "TemperatureFob.h"
 #import "TemperatureFobCell.h"
 #import "PersonDetailInfo.h"
+#import "TemperatureNewFobCell.h"
 
-@interface ListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ConnectionManagerDelegate, TemperatureFobDelegate>
+@interface ListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ConnectionManagerDelegate, TemperatureFobDelegate,TemperatureFobCellDelegate,UIAlertViewDelegate>
 {
     NSMutableArray* _fobArray;
+    
+    TemperatureNewFobCell* _newFobCell;
+    TemperatureFobCell * _storeFobCell;
+    
+    UIAlertView* _alertView;
+    
+    TemperatureFob* _fob;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
