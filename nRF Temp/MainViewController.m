@@ -54,6 +54,14 @@
         self.navigationController.navigationBar.translucent = NO;
     }
     
+//    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+//    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+//    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+//    self.navigationItem.leftBarButtonItem = _cancelButton;
+//    
+//    [self.navigationController.navigationBar.backItem.backBarButtonItem setBackButtonBackgroundImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+//    [self.rightButton.image scaleToSize:self.rightButton.image size:CGSizeMake(40, 30)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     

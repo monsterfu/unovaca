@@ -41,13 +41,14 @@
     _mutableArray = [[NSMutableArray alloc]initWithObjects:@"照片",@"昵称",@"生日",@"性别",@"身高",@"体重",@"血型", nil];
     
 //    _detailInfo = [PersonDetailInfo addPersonDetailInfoWithName:@"宝贝"];
-    
-    _saveButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"save.png"] style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
-//    [_saveButton setImageInsets:UIEdgeInsetsMake(3, 0, 3, 6)];
+    UIImage* saveImg = [UIImage imageNamed:@"ic_titlebar_save_remind_normal"];
+    _saveButton = [[UIBarButtonItem alloc]initWithImage:[saveImg scaleToSize:saveImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
+    [_saveButton setImageInsets:UIEdgeInsetsMake(3, 0, 3, 6)];
     self.navigationItem.rightBarButtonItem = _saveButton;
     
-    _cancelButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backhl.png"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed)];
-//    [_cancelButton setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     
     [self configureDefault];

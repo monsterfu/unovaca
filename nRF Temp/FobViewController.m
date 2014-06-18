@@ -63,11 +63,20 @@
     {
         [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15.0, 0, 15.0)];
     }
-//    UIBarButtonItem* backButtom = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backhl.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-////    [backButtom setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
-//    self.navigationItem.leftBarButtonItem = backButtom;
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
+    
+    UIImage* graphImg = [UIImage imageNamed:@"ic_titlebar_graph_history_normal"];
+    UIBarButtonItem* graphButton = [[UIBarButtonItem alloc]initWithImage:[graphImg scaleToSize:graphImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(graphButtonPressed)];
+    [graphButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.rightBarButtonItem = graphButton;
 }
-
+-(void)graphButtonPressed
+{
+    [self performSegueWithIdentifier:@"showGraph" sender:nil];
+}
 -(void)backButtonPressed
 {
     [self.navigationController popViewControllerAnimated:YES];

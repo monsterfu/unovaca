@@ -30,9 +30,10 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
-//    UIBarButtonItem* backButtom = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backhl"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-////    [backButtom setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
-//    self.navigationItem.leftBarButtonItem = backButtom;
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
 }
 
 -(void)backButtonPressed

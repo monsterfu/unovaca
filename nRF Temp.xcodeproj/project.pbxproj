@@ -62,6 +62,18 @@
 		0F40EEC1191A938E0054894B /* fourTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F40EEBF191A938E0054894B /* fourTableViewController.m */; };
 		0F40EEC8191A963B0054894B /* fourDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F40EEC6191A963B0054894B /* fourDetalViewController.m */; };
 		0F40EEC9191A963B0054894B /* fourDetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F40EEC7191A963B0054894B /* fourDetalViewController.xib */; };
+		0F77AFDE1951E389005F1063 /* ic_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFD81951E389005F1063 /* ic_back_normal.png */; };
+		0F77AFDF1951E389005F1063 /* ic_back_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFD91951E389005F1063 /* ic_back_pressed.png */; };
+		0F77AFE01951E389005F1063 /* ic_titlebar_graph_history_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFDA1951E389005F1063 /* ic_titlebar_graph_history_normal.png */; };
+		0F77AFE11951E389005F1063 /* ic_titlebar_graph_history_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFDB1951E389005F1063 /* ic_titlebar_graph_history_pressed.png */; };
+		0F77AFE21951E389005F1063 /* ic_titlebar_save_remind_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFDC1951E389005F1063 /* ic_titlebar_save_remind_normal.png */; };
+		0F77AFE31951E389005F1063 /* ic_titlebar_save_remind_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFDD1951E389005F1063 /* ic_titlebar_save_remind_pressed.png */; };
+		0F77AFEA1951E47A005F1063 /* ic_titlebar_add_kid_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE41951E47A005F1063 /* ic_titlebar_add_kid_normal.png */; };
+		0F77AFEB1951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE51951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png */; };
+		0F77AFEC1951E47A005F1063 /* ic_titlebar_delete_remind_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE61951E47A005F1063 /* ic_titlebar_delete_remind_normal.png */; };
+		0F77AFED1951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE71951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png */; };
+		0F77AFEE1951E47A005F1063 /* ic_titlebar_setting_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE81951E47A005F1063 /* ic_titlebar_setting_normal.png */; };
+		0F77AFEF1951E47A005F1063 /* ic_titlebar_setting_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFE91951E47A005F1063 /* ic_titlebar_setting_pressed.png */; };
 		0FB517D319212B760070344F /* battery_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517CC19212B760070344F /* battery_100@2x.png */; };
 		0FB517D419212B760070344F /* battery_10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517CD19212B760070344F /* battery_10@2x.png */; };
 		0FB517D519212B760070344F /* battery_20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB517CE19212B760070344F /* battery_20@2x.png */; };
@@ -291,6 +303,18 @@
 		0F40EEC5191A963B0054894B /* fourDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fourDetalViewController.h; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.h; sourceTree = "<group>"; };
 		0F40EEC6191A963B0054894B /* fourDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fourDetalViewController.m; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.m; sourceTree = "<group>"; };
 		0F40EEC7191A963B0054894B /* fourDetalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = fourDetalViewController.xib; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.xib; sourceTree = "<group>"; };
+		0F77AFD81951E389005F1063 /* ic_back_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_normal.png; sourceTree = "<group>"; };
+		0F77AFD91951E389005F1063 /* ic_back_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_pressed.png; sourceTree = "<group>"; };
+		0F77AFDA1951E389005F1063 /* ic_titlebar_graph_history_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_graph_history_normal.png; sourceTree = "<group>"; };
+		0F77AFDB1951E389005F1063 /* ic_titlebar_graph_history_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_graph_history_pressed.png; sourceTree = "<group>"; };
+		0F77AFDC1951E389005F1063 /* ic_titlebar_save_remind_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_save_remind_normal.png; sourceTree = "<group>"; };
+		0F77AFDD1951E389005F1063 /* ic_titlebar_save_remind_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_save_remind_pressed.png; sourceTree = "<group>"; };
+		0F77AFE41951E47A005F1063 /* ic_titlebar_add_kid_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_add_kid_normal.png; sourceTree = "<group>"; };
+		0F77AFE51951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_add_kid_pressed.png.png; sourceTree = "<group>"; };
+		0F77AFE61951E47A005F1063 /* ic_titlebar_delete_remind_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_delete_remind_normal.png; sourceTree = "<group>"; };
+		0F77AFE71951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_delete_remind_pressed.png; sourceTree = "<group>"; };
+		0F77AFE81951E47A005F1063 /* ic_titlebar_setting_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_setting_normal.png; sourceTree = "<group>"; };
+		0F77AFE91951E47A005F1063 /* ic_titlebar_setting_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_setting_pressed.png; sourceTree = "<group>"; };
 		0FB517CC19212B760070344F /* battery_100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_100@2x.png"; sourceTree = "<group>"; };
 		0FB517CD19212B760070344F /* battery_10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_10@2x.png"; sourceTree = "<group>"; };
 		0FB517CE19212B760070344F /* battery_20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_20@2x.png"; sourceTree = "<group>"; };
@@ -640,6 +664,18 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				0F77AFE41951E47A005F1063 /* ic_titlebar_add_kid_normal.png */,
+				0F77AFE51951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png */,
+				0F77AFE61951E47A005F1063 /* ic_titlebar_delete_remind_normal.png */,
+				0F77AFE71951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png */,
+				0F77AFE81951E47A005F1063 /* ic_titlebar_setting_normal.png */,
+				0F77AFE91951E47A005F1063 /* ic_titlebar_setting_pressed.png */,
+				0F77AFD81951E389005F1063 /* ic_back_normal.png */,
+				0F77AFD91951E389005F1063 /* ic_back_pressed.png */,
+				0F77AFDA1951E389005F1063 /* ic_titlebar_graph_history_normal.png */,
+				0F77AFDB1951E389005F1063 /* ic_titlebar_graph_history_pressed.png */,
+				0F77AFDC1951E389005F1063 /* ic_titlebar_save_remind_normal.png */,
+				0F77AFDD1951E389005F1063 /* ic_titlebar_save_remind_pressed.png */,
 				640670AE19503B5100928CAB /* reminder_alarm.png */,
 				640670AB1950315300928CAB /* default_head.png */,
 				640670A7195022BF00928CAB /* btn_radio_off.png */,
@@ -1255,6 +1291,8 @@
 				0F02E1F91919440100722AFA /* disease-2 in Resources */,
 				64E1E24E1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin in Resources */,
 				0F19CAC11913E44700BF9312 /* a提醒icon.png in Resources */,
+				0F77AFED1951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png in Resources */,
+				0F77AFEA1951E47A005F1063 /* ic_titlebar_add_kid_normal.png in Resources */,
 				0F19CABA1913E44700BF9312 /* a历史记录icon.png in Resources */,
 				640D9CBC1919F9290097386B /* twoKnowsViewController.xib in Resources */,
 				64097C6519050AEC00C0E49D /* 帮助icon.png in Resources */,
@@ -1273,6 +1311,7 @@
 				0FB517D819212B760070344F /* battery_80@2x.png in Resources */,
 				0F19CAB11913E44700BF9312 /* a返回.png in Resources */,
 				649B7212190F8872005E4F2E /* medicine_card.txt in Resources */,
+				0F77AFE31951E389005F1063 /* ic_titlebar_save_remind_pressed.png in Resources */,
 				64097C6319050AEC00C0E49D /* 512.png in Resources */,
 				0F19CAA81913E44700BF9312 /* a帮助icon.png in Resources */,
 				64097C8619050AEC00C0E49D /* 温度警报icon.png in Resources */,
@@ -1290,6 +1329,7 @@
 				640670A019501DF400928CAB /* ic_signal_1.png in Resources */,
 				64097C6019050AEC00C0E49D /* 7.png in Resources */,
 				641A720F190616C200CC7041 /* save@2x.png in Resources */,
+				0F77AFDE1951E389005F1063 /* ic_back_normal.png in Resources */,
 				64097C8219050AEC00C0E49D /* 提醒2icon.png in Resources */,
 				640670AA195022BF00928CAB /* btn_radio_on.png in Resources */,
 				641A721819061C2500CC7041 /* temperatureGap@2x.png in Resources */,
@@ -1323,10 +1363,12 @@
 				0F19CAAD1913E44700BF9312 /* a单选对勾.png in Resources */,
 				0F19CAAF1913E44700BF9312 /* a点击头像状态.png in Resources */,
 				64097C6A19050AEC00C0E49D /* 吃药提醒icon.png in Resources */,
+				0F77AFEE1951E47A005F1063 /* ic_titlebar_setting_normal.png in Resources */,
 				64097C7319050AEC00C0E49D /* 间隔icon.png in Resources */,
 				0FB517D319212B760070344F /* battery_100@2x.png in Resources */,
 				64D6F8D6190E47980070F8C5 /* icon.psd in Resources */,
 				0F19CAC91913E44700BF9312 /* a自定义提醒icon.png in Resources */,
+				0F77AFE01951E389005F1063 /* ic_titlebar_graph_history_normal.png in Resources */,
 				64097C6E19050AEC00C0E49D /* 度.png in Resources */,
 				641A721B1906382D00CC7041 /* backhl@2x.png in Resources */,
 				64097C8419050AEC00C0E49D /* 头像.png in Resources */,
@@ -1348,6 +1390,7 @@
 				64097C7B19050AEC00C0E49D /* 刻度页面.png in Resources */,
 				0F19CABC1913E44700BF9312 /* a删除.png in Resources */,
 				649B7210190F7E6D005E4F2E /* disease in Resources */,
+				0F77AFE11951E389005F1063 /* ic_titlebar_graph_history_pressed.png in Resources */,
 				64D7977C190F412C007442CE /* panel@2x.png in Resources */,
 				649EB9C618FCDE0400C3D6FB /* 数字.psd in Resources */,
 				649A856F1921E3BD00ED7445 /* a开关1.png in Resources */,
@@ -1361,6 +1404,7 @@
 				641A721919061C2500CC7041 /* timerGap@2x.png in Resources */,
 				64097C6919050AEC00C0E49D /* 常识icon.png in Resources */,
 				0FB517D919212B760070344F /* graph_main_bg@2x.png in Resources */,
+				0F77AFEF1951E47A005F1063 /* ic_titlebar_setting_pressed.png in Resources */,
 				0FB517D419212B760070344F /* battery_10@2x.png in Resources */,
 				0F19CAAC1913E44700BF9312 /* a吃药提醒icon.png in Resources */,
 				64D79779190F3CAC007442CE /* over@2x.png in Resources */,
@@ -1370,9 +1414,11 @@
 				641A721719061C2500CC7041 /* deletehl@2x.png in Resources */,
 				64E1E2511908FE2200D274A1 /* ble_app_template_button.bin in Resources */,
 				0F19CA821913E2F200BF9312 /* a6.png in Resources */,
+				0F77AFEB1951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png in Resources */,
 				64097C6D19050AEC00C0E49D /* 点击状态.png in Resources */,
 				0F19CAAE1913E44700BF9312 /* a点.png in Resources */,
 				0F19CAC81913E44700BF9312 /* a状态底图.png in Resources */,
+				0F77AFE21951E389005F1063 /* ic_titlebar_save_remind_normal.png in Resources */,
 				64097C6B19050AEC00C0E49D /* 点.png in Resources */,
 				64097C7819050AEC00C0E49D /* 开关2.png in Resources */,
 				93799D2F166E961700351938 /* help.html in Resources */,
@@ -1387,11 +1433,13 @@
 				64097C7419050AEC00C0E49D /* 箭头.png in Resources */,
 				0F19CACE1913E4AC00BF9312 /* a宝贝体温记录-20140411.psd in Resources */,
 				0F19CAD71914001200BF9312 /* MainStoryboard.storyboard in Resources */,
+				0F77AFEC1951E47A005F1063 /* ic_titlebar_delete_remind_normal.png in Resources */,
 				0F19CAB71913E44700BF9312 /* a结束按钮.png in Resources */,
 				64D7977A190F3CAC007442CE /* overhl@2x.png in Resources */,
 				0F19CAAA1913E44700BF9312 /* a保存2.png in Resources */,
 				64097C7719050AEC00C0E49D /* 开关1.png in Resources */,
 				641A720B190615EA00CC7041 /* back@2x.png in Resources */,
+				0F77AFDF1951E389005F1063 /* ic_back_pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

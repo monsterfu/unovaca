@@ -36,10 +36,16 @@
     [self reloadData];
     
    // self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
-    self.addButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"addnew.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addButtonPressed)];
-    self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(cancelButtonPressed)];
+    UIImage* addImg = [UIImage imageNamed:@"ic_titlebar_add_kid_normal"];
+    _addButton = [[UIBarButtonItem alloc]initWithImage:[addImg scaleToSize:addImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(addButtonPressed)];
+    [_addButton setImageInsets:UIEdgeInsetsMake(3, 0, 3, 6)];
+    self.navigationItem.rightBarButtonItem = _addButton;
     
-    self.navigationItem.rightBarButtonItem = self.addButton;
+        
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
     
 //    if (![self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
 //    {

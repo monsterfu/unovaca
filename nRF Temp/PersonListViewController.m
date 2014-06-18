@@ -42,9 +42,11 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
     
-//    UIBarButtonItem* backButtom = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backhl.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-////    [backButtom setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
-//    self.navigationItem.leftBarButtonItem = backButtom;
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
+    
     _selectedIndex = 0;
     _selectedIndex = [USER_DEFAULT integerForKey:KEY_PERSON_SELECTED];
 }

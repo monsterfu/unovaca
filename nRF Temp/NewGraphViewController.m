@@ -46,7 +46,15 @@
     [self processTimeLabel];
     
     [self processTemperatureLabel];
-    
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
+}
+
+-(void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(NSString*)timeStrFromReading:(TemperatureReading*)reading
 {
@@ -209,11 +217,11 @@
             break;
     }
 }
--(void)backButtonPressed
-{
-    GraphViewController* grahViewController = [[GraphViewController alloc]init];
-    [self.navigationController pushViewController:grahViewController animated:YES];
-}
+//-(void)backButtonPressed
+//{
+//    GraphViewController* grahViewController = [[GraphViewController alloc]init];
+//    [self.navigationController pushViewController:grahViewController animated:YES];
+//}
 
 - (void)didReceiveMemoryWarning
 {

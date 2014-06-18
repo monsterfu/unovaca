@@ -64,6 +64,11 @@ static NSUInteger scanInt = 16;
 //    self.navigationItem.leftBarButtonItem = backButtom;
     
     self.title = _fob.idString;
+    
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
 }
 
 -(void)backButtonPressed

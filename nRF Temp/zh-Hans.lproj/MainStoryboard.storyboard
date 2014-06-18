@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9qa-oB-E2B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9qa-oB-E2B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -274,7 +274,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cpt-XI-LJ8">
                         <barButtonItem key="rightBarButtonItem" image="more.png" style="plain" id="eEX-dI-nOI">
-                            <inset key="imageInsets" minX="0.0" minY="6" maxX="10" maxY="6"/>
+                            <inset key="imageInsets" minX="0.0" minY="3" maxX="10" maxY="6"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="xJc-iz-uWm" kind="push" id="WuZ-Ix-JAv"/>
@@ -577,7 +577,7 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="提醒" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kpD-n2-azh">
                                             <rect key="frame" x="72" y="11" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1064,7 +1064,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="用户列表" id="J5j-gf-KLb">
                         <barButtonItem key="rightBarButtonItem" image="addnew.png" id="b7d-8R-uGK">
-                            <inset key="imageInsets" minX="0.0" minY="6" maxX="10" maxY="6"/>
+                            <inset key="imageInsets" minX="0.0" minY="3" maxX="10" maxY="6"/>
                             <connections>
                                 <segue destination="aQo-UB-wa9" kind="push" identifier="firstPersonDetail" id="E1L-Yg-DOo"/>
                             </connections>
@@ -2378,8 +2378,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xiW-pL-UYO"/>
         <segue reference="gIL-tL-4g8"/>
+        <segue reference="xiW-pL-UYO"/>
         <segue reference="qGK-1n-xtn"/>
     </inferredMetricsTieBreakers>
 </document>
