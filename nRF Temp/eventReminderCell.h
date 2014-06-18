@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "EventReminderModel.h"
 
-@interface eventReminderCell : UITableViewCell
+@protocol eventReminderCellDelegate <NSObject>
 
+-(void)switchChanged:(BOOL)on index:(NSUInteger)index;
+
+@end
+
+@interface eventReminderCell : UITableViewCell
+{
+    id<eventReminderCellDelegate>delegate;
+}
+@property (weak, nonatomic) id<eventReminderCellDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UILabel *eventContentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *frequenceLabel;

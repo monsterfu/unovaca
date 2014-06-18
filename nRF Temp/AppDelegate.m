@@ -21,6 +21,8 @@
         //没有则创建一个
         PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝"];
         _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithInteger:20];
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
         
         NSError *error = nil;
@@ -33,7 +35,37 @@
     
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    if (application.applicationState == UIApplicationStateActive) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                            message:[NSString stringWithFormat:@"%@", alert]
+                                                           delegate:self
+                                                  cancelButtonTitle:@"知道了"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        [[soundVibrateManager sharedInstance]playAlertSound];
+        [[soundVibrateManager sharedInstance]vibrate];
+    }
+    [application setApplicationIconBadgeNumber:0];
+}
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    if (application.applicationState == UIApplicationStateActive) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                            message:[NSString stringWithFormat:@"%@", notification.alertBody]
+                                                           delegate:self
+                                                  cancelButtonTitle:@"知道了"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        [[soundVibrateManager sharedInstance]playAlertSound];
+        [[soundVibrateManager sharedInstance]vibrate];
+    }
+    [application setApplicationIconBadgeNumber:0];
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

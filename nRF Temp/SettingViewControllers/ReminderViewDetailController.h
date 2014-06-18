@@ -20,7 +20,7 @@
     eventRepeatViewCell* _repeatCell;
 }
 
-
+@property (strong, nonatomic) UILocalNotification *localNotice;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) BOOL isAdd;

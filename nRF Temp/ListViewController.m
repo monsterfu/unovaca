@@ -76,7 +76,7 @@
     [[ConnectionManager sharedInstance] startScanForFobs];
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(updateTimerCallback) userInfo:nil repeats:YES];
     
-    _fobArray = [NSMutableArray arrayWithArray:[_detailInfo allStoredFobs]];
+    _fobArray = [NSMutableArray arrayWithArray:[_detailInfo allStoredFobsPerson]];
     
     for (TemperatureFob *fob in _fobArray)
     {
@@ -140,7 +140,7 @@
 - (void) reloadData
 {
 //    self.storedFobs = [TemperatureFob allStoredFobs];
-    self.foundFobs = [_detailInfo allFoundFobs];
+    self.foundFobs = [_detailInfo allFoundFobsPerson];
     
 //    self.storedFobs = [self.storedFobs sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
 //        return [[(TemperatureFob *) obj1 idString] compare:[(TemperatureFob *) obj2 idString]];

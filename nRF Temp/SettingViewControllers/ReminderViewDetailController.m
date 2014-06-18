@@ -89,6 +89,7 @@
             abort();
         }
     }
+    [[UIApplication sharedApplication] scheduleLocalNotification:_localNotice];
     [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_EventReminderChanged object:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -143,7 +144,10 @@
     {
         _timeCell = [tableView dequeueReusableCellWithIdentifier:@"eventTimeIdentifier" forIndexPath:indexPath];
         
-        NSString* dateStr = [[[_reminderModel time].description substringToIndex:16]substringFromIndex:11];
+        NSDate* date = [NSDate dateWithTimeInterval:8*60*60 sinceDate:_reminderModel.time];
+        NSString* dateStr = [[date.description substringToIndex:16]substringFromIndex:11];
+        
+//        NSString* dateStr = [[[_reminderModel time].description substringToIndex:16]substringFromIndex:11];
         _timeCell.timeLabel.text = dateStr;
         
         return _timeCell;
@@ -170,17 +174,25 @@
 -(void)repeatRemindisOpen:(BOOL)on
 {
     _reminderModel.repeat = [NSNumber numberWithBool:on];
+    if (on) {
+        _localNotice.repeatInterval = NSDayCalendarUnit;
+    }else{
+        _localNotice.repeatInterval = NSCalendarUnitYear;
+    }
 }
 #pragma mark - eventContentViewCellDelegate
 -(void)updateTextField:(NSString*)content
 {
     _reminderModel.eventContent = content;
+    _localNotice.alertBody = content;
 }
 - (IBAction)datePickerChanged:(UIDatePicker *)sender
-{    
-    NSString* dateStr = [[[sender date].description substringToIndex:16]substringFromIndex:11];
+{
+    NSDate* date = [NSDate dateWithTimeInterval:8*60*60 sinceDate:[sender date]];
+    NSString* dateStr = [[date.description substringToIndex:16]substringFromIndex:11];
     _timeCell.timeLabel.text = dateStr;
     _reminderModel.time = sender.date;
+    _localNotice.fireDate = sender.date;
 }
 #pragma mark - timePick animate
 -(void)timePickerShow

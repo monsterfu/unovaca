@@ -26,9 +26,11 @@
 + (BOOL) deletePerson:(PersonDetailInfo *)person;
 
 - (BOOL)addFob:(TemperatureFob*)fob;
-- (TemperatureFob *) foundFobWithName:(NSString*)name;
 - (TemperatureFob *) foundFobWithUUid:(NSString*)uuid;
+- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid isSave:(BOOL)save;
 - (TemperatureFob *) createFobWithName:(NSString *)name UUid:(NSString*)uuid;
+- (NSArray *) allFoundFobsPerson;
+- (NSArray *) allStoredFobsPerson;
 - (NSArray *) allFoundFobs;
 - (NSArray *) allStoredFobs;
 

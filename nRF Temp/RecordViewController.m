@@ -33,7 +33,9 @@
     
     _recordsOfMonthArray = [NSMutableArray array];
     [_datePicker setFrame:CGRectMake(0, DEVICE_HEIGHT, DEVICE_WIDTH, 216)];
-    
+    UIView* viewBg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 20)];
+    viewBg.backgroundColor = [UIColor clearColor];
+    [_tableView setTableFooterView:viewBg];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -101,6 +103,10 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 76;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_recordsOfMonthArray count];

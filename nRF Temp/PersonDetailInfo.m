@@ -121,7 +121,7 @@
 
 - (void) deleteFoundFobs
 {
-    for (TemperatureFob *f in [self allFoundFobs])
+    for (TemperatureFob *f in [self allFoundFobsPerson])
     {
         [self deleteFob:f];
     }
@@ -152,11 +152,12 @@
     }
 }
 
-- (TemperatureFob *) foundFobWithName:(NSString*)name
+- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
     [request setFetchLimit:1];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"idString LIKE %@", name]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"uuid LIKE %@ AND accordings.name LIKE %@", uuid, self.name]];
+    
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
@@ -169,11 +170,16 @@
     return nil;
 }
 
-- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid
+- (TemperatureFob *) foundFobWithUUid:(NSString*)uuid isSave:(BOOL)save
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
     [request setFetchLimit:1];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"uuid LIKE %@", uuid]];
+    if (save) {
+        [request setPredicate:[NSPredicate predicateWithFormat:@"uuid LIKE %@ AND accordings.name LIKE %@ AND isSaved == YES", uuid, self.name]];
+    }else{
+        [request setPredicate:[NSPredicate predicateWithFormat:@"uuid LIKE %@ AND accordings.name LIKE %@ AND isSaved == NO", uuid, self.name]];
+    }
+    
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
@@ -195,16 +201,40 @@
     // Set default name and location to known value.
     fob.location = name;//@"unova";
     fob.uuid = uuid;
+    [self addFobingsObject:fob];
     return fob;
 }
 
-
+- (NSArray *) allFoundFobsPerson
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
+    NSError *error;
+    [request setPredicate:[NSPredicate predicateWithFormat:@"accordings.name LIKE %@ AND isSaved == NO", self.name]];
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error)
+    {
+        NSLog(@"Fetching readings failed: %@", error);
+    }
+    return array;
+}
+- (NSArray *) allStoredFobsPerson
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
+    NSError *error;
+    [request setPredicate:[NSPredicate predicateWithFormat:@"accordings.name LIKE %@ AND isSaved == YES", self.name]];
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error)
+    {
+        NSLog(@"Fetching readings failed: %@", error);
+    }
+    return array;
+}
 
 - (NSArray *) allFoundFobs
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"isSaved == NO"]];
     NSError *error;
+    [request setPredicate:[NSPredicate predicateWithFormat:@"isSaved == NO"]];
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
     {
@@ -215,14 +245,13 @@
 - (NSArray *) allStoredFobs
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureFob"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"isSaved == YES"]];
     NSError *error;
+    [request setPredicate:[NSPredicate predicateWithFormat:@"isSaved == YES"]];
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
     {
         NSLog(@"Fetching readings failed: %@", error);
     }
     return array;
-    
 }
 @end

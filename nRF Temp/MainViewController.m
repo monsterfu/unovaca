@@ -110,7 +110,7 @@
     
     
     if ([USER_DEFAULT stringForKey:KEY_FOBUUID]) {
-        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_FOBUUID]];
+        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_FOBUUID] isSave:YES];
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];

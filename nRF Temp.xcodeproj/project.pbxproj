@@ -148,8 +148,6 @@
 		641A721919061C2500CC7041 /* timerGap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A721419061C2400CC7041 /* timerGap@2x.png */; };
 		641A721B1906382D00CC7041 /* backhl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A721A1906382D00CC7041 /* backhl@2x.png */; };
 		641A72241906556600CC7041 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A72231906556600CC7041 /* more@2x.png */; };
-		641D78B618FFED4B008F62D3 /* IVMallTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D78B518FFED4B008F62D3 /* IVMallTools.m */; };
-		641D78BA18FFEDCB008F62D3 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D78B918FFEDCB008F62D3 /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		64252E7F1925F8CC00D454D4 /* RecordDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */; };
 		64252E821926116800D454D4 /* NewGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E811926116800D454D4 /* NewGraphViewController.m */; };
 		64252E8519261D2900D454D4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E8419261D2900D454D4 /* GraphView.m */; };
@@ -399,10 +397,6 @@
 		641A721419061C2400CC7041 /* timerGap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timerGap@2x.png"; sourceTree = "<group>"; };
 		641A721A1906382D00CC7041 /* backhl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backhl@2x.png"; sourceTree = "<group>"; };
 		641A72231906556600CC7041 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
-		641D78B418FFED4B008F62D3 /* IVMallTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVMallTools.h; sourceTree = "<group>"; };
-		641D78B518FFED4B008F62D3 /* IVMallTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVMallTools.m; sourceTree = "<group>"; };
-		641D78B818FFEDCB008F62D3 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
-		641D78B918FFEDCB008F62D3 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		64252E7D1925F8CC00D454D4 /* RecordDateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDateSelectViewController.h; sourceTree = "<group>"; };
 		64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDateSelectViewController.m; sourceTree = "<group>"; };
 		64252E801926116800D454D4 /* NewGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGraphViewController.h; sourceTree = "<group>"; };
@@ -658,6 +652,39 @@
 			path = original;
 			sourceTree = "<group>";
 		};
+		64034D2A19517760001B9CBE /* viewViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				64252E7D1925F8CC00D454D4 /* RecordDateSelectViewController.h */,
+				64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */,
+				0FBC5799191FC74A006AEA01 /* RecordViewController.h */,
+				0FBC579A191FC74A006AEA01 /* RecordViewController.m */,
+				0FBC5793191F9385006AEA01 /* DeviceDetailViewController.h */,
+				0FBC5794191F9385006AEA01 /* DeviceDetailViewController.m */,
+				93E4E203162D5E2000974286 /* ListViewController.h */,
+				93E4E204162D5E2000974286 /* ListViewController.m */,
+				93E4E206162D5E2000974286 /* FobViewController.h */,
+				93E4E207162D5E2000974286 /* FobViewController.m */,
+				93581B501631551B004BF458 /* GraphViewController.h */,
+				93581B511631551B004BF458 /* GraphViewController.m */,
+				64252E801926116800D454D4 /* NewGraphViewController.h */,
+				64252E811926116800D454D4 /* NewGraphViewController.m */,
+				64252E8319261D2900D454D4 /* GraphView.h */,
+				64252E8419261D2900D454D4 /* GraphView.m */,
+				5EBDB77018E9747700491B74 /* MainViewController.h */,
+				5EBDB77118E9747700491B74 /* MainViewController.m */,
+				6407987118ED33BA00A21F74 /* PersonViewController.h */,
+				6407987218ED33BA00A21F74 /* PersonViewController.m */,
+				64E9021918EE47BD00E9E72B /* PersonDetailSetViewController.h */,
+				64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */,
+				6407987418ED39B900A21F74 /* PersonListViewController.h */,
+				6407987518ED39B900A21F74 /* PersonListViewController.m */,
+				64E9021C18EEA49C00E9E72B /* SettingViewController.h */,
+				64E9021D18EEA49C00E9E72B /* SettingViewController.m */,
+			);
+			name = viewViewControllers;
+			sourceTree = "<group>";
+		};
 		640670A31950202600928CAB /* UIImage+scaleToSize */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,15 +706,6 @@
 			children = (
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		641D78B718FFEDCB008F62D3 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				641D78B818FFEDCB008F62D3 /* Toast+UIView.h */,
-				641D78B918FFEDCB008F62D3 /* Toast+UIView.m */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		649B060C1929A33D002B642E /* NSDate+JBCommon */ = {
@@ -948,36 +966,8 @@
 		933C8DC41636DA940041D15F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				641D78B718FFEDCB008F62D3 /* Toast */,
-				641D78B418FFED4B008F62D3 /* IVMallTools.h */,
-				641D78B518FFED4B008F62D3 /* IVMallTools.m */,
+				64034D2A19517760001B9CBE /* viewViewControllers */,
 				649E5FA318F54F7F0057E235 /* SettingViewControllers */,
-				64252E7D1925F8CC00D454D4 /* RecordDateSelectViewController.h */,
-				64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */,
-				0FBC5799191FC74A006AEA01 /* RecordViewController.h */,
-				0FBC579A191FC74A006AEA01 /* RecordViewController.m */,
-				0FBC5793191F9385006AEA01 /* DeviceDetailViewController.h */,
-				0FBC5794191F9385006AEA01 /* DeviceDetailViewController.m */,
-				93E4E203162D5E2000974286 /* ListViewController.h */,
-				93E4E204162D5E2000974286 /* ListViewController.m */,
-				93E4E206162D5E2000974286 /* FobViewController.h */,
-				93E4E207162D5E2000974286 /* FobViewController.m */,
-				93581B501631551B004BF458 /* GraphViewController.h */,
-				93581B511631551B004BF458 /* GraphViewController.m */,
-				64252E801926116800D454D4 /* NewGraphViewController.h */,
-				64252E811926116800D454D4 /* NewGraphViewController.m */,
-				64252E8319261D2900D454D4 /* GraphView.h */,
-				64252E8419261D2900D454D4 /* GraphView.m */,
-				5EBDB77018E9747700491B74 /* MainViewController.h */,
-				5EBDB77118E9747700491B74 /* MainViewController.m */,
-				6407987118ED33BA00A21F74 /* PersonViewController.h */,
-				6407987218ED33BA00A21F74 /* PersonViewController.m */,
-				64E9021918EE47BD00E9E72B /* PersonDetailSetViewController.h */,
-				64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */,
-				6407987418ED39B900A21F74 /* PersonListViewController.h */,
-				6407987518ED39B900A21F74 /* PersonListViewController.m */,
-				64E9021C18EEA49C00E9E72B /* SettingViewController.h */,
-				64E9021D18EEA49C00E9E72B /* SettingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1415,7 +1405,6 @@
 				64E1E2431908FC5700D274A1 /* DFUController.m in Sources */,
 				64D79783190F4EE3007442CE /* feverKnowsViewController.m in Sources */,
 				5EBDB76F18E9711E00491B74 /* PersonInfoCell.m in Sources */,
-				641D78BA18FFEDCB008F62D3 /* Toast+UIView.m in Sources */,
 				640670C2195044C200928CAB /* eventRepeatViewCell.m in Sources */,
 				649A505818F67D21001FD7D5 /* LimitWarningViewController.m in Sources */,
 				640D9CB61919E3770097386B /* oneKnowsViewController.m in Sources */,
@@ -1477,7 +1466,6 @@
 				649B722E190F8F59005E4F2E /* SBJsonParser.m in Sources */,
 				64E1E2461908FC5700D274A1 /* HelpViewController.m in Sources */,
 				93581AB61630383B004BF458 /* TemperatureReading.m in Sources */,
-				641D78B618FFED4B008F62D3 /* IVMallTools.m in Sources */,
 				649B722D190F8F59005E4F2E /* NSObject+SBJson.m in Sources */,
 				93581B521631551B004BF458 /* GraphViewController.m in Sources */,
 				649B7238190F8F59005E4F2E /* SBJsonWriter.m in Sources */,

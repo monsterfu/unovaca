@@ -33,6 +33,9 @@
 }
 
 - (IBAction)switchChanged:(UISwitch *)sender {
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(switchChanged:index:)]) {
+        [self.delegate switchChanged:sender.on index:_eventReminderModel.index];
+    }
 }
 
 -(void)setEventReminderModel:(EventReminderModel *)eventReminderModel
@@ -41,7 +44,10 @@
     
     _eventContentLabel.text = eventReminderModel.eventContent;
     
-    NSString* dateStr = [[[eventReminderModel.time description] substringToIndex:16]substringFromIndex:11];
+    NSDate* date = [NSDate dateWithTimeInterval:8*60*60 sinceDate:eventReminderModel.time];
+    NSString* dateStr = [[date.description substringToIndex:16]substringFromIndex:11];
+    
+//    NSString* dateStr = [[[eventReminderModel.time description] substringToIndex:16]substringFromIndex:11];
     
     _timeLabel.text = dateStr;
     if (eventReminderModel.repeat) {
