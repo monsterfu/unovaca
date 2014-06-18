@@ -54,7 +54,7 @@
 }
 -(void)setDetailInfo:(PersonDetailInfo *)detailInfo
 {
-    if (_detailInfo != detailInfo) {
+    if (1){//_detailInfo != detailInfo) {
         _detailInfo = detailInfo;
         [self setCellWithPersonDetailInfo:detailInfo];
     }

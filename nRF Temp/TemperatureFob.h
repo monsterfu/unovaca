@@ -39,6 +39,7 @@
 - (BOOL) addReadingWithRawData:(NSData *)rawData;
 
 - (TemperatureReading *) lastReading;
+- (TemperatureReading *) lastReadingBodyTemperature;
 - (NSArray *) lastReadings:(NSUInteger) number;
 - (NSArray *) lastReadingsSince:(NSUInteger) minutes;
 - (NSArray *) lastReadingsDay:(NSDate*)day;

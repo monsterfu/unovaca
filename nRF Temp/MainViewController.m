@@ -86,7 +86,18 @@
     [self.view addSubview:_lowPanel2View];
     
     _lowPanel2View.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(lowAngel));
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updatePersonDetail) name:NSNotificationCenter_PersonDetailChanged object:nil];
 }
+-(void)updatePersonDetail
+{
+    _detailInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
+    [_tableView reloadData];
+}
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:NSNotificationCenter_PersonDetailChanged object:nil];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [[ConnectionManager sharedInstance] startScanForFobs];
@@ -94,7 +105,7 @@
     [[ConnectionManager sharedInstance] setAcceptNewFobs:YES];
 
     
-    [self reloadData];
+    
 
     
     //取默认的最高温度配置
@@ -104,13 +115,12 @@
         [USER_DEFAULT synchronize];
     }
     
-    
     //取默认的用户名
     _detailInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
     
-    
-    if ([USER_DEFAULT stringForKey:KEY_FOBUUID]) {
-        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_FOBUUID] isSave:YES];
+    //KEY_SELECED_FOB
+    if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
+        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];
@@ -122,6 +132,7 @@
     if (_fob) {
         _fob.delegate = self;
     }
+    [self reloadData];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -155,7 +166,7 @@
         _lowPanel2View.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(lowAngel));
 //        _highPanelView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(highAngel));
     }else if(value > 42){
-        _lowPanel2View.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(lowAngel));
+        _lowPanel2View.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-lowAngel));
 //        _highPanelView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(highAngel));
     }else{
         lowAngel = lowAngel + (value - 35)*45;

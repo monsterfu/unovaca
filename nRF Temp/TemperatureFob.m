@@ -76,26 +76,10 @@
             break;
     }
     
-    
-//    if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
-//    {
-//        return false;
-//    }
-//    
-//    uint32_t raw;
-//    [rawData getBytes:&raw length:4];
-//    
-//    int8_t exponent = (raw & 0xFF000000) >> 24;
-//    int32_t mantissa = (raw & 0x00FFFFFF);
-//    if (mantissa & 0x00800000)
-//    {
-//        mantissa |= (0xFF000000);
-//    }
-//    
-//    CGFloat value = mantissa * pow(10.0, exponent);
-//    if (value < 35.0f || value > 42.0f) {
-//        return NO;
-//    }
+    if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
+    {
+        return false;
+    }
     
     TemperatureReading *reading = (TemperatureReading *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureReading" inManagedObjectContext:self.managedObjectContext];
     [reading setDate:[NSDate date]];
@@ -103,9 +87,7 @@
     [reading setFob:self];
     
     [self addReadingsObject:reading];
-    
     [self.delegate didUpdateData:self];
-    
     return true;
 }
 
@@ -156,6 +138,19 @@
     }
 }
 
+- (TemperatureReading *) lastReadingBodyTemperature
+{
+    NSArray *readings = [self lastReadingsBodyTemperature:0];
+    if ([readings count] > 0)
+    {
+        return [readings objectAtIndex:0];
+    }
+    else
+    {
+        return nil;
+    }
+}
+
 - (NSArray *) lastReadings:(NSUInteger) number
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureReading"];
@@ -164,7 +159,25 @@
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
     [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
-    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.idString LIKE %@", self.idString]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@", self.uuid]];
+    NSError *error;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error)
+    {
+        NSLog(@"Fetching readings failed: %@", error);
+    }
+    return array;
+}
+
+- (NSArray *) lastReadingsBodyTemperature:(NSUInteger) number
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TemperatureReading"];
+    [request setFetchLimit:number];
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+    [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@ AND value >= 35 AND value <= 42", self.uuid]];
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
@@ -182,7 +195,7 @@
     [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     NSDate *startTime = [NSDate dateWithTimeIntervalSinceNow:-(minutes*60.0)];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.idString LIKE %@ AND date >= %@", self.idString, startTime]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@ AND date >= %@ AND value >= 35 AND value <= 42", self.uuid, startTime]];
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
@@ -206,7 +219,7 @@
     NSDate* endTime = [NSDate currentDayEndTime:day];
     
     
-    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.idString LIKE %@ AND date >= %@ AND date <= %@", self.idString,startTime, endTime]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@ AND date >= %@ AND date <= %@ AND value >= 35 AND value <= 42", self.uuid,startTime, endTime]];
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)
@@ -225,7 +238,7 @@
     
     
     NSDate *startTime = month;
-    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.idString LIKE %@ AND date >= %@", self.idString, startTime]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@ AND date >= %@ AND value >= 35 AND value <= 42", self.uuid, startTime]];
     NSError *error;
     NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (error)

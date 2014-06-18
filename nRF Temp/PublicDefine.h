@@ -54,5 +54,6 @@
 #define KEY_SELECTED_MONTH  @"key_selected_month"
 
 //通知
-#define NSNotificationCenter_EventReminderChanged     @"NSNotificationCenter_EventReminderChanged"
+#define NSNotificationCenter_EventReminderChanged       @"NSNotificationCenter_EventReminderChanged"
+#define NSNotificationCenter_PersonDetailChanged        @"NSNotificationCenter_PersonDetailChanged"
 #endif

@@ -27,7 +27,7 @@
 }
 -(void)setTemperatureFob:(TemperatureFob *)info
 {
-    TemperatureReading *lastReading = [info lastReading];
+    TemperatureReading *lastReading = [info lastReadingBodyTemperature];
     if (lastReading) {
         _tempLabel.text = [NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue];
         NSString* str = [[[lastReading date]description] substringToIndex:16];

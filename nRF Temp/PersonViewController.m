@@ -139,6 +139,7 @@
             abort();
         }
     }
+    [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_PersonDetailChanged object:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

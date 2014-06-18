@@ -209,10 +209,6 @@
     selectedFob.isSaved = YES;
     selectedFob.delegate = self;
     
-    [USER_DEFAULT removeObjectForKey:KEY_FOBUUID];
-    [USER_DEFAULT setObject:selectedFob.uuid forKey:KEY_FOBUUID];
-    [USER_DEFAULT synchronize];
-    
     if (![USER_DEFAULT objectForKey:KEY_SELECED_FOB]) {
         [USER_DEFAULT setObject:selectedFob.uuid forKey:KEY_SELECED_FOB];
         [USER_DEFAULT synchronize];

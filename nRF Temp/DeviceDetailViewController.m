@@ -144,8 +144,16 @@ static NSUInteger scanInt = 16;
 
 
 - (IBAction)deleteButtonTouch:(UIButton *)sender {
+    
+    NSString* name;
+    if ([USER_DEFAULT objectForKey:[self.fob uuid]]) {
+        name = [USER_DEFAULT objectForKey:[self.fob uuid]];
+    }else{
+        name = [self.fob idString];
+    }
+    
     UIAlertView* question = [[UIAlertView alloc] initWithTitle:@"删除温度计"
-                                                       message:[NSString stringWithFormat:@"你确定要删除温度计%@ ?", [self.fob location]]
+                                                       message:[NSString stringWithFormat:@"你确定要删除温度计%@ ?", name]
                                                       delegate:self
                                              cancelButtonTitle:@"不删除"
                                              otherButtonTitles:@"删除", nil];
