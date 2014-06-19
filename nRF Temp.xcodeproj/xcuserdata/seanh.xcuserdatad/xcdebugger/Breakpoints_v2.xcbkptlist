@@ -346,12 +346,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ListViewController.m"
-            timestampString = "421664095.179823"
+            timestampString = "424835411.149766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-willRotateToInterfaceOrientation:duration:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -474,13 +474,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ListViewController.m"
-            timestampString = "424674865.762458"
+            timestampString = "424835411.149766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "@implementation ListViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,12 +490,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ListViewController.m"
-            timestampString = "424675143.912849"
+            timestampString = "424835411.149766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "-reloadData"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-isBluetoothEnabled:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -554,13 +554,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ListViewController.m"
-            timestampString = "424762938.90758"
+            timestampString = "424835411.149766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "@implementation ListViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -666,12 +666,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ListViewController.m"
-            timestampString = "424781871.261775"
+            timestampString = "424835411.149766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

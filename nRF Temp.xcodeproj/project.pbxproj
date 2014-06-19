@@ -87,6 +87,7 @@
 		0FBC579B191FC74A006AEA01 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC579A191FC74A006AEA01 /* RecordViewController.m */; };
 		5EBDB76F18E9711E00491B74 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */; };
 		5EBDB77218E9747700491B74 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB77118E9747700491B74 /* MainViewController.m */; };
+		6405B5F0195278BB0081A8CD /* umeng_update_close_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6405B5EF195278BB0081A8CD /* umeng_update_close_bg_normal.png */; };
 		6406709A1950160400928CAB /* TemperatureNewFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670991950160400928CAB /* TemperatureNewFobCell.m */; };
 		6406709F19501DF400928CAB /* ic_signal_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709B19501DF400928CAB /* ic_signal_0.png */; };
 		640670A019501DF400928CAB /* ic_signal_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6406709C19501DF400928CAB /* ic_signal_1.png */; };
@@ -333,6 +334,7 @@
 		5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
 		5EBDB77018E9747700491B74 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5EBDB77118E9747700491B74 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6405B5EF195278BB0081A8CD /* umeng_update_close_bg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = umeng_update_close_bg_normal.png; sourceTree = "<group>"; };
 		640670981950160400928CAB /* TemperatureNewFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureNewFobCell.h; sourceTree = "<group>"; };
 		640670991950160400928CAB /* TemperatureNewFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureNewFobCell.m; sourceTree = "<group>"; };
 		6406709B19501DF400928CAB /* ic_signal_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_signal_0.png; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				6405B5EF195278BB0081A8CD /* umeng_update_close_bg_normal.png */,
 				0F77AFE41951E47A005F1063 /* ic_titlebar_add_kid_normal.png */,
 				0F77AFE51951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png */,
 				0F77AFE61951E47A005F1063 /* ic_titlebar_delete_remind_normal.png */,
@@ -1309,6 +1312,7 @@
 				0F19CAC01913E44700BF9312 /* a提醒2icon.png in Resources */,
 				649EB9B618FCDE0400C3D6FB /* 刻度页面.psd in Resources */,
 				0FB517D819212B760070344F /* battery_80@2x.png in Resources */,
+				6405B5F0195278BB0081A8CD /* umeng_update_close_bg_normal.png in Resources */,
 				0F19CAB11913E44700BF9312 /* a返回.png in Resources */,
 				649B7212190F8872005E4F2E /* medicine_card.txt in Resources */,
 				0F77AFE31951E389005F1063 /* ic_titlebar_save_remind_pressed.png in Resources */,

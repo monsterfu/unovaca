@@ -18,6 +18,7 @@
 @property NSArray *foundFobs;
 @property NSTimer *updateTimer;
 @property UIBarButtonItem *addButton;
+@property UIBarButtonItem *stopButton;
 @property UIBarButtonItem *cancelButton;
 @property BOOL showNewFobSection;
 @end
@@ -40,6 +41,10 @@
     _addButton = [[UIBarButtonItem alloc]initWithImage:[addImg scaleToSize:addImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(addButtonPressed)];
     [_addButton setImageInsets:UIEdgeInsetsMake(3, 0, 3, 6)];
     self.navigationItem.rightBarButtonItem = _addButton;
+    
+    UIImage* stopImg = [UIImage imageNamed:@"umeng_update_close_bg_normal"];
+    _stopButton = [[UIBarButtonItem alloc]initWithImage:[stopImg scaleToSize:stopImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed)];
+    [_stopButton setImageInsets:UIEdgeInsetsMake(3, 0, 3, 6)];
     
         
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
@@ -235,7 +240,7 @@
     [self reloadData];
     
     [self.addActivityIndicator startAnimating];
-    self.navigationItem.rightBarButtonItem = self.cancelButton;
+    self.navigationItem.rightBarButtonItem = self.stopButton;
 }
 
 - (void) cancelButtonPressed
