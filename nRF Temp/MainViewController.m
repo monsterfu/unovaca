@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"智能蓝牙温度计";
+    self.title = @"Unova智能温度计";
     
     NSLog(@"self.navigationController.navigationBar.height:%f",self.navigationController.navigationBar.frame.size.height);
     if (![self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
@@ -74,8 +74,6 @@
     _managedObjectContext = delegate.managedObjectContext;
     
     [self showTemperatureImageWithValue:0.0f];
-    
-    [_textLabel setHidden:YES];
     
     CGFloat lowAngel = 45.0f/2.0f;
     lowAngel = lowAngel + (35 - 35)*45;
@@ -111,10 +109,6 @@
     [[ConnectionManager sharedInstance] startScanForFobs];
     [[ConnectionManager sharedInstance] setDelegate:self];
     [[ConnectionManager sharedInstance] setAcceptNewFobs:YES];
-
-    
-    
-
     
     //取默认的最高温度配置
     NSInteger tempLimit = [USER_DEFAULT integerForKey:KEY_MOST_STR];
@@ -129,11 +123,25 @@
     //KEY_SELECED_FOB
     if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
         _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
+        _fob.active = NO;
+        [_temperaturePanel setHidden:YES];
+        [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
+        _textLabel.text = @"没有检测到体温";
+        _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:NO];
+        
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];
         if ([arry count]) {
             _fob = [arry objectAtIndex:0];
+            [_temperaturePanel setHidden:YES];
+            [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
+            _textLabel.text = @"没有检测到体温";
+        }else{
+            _fob = nil;
+            [_temperaturePanel setHidden:YES];
+            [_statusButton setTitle:@"离线" forState:UIControlStateNormal];
+            _textLabel.text = @"请扫描并添加体温计";
         }
     }
     
@@ -147,12 +155,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)checkStatusResult
+{
+    if (_fob.active == NO) {
+        [_statusButton setTitle:@"离线" forState:UIControlStateNormal];
+        _textLabel.text = @"没有检测到体温";
+    }
+}
 - (void) reloadData
 {
     [self.tableView reloadData];
-    
-
 }
 
 -(void)showTemperatureImageWithValue:(CGFloat)value
@@ -332,23 +344,38 @@
     [self showTemperatureImageWithValue:value];
     [self panelRotation:value];
     
-    if (value< 35.0f) {
-        _textLabel.text = @"请正确使用体温计";
-        _status.text = @"异常";
-    }
-    else if ((value < 39.0f)&&(value >= 38.0f)) {
-        _textLabel.text = @"低烧";
-        _status.text = @"低烧";
-    }
-    else if(value >= 39.0f){
-        _textLabel.text = @"高烧";
-        _status.text = @"高烧";
-    }
-    else{
-        _textLabel.text = @"体温正常";
-        _status.text = @"正常";
-    }
     
-    [_textLabel setHidden:NO];
+    
+    if (value< 31.0) {
+        [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
+        _textLabel.text = @"没有检测到正常体温";
+    }else if (value >= 31&&value< 34.5) {
+        [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
+        _textLabel.text = @"体温小于34.5℃,请等待!";
+    }else if (value >= 34.5&&value< 36) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"低温";
+        _textLabel.text = @"宝贝处于低温状态";
+    }else if (value >= 36&&value< 37.5) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"正常";
+        _textLabel.text = @"宝贝处于正常状态";
+    }else if (value >= 37.5&&value< 38) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"低热";
+        _textLabel.text = @"宝贝处于低热状态";
+    }else if (value >= 38&&value< 39) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"中热";
+        _textLabel.text = @"宝贝处于中热状态";
+    }else if (value >= 39&&value < 40) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"高热";
+        _textLabel.text = @"宝贝处于高热状态";
+    }else if (value >= 40) {
+        [_temperaturePanel setHidden:NO];
+        _status.text = @"超高热";
+        _textLabel.text = @"宝贝处于超高热状态";
+    }
 }
 @end

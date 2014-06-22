@@ -79,7 +79,6 @@
 -(void)backButtonPressed
 {
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -92,6 +91,7 @@
     for (TemperatureFob *fob in _fobArray)
     {
         fob.delegate = self;
+        fob.signalStrength = [NSNumber numberWithFloat:0.0f];
     }
     [self reloadData];
 }
@@ -282,7 +282,7 @@
 }
 - (void) didUpdateData:(TemperatureFob *) fob
 {
-    
+    NSLog(@"fob: temperature:%f,batteryLevel:%f,signalStrength:%f",[fob.temperature floatValue],[fob.batteryLevel floatValue],[fob.signalStrength floatValue]);
 }
 -(void) recentUpdateData:(NSData*)rawData
 {

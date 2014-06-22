@@ -21,6 +21,7 @@
 {
     NSArray* _personInfoArray;
     BOOL _haveDevice;
+    NSTimer* _checkStatusTimer;
 }
 @property (weak, nonatomic) IBOutlet UIView *colorBg;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightButton;
@@ -37,6 +38,12 @@
 @property (weak, nonatomic) IBOutlet UIView *lowPanelView;
 @property (nonatomic, retain)UIView* lowPanel2View;
 @property (weak, nonatomic) IBOutlet UIImageView *plotImageView;
+
+@property (weak, nonatomic) IBOutlet UIView *temperaturePanel;
+@property (weak, nonatomic) IBOutlet UIView *checkStatusView;
+@property (weak, nonatomic) IBOutlet UIButton *statusButton;
+
+
 
 @property(nonatomic,retain)PersonDetailInfo* detailInfo;
 @property(nonatomic,retain)TemperatureFob* fob;

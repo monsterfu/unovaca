@@ -50,28 +50,45 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tav-Wv-qn1">
+                                        <rect key="frame" x="120" y="190" width="80" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3W-DX-DXK">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="在线" backgroundImage="history_day_bg">
+                                                    <color key="titleColor" red="0.588479478" green="0.88096552309999998" blue="0.33486852090000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="disabled" backgroundImage="ic_number_status_37.png"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fu3-6j-ZGz">
-                                        <rect key="frame" x="76" y="152" width="168" height="79"/>
+                                        <rect key="frame" x="76" y="140" width="168" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q4t-9g-nso">
-                                                <rect key="frame" x="11" y="0.0" width="31" height="59"/>
+                                                <rect key="frame" x="11" y="0.0" width="31" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6.png" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-cn-CJC">
-                                                <rect key="frame" x="42" y="0.0" width="31" height="59"/>
+                                                <rect key="frame" x="42" y="0.0" width="31" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="点.png" translatesAutoresizingMaskIntoConstraints="NO" id="tH5-Kp-ldf">
-                                                <rect key="frame" x="72" y="0.0" width="14" height="59"/>
+                                                <rect key="frame" x="72" y="15" width="14" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8.png" translatesAutoresizingMaskIntoConstraints="NO" id="BKO-GM-PFp">
-                                                <rect key="frame" x="87" y="0.0" width="31" height="59"/>
+                                                <rect key="frame" x="87" y="0.0" width="31" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="状态底图.png" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-7Z-26n">
-                                                <rect key="frame" x="115" y="27" width="47" height="28"/>
+                                                <rect key="frame" x="115" y="24" width="47" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="度.png" translatesAutoresizingMaskIntoConstraints="NO" id="vG9-LX-ADN">
@@ -79,7 +96,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正常" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-bF-NNY">
-                                                <rect key="frame" x="117" y="31" width="42" height="21"/>
+                                                <rect key="frame" x="117" y="28" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.588479478" green="0.88096552309999998" blue="0.33486852090000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,7 +106,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="宝贝体温处于正常状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZC-ET-TFj">
-                                        <rect key="frame" x="87" y="123" width="145" height="21"/>
+                                        <rect key="frame" x="87" y="115" width="145" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -284,16 +301,19 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="checkStatusView" destination="Tav-Wv-qn1" id="hrK-yi-IvI"/>
                         <outlet property="colorBg" destination="bDE-ot-rKU" id="M0i-Vb-c2g"/>
                         <outlet property="lowPanelView" destination="hkS-Xc-Vrk" id="dvm-Nn-0iK"/>
                         <outlet property="panelView" destination="bDE-ot-rKU" id="CaP-UX-Stc"/>
                         <outlet property="plotImageView" destination="ryZ-pv-bgl" id="j1b-kN-c0f"/>
                         <outlet property="rightButton" destination="eEX-dI-nOI" id="o9L-ms-YAE"/>
                         <outlet property="status" destination="pSk-bF-NNY" id="FHj-uy-710"/>
+                        <outlet property="statusButton" destination="B3W-DX-DXK" id="JL2-1s-lcU"/>
                         <outlet property="tableView" destination="CV3-LR-YkG" id="fmg-a6-5pn"/>
                         <outlet property="temp1" destination="Q4t-9g-nso" id="cKz-16-bbk"/>
                         <outlet property="temp2" destination="rZk-cn-CJC" id="dzI-zV-Vkt"/>
                         <outlet property="temp3" destination="BKO-GM-PFp" id="1dc-yg-GjT"/>
+                        <outlet property="temperaturePanel" destination="Fu3-6j-ZGz" id="hgq-ey-6be"/>
                         <outlet property="textLabel" destination="AZC-ET-TFj" id="nHm-Og-sXU"/>
                     </connections>
                 </viewController>
@@ -325,9 +345,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="history_day_bg" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-vZ-pp7">
+                                                    <rect key="frame" x="20" y="8" width="31" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="31日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOG-xM-OPL">
                                                     <rect key="frame" x="20" y="8" width="31" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2360,6 +2385,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="background.png" width="320" height="320"/>
         <image name="btn_radio_off.png" width="80" height="80"/>
         <image name="graph_main_bg.png" width="540" height="740"/>
+        <image name="history_day_bg" width="320" height="320"/>
+        <image name="ic_number_status_37.png" width="150" height="89"/>
         <image name="ic_signal_0.png" width="64" height="64"/>
         <image name="more.png" width="40" height="40"/>
         <image name="over.png" width="120" height="47"/>

@@ -127,8 +127,9 @@
 
 -(void)showPlot:(float)temp x:(NSUInteger)x
 {
+    NSLog(@"showPlot  showPlot  showPlot showPlot:%f",temp);
     NSUInteger y_gap = _graphRect.size.height/7;
-    NSUInteger y = _graphRect.origin.y + (temp - 35.0f)*y_gap;
+    NSUInteger y = _graphRect.origin.y + (temp - 30.0f)*y_gap;
     CGRect frame = CGRectMake(x, y, TEM_W_H, TEM_W_H);
     GraphView* temView = [[GraphView alloc]initWithFrame:frame];
     [self.view addSubview:temView];
