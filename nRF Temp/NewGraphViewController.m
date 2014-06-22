@@ -127,9 +127,9 @@
 
 -(void)showPlot:(float)temp x:(NSUInteger)x
 {
-    NSLog(@"showPlot  showPlot  showPlot showPlot:%f",temp);
+    NSLog(@"showPlot  showPlot  showPlot showPlot:%f  %d",temp,x);
     NSUInteger y_gap = _graphRect.size.height/7;
-    NSUInteger y = _graphRect.origin.y + (temp - 30.0f)*y_gap;
+    NSUInteger y = _graphRect.origin.y + (temp - 29.2f)*y_gap;
     CGRect frame = CGRectMake(x, y, TEM_W_H, TEM_W_H);
     GraphView* temView = [[GraphView alloc]initWithFrame:frame];
     [self.view addSubview:temView];
@@ -202,14 +202,14 @@
         default:
         {
             for (TemperatureReading* reading in _readings) {
-                if (reading == [_readings firstObject]) {
+                if (reading == [_readings lastObject]) {
                     [self showPlot:[reading.value floatValue]  x:_graphRect.origin.x];
-                }else if(reading == [_readings lastObject]) {
+                }else if(reading == [_readings firstObject]) {
                     [self showPlot:[reading.value floatValue]  x:_graphRect.origin.x + _graphRect.size.width];
                 }else{
                     
                     NSTimeInterval Gap = [reading.date timeIntervalSinceDate:_firstDate];
-                    NSUInteger x = _graphRect.origin.x + _graphRect.size.width*(Gap/_timeGap);
+                    NSUInteger x = _graphRect.origin.x + _graphRect.size.width - _graphRect.size.width*(Gap/_timeGap);
                     
                     [self showPlot:[reading.value floatValue]  x:x];
                 }
