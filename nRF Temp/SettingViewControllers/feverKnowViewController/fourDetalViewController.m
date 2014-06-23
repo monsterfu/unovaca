@@ -8,6 +8,7 @@
 
 #import "fourDetalViewController.h"
 
+
 @interface fourDetalViewController ()
 
 @end
@@ -33,6 +34,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setContent:_contentDic];
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
+}
+
+-(void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

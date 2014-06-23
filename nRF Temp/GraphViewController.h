@@ -10,11 +10,8 @@
 
 #import "TemperatureFob.h"
 
-@interface GraphViewController : UIViewController <TemperatureFobDelegate, CPTPlotDataSource, CPTPlotSpaceDelegate>
+@interface GraphViewController : UIViewController <TemperatureFobDelegate>
 @property (nonatomic, strong) TemperatureFob* fob;
-
-@property (nonatomic, strong) CPTGraphHostingView *hostView;
-@property (nonatomic, strong) CPTGraph *graph;
 
 @property (weak, nonatomic) IBOutlet UIView *graphView;
 

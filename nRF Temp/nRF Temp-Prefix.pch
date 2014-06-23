@@ -14,5 +14,4 @@
     #import <CoreBluetooth/CoreBluetooth.h>
     #import <CoreData/CoreData.h>
 
-    #import "CorePlot-CocoaTouch.h"
 #endif

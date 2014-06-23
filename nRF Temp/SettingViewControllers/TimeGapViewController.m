@@ -35,6 +35,16 @@
     self.title = @"测量间隔时间";
     _timeGapArray = @[@"5秒",@"10秒",@"5分钟",@"10分钟",@"15分钟",@"30分钟",@"1小时"];
     _selectItem = [USER_DEFAULT integerForKey:KEY_GAPTIMER_STR];
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
+    self.navigationItem.leftBarButtonItem = _cancelButton;
+}
+
+-(void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

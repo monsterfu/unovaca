@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DFUController.h"
-
+#import "UIImage+scaleToSize.h"
 @interface ProgressViewController : UIViewController <DFUControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 

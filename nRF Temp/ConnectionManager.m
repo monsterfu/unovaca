@@ -119,6 +119,33 @@ static ConnectionManager *sharedConnectionManager;
     }
     
     if ([[[peripheral identifier]UUIDString] isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]]) {
+        
+        uint32_t raw;
+        NSData* rawData = [serviceData objectForKey:[TemperatureFob thermometerServiceUUID]];
+        [rawData getBytes:&raw length:4];
+        
+        int8_t exponent = (raw & 0xFF000000) >> 24;
+        int32_t mantissa = (raw & 0x00FFFFFF);
+        if (mantissa & 0x00800000)
+        {
+            mantissa |= (0xFF000000);
+        }
+        
+        CGFloat value = mantissa * pow(10.0, exponent);
+        
+        if (YES == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
+        {
+            NSInteger savedTemp = [USER_DEFAULT integerForKey:KEY_MOST_STR] +37;
+            NSLog(@"saveTemp ================================================>%d",savedTemp);
+            if (value > savedTemp)
+            {
+                [[soundVibrateManager sharedInstance]playAlertSound];
+                [[soundVibrateManager sharedInstance]vibrate];
+                alertView = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"目前体味已经超过报警值！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alertView show];
+            }
+        }
+        
         [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
     }
 }

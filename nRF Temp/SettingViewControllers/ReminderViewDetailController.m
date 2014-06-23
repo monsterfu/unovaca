@@ -41,9 +41,15 @@
     UIBarButtonItem* _saveButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"save.png"] style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
     self.navigationItem.rightBarButtonItem = _saveButton;
     
-   UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"backhl.png"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed)];
-    //    [_cancelButton setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
+    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
+}
+
+-(void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

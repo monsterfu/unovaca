@@ -127,7 +127,7 @@
         [_temperaturePanel setHidden:YES];
         [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
         _textLabel.text = @"没有检测到体温";
-        _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:NO];
+        _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
         
     }else{
         NSArray* arry;
@@ -161,6 +161,7 @@
         [_statusButton setTitle:@"离线" forState:UIControlStateNormal];
         _textLabel.text = @"没有检测到体温";
     }
+    _fob.active = NO;
 }
 - (void) reloadData
 {
@@ -209,6 +210,11 @@
     if (enabled)
     {
         [[ConnectionManager sharedInstance] startScanForFobs];
+        if (_fob) {
+            _textLabel.text = @"未检测到正常体温";
+        }else{
+            _textLabel.text = @"请扫描并绑定温度计！";
+        }
     }else{
         _textLabel.text = @"未打开蓝牙";
     }
@@ -222,7 +228,10 @@
 #pragma mark -table delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    if (DEVICE_HEIGHT > 480) {
+        return 80;
+    }
+    return 40;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -330,28 +339,19 @@
     
     CGFloat value = mantissa * pow(10.0, exponent);
     
-    if (YES == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
-    {
-        NSInteger savedTemp = [USER_DEFAULT integerForKey:KEY_MOST_STR] +37;
-        NSLog(@"saveTemp ================================================>%d",savedTemp);
-        if (value > savedTemp)
-        {
-            [[soundVibrateManager sharedInstance]playAlertSound];
-            [[soundVibrateManager sharedInstance]vibrate];
-        }
-    }
     
     [self showTemperatureImageWithValue:value];
     [self panelRotation:value];
     
     
+    [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
     
     if (value< 31.0) {
-        [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
         _textLabel.text = @"没有检测到正常体温";
     }else if (value >= 31&&value< 34.5) {
-        [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
-        _textLabel.text = @"体温小于34.5℃,请等待!";
+        if (_lastValue < value) {
+            _textLabel.text = @"体温小于34.5℃,请等待!";
+        }
     }else if (value >= 34.5&&value< 36) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"低温";
@@ -377,5 +377,7 @@
         _status.text = @"超高热";
         _textLabel.text = @"宝贝处于超高热状态";
     }
+    
+    _lastValue = value;
 }
 @end

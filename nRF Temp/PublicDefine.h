@@ -14,6 +14,9 @@
 #import "NSDate+JBCommon.h"
 #import "UIImage+scaleToSize.h"
 
+#define VISION_NO    @"1.1.0"
+
+
 #define DEVICE_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define DEVICE_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]

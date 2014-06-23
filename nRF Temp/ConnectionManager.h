@@ -18,6 +18,9 @@
 @end
 
 @interface ConnectionManager : NSObject <CBCentralManagerDelegate>
+{
+    UIAlertView* alertView;
+}
 @property BOOL acceptNewFobs;
 @property id<ConnectionManagerDelegate> delegate;
 

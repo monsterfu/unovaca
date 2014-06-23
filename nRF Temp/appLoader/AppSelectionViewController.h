@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DFUController.h"
+#import "UIImage+scaleToSize.h"
 
 @interface AppSelectionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *binariesTableView;

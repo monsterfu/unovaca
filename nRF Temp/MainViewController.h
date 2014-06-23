@@ -22,6 +22,7 @@
     NSArray* _personInfoArray;
     BOOL _haveDevice;
     NSTimer* _checkStatusTimer;
+    CGFloat _lastValue;
 }
 @property (weak, nonatomic) IBOutlet UIView *colorBg;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightButton;

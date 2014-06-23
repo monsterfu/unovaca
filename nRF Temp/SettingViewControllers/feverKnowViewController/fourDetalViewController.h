@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImage+scaleToSize.h"
 
 @interface fourDetalViewController : UIViewController
 

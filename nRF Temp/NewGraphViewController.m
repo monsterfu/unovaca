@@ -40,7 +40,7 @@
     
     _MostTempLabel.text = [NSString stringWithFormat:@"最高温度%.1f℃",[self hightestTempInArray:_readings]];
     
-    _graphRect = CGRectMake(_tempBgImage.frame.origin.x + 48, _tempBgImage.frame.origin.y, _tempBgImage.frame.size.width-80, _tempBgImage.frame.size.height);
+    _graphRect = CGRectMake(_tempBgImage.frame.origin.x + DEVICE_WIDTH/6, _tempBgImage.frame.origin.y, _tempBgImage.frame.size.width- DEVICE_WIDTH/3, _tempBgImage.frame.size.height);
     [self firstAndLastDate:_readings];
     
     [self processTimeLabel];
@@ -129,8 +129,8 @@
 {
     NSLog(@"showPlot  showPlot  showPlot showPlot:%f  %d",temp,x);
     NSUInteger y_gap = _graphRect.size.height/7;
-    NSUInteger y = _graphRect.origin.y + (temp - 29.2f)*y_gap;
-    CGRect frame = CGRectMake(x, y, TEM_W_H, TEM_W_H);
+    NSUInteger y = _graphRect.origin.y + _graphRect.size.height - (temp - 35.0f)*y_gap;
+    CGRect frame = CGRectMake(x-5, y-5, TEM_W_H, TEM_W_H);
     GraphView* temView = [[GraphView alloc]initWithFrame:frame];
     [self.view addSubview:temView];
 }
@@ -202,13 +202,13 @@
         default:
         {
             for (TemperatureReading* reading in _readings) {
-                if (reading == [_readings lastObject]) {
+                if (reading == [_readings firstObject]) {
                     [self showPlot:[reading.value floatValue]  x:_graphRect.origin.x];
-                }else if(reading == [_readings firstObject]) {
+                }else if(reading == [_readings lastObject]) {
                     [self showPlot:[reading.value floatValue]  x:_graphRect.origin.x + _graphRect.size.width];
                 }else{
                     
-                    NSTimeInterval Gap = [reading.date timeIntervalSinceDate:_firstDate];
+                    NSTimeInterval Gap = [_lastDate timeIntervalSinceDate:reading.date];
                     NSUInteger x = _graphRect.origin.x + _graphRect.size.width - _graphRect.size.width*(Gap/_timeGap);
                     
                     [self showPlot:[reading.value floatValue]  x:x];

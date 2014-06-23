@@ -168,9 +168,9 @@ static NSUInteger scanInt = 16;
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if(buttonIndex == 1) {
-        [_person deleteFob:self.fob];
         [USER_DEFAULT removeObjectForKey:_fob.uuid];
         [USER_DEFAULT synchronize];
+        [_person deleteFob:self.fob];
         [[self navigationController] popViewControllerAnimated:YES];
     }
 }
