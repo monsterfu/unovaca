@@ -87,7 +87,8 @@
     
     if (DEVICE_HEIGHT <= 480) {
         CGRect oldRect = _tableView.frame;
-        oldRect.origin.y -= 50;
+        oldRect.origin.y -= 30;
+        oldRect.size.height += 60;
         [_tableView setFrame:oldRect];
     }
     
@@ -241,7 +242,7 @@
     if (DEVICE_HEIGHT > 480) {
         return 90;
     }
-    return 80;
+    return 75;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -372,7 +373,7 @@
     }else if (value >= 36&&value< 37.5) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"正常";
-        _textLabel.text = @"宝贝处于正常状态";
+        _textLabel.text = @"宝贝体温处于正常状态";
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 37.5&&value< 38) {
         [_temperaturePanel setHidden:NO];

@@ -33,7 +33,7 @@
     
     _recordsOfMonthArray = [NSMutableArray array];
     [_datePicker setFrame:CGRectMake(0, DEVICE_HEIGHT, DEVICE_WIDTH, 216)];
-    UIView* viewBg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 20)];
+    UIView* viewBg = [UIView new];
     viewBg.backgroundColor = [UIColor clearColor];
     [_tableView setTableFooterView:viewBg];
     
