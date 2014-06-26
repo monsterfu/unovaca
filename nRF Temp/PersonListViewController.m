@@ -225,6 +225,7 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
         _detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo"
                                                     inManagedObjectContext:self.managedObjectContext];
         _detailInfo.personId = [NSString randomStr];
+        _detailInfo.image = [UIImage imageNamed:@"default_head"];
         PersonViewController *addController = (PersonViewController *)segue.destinationViewController;
         addController.detailInfo = _detailInfo;
         addController.isNew = YES;

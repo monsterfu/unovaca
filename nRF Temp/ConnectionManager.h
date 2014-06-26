@@ -25,7 +25,7 @@
 @property id<ConnectionManagerDelegate> delegate;
 
 + (ConnectionManager*) sharedInstance;
-
+- (void) startScanForFobsBackGround;
 - (void) startScanForFobs;
 - (void) stopScanForFobs;
 

@@ -41,6 +41,16 @@ static ConnectionManager *sharedConnectionManager;
     return self;
 }
 
+- (void) startScanForFobsBackGround
+{
+    // Make sure we start scan from scratch
+    [self.cm stopScan];
+    [self.cm scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"1809"]]
+                                    options:@{
+                                              CBCentralManagerScanOptionSolicitedServiceUUIDsKey:@[
+                                                      [CBUUID UUIDWithString:[USER_DEFAULT objectForKey:KEY_SELECED_FOB]]]}];
+}
+
 - (void) startScanForFobs
 {
     NSDictionary* scanOptions = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:CBCentralManagerScanOptionAllowDuplicatesKey];

@@ -47,6 +47,7 @@
 #define KEY_MOST_STR       @"key_most_str"       //最高温度
 
 #define KEY_WARNING_OPEN   @"key_warning_open"   //报警开关
+#define KEY_BACKGROUND_OPEN @"key_background_open"  //后台开关
 //弧度、角度转换
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))

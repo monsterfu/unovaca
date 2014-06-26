@@ -11,7 +11,9 @@
 #import "ListViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    NSTimer* _scanTimer;
+}
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

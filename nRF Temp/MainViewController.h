@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *temp1;
 @property (weak, nonatomic) IBOutlet UIImageView *temp2;
 @property (weak, nonatomic) IBOutlet UIImageView *temp3;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImage;
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
@@ -44,6 +45,8 @@
 @property (weak, nonatomic) IBOutlet UIView *checkStatusView;
 @property (weak, nonatomic) IBOutlet UIButton *statusButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *openBgButton;
+- (IBAction)openBgButtonTouch:(UIButton *)sender;
 
 
 @property(nonatomic,retain)PersonDetailInfo* detailInfo;

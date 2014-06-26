@@ -25,6 +25,7 @@
         _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
         _detailInfo.weight = [NSNumber numberWithInteger:20];
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
+        [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
         NSError *error = nil;
         
@@ -33,7 +34,7 @@
             abort();
         }
     }
-    
+    [application setApplicationIconBadgeNumber:0];
     return YES;
 }
 
@@ -84,11 +85,24 @@
     {
         NSLog(@"Saving failed: %@", error);
     }
+    if (!_scanTimer&&[USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
+        _scanTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(backgroundScanBle) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:_scanTimer forMode:NSRunLoopCommonModes];
+    }
+}
+
+-(void)backgroundScanBle
+{
+    [[ConnectionManager sharedInstance]startScanForFobsBackGround];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    if (_scanTimer) {
+        [_scanTimer invalidate];
+        _scanTimer = nil;
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -99,7 +113,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-
+    [[ConnectionManager sharedInstance]startScanForFobs];
 }
 
 #pragma mark - Core Data stack

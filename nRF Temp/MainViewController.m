@@ -74,7 +74,7 @@
     _lowPanelView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(45));
     [_lowPanelView setHidden:YES];
     
-    _lowPanel2View = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 320)];
+    _lowPanel2View = [[UIView alloc]initWithFrame:CGRectMake(0, -40, 320, 320)];
     _lowPanel2View.userInteractionEnabled = NO;
     _lowPanel2View.backgroundColor = [UIColor clearColor];
     UIImageView* testImageView = [[UIImageView alloc]initWithFrame:CGRectMake(138, 235, 42, 42)];
@@ -358,36 +358,56 @@
     
     if (value< 31.0) {
         _textLabel.text = @"没有检测到正常体温";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_35"]];
     }else if (value >= 31&&value< 34.5) {
         if (_lastValue < value) {
             _textLabel.text = @"体温小于34.5℃,请等待!";
         }
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 34.5&&value< 36) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"低温";
         _textLabel.text = @"宝贝处于低温状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_38"]];
     }else if (value >= 36&&value< 37.5) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"正常";
         _textLabel.text = @"宝贝处于正常状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 37.5&&value< 38) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"低热";
         _textLabel.text = @"宝贝处于低热状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 38&&value< 39) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"中热";
         _textLabel.text = @"宝贝处于中热状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_39"]];
     }else if (value >= 39&&value < 40) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"高热";
         _textLabel.text = @"宝贝处于高热状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_41"]];
     }else if (value >= 40) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"超高热";
         _textLabel.text = @"宝贝处于超高热状态";
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_45"]];
     }
     
     _lastValue = value;
+}
+- (IBAction)openBgButtonTouch:(UIButton *)sender {
+    if ([USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
+        [_openBgButton setTitle:@"开启后台" forState:UIControlStateNormal];
+        [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
+        [USER_DEFAULT setBool:NO forKey:KEY_BACKGROUND_OPEN];
+    }else{
+        [_openBgButton setTitle:@"关闭后台" forState:UIControlStateNormal];
+        [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
+        [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
+    }
+    [USER_DEFAULT synchronize];
 }
 @end

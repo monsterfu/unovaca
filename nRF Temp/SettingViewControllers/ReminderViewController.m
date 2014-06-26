@@ -119,7 +119,27 @@
     _eventCell.delegate = self;
     return _eventCell;
 }
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
 
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [EventReminderModel deleteEventReminder:[_allEventReminderModelArray objectAtIndex:indexPath.row]];
+        [_allEventReminderModelArray removeObjectAtIndex:indexPath.row];
+        _localNotice = [_allEventNoticationArray objectAtIndex:index];
+        [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
 #pragma mark -
 #pragma mark Add a new event
 

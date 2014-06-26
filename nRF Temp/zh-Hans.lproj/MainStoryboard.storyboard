@@ -140,21 +140,24 @@
                                         <state key="normal" title="关闭后台" backgroundImage="over.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openBgButtonTouch:" destination="yh4-bi-RPF" eventType="touchUpInside" id="x1e-O0-OqI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.54983174133874035" green="0.73123301630434789" blue="0.2681347978643398" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="CV3-LR-YkG">
-                                <rect key="frame" x="0.0" y="294" width="320" height="186"/>
+                                <rect key="frame" x="0.0" y="307" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PersonInfoCell" editingAccessoryType="detailDisclosureButton" rowHeight="88" id="SeQ-2o-ZOL" customClass="PersonInfoCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="88"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PersonInfoCell" editingAccessoryType="detailDisclosureButton" rowHeight="90" id="SeQ-2o-ZOL" customClass="PersonInfoCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SeQ-2o-ZOL" id="hl8-dI-bAf">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="by5-ls-W8c">
@@ -205,11 +208,11 @@
                                             <segue destination="03I-oM-OeR" kind="push" identifier="personList" id="7YI-U5-xow"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="lastNoticeCell" editingAccessoryType="detailDisclosureButton" rowHeight="88" id="cXo-W5-0fL" customClass="LastHistoryCell">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="88"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="lastNoticeCell" editingAccessoryType="detailDisclosureButton" rowHeight="90" id="cXo-W5-0fL" customClass="LastHistoryCell">
+                                        <rect key="frame" x="0.0" y="112" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cXo-W5-0fL" id="GHh-lx-6kB">
-                                            <rect key="frame" x="0.0" y="0.0" width="253" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="253" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="历史记录icon.png" id="for-3V-0l0">
@@ -267,11 +270,13 @@
                         <outlet property="checkStatusView" destination="Tav-Wv-qn1" id="hrK-yi-IvI"/>
                         <outlet property="colorBg" destination="bDE-ot-rKU" id="M0i-Vb-c2g"/>
                         <outlet property="lowPanelView" destination="hkS-Xc-Vrk" id="dvm-Nn-0iK"/>
+                        <outlet property="openBgButton" destination="QiE-6x-ifD" id="BwC-2B-wWx"/>
                         <outlet property="panelView" destination="bDE-ot-rKU" id="CaP-UX-Stc"/>
                         <outlet property="plotImageView" destination="ryZ-pv-bgl" id="j1b-kN-c0f"/>
                         <outlet property="rightButton" destination="eEX-dI-nOI" id="o9L-ms-YAE"/>
                         <outlet property="status" destination="pSk-bF-NNY" id="FHj-uy-710"/>
                         <outlet property="statusButton" destination="B3W-DX-DXK" id="JL2-1s-lcU"/>
+                        <outlet property="statusImage" destination="LGK-7Z-26n" id="c9Y-OV-mTR"/>
                         <outlet property="tableView" destination="CV3-LR-YkG" id="fmg-a6-5pn"/>
                         <outlet property="temp1" destination="Q4t-9g-nso" id="cKz-16-bbk"/>
                         <outlet property="temp2" destination="rZk-cn-CJC" id="dzI-zV-Vkt"/>
@@ -974,7 +979,7 @@
             </objects>
             <point key="canvasLocation" x="1095" y="2004"/>
         </scene>
-        <!--Person List View Controller - 用户列表-->
+        <!--Person List View Controller - 宝贝列表-->
         <scene sceneID="0y0-hT-YQr">
             <objects>
                 <tableViewController id="03I-oM-OeR" customClass="PersonListViewController" sceneMemberID="viewController">
@@ -1051,7 +1056,7 @@
                             <outlet property="delegate" destination="03I-oM-OeR" id="43b-3k-Zjk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="用户列表" id="J5j-gf-KLb">
+                    <navigationItem key="navigationItem" title="宝贝列表" id="J5j-gf-KLb">
                         <barButtonItem key="rightBarButtonItem" image="addnew.png" id="b7d-8R-uGK">
                             <inset key="imageInsets" minX="0.0" minY="3" maxX="10" maxY="6"/>
                             <connections>
@@ -1194,7 +1199,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1054" y="-637"/>
         </scene>
-        <!--List View Controller - 智能蓝牙体温计-->
+        <!--List View Controller - 设备管理-->
         <scene sceneID="m1V-Ox-OZx">
             <objects>
                 <viewController id="ZQe-v0-tQ2" customClass="ListViewController" sceneMemberID="viewController">
@@ -1320,7 +1325,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="智能蓝牙体温计" id="sJK-Xi-7Sj"/>
+                    <navigationItem key="navigationItem" title="设备管理" id="sJK-Xi-7Sj"/>
                     <connections>
                         <outlet property="addActivityIndicator" destination="esA-7K-JHf" id="Yrs-fa-1k4"/>
                         <outlet property="tableView" destination="wxZ-m0-xEE" id="5ap-yd-3Yi"/>
@@ -2310,7 +2315,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gIL-tL-4g8"/>
+        <segue reference="FMO-oH-s3s"/>
         <segue reference="qGK-1n-xtn"/>
     </inferredMetricsTieBreakers>
 </document>
