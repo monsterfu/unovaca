@@ -87,7 +87,7 @@
     
     if (DEVICE_HEIGHT <= 480) {
         CGRect oldRect = _tableView.frame;
-        oldRect.origin.y -= 30;
+        oldRect.origin.y -= 50;
         oldRect.size.height += 60;
         [_tableView setFrame:oldRect];
     }

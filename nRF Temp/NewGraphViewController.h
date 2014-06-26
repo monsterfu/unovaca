@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *time4Label;
 @property (weak, nonatomic) IBOutlet UILabel *time5Label;
 
+@property (weak, nonatomic) IBOutlet UIView *timeBarView;
 
 
 @end
