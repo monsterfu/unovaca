@@ -134,12 +134,20 @@ static NSUInteger scanInt = 16;
     else if(indexPath.row == 2)
     {
         UIImageView* imgView = [[UIImageView alloc]initWithImage:[_fob currentBatteryImage]];
-        [imgView setFrame:CGRectMake(270, 12, 30, 12)];
+        [imgView setFrame:CGRectMake(270, 12, 40, 20)];
+        UILabel* label = [[UILabel alloc]initWithFrame:imgView.frame];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setFont:[UIFont systemFontOfSize:10]];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setText:[NSString stringWithFormat:@"%d%%",[_fob.batteryLevel intValue]]];
+        [label setTextColor:[UIColor whiteColor]];
         [cell addSubview:imgView];
+        [cell addSubview:label];
     }else if(indexPath.row == 3)
     {
         UIImageView* imgView = [[UIImageView alloc]initWithImage:[_fob currentSignalStrengthImage]];
         [imgView setFrame:CGRectMake(270, 12, 24, 18)];
+        
         [cell addSubview:imgView];
     }
     

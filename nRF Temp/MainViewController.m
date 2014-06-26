@@ -239,9 +239,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (DEVICE_HEIGHT > 480) {
-        return 80;
+        return 90;
     }
-    return 40;
+    return 80;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

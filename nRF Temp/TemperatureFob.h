@@ -39,7 +39,7 @@
 - (UIImage *) currentBatteryImage;
 
 - (void) setBatteryLevelWithRawData:(NSData *) rawData;
-- (BOOL) addReadingWithRawData:(NSData *)rawData;
+- (BOOL) addReadingWithRawData:(NSData *)rawData person:(PersonDetailInfo*)person;
 
 - (TemperatureReading *) lastReading;
 - (TemperatureReading *) lastReadingBodyTemperature_person:(PersonDetailInfo*)person;

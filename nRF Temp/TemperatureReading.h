@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class TemperatureFob;
+@class PersonDetailInfo;
 
 @interface TemperatureReading : NSManagedObject
 
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSNumber * value;
 @property (nonatomic, retain) TemperatureFob *fob;
+@property (nonatomic, retain) PersonDetailInfo *person;
 
 - (void) setRawValue:(NSData *) rawData;
 

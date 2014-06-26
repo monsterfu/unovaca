@@ -121,7 +121,7 @@ static ConnectionManager *sharedConnectionManager;
     
     [fob setBatteryLevelWithRawData:[serviceData objectForKey:[TemperatureFob batteryServiceUUID]]];
     
-    if (![fob addReadingWithRawData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]])
+    if (![fob addReadingWithRawData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]] person:personInfo])
     {
         NSLog(@"Threw away reading, too little time since last.");
     }

@@ -76,7 +76,8 @@
         ReminderViewDetailController* eventViewController = (ReminderViewDetailController *)[segue destinationViewController];
         eventViewController.reminderModel = [EventReminderModel foundEventReminderModelWithIndex:self.tableView.indexPathForSelectedRow.row];
         eventViewController.isAdd = NO;
-        
+        _localNotice = [_allEventNoticationArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
         eventViewController.localNotice = [_allEventNoticationArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
         
     }else if ([[segue identifier] isEqualToString:@"addEventViewController"])
@@ -134,6 +135,7 @@
         [_allEventReminderModelArray removeObjectAtIndex:indexPath.row];
         _localNotice = [_allEventNoticationArray objectAtIndex:index];
         [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
+        [_allEventNoticationArray removeObject:_localNotice];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationBottom];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

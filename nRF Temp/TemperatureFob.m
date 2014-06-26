@@ -45,7 +45,7 @@
     [self.delegate didUpdateData:self];
 }
 
-- (BOOL) addReadingWithRawData:(NSData *)rawData
+- (BOOL) addReadingWithRawData:(NSData *)rawData person:(PersonDetailInfo*)person
 {
     NSDate *now = [NSDate date];
     NSInteger index = [USER_DEFAULT integerForKey:KEY_GAPTIMER_STR];
@@ -85,6 +85,7 @@
     [reading setDate:[NSDate date]];
     [reading setRawValue:rawData];
     [reading setFob:self];
+    [reading setPerson:person];
     
     [self addReadingsObject:reading];
     [self.delegate didUpdateData:self];
