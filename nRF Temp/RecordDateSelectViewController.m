@@ -41,20 +41,15 @@
     NSDate* curDate = [NSDate date];
     NSString* dateStr = [curDate description];
     NSString* yearStr = [dateStr substringToIndex:4];
-//    NSUInteger year = [yearStr integerValue];
-    
-    NSString* monthStr = [dateStr substringToIndex:7];
-    monthStr = [monthStr substringFromIndex:5];
-    NSUInteger month = [monthStr integerValue];
     
     yearIndex = [curDate year];
     monthIndex = [curDate month] -1;
     
     [_picker selectRow:10 inComponent:0 animated:YES];
-    [_picker selectRow:month - 1 inComponent:1 animated:YES];
+    [_picker selectRow:monthIndex - 1 inComponent:1 animated:YES];
     
     _yearSr = [yearStr stringByAppendingString:@"年"];
-    _monthSr = [[NSString stringWithFormat:@"%d",month]stringByAppendingString:@"月"];
+    _monthSr = [[NSString stringWithFormat:@"%d",monthIndex]stringByAppendingString:@"月"];
     
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];

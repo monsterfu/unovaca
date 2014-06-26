@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSDate * time;
 @property (nonatomic, retain) NSNumber * repeat;
 @property (nonatomic, retain) NSNumber * index;
+@property (nonatomic, retain) NSNumber * open;
 
 + (BOOL) deleteEventReminder:(EventReminderModel *)EventReminder;
 + (NSMutableArray *) allEventReminderModel;

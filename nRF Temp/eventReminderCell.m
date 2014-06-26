@@ -56,5 +56,13 @@
         _frequenceLabel.text = @"提醒一次";
     }
     _smallContentLabel.text = eventReminderModel.eventContent;
+    
+    if ([eventReminderModel.open boolValue]) {
+        _switchView.on = YES;
+    }else{
+        _switchView.on = NO;
+    }
+    
+    
 }
 @end

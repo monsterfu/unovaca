@@ -199,7 +199,8 @@
             {
                 NSDate* birth = _detailInfo.birthday;//[USER_DEFAULT objectForKey:KEY_BIRTH_STR];
                 if (birth != nil) {
-                    _otherCell.detailTextLabel.text = [[birth description]substringToIndex:10];
+                    NSLocale *cnTime = [ [ NSLocale alloc ] initWithLocaleIdentifier : @"zh_CN" ] ;
+                    _otherCell.detailTextLabel.text = [[birth descriptionWithLocale:cnTime]substringToIndex:10];
                 }
                 break;
             }

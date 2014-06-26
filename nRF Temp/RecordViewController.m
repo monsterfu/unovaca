@@ -31,6 +31,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
+    self.title = @"宝贝体温记录";
     _recordsOfMonthArray = [NSMutableArray array];
     [_datePicker setFrame:CGRectMake(0, DEVICE_HEIGHT, DEVICE_WIDTH, 216)];
     UIView* viewBg = [UIView new];
@@ -50,20 +51,18 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    NSDate* todayDate;
     NSUInteger year = [USER_DEFAULT integerForKey:KEY_SELECTED_YEAR];
     NSUInteger month = [USER_DEFAULT integerForKey:KEY_SELECTED_MONTH];
     
-    NSDate* todayDate = [NSDate date];
-    
+    if (year&&month) {
+        todayDate = [NSDate dateWithYear:year Month:month];
+    }else{
+        todayDate = [NSDate date];
+    }
     [_selectDateButton setTitle:[NSString stringWithFormat:@"%d年%d月",[todayDate year],[todayDate month]-1] forState:UIControlStateNormal];
     
     [_selectDateButton setTitle:[NSString stringWithFormat:@"%d年%d月",[todayDate year],[todayDate month]-1] forState:UIControlStateSelected];
-    
-    if (year&&month) {
-        todayDate = [NSDate dateWithYear:year Month:month];
-    }
-    
-    
     
     [self selectDateRecord:todayDate];
 }

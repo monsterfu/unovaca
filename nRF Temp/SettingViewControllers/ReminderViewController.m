@@ -3,6 +3,7 @@
 */
 
 #import "ReminderViewController.h"
+#import "AppDelegate.h"
 
 @interface ReminderViewController ()
 
@@ -160,10 +161,28 @@
 {
     if ([_allEventNoticationArray count] > index) {
         _localNotice = [_allEventNoticationArray objectAtIndex:index];
+        
+        EventReminderModel * eventReminderModel = [_allEventReminderModelArray objectAtIndex:index];
         if (on) {
+            eventReminderModel.open = [NSNumber numberWithBool:YES];
             [[UIApplication sharedApplication] scheduleLocalNotification:_localNotice];
         }else{
+            eventReminderModel.open = [NSNumber numberWithBool:NO];
             [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
+        }
+        
+        
+        NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
+        NSManagedObjectContext *context = eventReminderModel.managedObjectContext;
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+            
+            if (![managedObjectContext save:&error]) {
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
         }
     }
 }

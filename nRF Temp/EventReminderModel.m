@@ -72,6 +72,7 @@
     eventReminderModel.eventContent = content;
     eventReminderModel.time = date;
     eventReminderModel.repeat = [NSNumber numberWithBool:repeat];
+    eventReminderModel.open = [NSNumber numberWithBool:YES];
     return eventReminderModel;
 }
 @end
