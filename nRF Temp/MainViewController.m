@@ -53,15 +53,6 @@
         self.navigationController.navigationBar.barTintColor = _colorBg.backgroundColor;
         self.navigationController.navigationBar.translucent = NO;
     }
-    
-//    UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
-//    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
-//    [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
-//    self.navigationItem.leftBarButtonItem = _cancelButton;
-//    
-//    [self.navigationController.navigationBar.backItem.backBarButtonItem setBackButtonBackgroundImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    
-//    [self.rightButton.image scaleToSize:self.rightButton.image size:CGSizeMake(40, 30)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -103,14 +94,18 @@
 }
 -(void)updatePersonDetail
 {
-    _detailInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
+    _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
     [_tableView reloadData];
 }
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:NSNotificationCenter_PersonDetailChanged object:nil];
 }
-
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [_checkStatusTimer invalidate];
+    _checkStatusTimer = nil;
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     [[ConnectionManager sharedInstance] startScanForFobs];
@@ -125,7 +120,7 @@
     }
     
     //取默认的用户名
-    _detailInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
+    _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
     
     //KEY_SELECED_FOB
     if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
@@ -134,16 +129,24 @@
         [_temperaturePanel setHidden:YES];
         [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
         _textLabel.text = @"没有检测到体温";
-        _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+        if (!_checkStatusTimer) {
+            _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+            [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
+        }
         
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];
         if ([arry count]) {
             _fob = [arry objectAtIndex:0];
+            _fob.active = NO;
             [_temperaturePanel setHidden:YES];
             [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
             _textLabel.text = @"没有检测到体温";
+            if (!_checkStatusTimer) {
+                _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+                [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
+            }
         }else{
             _fob = nil;
             [_temperaturePanel setHidden:YES];
@@ -283,7 +286,7 @@
     {
         historyCell = [tableView dequeueReusableCellWithIdentifier:@"lastNoticeCell" forIndexPath:indexPath];
         if (_fob) {
-            historyCell.temperatureFob = _fob;
+            [historyCell setTemperatureFob:_fob person:_detailInfo];
             [historyCell.tempLabel setHidden:NO];
             [historyCell.timeLabel setHidden:NO];
             [historyCell.noHistoryRemindLabel setHidden:YES];

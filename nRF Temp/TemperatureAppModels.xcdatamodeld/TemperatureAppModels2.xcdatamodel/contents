@@ -12,9 +12,11 @@
         <attribute name="high" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sex" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="fobings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TemperatureFob" inverseName="accordings" inverseEntity="TemperatureFob" syncable="YES"/>
+        <relationship name="personreading" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TemperatureReading" inverseName="person" inverseEntity="TemperatureReading" syncable="YES"/>
     </entity>
     <entity name="TemperatureFob" representedClassName="TemperatureFob" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -31,15 +33,16 @@
         <attribute name="date" attributeType="Date" syncable="YES"/>
         <attribute name="value" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="fob" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemperatureFob" inverseName="readings" inverseEntity="TemperatureFob" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonDetailInfo" inverseName="personreading" inverseEntity="PersonDetailInfo" syncable="YES"/>
     </entity>
     <fetchRequest name="EventReminderFobs" entity="EventReminderModel"/>
     <fetchRequest name="FoundFobs" entity="TemperatureFob" predicateString="isSaved == 0"/>
     <fetchRequest name="PersonFobs" entity="PersonDetailInfo"/>
     <fetchRequest name="StoredFobs" entity="TemperatureFob" predicateString="isSaved == 1"/>
     <elements>
-        <element name="PersonDetailInfo" positionX="-236" positionY="-108" width="128" height="163"/>
-        <element name="TemperatureFob" positionX="-11" positionY="-54" width="128" height="180"/>
-        <element name="TemperatureReading" positionX="225" positionY="72" width="128" height="88"/>
         <element name="EventReminderModel" positionX="-225" positionY="153" width="128" height="103"/>
+        <element name="PersonDetailInfo" positionX="-236" positionY="-108" width="128" height="193"/>
+        <element name="TemperatureFob" positionX="79" positionY="-279" width="128" height="180"/>
+        <element name="TemperatureReading" positionX="225" positionY="72" width="128" height="103"/>
     </elements>
 </model>

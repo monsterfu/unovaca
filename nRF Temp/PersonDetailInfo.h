@@ -19,9 +19,10 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * sex;
 @property (nonatomic, retain) NSNumber * weight;
+@property (nonatomic, retain) NSString* personId;
 
-+ (PersonDetailInfo *) PersonWithName:(NSString *) name;
-+ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name;
++ (PersonDetailInfo *) PersonWithPersonId:(NSString *)personId;
++ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name personId:(NSString*)personId;
 + (NSMutableArray *) allPersonDetail;
 + (BOOL) deletePerson:(PersonDetailInfo *)person;
 

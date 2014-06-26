@@ -73,9 +73,9 @@
     [_recordsOfMonthArray removeAllObjects];
     NSMutableArray* allDay = [NSDate currentMonthAllDay:date];
     for (NSDate* day in allDay) {
-        NSArray* recordDay = [_fob lastReadingsDay:day];
+        NSArray* recordDay = [_fob lastReadingsDay:day person:_person];
         if ([recordDay count]) {
-            [_recordsOfMonthArray addObject:[_fob lastReadingsDay:day]];
+            [_recordsOfMonthArray addObject:recordDay];
         }
     }
     [_tableView reloadData];

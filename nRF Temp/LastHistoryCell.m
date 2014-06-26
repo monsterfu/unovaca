@@ -25,9 +25,9 @@
 
     // Configure the view for the selected state
 }
--(void)setTemperatureFob:(TemperatureFob *)info
+-(void)setTemperatureFob:(TemperatureFob *)info person:(PersonDetailInfo*)person
 {
-    TemperatureReading *lastReading = [info lastReadingBodyTemperature];
+    TemperatureReading *lastReading = [info lastReadingBodyTemperature_person:person];
     if (lastReading) {
         _tempLabel.text = [NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue];
         NSString* str = [[[lastReading date]description] substringToIndex:16];

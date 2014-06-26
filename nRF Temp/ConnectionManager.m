@@ -93,7 +93,7 @@ static ConnectionManager *sharedConnectionManager;
     
     NSLog(@"Discovered peripheral, name %@, data: %@, RSSI: %f, peripheral.identifier:%@", [peripheral name], advertisementData, RSSI.floatValue,peripheral.identifier);
 
-    PersonDetailInfo* personInfo = [PersonDetailInfo PersonWithName:[USER_DEFAULT stringForKey:KEY_USERNAME]];
+    PersonDetailInfo* personInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
     TemperatureFob *fob = [personInfo foundFobWithUUid:[peripheral.identifier UUIDString]];
 
     if (fob == nil && !self.acceptNewFobs)
@@ -106,8 +106,6 @@ static ConnectionManager *sharedConnectionManager;
         fob = [personInfo createFobWithName:[peripheral name] UUid:[[peripheral identifier]UUIDString]];
         [self.delegate didDiscoverFob:fob];
     }
-    
-    fob.active = YES;
     
     [fob setSignalStrength:RSSI];
     
@@ -146,6 +144,7 @@ static ConnectionManager *sharedConnectionManager;
             }
         }
         
+        fob.active = YES;
         [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
     }
 }

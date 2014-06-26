@@ -13,6 +13,7 @@
 #import "SBJson/SBJson.h"
 #import "NSDate+JBCommon.h"
 #import "UIImage+scaleToSize.h"
+#import "NSString+randonStr.h"
 
 #define VISION_NO    @"1.1.0"
 
@@ -33,10 +34,12 @@
 
 //main
 #define KEY_USERNAME       @"key_username"
+#define KEY_PERSONID       @"key_personid"
 #define KEY_FOBNAME       @"key_fobname"
 #define KEY_FOBUUID         @"key_fobuuid"
 
 #define KEY_SELECED_FOB        @"key_selected_fob"
+#define KEY_BACKGROUND_OPEN     @"key_background_open"
 //setting
 
 #define KEY_GAPTIMER_STR   @"key_gaptimer_str"   //时间间隔

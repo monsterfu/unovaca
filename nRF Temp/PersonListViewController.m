@@ -47,8 +47,6 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     
-    _selectedIndex = 0;
-    _selectedIndex = [USER_DEFAULT integerForKey:KEY_PERSON_SELECTED];
 }
 
 -(void)backButtonPressed
@@ -63,6 +61,16 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
 -(void)viewWillAppear:(BOOL)animated
 {
     _personInfoArray = [PersonDetailInfo allPersonDetail];
+    
+    NSUInteger i = 0;
+    
+    for (PersonDetailInfo* person in _personInfoArray) {
+        if ([person.personId isEqualToString:[USER_DEFAULT objectForKey:KEY_PERSONID]]) {
+            _selectedIndex = i;
+        }
+        i++;
+    }
+    
     [self.tableView reloadData];
 }
 #pragma mark - Table view data source
@@ -140,8 +148,8 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
     
     
     PersonDetailInfo *detailInfo = (PersonDetailInfo *)[_personInfoArray objectAtIndex:indexPath.row];
-    [USER_DEFAULT removeObjectForKey:KEY_USERNAME];
-    [USER_DEFAULT setObject:detailInfo.name forKey:KEY_USERNAME];
+    [USER_DEFAULT removeObjectForKey:KEY_PERSONID];
+    [USER_DEFAULT setObject:detailInfo.personId forKey:KEY_PERSONID];
     [USER_DEFAULT synchronize];
     
     
@@ -214,13 +222,9 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
         
         [USER_DEFAULT removeObjectForKey:KEY_NICKNAME_STR];
         
-        if ([self.tableView numberOfRowsInSection:0] == 0) {
-            _detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo"
-                                                        inManagedObjectContext:self.managedObjectContext];
-        }else{
-            _detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo"
-                                                        inManagedObjectContext:self.managedObjectContext];
-        }
+        _detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo"
+                                                    inManagedObjectContext:self.managedObjectContext];
+        _detailInfo.personId = [NSString randomStr];
         PersonViewController *addController = (PersonViewController *)segue.destinationViewController;
         addController.detailInfo = _detailInfo;
         addController.isNew = YES;

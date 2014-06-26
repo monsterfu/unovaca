@@ -19,12 +19,13 @@
     
     if (![USER_DEFAULT stringForKey:KEY_USERNAME]) {
         //没有则创建一个
-        PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝"];
+        NSString* personId = [NSString randomStr];
+        PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝" personId:personId];
         _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
         _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
         _detailInfo.weight = [NSNumber numberWithInteger:20];
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
-        
+        [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
         NSError *error = nil;
         
         if (![_detailInfo.managedObjectContext save:&error]) {

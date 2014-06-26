@@ -10,6 +10,9 @@
 
 #import "TemperatureReading.h"
 #import "PublicDefine.h"
+#import "PersonDetailInfo.h"
+
+@class PersonDetailInfo;
 
 @protocol TemperatureFobDelegate
 - (void) didUpdateData:(TemperatureFob *) fob;
@@ -39,10 +42,10 @@
 - (BOOL) addReadingWithRawData:(NSData *)rawData;
 
 - (TemperatureReading *) lastReading;
-- (TemperatureReading *) lastReadingBodyTemperature;
+- (TemperatureReading *) lastReadingBodyTemperature_person:(PersonDetailInfo*)person;
 - (NSArray *) lastReadings:(NSUInteger) number;
 - (NSArray *) lastReadingsSince:(NSUInteger) minutes;
-- (NSArray *) lastReadingsDay:(NSDate*)day;
+- (NSArray *) lastReadingsDay:(NSDate*)day person:(PersonDetailInfo*)person;
 - (NSArray *) lastReadingsMonth:(NSDate*)month;
 @end
 

@@ -18,13 +18,13 @@
 @dynamic name;
 @dynamic sex;
 @dynamic weight;
-
+@dynamic personId;
 
 #pragma mark - Person
-+ (PersonDetailInfo *) PersonWithName:(NSString *) name
++ (PersonDetailInfo *) PersonWithPersonId:(NSString *)personId
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"PersonDetailInfo"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"name LIKE %@", name]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"personId LIKE %@", personId]];
     NSManagedObjectContext *moc = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     NSError *error;
     NSArray *array = [moc executeFetchRequest:request error:&error];
@@ -40,12 +40,13 @@
     return nil;
 }
 
-+ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name 
++ (PersonDetailInfo *) createPersonDetailInfoWithName:(NSString *)name personId:(NSString*)personId
 {
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     
     PersonDetailInfo *personDetailInfo = (PersonDetailInfo *) [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo" inManagedObjectContext:managedObjectContext];
     personDetailInfo.name = name;
+    personDetailInfo.personId = personId;
     return personDetailInfo;
 }
 

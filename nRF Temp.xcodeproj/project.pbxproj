@@ -227,6 +227,10 @@
 		64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4338195C12B3005502D8 /* ic_launcher.png */; };
 		64EA433C195C12B3005502D8 /* logo_512X512 - 副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */; };
 		64EA433D195C12B3005502D8 /* ic_launcher - 副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */; };
+		64EA4340195C1658005502D8 /* NSString+randonStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EA433F195C1658005502D8 /* NSString+randonStr.m */; };
+		64EA4344195C1737005502D8 /* ic_number_status_35.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4341195C1737005502D8 /* ic_number_status_35.png */; };
+		64EA4345195C1737005502D8 /* ic_number_status_39.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4342195C1737005502D8 /* ic_number_status_39.png */; };
+		64EA4346195C1737005502D8 /* ic_number_status_45.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4343195C1737005502D8 /* ic_number_status_45.png */; };
 		931D1AA5162D9994007F8617 /* TemperatureFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AA4162D9994007F8617 /* TemperatureFobCell.m */; };
 		931D1ABC162E9150007F8617 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931D1ABB162E9150007F8617 /* CoreBluetooth.framework */; };
 		931D1ABD162E93FB007F8617 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AB7162E8B0A007F8617 /* ConnectionManager.m */; };
@@ -532,6 +536,11 @@
 		64EA4338195C12B3005502D8 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_512X512 - 副本.png"; sourceTree = "<group>"; };
 		64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher - 副本.png"; sourceTree = "<group>"; };
+		64EA433E195C1658005502D8 /* NSString+randonStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+randonStr.h"; sourceTree = "<group>"; };
+		64EA433F195C1658005502D8 /* NSString+randonStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+randonStr.m"; sourceTree = "<group>"; };
+		64EA4341195C1737005502D8 /* ic_number_status_35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_number_status_35.png; sourceTree = "<group>"; };
+		64EA4342195C1737005502D8 /* ic_number_status_39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_number_status_39.png; sourceTree = "<group>"; };
+		64EA4343195C1737005502D8 /* ic_number_status_45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_number_status_45.png; sourceTree = "<group>"; };
 		931D1AA3162D9994007F8617 /* TemperatureFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureFobCell.h; sourceTree = "<group>"; };
 		931D1AA4162D9994007F8617 /* TemperatureFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureFobCell.m; sourceTree = "<group>"; };
 		931D1AB6162E8B0A007F8617 /* ConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
@@ -613,6 +622,9 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				64EA4341195C1737005502D8 /* ic_number_status_35.png */,
+				64EA4342195C1737005502D8 /* ic_number_status_39.png */,
+				64EA4343195C1737005502D8 /* ic_number_status_45.png */,
 				64EA4338195C12B3005502D8 /* ic_launcher.png */,
 				64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */,
 				64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */,
@@ -706,6 +718,8 @@
 			children = (
 				649B060D1929A380002B642E /* NSDate+JBCommon.h */,
 				649B060E1929A380002B642E /* NSDate+JBCommon.m */,
+				64EA433E195C1658005502D8 /* NSString+randonStr.h */,
+				64EA433F195C1658005502D8 /* NSString+randonStr.m */,
 			);
 			name = "NSDate+JBCommon";
 			sourceTree = "<group>";
@@ -1168,6 +1182,7 @@
 			files = (
 				64E1E2451908FC5700D274A1 /* help.html in Resources */,
 				649A85711921E3BD00ED7445 /* a开关3.png in Resources */,
+				64EA4345195C1737005502D8 /* ic_number_status_39.png in Resources */,
 				64097C5A19050AEC00C0E49D /* 1.png in Resources */,
 				0F02E1F91919440100722AFA /* disease-2 in Resources */,
 				64E1E24E1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin in Resources */,
@@ -1230,6 +1245,7 @@
 				640D9CB71919E3770097386B /* oneKnowsViewController.xib in Resources */,
 				641A720E190616C200CC7041 /* addnew@2x.png in Resources */,
 				64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */,
+				64EA4344195C1737005502D8 /* ic_number_status_35.png in Resources */,
 				0F19CABD1913E44700BF9312 /* a删除2.png in Resources */,
 				64097C6819050AEC00C0E49D /* 保存2.png in Resources */,
 				0F3E0FDB19553E8C00F86FCC /* ic_number_status_38.png in Resources */,
@@ -1243,6 +1259,7 @@
 				0F19CA7C1913E2F200BF9312 /* a0.png in Resources */,
 				641A721619061C2500CC7041 /* delete@2x.png in Resources */,
 				0F19CAB51913E44700BF9312 /* a间隔icon.png in Resources */,
+				64EA4346195C1737005502D8 /* ic_number_status_45.png in Resources */,
 				64097C5C19050AEC00C0E49D /* 3.png in Resources */,
 				0F19CAC51913E44700BF9312 /* a新增提醒icon.png in Resources */,
 				64097C8519050AEC00C0E49D /* 头像蒙版.png in Resources */,
@@ -1360,6 +1377,7 @@
 				6406709A1950160400928CAB /* TemperatureNewFobCell.m in Sources */,
 				649B7236190F8F59005E4F2E /* SBJsonTokeniser.m in Sources */,
 				93E4E205162D5E2000974286 /* ListViewController.m in Sources */,
+				64EA4340195C1658005502D8 /* NSString+randonStr.m in Sources */,
 				649B7237190F8F59005E4F2E /* SBJsonUTF8Stream.m in Sources */,
 				64E1E2411908FC5700D274A1 /* AppSelectionViewController.m in Sources */,
 				649B7234190F8F59005E4F2E /* SBJsonStreamWriterAccumulator.m in Sources */,
