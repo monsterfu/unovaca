@@ -34,7 +34,7 @@
 
 - (IBAction)switchChanged:(UISwitch *)sender {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(switchChanged:index:)]) {
-        [self.delegate switchChanged:sender.on index:_eventReminderModel.index];
+        [self.delegate switchChanged:sender.on index:[_eventReminderModel.index intValue]];
     }
 }
 
