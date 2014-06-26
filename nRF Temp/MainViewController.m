@@ -93,6 +93,13 @@
     
     _lowPanel2View.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(lowAngel));
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updatePersonDetail) name:NSNotificationCenter_PersonDetailChanged object:nil];
+    
+    if (DEVICE_HEIGHT <= 480) {
+        CGRect oldRect = _tableView.frame;
+        oldRect.origin.y -= 50;
+        [_tableView setFrame:oldRect];
+    }
+    
 }
 -(void)updatePersonDetail
 {

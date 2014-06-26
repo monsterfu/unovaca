@@ -224,6 +224,9 @@
 		64E1E2511908FE2200D274A1 /* ble_app_template_button.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */; };
 		64E9021B18EE47BD00E9E72B /* PersonDetailSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */; };
 		64E9021E18EEA49C00E9E72B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E9021D18EEA49C00E9E72B /* SettingViewController.m */; };
+		64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4338195C12B3005502D8 /* ic_launcher.png */; };
+		64EA433C195C12B3005502D8 /* logo_512X512 - 副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */; };
+		64EA433D195C12B3005502D8 /* ic_launcher - 副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */; };
 		931D1AA5162D9994007F8617 /* TemperatureFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AA4162D9994007F8617 /* TemperatureFobCell.m */; };
 		931D1ABC162E9150007F8617 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931D1ABB162E9150007F8617 /* CoreBluetooth.framework */; };
 		931D1ABD162E93FB007F8617 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AB7162E8B0A007F8617 /* ConnectionManager.m */; };
@@ -526,6 +529,9 @@
 		64E9021C18EEA49C00E9E72B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		64E9021D18EEA49C00E9E72B /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		64E98A4318F51AFE00AE419B /* TemperatureAppModels3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TemperatureAppModels3.xcdatamodel; sourceTree = "<group>"; };
+		64EA4338195C12B3005502D8 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_512X512 - 副本.png"; sourceTree = "<group>"; };
+		64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher - 副本.png"; sourceTree = "<group>"; };
 		931D1AA3162D9994007F8617 /* TemperatureFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureFobCell.h; sourceTree = "<group>"; };
 		931D1AA4162D9994007F8617 /* TemperatureFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureFobCell.m; sourceTree = "<group>"; };
 		931D1AB6162E8B0A007F8617 /* ConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
@@ -543,8 +549,6 @@
 		93799D2E166E961700351938 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = help.html; path = ../help.html; sourceTree = "<group>"; };
 		9380A98817DDE14000DDB73E /* TemperatureAppModels 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TemperatureAppModels 1.1.xcdatamodel"; sourceTree = "<group>"; };
 		9380A9CE17DF4A4B00DDB73E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9380A9D217DF4A8F00DDB73E /* Splach_screen_640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splach_screen_640x1136.png; sourceTree = "<group>"; };
-		9380A9D317DF4A8F00DDB73E /* Splash_screen_640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash_screen_640x960.png; sourceTree = "<group>"; };
 		9380AA2117E0B76A00DDB73E /* BatteryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryView.h; sourceTree = "<group>"; };
 		9380AA2217E0B76A00DDB73E /* BatteryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryView.m; sourceTree = "<group>"; };
 		93E4E1E4162D5E2000974286 /* nRF Temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nRF Temp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -609,6 +613,9 @@
 		0FBC5776191F4BBE006AEA01 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				64EA4338195C12B3005502D8 /* ic_launcher.png */,
+				64EA4339195C12B3005502D8 /* logo_512X512 - 副本.png */,
+				64EA433A195C12B3005502D8 /* ic_launcher - 副本.png */,
 				0F3E0FDD1955508D00F86FCC /* history_day_bg.png */,
 				0F3E0FD719553E8C00F86FCC /* ic_number_status_37.png */,
 				0F3E0FD819553E8C00F86FCC /* ic_number_status_38.png */,
@@ -1094,8 +1101,6 @@
 				0FBC5776191F4BBE006AEA01 /* original */,
 				64D6F88E190E47980070F8C5 /* iphone5 */,
 				649EB92D18FCDE0300C3D6FB /* iphone4 */,
-				9380A9D217DF4A8F00DDB73E /* Splach_screen_640x1136.png */,
-				9380A9D317DF4A8F00DDB73E /* Splash_screen_640x960.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1167,6 +1172,7 @@
 				0F02E1F91919440100722AFA /* disease-2 in Resources */,
 				64E1E24E1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin in Resources */,
 				0F19CAC11913E44700BF9312 /* a提醒icon.png in Resources */,
+				64EA433C195C12B3005502D8 /* logo_512X512 - 副本.png in Resources */,
 				0F77AFED1951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png in Resources */,
 				0F77AFEA1951E47A005F1063 /* ic_titlebar_add_kid_normal.png in Resources */,
 				0F19CABA1913E44700BF9312 /* a历史记录icon.png in Resources */,
@@ -1200,6 +1206,7 @@
 				64097C5E19050AEC00C0E49D /* 5.png in Resources */,
 				0F19CA7F1913E2F200BF9312 /* a3.png in Resources */,
 				64097C7919050AEC00C0E49D /* 开关3.png in Resources */,
+				64EA433D195C12B3005502D8 /* ic_launcher - 副本.png in Resources */,
 				0F19CAC31913E44700BF9312 /* a温度警报icon.png in Resources */,
 				0F19CA851913E2F200BF9312 /* a9.png in Resources */,
 				0FB517D519212B760070344F /* battery_20@2x.png in Resources */,
@@ -1222,6 +1229,7 @@
 				0F19CABE1913E44700BF9312 /* a设置.png in Resources */,
 				640D9CB71919E3770097386B /* oneKnowsViewController.xib in Resources */,
 				641A720E190616C200CC7041 /* addnew@2x.png in Resources */,
+				64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */,
 				0F19CABD1913E44700BF9312 /* a删除2.png in Resources */,
 				64097C6819050AEC00C0E49D /* 保存2.png in Resources */,
 				0F3E0FDB19553E8C00F86FCC /* ic_number_status_38.png in Resources */,
@@ -1484,14 +1492,13 @@
 		93E4E20C162D5E2000974286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/nRF Temp-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/nRF Temp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1509,14 +1516,13 @@
 		93E4E20D162D5E2000974286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
 				CODE_SIGN_IDENTITY = "iPhone Developer: xin fu (MC3BQTMFTZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin fu (MC3BQTMFTZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/nRF Temp-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/nRF Temp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1524,8 +1530,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
+				PROVISIONING_PROFILE = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
