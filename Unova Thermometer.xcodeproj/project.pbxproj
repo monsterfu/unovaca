@@ -560,14 +560,14 @@
 		9380A9CE17DF4A4B00DDB73E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9380AA2117E0B76A00DDB73E /* BatteryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryView.h; sourceTree = "<group>"; };
 		9380AA2217E0B76A00DDB73E /* BatteryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryView.m; sourceTree = "<group>"; };
-		93E4E1E4162D5E2000974286 /* nRF Temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nRF Temp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E4E1E4162D5E2000974286 /* Unova Thermometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unova Thermometer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4E1E8162D5E2000974286 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93E4E1EA162D5E2000974286 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93E4E1EC162D5E2000974286 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		93E4E1F0162D5E2000974286 /* nRF Temp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nRF Temp-Info.plist"; sourceTree = "<group>"; };
+		93E4E1F0162D5E2000974286 /* Unova Thermometer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unova Thermometer-Info.plist"; sourceTree = "<group>"; };
 		93E4E1F2162D5E2000974286 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93E4E1F4162D5E2000974286 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		93E4E1F6162D5E2000974286 /* nRF Temp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nRF Temp-Prefix.pch"; sourceTree = "<group>"; };
+		93E4E1F6162D5E2000974286 /* Unova Thermometer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unova Thermometer-Prefix.pch"; sourceTree = "<group>"; };
 		93E4E1F7162D5E2000974286 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93E4E1F8162D5E2000974286 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		93E4E203162D5E2000974286 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -1047,7 +1047,7 @@
 		93E4E1E5162D5E2000974286 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93E4E1E4162D5E2000974286 /* nRF Temp.app */,
+				93E4E1E4162D5E2000974286 /* Unova Thermometer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1100,10 +1100,10 @@
 				0F40EEB7191A78050054894B /* soundRes */,
 				93799D2E166E961700351938 /* help.html */,
 				93E4E212162D5FC300974286 /* images */,
-				93E4E1F0162D5E2000974286 /* nRF Temp-Info.plist */,
+				93E4E1F0162D5E2000974286 /* Unova Thermometer-Info.plist */,
 				93E4E1F1162D5E2000974286 /* InfoPlist.strings */,
 				93E4E1F4162D5E2000974286 /* main.m */,
-				93E4E1F6162D5E2000974286 /* nRF Temp-Prefix.pch */,
+				93E4E1F6162D5E2000974286 /* Unova Thermometer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1122,9 +1122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93E4E1E3162D5E2000974286 /* nRF Temp */ = {
+		93E4E1E3162D5E2000974286 /* Unova Thermometer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93E4E20B162D5E2000974286 /* Build configuration list for PBXNativeTarget "nRF Temp" */;
+			buildConfigurationList = 93E4E20B162D5E2000974286 /* Build configuration list for PBXNativeTarget "Unova Thermometer" */;
 			buildPhases = (
 				93E4E1E0162D5E2000974286 /* Sources */,
 				93E4E1E1162D5E2000974286 /* Frameworks */,
@@ -1134,9 +1134,9 @@
 			);
 			dependencies = (
 			);
-			name = "nRF Temp";
+			name = "Unova Thermometer";
 			productName = "nRF Temp";
-			productReference = 93E4E1E4162D5E2000974286 /* nRF Temp.app */;
+			productReference = 93E4E1E4162D5E2000974286 /* Unova Thermometer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1157,7 +1157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 93E4E1DE162D5E2000974286 /* Build configuration list for PBXProject "nRF Temp" */;
+			buildConfigurationList = 93E4E1DE162D5E2000974286 /* Build configuration list for PBXProject "Unova Thermometer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1170,7 +1170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93E4E1E3162D5E2000974286 /* nRF Temp */,
+				93E4E1E3162D5E2000974286 /* Unova Thermometer */,
 			);
 		};
 /* End PBXProject section */
@@ -1514,8 +1514,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "nRF Temp/nRF Temp-Prefix.pch";
-				INFOPLIST_FILE = "nRF Temp/nRF Temp-Info.plist";
+				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
+				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1523,7 +1523,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Unova Thermometer";
 				PROVISIONING_PROFILE = "A0B28F0E-D6D5-4855-93F3-5B184E66428D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A0B28F0E-D6D5-4855-93F3-5B184E66428D";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1538,8 +1538,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: xin fu (MC3BQTMFTZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin fu (MC3BQTMFTZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "nRF Temp/nRF Temp-Prefix.pch";
-				INFOPLIST_FILE = "nRF Temp/nRF Temp-Info.plist";
+				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
+				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1547,7 +1547,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Unova Thermometer";
 				PROVISIONING_PROFILE = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1558,7 +1558,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93E4E1DE162D5E2000974286 /* Build configuration list for PBXProject "nRF Temp" */ = {
+		93E4E1DE162D5E2000974286 /* Build configuration list for PBXProject "Unova Thermometer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93E4E209162D5E2000974286 /* Debug */,
@@ -1567,7 +1567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93E4E20B162D5E2000974286 /* Build configuration list for PBXNativeTarget "nRF Temp" */ = {
+		93E4E20B162D5E2000974286 /* Build configuration list for PBXNativeTarget "Unova Thermometer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93E4E20C162D5E2000974286 /* Debug */,
