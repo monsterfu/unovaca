@@ -84,7 +84,12 @@
 -(void)saveButtonPressed
 {
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
-    NSManagedObjectContext *context = _reminderModel.managedObjectContext;  
+    NSManagedObjectContext *context = _reminderModel.managedObjectContext;
+    if (!_reminderModel.eventContent) {
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"警告" message:@"提醒内容不能为空" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+        [alertView show];
+        return;
+    }
     NSError *error = nil;
     if (![context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);

@@ -74,7 +74,8 @@
     if ([[segue identifier] isEqualToString:@"showEventViewController"])
     {
         ReminderViewDetailController* eventViewController = (ReminderViewDetailController *)[segue destinationViewController];
-        eventViewController.reminderModel = [EventReminderModel foundEventReminderModelWithIndex:self.tableView.indexPathForSelectedRow.row];
+        eventReminderCell* cell = (eventReminderCell*)sender;
+        eventViewController.reminderModel = cell.eventReminderModel;
         eventViewController.isAdd = NO;
         _localNotice = [_allEventNoticationArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
         [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
@@ -133,7 +134,7 @@
         // Delete the row from the data source
         [EventReminderModel deleteEventReminder:[_allEventReminderModelArray objectAtIndex:indexPath.row]];
         [_allEventReminderModelArray removeObjectAtIndex:indexPath.row];
-        _localNotice = [_allEventNoticationArray objectAtIndex:index];
+        _localNotice = [_allEventNoticationArray objectAtIndex:indexPath.row];
         [[UIApplication sharedApplication]cancelLocalNotification:_localNotice];
         [_allEventNoticationArray removeObject:_localNotice];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationBottom];

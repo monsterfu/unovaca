@@ -35,7 +35,12 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
+    if ([textField.text length]) {
+        if (self.delegate&&[self.delegate respondsToSelector:@selector(updateTextField:)]) {
+            [self.delegate updateTextField:textField.text];
+            [textField resignFirstResponder];
+        }
+    }
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

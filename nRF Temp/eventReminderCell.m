@@ -50,7 +50,7 @@
 //    NSString* dateStr = [[[eventReminderModel.time description] substringToIndex:16]substringFromIndex:11];
     
     _timeLabel.text = dateStr;
-    if (eventReminderModel.repeat) {
+    if ([eventReminderModel.repeat intValue]) {
         _frequenceLabel.text = @"每天提醒";
     }else{
         _frequenceLabel.text = @"提醒一次";
