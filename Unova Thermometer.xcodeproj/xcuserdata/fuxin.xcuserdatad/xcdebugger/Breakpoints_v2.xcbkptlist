@@ -14,7 +14,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
-            endingLineNumber = "387">
+            endingLineNumber = "387"
+            landmarkName = "-recentUpdateData:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -28,7 +30,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "397"
-            endingLineNumber = "397">
+            endingLineNumber = "397"
+            landmarkName = "-recentUpdateData:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -59,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
-            landmarkName = "-isBluetoothEnabled:"
+            landmarkName = "-panelRotation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -361,7 +365,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "-dealloc"
+            landmarkName = "-backButtonPressed"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -506,6 +510,22 @@
             startingLineNumber = "133"
             endingLineNumber = "133"
             landmarkName = "-showPlot:x:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nRF Temp/SettingViewControllers/ReminderViewController.m"
+            timestampString = "425717873.410647"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-switchChanged:index:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
