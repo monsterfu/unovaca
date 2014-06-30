@@ -1535,8 +1535,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin fu (MC3BQTMFTZ)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Smit (HK) Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Smit (HK) Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
@@ -1548,8 +1548,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Unova Thermometer";
-				PROVISIONING_PROFILE = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
+				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

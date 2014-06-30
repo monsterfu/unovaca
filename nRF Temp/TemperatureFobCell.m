@@ -26,8 +26,9 @@
         [_nameLabel setText:fob.location];
     }
     [_tempLabel setText:[NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue]];
-    
-    NSString* dateStr = [NSString stringWithFormat:@"(%@)",[lastReading.date.description substringToIndex:19]];
+    NSDate* date = [NSDate dateWithTimeInterval:8*4*60*60 sinceDate:[lastReading date]];
+    NSString* dateStr = [date.description substringToIndex:19];
+//    NSString* dateStr = [NSString stringWithFormat:@"(%@)",[lastReading.date.description substringToIndex:19]];
     [_dateTimeLabel setText:dateStr];
     [_signalImageView setImage:[fob currentSignalStrengthImage]];
     

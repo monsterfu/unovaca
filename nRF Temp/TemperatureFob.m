@@ -75,10 +75,16 @@
         default:
             break;
     }
-    
-    if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
-    {
-        return false;
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+        if ([now timeIntervalSinceDate:[self.lastReading date]] < 2*60)
+        {
+            return false;
+        }
+    }else if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+        if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
+        {
+            return false;
+        }
     }
     
     TemperatureReading *reading = (TemperatureReading *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureReading" inManagedObjectContext:self.managedObjectContext];
@@ -214,11 +220,11 @@
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
-    NSLog(@"startTime , endTime:%@",day);
+    
     
     NSDate* startTime = [NSDate currentDayStartTime:day];
     NSDate* endTime = [NSDate currentDayEndTime:day];
-    
+    NSLog(@"startTime：%@ , endTime:%@",startTime,endTime);
     
     [request setPredicate:[NSPredicate predicateWithFormat:@"fob.uuid LIKE %@ AND person.personId LIKE %@ AND date >= %@ AND date <= %@ AND value >= 35 AND value <= 42", self.uuid,person.personId, startTime, endTime]];
     NSError *error;

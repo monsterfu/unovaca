@@ -22,7 +22,7 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSRange range = [calendar rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:date];
     
-    for (NSUInteger num = 1; num < range.length; num ++) {
+    for (NSUInteger num = 1; num <= range.length; num ++) {
         NSDateComponents *fromTimeComponents = [cal components:(NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit ) fromDate:date];
         NSDateComponents *toTimeComponents = [cal components:(NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit ) fromDate:[NSDate date]];
         [toTimeComponents setYear:[fromTimeComponents year]];

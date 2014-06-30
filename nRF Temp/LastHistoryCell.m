@@ -29,14 +29,15 @@
 {
     TemperatureReading *lastReading = [info lastReadingBodyTemperature_person:person];
     if (lastReading) {
+        
+        NSDate* date = [NSDate dateWithTimeInterval:8*4*60*60 sinceDate:[lastReading date]];
+        NSString* dateStr = [date.description substringToIndex:16];
+        
         _tempLabel.text = [NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue];
-        NSString* str = [[[lastReading date]description] substringToIndex:16];
-        _timeLabel.text = [NSString stringWithFormat:@"(%@)",str];
+        _timeLabel.text = [NSString stringWithFormat:@"(%@)",dateStr];
     }else{
         _tempLabel.text = @"无记录";
         _timeLabel.text = @"";
     }
-    
-    
 }
 @end

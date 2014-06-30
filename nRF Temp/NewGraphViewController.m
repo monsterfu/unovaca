@@ -51,7 +51,11 @@
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     [_timeBarView setFrame:CGRectMake(0, DEVICE_HEIGHT - _timeBarView.frame.size.height, DEVICE_WIDTH, _timeBarView.frame.size.height)];
-    
+    if (1){//DEVICE_HEIGHT > 480) {
+        CGRect oldRect = _timeBarView.frame;
+        oldRect.origin.y -=100;
+        [_timeBarView setFrame:oldRect];
+    }
 }
 
 -(void)backButtonPressed
@@ -130,9 +134,14 @@
 -(void)showPlot:(float)temp x:(NSUInteger)x
 {
     NSLog(@"showPlot  showPlot  showPlot showPlot:%f  %d",temp,x);
+    CGRect frame;
     NSUInteger y_gap = _graphRect.size.height/7;
     NSUInteger y = _graphRect.origin.y + _graphRect.size.height - (temp - 35.0f)*y_gap;
-    CGRect frame = CGRectMake(x-5, y-5, TEM_W_H, TEM_W_H);
+    if (DEVICE_HEIGHT > 480) {
+        frame = CGRectMake(x-5, y-5-y_gap*1/3, TEM_W_H, TEM_W_H);
+    }else{
+        frame = CGRectMake(x-5, y-5-y_gap, TEM_W_H, TEM_W_H);
+    }
     GraphView* temView = [[GraphView alloc]initWithFrame:frame];
     [self.view addSubview:temView];
 }
