@@ -31,10 +31,12 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(eventReminderChanged) name:NSNotificationCenter_EventReminderChanged object:nil];
     _allEventNoticationArray = [NSMutableArray array];
     
+    [[UIApplication sharedApplication]cancelAllLocalNotifications];
+    
     for (EventReminderModel* model in _allEventReminderModelArray) {
         _localNotice = [[UILocalNotification alloc]init];
         _localNotice.applicationIconBadgeNumber = 1;
-        _localNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:100];//model.time;
+        _localNotice.fireDate = model.time;//[NSDate dateWithTimeIntervalSinceNow:100];//model.time;
         _localNotice.timeZone = [NSTimeZone defaultTimeZone];
         _localNotice.soundName = @"4031.wav";
         if (model.repeat) {
@@ -45,6 +47,9 @@
         _localNotice.alertBody = model.eventContent;
         
         [_allEventNoticationArray addObject:_localNotice];
+        if ([model.open boolValue]) {
+            [[UIApplication sharedApplication] scheduleLocalNotification:_localNotice];
+        }
     }
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
