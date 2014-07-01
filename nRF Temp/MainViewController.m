@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"Unova智能温度计";
+    self.title = @"Unova智能温度计";//NSLocalizedString(@"hello", nil);
     
     NSLog(@"self.navigationController.navigationBar.height:%f",self.navigationController.navigationBar.frame.size.height);
     if (![self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
@@ -352,12 +352,14 @@
     
     if (value< 31.0) {
         _textLabel.text = @"没有检测到正常体温";
+        [_temperaturePanel setHidden:YES];
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_35"]];
     }else if (value >= 31&&value< 34.5) {
         if (_lastValue < value) {
             _textLabel.text = @"体温小于34.5℃,请等待!";
         }
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
+        [_temperaturePanel setHidden:YES];
     }else if (value >= 34.5&&value< 36) {
         [_temperaturePanel setHidden:NO];
         _status.text = @"低温";
