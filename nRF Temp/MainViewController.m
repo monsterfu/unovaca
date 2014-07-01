@@ -112,14 +112,7 @@
     [[ConnectionManager sharedInstance] startScanForFobs];
     [[ConnectionManager sharedInstance] setDelegate:self];
     [[ConnectionManager sharedInstance] setAcceptNewFobs:YES];
-    
-    //取默认的最高温度配置
-    NSInteger tempLimit = [USER_DEFAULT integerForKey:KEY_MOST_STR];
-    if (tempLimit == 0) {
-        [USER_DEFAULT setInteger:42 - 37 forKey:KEY_MOST_STR];
-        [USER_DEFAULT synchronize];
-    }
-    
+        
     //取默认的用户名
     _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
     

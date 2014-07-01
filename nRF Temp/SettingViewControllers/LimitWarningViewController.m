@@ -64,7 +64,6 @@
 -(void)saveButtonPressed
 {
     [USER_DEFAULT removeObjectForKey:KEY_MOST_STR];
-    [USER_DEFAULT removeObjectForKey:KEY_LOWEST_STR];
     [USER_DEFAULT setInteger:_mostInt forKey:KEY_MOST_STR];
     [USER_DEFAULT synchronize];
     [self.navigationController popViewControllerAnimated:YES];

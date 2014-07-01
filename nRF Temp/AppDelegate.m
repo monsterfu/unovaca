@@ -27,6 +27,7 @@
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
+        [USER_DEFAULT setInteger:5 forKey:KEY_MOST_STR];
         NSError *error = nil;
         
         if (![_detailInfo.managedObjectContext save:&error]) {

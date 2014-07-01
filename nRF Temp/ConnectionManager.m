@@ -152,7 +152,7 @@ static ConnectionManager *sharedConnectionManager;
             {
                 [[soundVibrateManager sharedInstance]playAlertSound];
                 [[soundVibrateManager sharedInstance]vibrate];
-                alertView = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"目前体味已经超过报警值！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                alertView = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"目前体温已经超过%d℃报警值！",[USER_DEFAULT integerForKey:KEY_MOST_STR]] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                 [alertView show];
             }
         }
