@@ -36,10 +36,7 @@
         {
             self.locationField.text = self.fob.location;
         }
-        
         [self.batteryView setBatteryLevel:self.fob.batteryLevel];
-        
-        
     }
 }
 

@@ -701,13 +701,6 @@
 			name = "UIImage+scaleToSize";
 			sourceTree = "<group>";
 		};
-		640670AD1950362800928CAB /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
-			sourceTree = "<group>";
-		};
 		640670B319503E5300928CAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1074,7 +1067,6 @@
 		93E4E1EE162D5E2000974286 /* nRF Temp */ = {
 			isa = PBXGroup;
 			children = (
-				640670AD1950362800928CAB /* iPad */,
 				640670B319503E5300928CAB /* Model */,
 				640670A31950202600928CAB /* UIImage+scaleToSize */,
 				649B060C1929A33D002B642E /* NSDate+JBCommon */,

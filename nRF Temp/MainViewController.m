@@ -121,13 +121,12 @@
         _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
         _fob.active = NO;
         [_temperaturePanel setHidden:YES];
-        [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
-        _textLabel.text = @"没有检测到体温";
+        [_statusButton setTitle:@"检测中..." forState:UIControlStateDisabled];
+        _textLabel.text = @"没有检测到正常体温";
         if (!_checkStatusTimer) {
-            _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+            _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
         }
-        
     }else{
         NSArray* arry;
         arry = [_detailInfo allStoredFobs];
@@ -135,16 +134,16 @@
             _fob = [arry objectAtIndex:0];
             _fob.active = NO;
             [_temperaturePanel setHidden:YES];
-            [_statusButton setTitle:@"检测中..." forState:UIControlStateNormal];
-            _textLabel.text = @"没有检测到体温";
+            [_statusButton setTitle:@"检测中..." forState:UIControlStateDisabled];
+            _textLabel.text = @"没有检测到正常体温";
             if (!_checkStatusTimer) {
-                _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+                _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
                 [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
             }
         }else{
             _fob = nil;
             [_temperaturePanel setHidden:YES];
-            [_statusButton setTitle:@"离线" forState:UIControlStateNormal];
+            [_statusButton setTitle:@"离线" forState:UIControlStateDisabled];
             _textLabel.text = @"请扫描并添加体温计";
         }
     }
@@ -162,8 +161,8 @@
 -(void)checkStatusResult
 {
     if (_fob.active == NO) {
-        [_statusButton setTitle:@"离线" forState:UIControlStateNormal];
-        _textLabel.text = @"没有检测到体温";
+        [_statusButton setTitle:@"离线" forState:UIControlStateDisabled];
+        _textLabel.text = @"没有检测到正常体温";
     }
     _fob.active = NO;
 }
