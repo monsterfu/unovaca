@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"Unova智能温度计";//NSLocalizedString(@"hello", nil);
+    self.title = NSLocalizedString(@"Unova智能温度计",nil);//NSLocalizedString(@"hello", nil);
     
     NSLog(@"self.navigationController.navigationBar.height:%f",self.navigationController.navigationBar.frame.size.height);
     if (![self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
@@ -121,8 +121,8 @@
         _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
         _fob.active = NO;
         [_temperaturePanel setHidden:YES];
-        [_statusButton setTitle:@"检测中..." forState:UIControlStateDisabled];
-        _textLabel.text = @"没有检测到正常体温";
+        [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
+        _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
         if (!_checkStatusTimer) {
             _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
@@ -134,8 +134,8 @@
             _fob = [arry objectAtIndex:0];
             _fob.active = NO;
             [_temperaturePanel setHidden:YES];
-            [_statusButton setTitle:@"检测中..." forState:UIControlStateDisabled];
-            _textLabel.text = @"没有检测到正常体温";
+            [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
+            _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
             if (!_checkStatusTimer) {
                 _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
                 [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
@@ -143,8 +143,8 @@
         }else{
             _fob = nil;
             [_temperaturePanel setHidden:YES];
-            [_statusButton setTitle:@"离线" forState:UIControlStateDisabled];
-            _textLabel.text = @"请扫描并添加体温计";
+            [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
+            _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
         }
     }
     
@@ -161,8 +161,9 @@
 -(void)checkStatusResult
 {
     if (_fob.active == NO) {
-        [_statusButton setTitle:@"离线" forState:UIControlStateDisabled];
-        _textLabel.text = @"没有检测到正常体温";
+        [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
+        [_temperaturePanel setHidden:YES];
+        _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
     }
     _fob.active = NO;
 }
@@ -214,12 +215,12 @@
     {
         [[ConnectionManager sharedInstance] startScanForFobs];
         if (_fob) {
-            _textLabel.text = @"未检测到正常体温";
+            _textLabel.text = NSLocalizedString(@"未检测到正常体温",nil);
         }else{
-            _textLabel.text = @"请扫描并绑定温度计！";
+            _textLabel.text = NSLocalizedString(@"请扫描并绑定温度计！",nil);
         }
     }else{
-        _textLabel.text = @"未打开蓝牙";
+        _textLabel.text = NSLocalizedString(@"未打开蓝牙",nil);
     }
 }
 - (void) didDiscoverFob:(TemperatureFob *)fob
@@ -347,47 +348,47 @@
     [self panelRotation:value];
     
     
-    [_statusButton setTitle:@"在线" forState:UIControlStateDisabled];
+    [_statusButton setTitle:NSLocalizedString(@"在线",nil) forState:UIControlStateDisabled];
     
     if (value< 31.0) {
-        _textLabel.text = @"没有检测到正常体温";
+        _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
         [_temperaturePanel setHidden:YES];
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_35"]];
     }else if (value >= 31&&value< 34.5) {
         if (_lastValue < value) {
-            _textLabel.text = @"体温小于34.5℃,请等待!";
+            _textLabel.text = NSLocalizedString(@"体温小于34.5℃,请等待!",nil);
         }
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
         [_temperaturePanel setHidden:YES];
     }else if (value >= 34.5&&value< 36) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"低温";
-        _textLabel.text = @"宝贝处于低温状态";
+        _status.text = NSLocalizedString(@"低温",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝处于低温状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_38"]];
     }else if (value >= 36&&value< 37.5) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"正常";
-        _textLabel.text = @"宝贝体温处于正常状态";
+        _status.text = NSLocalizedString(@"正常",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝体温处于正常状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 37.5&&value< 38) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"低热";
-        _textLabel.text = @"宝贝处于低热状态";
+        _status.text = NSLocalizedString(@"低热",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝处于低热状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
     }else if (value >= 38&&value< 39) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"中热";
-        _textLabel.text = @"宝贝处于中热状态";
+        _status.text = NSLocalizedString(@"中热",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝处于中热状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_39"]];
     }else if (value >= 39&&value < 40) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"高热";
-        _textLabel.text = @"宝贝处于高热状态";
+        _status.text = NSLocalizedString(@"高热",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝处于高热状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_41"]];
     }else if (value >= 40) {
         [_temperaturePanel setHidden:NO];
-        _status.text = @"超高热";
-        _textLabel.text = @"宝贝处于超高热状态";
+        _status.text = NSLocalizedString(@"超高热",nil);
+        _textLabel.text = NSLocalizedString(@"宝贝处于超高热状态",nil);
         [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_45"]];
     }
     
@@ -395,11 +396,11 @@
 }
 - (IBAction)openBgButtonTouch:(UIButton *)sender {
     if ([USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
-        [_openBgButton setTitle:@"开启后台" forState:UIControlStateNormal];
+        [_openBgButton setTitle:NSLocalizedString(@"开启后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:NO forKey:KEY_BACKGROUND_OPEN];
     }else{
-        [_openBgButton setTitle:@"关闭后台" forState:UIControlStateNormal];
+        [_openBgButton setTitle:NSLocalizedString(@"关闭后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
     }

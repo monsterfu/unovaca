@@ -49,19 +49,19 @@
 -(NSString*)getStatusString:(CGFloat)value
 {
     if (value >= 34.5&&value< 36) {
-        return @"低温";
+        return NSLocalizedString(@"低温",nil);
     }else if (value >= 36&&value< 37.5) {
-        return @"正常";
+        return NSLocalizedString(@"正常",nil);
     }else if (value >= 37.5&&value< 38) {
-        return @"低热";
+        return NSLocalizedString(@"低热",nil);
     }else if (value >= 38&&value< 39) {
-        return @"中热";
+        return NSLocalizedString(@"中热",nil);
     }else if (value >= 39&&value < 40) {
-        return @"高热";
+        return NSLocalizedString(@"高热",nil);
     }else if (value >= 40) {
-        return @"超高热";
+        return NSLocalizedString(@"超高热",nil);
     }else
-        return @"异常";
+        return NSLocalizedString(@"异常",nil);
 }
 
 -(void)setRecordReadingArrayWithArray:(NSArray *)recordReadingArray

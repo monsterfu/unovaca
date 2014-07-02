@@ -38,7 +38,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _mutableArray = [[NSMutableArray alloc]initWithObjects:@"照片",@"昵称",@"生日",@"性别",@"身高",@"体重",@"血型", nil];
+    _mutableArray = [[NSMutableArray alloc]initWithObjects:NSLocalizedString(@"照片",nil),NSLocalizedString(@"昵称",nil),NSLocalizedString(@"生日",nil),NSLocalizedString(@"性别",nil),NSLocalizedString(@"身高",nil),NSLocalizedString(@"体重",nil),NSLocalizedString(@"血型",nil), nil];
     
 //    _detailInfo = [PersonDetailInfo addPersonDetailInfoWithName:@"宝贝"];
     UIImage* saveImg = [UIImage imageNamed:@"ic_titlebar_save_remind_normal"];
@@ -66,7 +66,7 @@
     }
     
     if (_isNew) {
-        self.title = @"编辑";
+        self.title = NSLocalizedString(@"编辑",nil);
     }else{
         self.title = _detailInfo.name;
     }
@@ -107,7 +107,7 @@
             [USER_DEFAULT setObject:_detailInfo.name forKey:KEY_NICKNAME_STR];
             [USER_DEFAULT synchronize];
         }else{
-            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"昵称不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil) message:NSLocalizedString(@"昵称不能为空",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
             [alert show];
         }
         return;
@@ -175,14 +175,14 @@
 {
     if (indexPath.row == PersonInfoHeadIcon) {
         _headCell = [tableView dequeueReusableCellWithIdentifier:@"headIcon" forIndexPath:indexPath];
-        _headCell.textLabel.text = @"照片";
+        _headCell.textLabel.text = NSLocalizedString(@"照片",nil);
         
 //        [_headCell.imageView.layer setCornerRadius:CGRectGetHeight([_headCell.imageView bounds]) / 2];
         _headCell.imageView.layer.masksToBounds = YES;
         [_headCell.imageView setImage:_detailInfo.image];
         return _headCell;
     }else{
-        _sexArray = [NSArray arrayWithObjects:@"男",@"女", nil];
+        _sexArray = [NSArray arrayWithObjects:NSLocalizedString(@"男",nil),NSLocalizedString(@"女",nil), nil];
         _bloodArray = @[@"A",@"B",@"AB",@"O"];
         
         _otherCell = [tableView dequeueReusableCellWithIdentifier:@"otherInfoCell" forIndexPath:indexPath];
@@ -250,9 +250,9 @@
             _actionSheetView =  [[UIActionSheet alloc]
                                  initWithTitle:nil
                                  delegate:self
-                                 cancelButtonTitle:@"取消"
-                                 destructiveButtonTitle:@"拍照"
-                                 otherButtonTitles:@"从手机相册选择",nil];
+                                 cancelButtonTitle:NSLocalizedString(@"取消",nil)
+                                 destructiveButtonTitle:NSLocalizedString(@"拍照",nil)
+                                 otherButtonTitles:NSLocalizedString(@"从手机相册选择",nil),nil];
             _actionSheetView.actionSheetStyle = UIActionSheetStyleBlackOpaque;
             [_actionSheetView showInView:self.view];
         }

@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeGapArray = @[@"5秒",@"10秒",@"5分钟",@"10分钟",@"15分钟",@"30分钟",@"1小时"];
+    _timeGapArray = @[NSLocalizedString(@"5秒",nil),NSLocalizedString(@"10秒",nil),NSLocalizedString(@"5分钟",nil),NSLocalizedString(@"10分钟",nil),NSLocalizedString(@"15分钟",nil),NSLocalizedString(@"30分钟",nil),NSLocalizedString(@"1小时",nil)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -86,12 +86,13 @@
     {
         [label removeFromSuperview];
         [switchView removeFromSuperview];
-        label = [[UILabel alloc]initWithFrame:CGRectMake(190, 6, 60, 30)];
-        label.text = [NSString stringWithFormat:@"%d°C",[USER_DEFAULT integerForKey:KEY_MOST_STR]+37];
+//        label = [[UILabel alloc]initWithFrame:CGRectMake(190, 6, 60, 30)];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d°C",[USER_DEFAULT integerForKey:KEY_MOST_STR]+37];
         //.text = [NSString stringWithFormat:@"%d°C",[USER_DEFAULT integerForKey:KEY_MOST_STR]+25];
-        label.textColor = [UIColor grayColor];
-        label.font = [UIFont systemFontOfSize:12];
-        [cell addSubview:label];
+        cell.detailTextLabel.textColor = [UIColor grayColor];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+//        [cell addSubview:label];
+        
         switchView = [[UISwitch alloc]initWithFrame:CGRectMake(240, 6, 0, 0)];
         [switchView addTarget:self action:@selector(switchViewAction:) forControlEvents:UIControlEventValueChanged];
         [cell addSubview:switchView];

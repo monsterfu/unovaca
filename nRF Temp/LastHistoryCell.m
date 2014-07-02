@@ -36,7 +36,10 @@
         _tempLabel.text = [NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue];
         _timeLabel.text = [NSString stringWithFormat:@"(%@)",dateStr];
     }else{
-        _tempLabel.text = @"无记录";
+        _noHistoryRemindLabel.text = NSLocalizedString(@"无记录",nil);
+        [_noHistoryRemindLabel setHidden:NO];
+        _tempLabel.text = NSLocalizedString(@"无记录",nil);
+        [_tempLabel setHidden:YES];
         _timeLabel.text = @"";
     }
 }

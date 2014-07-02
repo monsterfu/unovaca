@@ -36,9 +36,9 @@
 //    [_cancelButton setImageInsets:UIEdgeInsetsMake(6, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     
-    _sexArray = [NSArray arrayWithObjects:@"男",@"女", nil];
+    _sexArray = [NSArray arrayWithObjects:NSLocalizedString(@"男",nil),NSLocalizedString(@"女",nil), nil];
     _bloodArray = @[@"A",@"B",@"AB",@"O"];
-    _titleArray = @[@"名字",@"生日",@"性别",@"身高",@"体重",@"血型"];
+    _titleArray = @[NSLocalizedString(@"名字",nil),NSLocalizedString(@"生日",nil),NSLocalizedString(@"性别",nil),NSLocalizedString(@"身高",nil),NSLocalizedString(@"体重",nil),NSLocalizedString(@"血型",nil)];
     _pickerView.dataSource = self;
     _pickerView.delegate = self;
     
@@ -248,7 +248,7 @@
             _textfieldLabel.center = cell.center;
             _textfieldLabel.allowsEditingTextAttributes = YES;
             _textfieldLabel.font = [UIFont systemFontOfSize:18];
-            _textfieldLabel.placeholder = @"请输入昵称";
+            _textfieldLabel.placeholder = NSLocalizedString(@"请输入昵称",nil);
             _textfieldLabel.clearButtonMode = UITextFieldViewModeAlways;
             [_textfieldLabel becomeFirstResponder];
             [cell addSubview:_textfieldLabel];

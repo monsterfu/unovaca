@@ -83,9 +83,9 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if ([_personInfoArray count] == 0) {
-        return @"无用户信息，请添加";
+        return NSLocalizedString(@"无用户信息，请添加",nil);
     }
-    return @"点击头像，详细编辑";
+    return NSLocalizedString(@"点击头像，详细编辑",nil);
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -174,7 +174,7 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
         // Delete the row from the data source
 //        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         if ([tableView numberOfRowsInSection:0] <= 1) {
-            UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"警告" message:@"人员信息不可为空" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+            UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil) message:NSLocalizedString(@"人员信息不可为空",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"好的",nil) otherButtonTitles:nil, nil];
             [alertView show];
             [tableView setEditing:NO animated:YES];
             return;

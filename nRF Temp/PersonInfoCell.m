@@ -38,7 +38,7 @@
     unsigned int unitFlags = NSYearCalendarUnit;
     NSDateComponents *comps = [calendar components:unitFlags fromDate:myDate toDate:nowDate options:0];
     int year = [comps year];
-    return [NSString stringWithFormat:@"%d岁",year];
+    return [NSString stringWithFormat:@"%d%@",year,NSLocalizedString(@"岁",nil)];
 }
 
 -(void)setCellWithPersonDetailInfo:(PersonDetailInfo*)info

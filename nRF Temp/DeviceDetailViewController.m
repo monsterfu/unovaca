@@ -40,12 +40,12 @@ static NSUInteger scanInt = 16;
 {
     if (scanInt > 1) {
         scanInt --;
-        _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"正在检测，请等待%d秒…",scanInt];
+        _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"%@%d%@…",NSLocalizedString(@"正在检测，请等待",nil),scanInt, NSLocalizedString(@"秒",nil)];
     }else{
         if (_fob.active) {
-            _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"在线"];
+            _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"在线",nil)];
         }else{
-            _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"离线"];
+            _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"离线",nil)];
         }
         [_scanTimer invalidate];
         _scanTimer = nil;
@@ -165,11 +165,11 @@ static NSUInteger scanInt = 16;
         name = [self.fob idString];
     }
     
-    UIAlertView* question = [[UIAlertView alloc] initWithTitle:@"删除温度计"
-                                                       message:[NSString stringWithFormat:@"你确定要删除温度计%@ ?", name]
+    UIAlertView* question = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"删除温度计",nil)
+                                                       message:[NSString stringWithFormat:@"%@%@ ?",NSLocalizedString(@"你确定要删除温度计",nil), name]
                                                       delegate:self
-                                             cancelButtonTitle:@"不删除"
-                                             otherButtonTitles:@"删除", nil];
+                                             cancelButtonTitle:NSLocalizedString(@"不删除",nil)
+                                             otherButtonTitles:NSLocalizedString(@"删除",nil), nil];
     [question show];
 }
 
@@ -196,10 +196,10 @@ static NSUInteger scanInt = 16;
         [USER_DEFAULT setObject:textField.text forKey:_fob.uuid];
         [USER_DEFAULT synchronize];
     }else{
-        UIAlertView* question = [[UIAlertView alloc] initWithTitle:@"温馨提示"
-                                                           message:[NSString stringWithFormat:@"您修改的温度计名字不能为空"]
+        UIAlertView* question = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"温馨提示",nil)
+                                                           message:[NSString stringWithFormat:NSLocalizedString(@"您修改的温度计名字不能为空",nil)]
                                                           delegate:self
-                                                 cancelButtonTitle:@"确定"
+                                                 cancelButtonTitle:NSLocalizedString(@"确定",nil)
                                                  otherButtonTitles:nil, nil];
         [question show];
     }

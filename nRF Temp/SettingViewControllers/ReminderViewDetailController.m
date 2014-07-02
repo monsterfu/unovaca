@@ -36,7 +36,7 @@
     [_datePickerView setFrame:CGRectMake(0, DEVICE_HEIGHT, oldRect.size.width, oldRect.size.height)];
     [_datePickerView setHidden:YES];
     UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
-//    [self.view addGestureRecognizer:tapGestureRecognizer];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     UIBarButtonItem* _saveButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"save.png"] style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
     self.navigationItem.rightBarButtonItem = _saveButton;
@@ -86,7 +86,7 @@
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     NSManagedObjectContext *context = _reminderModel.managedObjectContext;
     if (!_reminderModel.eventContent) {
-        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"警告" message:@"提醒内容不能为空" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil)message:NSLocalizedString(@"提醒内容不能为空",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"好的",nil) otherButtonTitles:nil, nil];
         [alertView show];
         return;
     }

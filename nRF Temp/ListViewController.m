@@ -175,7 +175,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 1)
-        return @"附近新的温度计";
+        return NSLocalizedString(@"附近新的温度计",nil);
     else
         return nil;
 }
@@ -259,7 +259,7 @@
 {
     if (![fob.uuid isEqualToString:[USER_DEFAULT objectForKey:KEY_SELECED_FOB]]) {
         _fob = fob;
-        _alertView = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"您是否要设置此温度计为当前监测体温计？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        _alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:NSLocalizedString(@"您是否要设置此温度计为当前监测体温计？",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"取消",nil) otherButtonTitles:NSLocalizedString(@"确定",nil), nil];
         [_alertView show];
     }
     

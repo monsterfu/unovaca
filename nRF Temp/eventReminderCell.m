@@ -51,9 +51,9 @@
     
     _timeLabel.text = dateStr;
     if ([eventReminderModel.repeat intValue]) {
-        _frequenceLabel.text = @"每天提醒";
+        _frequenceLabel.text = NSLocalizedString(@"每天提醒",nil);
     }else{
-        _frequenceLabel.text = @"提醒一次";
+        _frequenceLabel.text = NSLocalizedString(@"提醒一次",nil);
     }
     _smallContentLabel.text = eventReminderModel.eventContent;
     

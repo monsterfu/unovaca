@@ -48,8 +48,11 @@
     [_picker selectRow:10 inComponent:0 animated:YES];
     [_picker selectRow:monthIndex - 1 inComponent:1 animated:YES];
     
-    _yearSr = [yearStr stringByAppendingString:@"年"];
-    _monthSr = [[NSString stringWithFormat:@"%d",monthIndex]stringByAppendingString:@"月"];
+    _yearSr = [yearStr stringByAppendingString:NSLocalizedString(@"年",nil)];
+    
+    NSArray* monthArray = @[NSLocalizedString(@"1月",nil), NSLocalizedString(@"2月",nil),NSLocalizedString(@"3月",nil),NSLocalizedString(@"4月",nil),NSLocalizedString(@"5月",nil),NSLocalizedString(@"6月",nil),NSLocalizedString(@"7月",nil),NSLocalizedString(@"8月",nil), NSLocalizedString(@"9月",nil),NSLocalizedString(@"10月",nil),NSLocalizedString(@"11月",nil), NSLocalizedString(@"12月",nil)];
+    
+    _monthSr = [monthArray objectAtIndex:monthIndex];
     
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
@@ -105,7 +108,7 @@
 #pragma mark - tableView delegate
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"选择记录日期";
+    return NSLocalizedString(@"选择记录日期",nil);
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -131,9 +134,10 @@
         NSUInteger year = [yearStr integerValue];
         NSUInteger yearEx = year - 10 + row;
         yearIndex = yearEx;
-        _yearSr = [NSString stringWithFormat:@"%d年",yearEx];
+        _yearSr = [NSString stringWithFormat:@"%d%@",yearEx,NSLocalizedString(@"年",nil)];
     }else{
-        NSArray* monthArray = @[@"1月",@"2月",@"3月",@"4月",@"5月",@"6月",@"7月",@"8月",@"9月",@"10月",@"11月",@"12月"];
+        NSArray* monthArray = @[NSLocalizedString(@"1月",nil), NSLocalizedString(@"2月",nil),NSLocalizedString(@"3月",nil),NSLocalizedString(@"4月",nil),NSLocalizedString(@"5月",nil),NSLocalizedString(@"6月",nil),NSLocalizedString(@"7月",nil),NSLocalizedString(@"8月",nil), NSLocalizedString(@"9月",nil),NSLocalizedString(@"10月",nil),NSLocalizedString(@"11月",nil), NSLocalizedString(@"12月",nil)];
+        
         _monthSr = [monthArray objectAtIndex:row];
         monthIndex = row+1;
     }
@@ -174,9 +178,9 @@
         NSUInteger year = [yearStr integerValue];
         NSUInteger yearEx = year - 10 + row;
         
-        return [NSString stringWithFormat:@"%d年",yearEx];
+        return [NSString stringWithFormat:@"%d%@",yearEx,NSLocalizedString(@"年",nil)];;
     }else{
-        NSArray* monthArray = @[@"1月",@"2月",@"3月",@"4月",@"5月",@"6月",@"7月",@"8月",@"9月",@"10月",@"11月",@"12月"];
+        NSArray* monthArray = @[NSLocalizedString(@"1月",nil), NSLocalizedString(@"2月",nil),NSLocalizedString(@"3月",nil),NSLocalizedString(@"4月",nil),NSLocalizedString(@"5月",nil),NSLocalizedString(@"6月",nil),NSLocalizedString(@"7月",nil),NSLocalizedString(@"8月",nil), NSLocalizedString(@"9月",nil),NSLocalizedString(@"10月",nil),NSLocalizedString(@"11月",nil), NSLocalizedString(@"12月",nil)];
         return [monthArray objectAtIndex:row];
     }
 }

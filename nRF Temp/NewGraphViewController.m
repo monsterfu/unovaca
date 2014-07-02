@@ -33,12 +33,12 @@
     // Do any additional setup after loading the view.
     
     TemperatureReading* reading = [_readings objectAtIndex:0];
-    _dateStr = [NSString stringWithFormat:@"%d月%d日",[reading.date month],[reading.date day]];
+    _dateStr = [NSString stringWithFormat:@"%d%@%d%@",[reading.date month],NSLocalizedString(@"月",nil),[reading.date day],NSLocalizedString(@"日",nil)];
     
-    NSString* titleStr = @"宝贝体温记录";
+    NSString* titleStr = NSLocalizedString(@"宝贝体温记录",nil);
     self.title = [titleStr stringByAppendingString:[NSString stringWithFormat:@"(%@)",_dateStr]];
     
-    _MostTempLabel.text = [NSString stringWithFormat:@"最高温度%.1f℃",[self hightestTempInArray:_readings]];
+    _MostTempLabel.text = [NSString stringWithFormat:@"%@%.1f℃",NSLocalizedString(@"最高温度",nil),[self hightestTempInArray:_readings]];
     
     _graphRect = CGRectMake(_tempBgImage.frame.origin.x + DEVICE_WIDTH/6, _tempBgImage.frame.origin.y, _tempBgImage.frame.size.width- DEVICE_WIDTH/3, _tempBgImage.frame.size.height);
     [self firstAndLastDate:_readings];

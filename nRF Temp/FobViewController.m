@@ -48,9 +48,9 @@
     self.tableView.delegate = self;
 
     TemperatureReading* reading = [_readings objectAtIndex:0];
-    _dateStr = [NSString stringWithFormat:@"%d月%d日",[reading.date month],[reading.date day]];
+    _dateStr = [NSString stringWithFormat:@"%d%@%d%@",[reading.date month],NSLocalizedString(@"月",nil),[reading.date day],NSLocalizedString(@"日",nil)];
     
-    NSString* titleStr = @"宝贝体温记录";
+    NSString* titleStr = NSLocalizedString(@"宝贝体温记录",nil);
     self.title = [titleStr stringByAppendingString:[NSString stringWithFormat:@"(%@)",_dateStr]];
         
     [self updateView];
