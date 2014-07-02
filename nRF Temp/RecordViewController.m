@@ -60,9 +60,9 @@
     }else{
         todayDate = [NSDate date];
     }
-    [_selectDateButton setTitle:[NSString stringWithFormat:@"%d%@%d%@",[todayDate year],NSLocalizedString(@"年",nil),[todayDate month]-1, NSLocalizedString(@"年",nil)] forState:UIControlStateNormal];
+    [_selectDateButton setTitle:[NSString stringWithFormat:@"%d%@%d%@",[todayDate year],NSLocalizedString(@"年",nil),[todayDate month]-1, NSLocalizedString(@"月",nil)] forState:UIControlStateNormal];
     
-    [_selectDateButton setTitle:[NSString stringWithFormat:@"%d%@%d%@",[todayDate year],NSLocalizedString(@"年",nil),[todayDate month]-1, NSLocalizedString(@"年",nil)] forState:UIControlStateSelected];
+    [_selectDateButton setTitle:[NSString stringWithFormat:@"%d%@%d%@",[todayDate year],NSLocalizedString(@"年",nil),[todayDate month]-1, NSLocalizedString(@"月",nil)] forState:UIControlStateSelected];
     
     [self selectDateRecord:todayDate];
 }

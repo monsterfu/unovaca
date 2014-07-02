@@ -36,7 +36,7 @@
     [_datePickerView setFrame:CGRectMake(0, DEVICE_HEIGHT, oldRect.size.width, oldRect.size.height)];
     [_datePickerView setHidden:YES];
     UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
-    [self.view addGestureRecognizer:tapGestureRecognizer];
+//    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     UIBarButtonItem* _saveButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"save.png"] style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
     self.navigationItem.rightBarButtonItem = _saveButton;
@@ -212,7 +212,7 @@
     [_datePickerView setHidden:NO];
     [UIView animateWithDuration:0.6 animations:^{
         CGRect oldRect = _datePickerView.frame;
-        [_datePickerView setFrame:CGRectMake(0, DEVICE_HEIGHT - oldRect.size.height, oldRect.size.width, oldRect.size.height)];
+        [_datePickerView setFrame:CGRectMake(0, DEVICE_HEIGHT - oldRect.size.height*2, oldRect.size.width, oldRect.size.height)];
     }];
 }
 -(void)timePickerHide

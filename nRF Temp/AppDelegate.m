@@ -43,7 +43,7 @@
 {
     NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
     if (application.applicationState == UIApplicationStateActive) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"温馨提示",nil)
                                                             message:[NSString stringWithFormat:@"%@", alert]
                                                            delegate:self
                                                   cancelButtonTitle:@"知道了"
@@ -58,10 +58,10 @@
 {
     if (application.applicationState == UIApplicationStateActive) {
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"温馨提示",nil)
                                                             message:[NSString stringWithFormat:@"%@", notification.alertBody]
                                                            delegate:self
-                                                  cancelButtonTitle:@"知道了"
+                                                  cancelButtonTitle:NSLocalizedString(@"知道了",nil)
                                                   otherButtonTitles:nil];
         [alertView show];
         [[soundVibrateManager sharedInstance]playAlertSound];

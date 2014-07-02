@@ -51,7 +51,7 @@
         _datePicker.date = _detailInfo.birthday;
     }
     
-    
+    _datePicker.locale = [[NSLocale alloc]initWithLocaleIdentifier:[[USER_DEFAULT objectForKey : @"AppleLanguages"]objectAtIndex:0]];
     _birthDate = _datePicker.date;
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     [_datePicker setMaximumDate:[NSDate date]];

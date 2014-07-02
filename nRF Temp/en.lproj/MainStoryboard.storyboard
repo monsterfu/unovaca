@@ -498,9 +498,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Temperature alarm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H2j-1O-5zN">
-                                            <rect key="frame" x="79" y="7" width="151" height="22"/>
+                                            <rect key="frame" x="79" y="7" width="156" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -583,36 +583,8 @@
                                     <segue destination="7RQ-1y-97C" kind="push" id="YiR-on-dww"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" textLabel="urg-lh-KOi" detailTextLabel="sh5-MU-BKa" imageView="psr-ia-y1y" style="IBUITableViewCellStyleValue1" id="7Ag-m5-b2e">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" textLabel="WxK-DU-0EU" detailTextLabel="gtb-wq-FAd" imageView="kpw-dK-Y9i" style="IBUITableViewCellStyleValue1" id="Wgt-Bj-wiB">
                                 <rect key="frame" x="0.0" y="259" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ag-m5-b2e" id="Oo2-Zx-Gv1">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Knowledges of fever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="urg-lh-KOi">
-                                            <rect key="frame" x="72" y="11" width="162" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sh5-MU-BKa">
-                                            <rect key="frame" x="241" y="11" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="a常识icon.png" id="psr-ia-y1y">
-                                            <rect key="frame" x="15" y="0.0" width="42" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell5" textLabel="WxK-DU-0EU" detailTextLabel="gtb-wq-FAd" imageView="kpw-dK-Y9i" style="IBUITableViewCellStyleValue1" id="Wgt-Bj-wiB">
-                                <rect key="frame" x="0.0" y="303" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wgt-Bj-wiB" id="ygG-dS-kUS">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -2247,7 +2219,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="8.png" width="62" height="106"/>
         <image name="addnew.png" width="40" height="40"/>
         <image name="a吃药提醒icon.png" width="80" height="81"/>
-        <image name="a常识icon.png" width="80" height="81"/>
         <image name="a提醒icon.png" width="80" height="81"/>
         <image name="a时间刻度.png" width="488" height="13"/>
         <image name="a温度警报icon.png" width="80" height="81"/>

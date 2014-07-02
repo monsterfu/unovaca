@@ -35,7 +35,7 @@
 "温馨提示" = "Warm prompt";
 "知道了" = "OK";
 "年" = ".";
-"月" = "month";
+"月" = " ";
 "选择记录日期" = "Select records date";
 "宝贝体温记录" = "Baby's temperature records";
 "正在检测，请等待" = "checking, please wait ";
@@ -50,6 +50,7 @@
 "取消" = "cancel";
 "最高温度" = "highest temperature";
 "照片" = "photo";
+"名字" = "nickname";
 "昵称" = "nickname";
 "生日" = "birthday";
 "性别" = "sex";
@@ -62,7 +63,7 @@
 "男" = "male";
 "女" = "female";
 "拍照" = "Taking pictures";
-"从手机相册选择" = "From the mobile phone photo album choice";
+"从手机相册选择" = "Choice from the phone photo album";
 "请输入昵称" = "Please enter a nickname";
 "无用户信息，请添加" = "No user information, please add";
 "点击头像，详细编辑" = "Click on the picture, detailed editing";
@@ -97,3 +98,5 @@
 "扫描" = "scan";
 "停止扫描" = "stop";
 "好的" = "OK";
+"目前体温已经超过" = "The temperature has been exceeded";
+"℃报警值！" = "℃ alarm value！";
