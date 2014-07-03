@@ -75,6 +75,9 @@
         default:
             break;
     }
+    
+    [self.delegate didUpdateData:self];
+    
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
         if ([now timeIntervalSinceDate:[self.lastReading date]] < 2*60)
         {
@@ -94,7 +97,6 @@
     [reading setPerson:person];
     
     [self addReadingsObject:reading];
-    [self.delegate didUpdateData:self];
     return true;
 }
 

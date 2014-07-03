@@ -193,15 +193,9 @@
 		649BB778190A091D0049E5C8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649BB776190A091D0049E5C8 /* EventKit.framework */; };
 		649BB779190A091D0049E5C8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649BB777190A091D0049E5C8 /* EventKitUI.framework */; };
 		649E5FA618F54FD00057E235 /* TimeGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649E5FA518F54FD00057E235 /* TimeGapViewController.m */; };
-		649EB9B618FCDE0400C3D6FB /* 刻度页面.psd in Resources */ = {isa = PBXBuildFile; fileRef = 649EB94018FCDE0300C3D6FB /* 刻度页面.psd */; };
-		649EB9BD18FCDE0400C3D6FB /* 宝贝体温记录-20140411.psd in Resources */ = {isa = PBXBuildFile; fileRef = 649EB94718FCDE0300C3D6FB /* 宝贝体温记录-20140411.psd */; };
-		649EB9C618FCDE0400C3D6FB /* 数字.psd in Resources */ = {isa = PBXBuildFile; fileRef = 649EB95018FCDE0300C3D6FB /* 数字.psd */; };
-		649EB9D718FCDE0400C3D6FB /* 设置.psd in Resources */ = {isa = PBXBuildFile; fileRef = 649EB96118FCDE0300C3D6FB /* 设置.psd */; };
 		64AAE3C918F3D90900036D0F /* PersonPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AAE3C818F3D90900036D0F /* PersonPhotoCell.m */; };
 		64D6F8CD190E47980070F8C5 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F891190E47980070F8C5 /* 1024.png */; };
-		64D6F8D6190E47980070F8C5 /* icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F89A190E47980070F8C5 /* icon.psd */; };
 		64D6F8E2190E47980070F8C5 /* 启动.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F8A6190E47980070F8C5 /* 启动.png */; };
-		64D6F8E3190E47980070F8C5 /* 启动.psd in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F8A7190E47980070F8C5 /* 启动.psd */; };
 		64D79779190F3CAC007442CE /* over@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D79777190F3CAC007442CE /* over@2x.png */; };
 		64D7977A190F3CAC007442CE /* overhl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D79778190F3CAC007442CE /* overhl@2x.png */; };
 		64D7977C190F412C007442CE /* panel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D7977B190F412C007442CE /* panel@2x.png */; };
@@ -488,16 +482,10 @@
 		649BB777190A091D0049E5C8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		649E5FA418F54FD00057E235 /* TimeGapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeGapViewController.h; path = SettingViewControllers/TimeGapViewController.h; sourceTree = "<group>"; };
 		649E5FA518F54FD00057E235 /* TimeGapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeGapViewController.m; path = SettingViewControllers/TimeGapViewController.m; sourceTree = "<group>"; };
-		649EB94018FCDE0300C3D6FB /* 刻度页面.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "刻度页面.psd"; sourceTree = "<group>"; };
-		649EB94718FCDE0300C3D6FB /* 宝贝体温记录-20140411.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "宝贝体温记录-20140411.psd"; sourceTree = "<group>"; };
-		649EB95018FCDE0300C3D6FB /* 数字.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "数字.psd"; sourceTree = "<group>"; };
-		649EB96118FCDE0300C3D6FB /* 设置.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "设置.psd"; sourceTree = "<group>"; };
 		64AAE3C718F3D90900036D0F /* PersonPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonPhotoCell.h; sourceTree = "<group>"; };
 		64AAE3C818F3D90900036D0F /* PersonPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonPhotoCell.m; sourceTree = "<group>"; };
 		64D6F891190E47980070F8C5 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024.png; sourceTree = "<group>"; };
-		64D6F89A190E47980070F8C5 /* icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon.psd; sourceTree = "<group>"; };
 		64D6F8A6190E47980070F8C5 /* 启动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动.png"; sourceTree = "<group>"; };
-		64D6F8A7190E47980070F8C5 /* 启动.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "启动.psd"; sourceTree = "<group>"; };
 		64D79777190F3CAC007442CE /* over@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "over@2x.png"; sourceTree = "<group>"; };
 		64D79778190F3CAC007442CE /* overhl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overhl@2x.png"; sourceTree = "<group>"; };
 		64D7977B190F412C007442CE /* panel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panel@2x.png"; sourceTree = "<group>"; };
@@ -821,10 +809,6 @@
 				64097C5219050AEC00C0E49D /* 温度警报icon.png */,
 				64097C5719050AEC00C0E49D /* 状态底图.png */,
 				64097C5819050AEC00C0E49D /* 自定义提醒icon.png */,
-				649EB94018FCDE0300C3D6FB /* 刻度页面.psd */,
-				649EB94718FCDE0300C3D6FB /* 宝贝体温记录-20140411.psd */,
-				649EB95018FCDE0300C3D6FB /* 数字.psd */,
-				649EB96118FCDE0300C3D6FB /* 设置.psd */,
 			);
 			path = iphone4;
 			sourceTree = "<group>";
@@ -882,9 +866,7 @@
 				0F19CA7A1913E2F200BF9312 /* a8.png */,
 				0F19CA7B1913E2F200BF9312 /* a9.png */,
 				64D6F891190E47980070F8C5 /* 1024.png */,
-				64D6F89A190E47980070F8C5 /* icon.psd */,
 				64D6F8A6190E47980070F8C5 /* 启动.png */,
-				64D6F8A7190E47980070F8C5 /* 启动.psd */,
 			);
 			path = iphone5;
 			sourceTree = "<group>";
@@ -1143,7 +1125,7 @@
 				LastUpgradeCheck = 0450;
 				TargetAttributes = {
 					93E4E1E3162D5E2000974286 = {
-						DevelopmentTeam = 8C87933EV5;
+						DevelopmentTeam = 5PG8FSFRLG;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1189,17 +1171,14 @@
 				640D9CBC1919F9290097386B /* twoKnowsViewController.xib in Resources */,
 				64097C6519050AEC00C0E49D /* 帮助icon.png in Resources */,
 				0F19CAB21913E44700BF9312 /* a返回2.png in Resources */,
-				649EB9BD18FCDE0400C3D6FB /* 宝贝体温记录-20140411.psd in Resources */,
 				0F19CA7D1913E2F200BF9312 /* a1.png in Resources */,
 				640670A9195022BF00928CAB /* btn_radio_off.png in Resources */,
 				0F19CAAB1913E44700BF9312 /* a常识icon.png in Resources */,
 				64097C8019050AEC00C0E49D /* 设置.png in Resources */,
 				640670A119501DF400928CAB /* ic_signal_2.png in Resources */,
-				649EB9D718FCDE0400C3D6FB /* 设置.psd in Resources */,
 				93E4E1F3162D5E2000974286 /* InfoPlist.strings in Resources */,
 				641A721519061C2500CC7041 /* color@2x.png in Resources */,
 				0F19CAC01913E44700BF9312 /* a提醒2icon.png in Resources */,
-				649EB9B618FCDE0400C3D6FB /* 刻度页面.psd in Resources */,
 				0FB517D819212B760070344F /* battery_80@2x.png in Resources */,
 				6405B5F0195278BB0081A8CD /* umeng_update_close_bg_normal.png in Resources */,
 				0F19CAB11913E44700BF9312 /* a返回.png in Resources */,
@@ -1212,7 +1191,6 @@
 				64D6F8E2190E47980070F8C5 /* 启动.png in Resources */,
 				0F19CABB1913E44700BF9312 /* a色带.png in Resources */,
 				64097C6119050AEC00C0E49D /* 8.png in Resources */,
-				64D6F8E3190E47980070F8C5 /* 启动.psd in Resources */,
 				64097C5E19050AEC00C0E49D /* 5.png in Resources */,
 				0F19CA7F1913E2F200BF9312 /* a3.png in Resources */,
 				64097C7919050AEC00C0E49D /* 开关3.png in Resources */,
@@ -1266,7 +1244,6 @@
 				0F77AFEE1951E47A005F1063 /* ic_titlebar_setting_normal.png in Resources */,
 				64097C7319050AEC00C0E49D /* 间隔icon.png in Resources */,
 				0FB517D319212B760070344F /* battery_100@2x.png in Resources */,
-				64D6F8D6190E47980070F8C5 /* icon.psd in Resources */,
 				0F19CAC91913E44700BF9312 /* a自定义提醒icon.png in Resources */,
 				0F77AFE01951E389005F1063 /* ic_titlebar_graph_history_normal.png in Resources */,
 				64097C6E19050AEC00C0E49D /* 度.png in Resources */,
@@ -1292,7 +1269,6 @@
 				649B7210190F7E6D005E4F2E /* disease in Resources */,
 				0F77AFE11951E389005F1063 /* ic_titlebar_graph_history_pressed.png in Resources */,
 				64D7977C190F412C007442CE /* panel@2x.png in Resources */,
-				649EB9C618FCDE0400C3D6FB /* 数字.psd in Resources */,
 				649A856F1921E3BD00ED7445 /* a开关1.png in Resources */,
 				64097C7C19050AEC00C0E49D /* 历史记录icon.png in Resources */,
 				0F19CAB41913E44700BF9312 /* a更多2.png in Resources */,
@@ -1540,8 +1516,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Smit (HK) Limited";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Smit (HK) Limited";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ming Xu (5PG8FSFRLG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ming Xu (5PG8FSFRLG)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
@@ -1553,8 +1529,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Unova Thermometer";
-				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
+				PROVISIONING_PROFILE = "4DF3E4B1-8747-4D4D-90A9-A7A355D527B4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4DF3E4B1-8747-4D4D-90A9-A7A355D527B4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
