@@ -123,7 +123,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     recordCell* cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"recordCell"]];
-    NSArray* recordArray = [_recordsOfMonthArray objectAtIndex:indexPath.row];
+    NSUInteger num = [_recordsOfMonthArray count];
+    NSArray* recordArray = [_recordsOfMonthArray objectAtIndex:num - indexPath.row - 1];
     [cell setRecordReadingArrayWithArray:recordArray];
     return cell;
 }
