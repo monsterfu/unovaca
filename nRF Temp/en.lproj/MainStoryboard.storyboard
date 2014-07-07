@@ -367,7 +367,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RcM-L4-YLJ">
                                 <rect key="frame" x="0.0" y="0.0" width="103" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="2011-4">
+                                <state key="normal" title="2011.4">
                                     <color key="titleColor" red="0.54983174130000001" green="0.73123301630000004" blue="0.2681347979" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1987,7 +1987,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcl-JW-gtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="1262"/>
+            <point key="canvasLocation" x="1785" y="1154"/>
         </scene>
         <!--Reminder View Controller - Remind events-->
         <scene sceneID="d7t-ka-7h8">
