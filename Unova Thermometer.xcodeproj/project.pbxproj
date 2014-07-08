@@ -1125,7 +1125,7 @@
 				LastUpgradeCheck = 0450;
 				TargetAttributes = {
 					93E4E1E3162D5E2000974286 = {
-						DevelopmentTeam = 5PG8FSFRLG;
+						DevelopmentTeam = 8C87933EV5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1516,8 +1516,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ming Xu (5PG8FSFRLG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ming Xu (5PG8FSFRLG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Smit (HK) Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Smit (HK) Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
@@ -1529,8 +1529,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Unova Thermometer";
-				PROVISIONING_PROFILE = "4DF3E4B1-8747-4D4D-90A9-A7A355D527B4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4DF3E4B1-8747-4D4D-90A9-A7A355D527B4";
+				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -43,7 +43,7 @@
     NSString* yearStr = [dateStr substringToIndex:4];
     
     yearIndex = [curDate year];
-    monthIndex = [curDate month] -1;
+    monthIndex = [curDate month];
     
     [_picker selectRow:10 inComponent:0 animated:YES];
     [_picker selectRow:monthIndex - 1 inComponent:1 animated:YES];

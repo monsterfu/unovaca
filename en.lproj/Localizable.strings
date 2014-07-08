@@ -9,6 +9,7 @@
 "Unova智能温度计" = "Unova thermometer";
 "检测中..." = "checking";
 "没有检测到正常体温" = "no normal temperature is detected";
+"没有检测到体温" = "no normal temperature is detected";
 "离线" = "offline";
 "请扫描并添加体温计" = "Please (scan) and add a thermometer";
 "未检测到正常体温" = "normal temperature not detected";

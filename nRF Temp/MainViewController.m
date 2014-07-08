@@ -35,6 +35,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -98,7 +99,7 @@
     }
     [_temperaturePanel setHidden:YES];
     [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
-    _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
+    _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
 }
 -(void)updatePersonDetail
 {

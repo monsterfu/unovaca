@@ -50,7 +50,6 @@ static NSUInteger scanInt = 16;
         [_scanTimer invalidate];
         _scanTimer = nil;
     }
-    
 }
 
 - (void)viewDidLoad
