@@ -1034,7 +1034,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="headIcon" rowHeight="82" id="2aV-XW-KuU" customClass="PersonPhotoCell">
+                            <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="headIcon" rowHeight="82" id="2aV-XW-KuU" customClass="PersonPhotoCell">
                                 <rect key="frame" x="0.0" y="119" width="320" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aV-XW-KuU" id="D2U-N6-VGe">
