@@ -46,13 +46,13 @@
     monthIndex = [curDate month];
     
     [_picker selectRow:10 inComponent:0 animated:YES];
-    [_picker selectRow:monthIndex - 1 inComponent:1 animated:YES];
+    [_picker selectRow:monthIndex-1 inComponent:1 animated:YES];
     
     _yearSr = [yearStr stringByAppendingString:NSLocalizedString(@"年",nil)];
     
     NSArray* monthArray = @[NSLocalizedString(@"1月",nil), NSLocalizedString(@"2月",nil),NSLocalizedString(@"3月",nil),NSLocalizedString(@"4月",nil),NSLocalizedString(@"5月",nil),NSLocalizedString(@"6月",nil),NSLocalizedString(@"7月",nil),NSLocalizedString(@"8月",nil), NSLocalizedString(@"9月",nil),NSLocalizedString(@"10月",nil),NSLocalizedString(@"11月",nil), NSLocalizedString(@"12月",nil)];
     
-    _monthSr = [monthArray objectAtIndex:monthIndex];
+    _monthSr = [monthArray objectAtIndex:monthIndex-1];
     
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];

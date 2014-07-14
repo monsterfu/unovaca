@@ -28,6 +28,9 @@
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
         [USER_DEFAULT setInteger:5 forKey:KEY_MOST_STR];
+        
+        
+        
         NSError *error = nil;
         
         if (![_detailInfo.managedObjectContext save:&error]) {
@@ -35,6 +38,10 @@
             abort();
         }
     }
+    [USER_DEFAULT setInteger:2014 forKey:KEY_SELECTED_YEAR];
+    [USER_DEFAULT setInteger:7 forKey:KEY_SELECTED_MONTH];
+    [USER_DEFAULT synchronize];
+    
     [application setApplicationIconBadgeNumber:0];
     return YES;
 }
