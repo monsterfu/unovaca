@@ -16,7 +16,7 @@
 #import "NSString+randonStr.h"
 
 #define VISION_NO    @"1.1.2"
-#define NSLog(...) {}
+//#define NSLog(...) {}
 
 #define DEVICE_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define DEVICE_HEIGHT  [UIScreen mainScreen].bounds.size.height
