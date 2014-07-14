@@ -1011,7 +1011,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BSP-qJ-jht">
-                                            <rect key="frame" x="14" y="10" width="68" height="61"/>
+                                            <rect key="frame" x="199" y="10" width="68" height="61"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>

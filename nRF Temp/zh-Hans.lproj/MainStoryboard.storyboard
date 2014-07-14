@@ -1041,12 +1041,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BSP-qJ-jht">
-                                            <rect key="frame" x="14" y="10" width="68" height="61"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_head.png" id="BSP-qJ-jht">
+                                            <rect key="frame" x="219" y="10" width="61" height="61"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="照片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rvK-UU-NNY">
+                                            <rect key="frame" x="20" y="30" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92277184311224492" green="0.92277184311224492" blue="0.92277184311224492" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="headIcon" destination="BSP-qJ-jht" id="thy-Jl-0r7"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="otherInfoCell" textLabel="qjb-3D-gvT" detailTextLabel="6uN-K7-9Y6" rowHeight="37" style="IBUITableViewCellStyleValue1" id="L69-eR-Hk2">
                                 <rect key="frame" x="0.0" y="201" width="320" height="37"/>
@@ -1071,6 +1082,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92277184311224492" green="0.92277184311224492" blue="0.92277184311224492" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="gMN-pU-Qum" kind="push" identifier="personDetailEdit" id="hbX-CY-sTD"/>
                                 </connections>
@@ -2258,6 +2270,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="background" width="320" height="320"/>
         <image name="background.png" width="320" height="320"/>
         <image name="btn_radio_off.png" width="80" height="80"/>
+        <image name="default_head.png" width="206" height="206"/>
         <image name="graph_main_bg.png" width="540" height="740"/>
         <image name="history_day_bg" width="320" height="320"/>
         <image name="ic_number_status_37.png" width="150" height="89"/>

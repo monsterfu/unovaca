@@ -181,9 +181,10 @@
         _headCell = [tableView dequeueReusableCellWithIdentifier:@"headIcon" forIndexPath:indexPath];
         _headCell.textLabel.text = NSLocalizedString(@"照片",nil);
         
-//        [_headCell.imageView.layer setCornerRadius:CGRectGetHeight([_headCell.imageView bounds]) / 2];
-        _headCell.imageView.layer.masksToBounds = YES;
-        [_headCell.imageView setImage:_detailInfo.image];
+        
+//        [_headCell.headIcon.layer setCornerRadius:CGRectGetHeight([_headCell.headIcon bounds]) / 4];
+//        _headCell.headIcon.layer.masksToBounds = YES;
+        [_headCell.headIcon setImage:_detailInfo.image];
         return _headCell;
     }else{
         _sexArray = [NSArray arrayWithObjects:NSLocalizedString(@"男",nil),NSLocalizedString(@"女",nil), nil];
@@ -365,7 +366,7 @@
 	//获得编辑过的图片
     images = [info objectForKey: @"UIImagePickerControllerOriginalImage"];
 	
-    _headCell.imageView.image = images;
+    _headCell.headIcon.image = images;
 	_detailInfo.image = images;
     
 	[self dismissViewControllerAnimated:YES completion:nil];
