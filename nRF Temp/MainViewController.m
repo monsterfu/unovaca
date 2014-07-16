@@ -110,7 +110,7 @@
     if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
         abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse
     }
-    [_reminderLabel setAlpha:1.0f];
+    [_reminderLabel setAlpha:0.0f];
     
     [_reminderLabel.layer setCornerRadius:10];
     [_reminderLabel.layer setBorderColor:[UIColor clearColor].CGColor];
@@ -397,13 +397,13 @@
         if (_lastValue < value) {
             _textLabel.text = NSLocalizedString(@"体温小于34.5℃,请等待!",nil);
         }
-        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_35"]];
         [_temperaturePanel setHidden:YES];
     }else if (value >= 34.5&&value< 36) {
         [_temperaturePanel setHidden:NO];
         _status.text = NSLocalizedString(@"低温",nil);
         _textLabel.text = NSLocalizedString(@"宝贝处于低温状态",nil);
-        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_38"]];
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_35"]];
     }else if (value >= 36&&value< 37.5) {
         [_temperaturePanel setHidden:NO];
         _status.text = NSLocalizedString(@"正常",nil);
@@ -413,7 +413,7 @@
         [_temperaturePanel setHidden:NO];
         _status.text = NSLocalizedString(@"低热",nil);
         _textLabel.text = NSLocalizedString(@"宝贝处于低热状态",nil);
-        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_37"]];
+        [_statusImage setImage:[UIImage imageNamed:@"ic_number_status_38"]];
     }else if (value >= 38&&value< 39) {
         [_temperaturePanel setHidden:NO];
         _status.text = NSLocalizedString(@"中热",nil);
@@ -434,29 +434,49 @@
     _lastValue = value;
 }
 - (IBAction)openBgButtonTouch:(UIButton *)sender {
+    
     if ([USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
+        _openBgCheckAlertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:NSLocalizedString(@"你确定要关闭后台测量体温? 关闭后，程序仅在当前应用界面测量体温，将不会在后台周期测量体温。此状态下不影响手机电量的消耗.",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"取消",nil) otherButtonTitles:NSLocalizedString(@"确定",nil), nil];
+        [_openBgCheckAlertView show];
+        
+        
+        
+//        [_reminderLabel setText:NSLocalizedString(@"开启后台",nil)];
+        
+    }else{
+        _closeBgCheckAlertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:NSLocalizedString(@"你确定要开启后台测量体温? 开启后，程序将根据所设置的后台测量周期在后台周期测量体温.此状态下对手机电量的消耗偏大，建议将后台测量周期调大。",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"取消",nil) otherButtonTitles:NSLocalizedString(@"确定",nil), nil];
+        [_closeBgCheckAlertView show];
+        
+        
+        
+//        [_reminderLabel setText:NSLocalizedString(@"关闭后台",nil)];
+    }
+    
+//    [UIView animateWithDuration:1.0f animations:^{
+//        [_reminderLabel setAlpha:1.0f];
+//    } completion:^(BOOL finish){
+//        [UIView animateWithDuration:1.0f animations:^{
+//            [_reminderLabel setAlpha:0.0f];
+//        } completion:^(BOOL finish){
+//        }];
+//    }];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView == _openBgCheckAlertView) {
         [_openBgButton setTitle:NSLocalizedString(@"开启后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:NO forKey:KEY_BACKGROUND_OPEN];
-        
-        [_reminderLabel setText:NSLocalizedString(@"开启后台",nil)];
-        
-    }else{
+    }
+    
+    if (alertView == _closeBgCheckAlertView) {
         [_openBgButton setTitle:NSLocalizedString(@"关闭后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
-        
-        [_reminderLabel setText:NSLocalizedString(@"关闭后台",nil)];
     }
     [USER_DEFAULT synchronize];
-    
-    [UIView animateWithDuration:1.0f animations:^{
-        [_reminderLabel setAlpha:1.0f];
-    } completion:^(BOOL finish){
-        [UIView animateWithDuration:1.0f animations:^{
-            [_reminderLabel setAlpha:0.0f];
-        } completion:^(BOOL finish){
-        }];
-    }];
 }
+
 @end

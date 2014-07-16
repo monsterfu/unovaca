@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9qa-oB-E2B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9qa-oB-E2B">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -144,6 +144,14 @@
                                             <action selector="openBgButtonTouch:" destination="yh4-bi-RPF" eventType="touchUpInside" id="x1e-O0-OqI"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jTL-AU-gj7">
+                                        <rect key="frame" x="47" y="294" width="239" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.54983174133874035" green="0.73123301630434789" blue="0.2681347978643398" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -252,14 +260,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jTL-AU-gj7">
-                                <rect key="frame" x="41" y="366" width="239" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.54983174130000001" green="0.73123301630000004" blue="0.2681347979" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -368,6 +368,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="BOG-xM-OPL" id="YmO-Qm-qoN"/>
                                             <outlet property="finishLabel" destination="E6h-4s-XFD" id="iR1-j9-4RO"/>
+                                            <outlet property="statusImageView" destination="fEE-V5-iLm" id="DXV-5S-6MC"/>
                                             <outlet property="statusLabel" destination="E4N-er-811" id="DGB-uo-ZUA"/>
                                             <outlet property="tempLabel" destination="qi0-bH-LT0" id="kPP-DX-bG1"/>
                                             <segue destination="Gnh-T2-FqY" kind="push" identifier="curdayList" id="mrW-AJ-oia"/>
@@ -1052,10 +1053,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_head.png" id="BSP-qJ-jht">
-                                            <rect key="frame" x="219" y="10" width="61" height="61"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" id="Bkf-bj-WW0">
+                                            <rect key="frame" x="219" y="14" width="58" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M46-w8-2JL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" backgroundImage="头像.png">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DwF-pc-uad">
+                                                    <rect key="frame" x="7" y="6" width="45" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="照片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rvK-UU-NNY">
                                             <rect key="frame" x="20" y="30" width="77" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1067,7 +1084,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92277184311224492" green="0.92277184311224492" blue="0.92277184311224492" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="headIcon" destination="BSP-qJ-jht" id="thy-Jl-0r7"/>
+                                    <outlet property="headIcon" destination="DwF-pc-uad" id="ALU-TN-u93"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="otherInfoCell" textLabel="qjb-3D-gvT" detailTextLabel="6uN-K7-9Y6" rowHeight="37" style="IBUITableViewCellStyleValue1" id="L69-eR-Hk2">
@@ -2281,7 +2298,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="background" width="320" height="320"/>
         <image name="background.png" width="320" height="320"/>
         <image name="btn_radio_off.png" width="80" height="80"/>
-        <image name="default_head.png" width="206" height="206"/>
         <image name="graph_main_bg.png" width="540" height="740"/>
         <image name="history_day_bg" width="320" height="320"/>
         <image name="ic_number_status_37.png" width="150" height="89"/>
@@ -2303,7 +2319,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gIL-tL-4g8"/>
+        <segue reference="FMO-oH-s3s"/>
         <segue reference="qGK-1n-xtn"/>
     </inferredMetricsTieBreakers>
 </document>

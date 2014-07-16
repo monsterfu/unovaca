@@ -14,6 +14,8 @@
 #import "NSDate+JBCommon.h"
 #import "UIImage+scaleToSize.h"
 #import "NSString+randonStr.h"
+#import "BJImageCropper.h"
+
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}

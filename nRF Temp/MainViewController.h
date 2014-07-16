@@ -17,12 +17,15 @@
 #import "PersonDetailInfo.h"
 #import "RecordViewController.h"
 
-@interface MainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ConnectionManagerDelegate,TemperatureFobDelegate>
+@interface MainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ConnectionManagerDelegate,TemperatureFobDelegate,UIAlertViewDelegate>
 {
     NSArray* _personInfoArray;
     BOOL _haveDevice;
     NSTimer* _checkStatusTimer;
     CGFloat _lastValue;
+    
+    UIAlertView* _openBgCheckAlertView;
+    UIAlertView* _closeBgCheckAlertView;
 }
 @property (weak, nonatomic) IBOutlet UIView *colorBg;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightButton;

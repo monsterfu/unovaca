@@ -52,27 +52,22 @@
     CGFloat time = 0;
     switch (index) {
         case 0:
-            time = 5;
-            break;
-        case 1:
-            time = 10;
-            break;
-        case 2:
             time = 5*60;
             break;
-        case 3:
+        case 1:
             time = 10*60;
             break;
-        case 4:
+        case 2:
             time = 15*60;
             break;
-        case 5:
+        case 3:
             time = 30*60;
             break;
-        case 6:
+        case 4:
             time = 60*60;
             break;
         default:
+            time = 10*60;
             break;
     }
     

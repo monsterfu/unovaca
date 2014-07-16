@@ -66,6 +66,9 @@
 		0F40EEC1191A938E0054894B /* fourTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F40EEBF191A938E0054894B /* fourTableViewController.m */; };
 		0F40EEC8191A963B0054894B /* fourDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F40EEC6191A963B0054894B /* fourDetalViewController.m */; };
 		0F40EEC9191A963B0054894B /* fourDetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F40EEC7191A963B0054894B /* fourDetalViewController.xib */; };
+		0F779AC51976BE86008BDFF6 /* BJImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F779AC41976BE86008BDFF6 /* BJImageCropper.m */; };
+		0F779AC91976BF16008BDFF6 /* ImageCroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F779AC71976BF16008BDFF6 /* ImageCroperViewController.m */; };
+		0F779ACA1976BF16008BDFF6 /* ImageCroperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F779AC81976BF16008BDFF6 /* ImageCroperViewController.xib */; };
 		0F77AFDE1951E389005F1063 /* ic_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFD81951E389005F1063 /* ic_back_normal.png */; };
 		0F77AFDF1951E389005F1063 /* ic_back_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFD91951E389005F1063 /* ic_back_pressed.png */; };
 		0F77AFE01951E389005F1063 /* ic_titlebar_graph_history_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F77AFDA1951E389005F1063 /* ic_titlebar_graph_history_normal.png */; };
@@ -312,6 +315,11 @@
 		0F40EEC5191A963B0054894B /* fourDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fourDetalViewController.h; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.h; sourceTree = "<group>"; };
 		0F40EEC6191A963B0054894B /* fourDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fourDetalViewController.m; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.m; sourceTree = "<group>"; };
 		0F40EEC7191A963B0054894B /* fourDetalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = fourDetalViewController.xib; path = SettingViewControllers/feverKnowViewController/fourDetalViewController.xib; sourceTree = "<group>"; };
+		0F779AC31976BE86008BDFF6 /* BJImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJImageCropper.h; sourceTree = "<group>"; };
+		0F779AC41976BE86008BDFF6 /* BJImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJImageCropper.m; sourceTree = "<group>"; };
+		0F779AC61976BF16008BDFF6 /* ImageCroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCroperViewController.h; sourceTree = "<group>"; };
+		0F779AC71976BF16008BDFF6 /* ImageCroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCroperViewController.m; sourceTree = "<group>"; };
+		0F779AC81976BF16008BDFF6 /* ImageCroperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCroperViewController.xib; sourceTree = "<group>"; };
 		0F77AFD81951E389005F1063 /* ic_back_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_normal.png; sourceTree = "<group>"; };
 		0F77AFD91951E389005F1063 /* ic_back_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_pressed.png; sourceTree = "<group>"; };
 		0F77AFDA1951E389005F1063 /* ic_titlebar_graph_history_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_titlebar_graph_history_normal.png; sourceTree = "<group>"; };
@@ -670,6 +678,9 @@
 				5EBDB77118E9747700491B74 /* MainViewController.m */,
 				6407987118ED33BA00A21F74 /* PersonViewController.h */,
 				6407987218ED33BA00A21F74 /* PersonViewController.m */,
+				0F779AC61976BF16008BDFF6 /* ImageCroperViewController.h */,
+				0F779AC71976BF16008BDFF6 /* ImageCroperViewController.m */,
+				0F779AC81976BF16008BDFF6 /* ImageCroperViewController.xib */,
 				64E9021918EE47BD00E9E72B /* PersonDetailSetViewController.h */,
 				64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */,
 				6407987418ED39B900A21F74 /* PersonListViewController.h */,
@@ -683,6 +694,8 @@
 		640670A31950202600928CAB /* UIImage+scaleToSize */ = {
 			isa = PBXGroup;
 			children = (
+				0F779AC31976BE86008BDFF6 /* BJImageCropper.h */,
+				0F779AC41976BE86008BDFF6 /* BJImageCropper.m */,
 				640670A41950204A00928CAB /* UIImage+scaleToSize.h */,
 				640670A51950204A00928CAB /* UIImage+scaleToSize.m */,
 			);
@@ -1272,6 +1285,7 @@
 				649A856F1921E3BD00ED7445 /* a开关1.png in Resources */,
 				64097C7C19050AEC00C0E49D /* 历史记录icon.png in Resources */,
 				0F19CAB41913E44700BF9312 /* a更多2.png in Resources */,
+				0F779ACA1976BF16008BDFF6 /* ImageCroperViewController.xib in Resources */,
 				649A85701921E3BD00ED7445 /* a开关2.png in Resources */,
 				0FB517D619212B760070344F /* battery_40@2x.png in Resources */,
 				0F3E0FDC19553E8C00F86FCC /* ic_number_status_41.png in Resources */,
@@ -1337,6 +1351,7 @@
 				640670B219503CA800928CAB /* eventReminderCell.m in Sources */,
 				93E4E1F5162D5E2000974286 /* main.m in Sources */,
 				649BB775190A08DC0049E5C8 /* ReminderViewController.m in Sources */,
+				0F779AC51976BE86008BDFF6 /* BJImageCropper.m in Sources */,
 				64E1E2481908FC5700D274A1 /* TargetSelectionViewController.m in Sources */,
 				93E4E1F9162D5E2000974286 /* AppDelegate.m in Sources */,
 				640670C81950659900928CAB /* EventReminderModel.m in Sources */,
@@ -1350,6 +1365,7 @@
 				649B7236190F8F59005E4F2E /* SBJsonTokeniser.m in Sources */,
 				93E4E205162D5E2000974286 /* ListViewController.m in Sources */,
 				64EA4340195C1658005502D8 /* NSString+randonStr.m in Sources */,
+				0F779AC91976BF16008BDFF6 /* ImageCroperViewController.m in Sources */,
 				649B7237190F8F59005E4F2E /* SBJsonUTF8Stream.m in Sources */,
 				64E1E2411908FC5700D274A1 /* AppSelectionViewController.m in Sources */,
 				649B7234190F8F59005E4F2E /* SBJsonStreamWriterAccumulator.m in Sources */,

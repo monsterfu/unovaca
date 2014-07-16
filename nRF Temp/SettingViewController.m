@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _timeGapArray = @[NSLocalizedString(@"5秒",nil),NSLocalizedString(@"10秒",nil),NSLocalizedString(@"5分钟",nil),NSLocalizedString(@"10分钟",nil),NSLocalizedString(@"15分钟",nil),NSLocalizedString(@"30分钟",nil),NSLocalizedString(@"1小时",nil)];
+    _timeGapArray = @[NSLocalizedString(@"5分钟",nil),NSLocalizedString(@"10分钟",nil),NSLocalizedString(@"15分钟",nil),NSLocalizedString(@"30分钟",nil),NSLocalizedString(@"1小时",nil)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

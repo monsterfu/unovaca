@@ -101,3 +101,6 @@
 "好的" = "OK";
 "目前体温已经超过" = "The temperature has been exceeded";
 "℃报警值！" = "℃ alarm value！";
+"你确定要关闭后台测量体温?" = "Are you sure you want to shut down the background temperature? Shut down, only in the current application interface temperature, there will be no cycles in the background measurement temperature. This condition does not affect the consumption of mobile phone battery.";
+"你确定要开启后台测量体温?" = "Are you sure you want to open the background temperature? After open, the program will be set up according to the background of cycle in the background cycle measurement temperature. The condition of the battery power consumption is big, proposed to the background measurement cycle up.";
+"使用" = "use";

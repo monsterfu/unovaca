@@ -11,6 +11,7 @@
 #import "PersonDetailInfo.h"
 #import "PersonPhotoCell.h"
 #import "PersonDetailSetViewController.h"
+#import "ImageCroperViewController.h"
 
 enum PersonInfoEnum {
     PersonInfoHeadIcon = 0,
@@ -23,7 +24,7 @@ enum PersonInfoEnum {
     PersonInfoNumMax   = 7
     };
 
-@interface PersonViewController : UITableViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface PersonViewController : UITableViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ImageCroperViewControllerDelegate>
 {
     UILabel* _Label;
     NSMutableArray* _mutableArray;

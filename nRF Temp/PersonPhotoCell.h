@@ -11,6 +11,6 @@
 @interface PersonPhotoCell : UITableViewCell
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *headIcon;
+@property (strong, nonatomic) IBOutlet UIImageView *headIcon;
 
 @end

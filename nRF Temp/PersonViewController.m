@@ -8,7 +8,6 @@
 
 #import "PersonViewController.h"
 #import "AppDelegate.h"
-
 @interface PersonViewController ()
 
 @end
@@ -99,8 +98,7 @@
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
-
--(void)saveButtonPressed
+- (void)savesssssss
 {
     _managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -116,14 +114,6 @@
         }
         return;
     }
-    
-    _detailInfo.name = [USER_DEFAULT stringForKey:KEY_NICKNAME_STR];
-    _detailInfo.birthday =[USER_DEFAULT objectForKey:KEY_BIRTH_STR];
-    _detailInfo.blood = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_BLOOD_STR]];
-    _detailInfo.sex = [NSNumber numberWithBool:[USER_DEFAULT integerForKey:KEY_SEX_STR]];
-    _detailInfo.high = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_HIGH_STR]];
-    _detailInfo.weight = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_HEIGHT_STR]];
-    
     NSError *error = nil;
     if (![context save:&error]) {
         /*
@@ -144,8 +134,19 @@
             abort();
         }
     }
+    
+    _detailInfo.name = [USER_DEFAULT stringForKey:KEY_NICKNAME_STR];
+    _detailInfo.birthday =[USER_DEFAULT objectForKey:KEY_BIRTH_STR];
+    _detailInfo.blood = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_BLOOD_STR]];
+    _detailInfo.sex = [NSNumber numberWithBool:[USER_DEFAULT integerForKey:KEY_SEX_STR]];
+    _detailInfo.high = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_HIGH_STR]];
+    _detailInfo.weight = [NSNumber numberWithInteger:[USER_DEFAULT integerForKey:KEY_HEIGHT_STR]];
+}
+-(void)saveButtonPressed
+{
     [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_PersonDetailChanged object:nil];
     [self.navigationController popViewControllerAnimated:YES];
+    //[self performSelector:@selector(savesssssss)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -179,11 +180,9 @@
 {
     if (indexPath.row == PersonInfoHeadIcon) {
         _headCell = [tableView dequeueReusableCellWithIdentifier:@"headIcon" forIndexPath:indexPath];
-        _headCell.textLabel.text = NSLocalizedString(@"照片",nil);
         
-        
-//        [_headCell.headIcon.layer setCornerRadius:CGRectGetHeight([_headCell.headIcon bounds]) / 4];
-//        _headCell.headIcon.layer.masksToBounds = YES;
+        [_headCell.headIcon.layer setCornerRadius:CGRectGetHeight([_headCell.headIcon bounds]) / 2];
+        _headCell.headIcon.layer.masksToBounds = YES;
         [_headCell.headIcon setImage:_detailInfo.image];
         return _headCell;
     }else{
@@ -366,10 +365,16 @@
 	//获得编辑过的图片
     images = [info objectForKey: @"UIImagePickerControllerOriginalImage"];
 	
-    _headCell.headIcon.image = images;
-	_detailInfo.image = images;
     
-	[self dismissViewControllerAnimated:YES completion:nil];
+    ImageCroperViewController* _imageCroperViewController = [[ImageCroperViewController alloc]initWithNibName:@"ImageCroperViewController" bundle:nil];
+    _imageCroperViewController.delegate = self;
+    _imageCroperViewController.editImage = images;
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.navigationController presentViewController:_imageCroperViewController animated:YES completion:nil];
+    }];
+    
+    
+	
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
@@ -385,5 +390,12 @@
         PersonDetailSetViewController * curPersonController = (PersonDetailSetViewController *)segue.destinationViewController;
         curPersonController.detailInfo = _detailInfo;
     }
+}
+
+#pragma mark - delegate
+-(void)useEditImage:(UIImage*)image
+{
+    _headCell.headIcon.image = image;
+	_detailInfo.image = image;
 }
 @end

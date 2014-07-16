@@ -33,7 +33,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.title = NSLocalizedString(@"测量间隔时间",nil);
-    _timeGapArray = @[NSLocalizedString(@"5秒",nil),NSLocalizedString(@"10秒",nil),NSLocalizedString(@"5分钟",nil),NSLocalizedString(@"10分钟",nil),NSLocalizedString(@"15分钟",nil),NSLocalizedString(@"30分钟",nil),NSLocalizedString(@"1小时",nil)];
+    _timeGapArray = @[NSLocalizedString(@"5分钟",nil),NSLocalizedString(@"10分钟",nil),NSLocalizedString(@"15分钟",nil),NSLocalizedString(@"30分钟",nil),NSLocalizedString(@"1小时",nil)];
     _selectItem = [USER_DEFAULT integerForKey:KEY_GAPTIMER_STR];
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];

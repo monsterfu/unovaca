@@ -69,6 +69,33 @@
     if (self.recordReadingArray != recordReadingArray) {
         self.recordReadingArray = [NSArray arrayWithArray:recordReadingArray];
     }
+    
+    CGFloat temp = [self hightestTempInArray:recordReadingArray];
+    
+    if (temp< 31.0) {
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_35"]];
+    }else if (temp >= 31&&temp< 34.5) {
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_35"]];
+    }else if (temp >= 34.5&&temp< 36) {
+        [_statusLabel setTextColor:[UIColor blackColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_35"]];
+    }else if (temp >= 36&&temp< 37.5) {
+        [_statusLabel setTextColor:[UIColor yellowColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_37"]];
+    }else if (temp >= 37.5&&temp< 38) {
+        [_statusLabel setTextColor:[UIColor orangeColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_38"]];
+    }else if (temp >= 38&&temp< 39) {
+        [_statusLabel setTextColor:[UIColor orangeColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_39"]];
+    }else if (temp >= 39&&temp < 40) {
+        [_statusLabel setTextColor:[UIColor redColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_41"]];
+    }else if (temp >= 40) {
+        [_statusLabel setTextColor:[UIColor redColor]];
+        [_statusImageView setImage:[UIImage imageNamed:@"ic_number_status_45"]];
+    }
+    
     self.tempLabel.text = [NSString stringWithFormat:@"%.1f℃",[self hightestTempInArray:recordReadingArray]];
     
     self.statusLabel.text = [self getStatusString:[self hightestTempInArray:recordReadingArray]];
