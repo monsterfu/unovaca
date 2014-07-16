@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noHistoryRemindLabel;
+@property (readwrite, nonatomic) IBOutlet UIImageView * iconImageView;
 
 -(void)setTemperatureFob:(TemperatureFob *)info person:(PersonDetailInfo*)person;
 @end

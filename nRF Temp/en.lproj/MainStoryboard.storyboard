@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9qa-oB-E2B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9qa-oB-E2B">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -243,6 +243,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="iconImageView" destination="for-3V-0l0" id="17P-tx-3YV"/>
                                             <outlet property="noHistoryRemindLabel" destination="iIc-E5-P2p" id="lQF-7H-xPb"/>
                                             <outlet property="tempLabel" destination="BAg-YC-hQy" id="6m9-7r-bbe"/>
                                             <outlet property="timeLabel" destination="MSi-W5-PjS" id="oD3-56-Dvc"/>
@@ -251,6 +252,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SJN-fb-1fw">
+                                <rect key="frame" x="40" y="366" width="239" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.54983174130000001" green="0.73123301630000004" blue="0.2681347979" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -269,10 +278,12 @@
                     <connections>
                         <outlet property="checkStatusView" destination="Tav-Wv-qn1" id="hrK-yi-IvI"/>
                         <outlet property="colorBg" destination="bDE-ot-rKU" id="M0i-Vb-c2g"/>
+                        <outlet property="deviceButton" destination="BXC-It-JSL" id="e2Y-Uj-d2k"/>
                         <outlet property="lowPanelView" destination="hkS-Xc-Vrk" id="dvm-Nn-0iK"/>
                         <outlet property="openBgButton" destination="QiE-6x-ifD" id="BwC-2B-wWx"/>
                         <outlet property="panelView" destination="bDE-ot-rKU" id="CaP-UX-Stc"/>
                         <outlet property="plotImageView" destination="ryZ-pv-bgl" id="j1b-kN-c0f"/>
+                        <outlet property="reminderLabel" destination="SJN-fb-1fw" id="j9Y-b8-8Q3"/>
                         <outlet property="rightButton" destination="eEX-dI-nOI" id="o9L-ms-YAE"/>
                         <outlet property="status" destination="pSk-bF-NNY" id="FHj-uy-710"/>
                         <outlet property="statusButton" destination="B3W-DX-DXK" id="JL2-1s-lcU"/>

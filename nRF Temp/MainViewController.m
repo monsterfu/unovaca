@@ -91,12 +91,31 @@
         oldRect.origin.y -= 50;
         oldRect.size.height += 60;
         [_tableView setFrame:oldRect];
+        
+        oldRect = _reminderLabel.frame;
+        oldRect.origin.y -= 10;
+        [_reminderLabel setFrame:oldRect];
+        
+    }else{
+        CGRect oldRect = _openBgButton.frame;
+        oldRect.origin.y += 20;
+        [_openBgButton setFrame:oldRect];
+        
+        oldRect = _deviceButton.frame;
+        oldRect.origin.y += 20;
+        [_deviceButton setFrame:oldRect];
     }
     NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:9];
     NSDate* today = [NSDate date];
     if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
         abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse
     }
+    [_reminderLabel setAlpha:1.0f];
+    
+    [_reminderLabel.layer setCornerRadius:10];
+    [_reminderLabel.layer setBorderColor:[UIColor clearColor].CGColor];
+    [_reminderLabel.layer setBorderWidth:3];
+    
     [_temperaturePanel setHidden:YES];
     [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
@@ -241,7 +260,7 @@
     if (DEVICE_HEIGHT > 480) {
         return 90;
     }
-    return 75;
+    return 70;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -285,6 +304,20 @@
     else
     {
         historyCell = [tableView dequeueReusableCellWithIdentifier:@"lastNoticeCell" forIndexPath:indexPath];
+        
+        if (DEVICE_HEIGHT <= 480) {
+            CGRect oldRect = historyCell.tempLabel.frame;
+            oldRect.origin.y = 25;
+            [historyCell.tempLabel setFrame:oldRect];
+            oldRect = historyCell.timeLabel.frame;
+            oldRect.origin.y = 25;
+            [historyCell.timeLabel setFrame:oldRect];
+            oldRect = historyCell.iconImageView.frame;
+            oldRect.origin.y = 5;
+            oldRect.origin.x = 5;
+            [historyCell.iconImageView setFrame:oldRect];
+        }
+        
         if (_fob) {
             [historyCell setTemperatureFob:_fob person:_detailInfo];
             [historyCell.tempLabel setHidden:NO];
@@ -405,11 +438,25 @@
         [_openBgButton setTitle:NSLocalizedString(@"开启后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:NO forKey:KEY_BACKGROUND_OPEN];
+        
+        [_reminderLabel setText:NSLocalizedString(@"开启后台",nil)];
+        
     }else{
         [_openBgButton setTitle:NSLocalizedString(@"关闭后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
+        
+        [_reminderLabel setText:NSLocalizedString(@"关闭后台",nil)];
     }
     [USER_DEFAULT synchronize];
+    
+    [UIView animateWithDuration:1.0f animations:^{
+        [_reminderLabel setAlpha:1.0f];
+    } completion:^(BOOL finish){
+        [UIView animateWithDuration:1.0f animations:^{
+            [_reminderLabel setAlpha:0.0f];
+        } completion:^(BOOL finish){
+        }];
+    }];
 }
 @end

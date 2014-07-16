@@ -42,7 +42,7 @@
     self.navigationItem.rightBarButtonItem = _saveButton;
     
     UIImage* backImg = [UIImage imageNamed:@"ic_back_normal"];
-    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
+    UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed)];
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
 }
@@ -85,7 +85,8 @@
 {
     NSManagedObjectContext *managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
     NSManagedObjectContext *context = _reminderModel.managedObjectContext;
-    if (!_reminderModel.eventContent) {
+    _reminderModel.eventContent = _contentCell.textField.text;
+    if (!_reminderModel.eventContent.length) {
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil)message:NSLocalizedString(@"提醒内容不能为空",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"好的",nil) otherButtonTitles:nil, nil];
         [alertView show];
         return;

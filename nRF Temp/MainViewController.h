@@ -44,9 +44,13 @@
 @property (weak, nonatomic) IBOutlet UIView *temperaturePanel;
 @property (weak, nonatomic) IBOutlet UIView *checkStatusView;
 @property (weak, nonatomic) IBOutlet UIButton *statusButton;
+@property (weak, nonatomic) IBOutlet UIButton *deviceButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *openBgButton;
 - (IBAction)openBgButtonTouch:(UIButton *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *reminderLabel;
 
 
 @property(nonatomic,retain)PersonDetailInfo* detailInfo;
