@@ -7,6 +7,7 @@
 //
 
 #import "DeviceDetailViewController.h"
+#import "ConnectionManager.h"
 
 @interface DeviceDetailViewController ()
 
@@ -26,6 +27,9 @@ static NSUInteger scanInt = 16;
 - (void)viewWillAppear:(BOOL)animated
 {
     _fob.active = NO;
+    _fob.delegate = self;
+    _fob.batteryLevel = [NSNumber numberWithFloat:0.0f];
+    _fob.signalStrength = [NSNumber numberWithFloat:0.0f];
     scanInt = 16;
     _scanTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(scanAction) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:_scanTimer forMode:NSDefaultRunLoopMode];
@@ -210,5 +214,16 @@ static NSUInteger scanInt = 16;
     }
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - Fobdelegate
+- (void) didUpdateData:(TemperatureFob *) fob
+{
+    if (fob == _fob) {
+        _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"在线",nil)];
+        [_scanTimer invalidate];
+        _scanTimer = nil;
+        [self.tableView reloadData];
+    }
 }
 @end

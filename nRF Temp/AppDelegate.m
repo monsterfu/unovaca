@@ -23,7 +23,7 @@
         PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝" personId:personId];
         _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
         _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
-        _detailInfo.weight = [NSNumber numberWithInteger:20];
+        _detailInfo.weight = [NSNumber numberWithInteger:23];
         [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
@@ -101,6 +101,13 @@
 
 -(void)backgroundScanBle
 {
+    NSLog(@"Saving all fobs...");
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
+    {
+        NSLog(@"Saving failed: %@", error);
+    }
     [[ConnectionManager sharedInstance]startScanForFobsBackGround];
 }
 

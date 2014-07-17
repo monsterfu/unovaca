@@ -466,12 +466,18 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (alertView == _openBgCheckAlertView) {
+        if (buttonIndex == 0) {
+            return;
+        }
         [_openBgButton setTitle:NSLocalizedString(@"开启后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:NO forKey:KEY_BACKGROUND_OPEN];
     }
     
     if (alertView == _closeBgCheckAlertView) {
+        if (buttonIndex == 0) {
+            return;
+        }
         [_openBgButton setTitle:NSLocalizedString(@"关闭后台",nil) forState:UIControlStateNormal];
         [USER_DEFAULT removeObjectForKey:KEY_BACKGROUND_OPEN];
         [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];

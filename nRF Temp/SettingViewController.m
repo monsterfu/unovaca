@@ -66,9 +66,9 @@
         return 2;
     }else{
         if ( [[[USER_DEFAULT objectForKey : @"AppleLanguages"]objectAtIndex:0] isEqualToString:@"en"]) {
-            return 2;
+            return 3;
         }
-        return 3;
+        return 4;
     }
     return 0;
 }

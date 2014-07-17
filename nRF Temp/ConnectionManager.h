@@ -20,6 +20,7 @@
 @interface ConnectionManager : NSObject <CBCentralManagerDelegate>
 {
     UIAlertView* alertView;
+    UILocalNotification* _localOutOfRangeNotice;
 }
 @property BOOL acceptNewFobs;
 @property id<ConnectionManagerDelegate> delegate;

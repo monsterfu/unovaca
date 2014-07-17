@@ -226,6 +226,8 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
                                                     inManagedObjectContext:self.managedObjectContext];
         _detailInfo.personId = [NSString randomStr];
         _detailInfo.image = [UIImage imageNamed:@"default_head"];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithFloat:23.0f];
         PersonViewController *addController = (PersonViewController *)segue.destinationViewController;
         addController.detailInfo = _detailInfo;
         addController.isNew = YES;

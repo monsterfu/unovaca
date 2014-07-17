@@ -67,7 +67,7 @@
 "从手机相册选择" = "Choice from the phone photo album";
 "请输入昵称" = "Please enter a nickname";
 "无用户信息，请添加" = "No user information, please add";
-"点击头像，详细编辑" = "Click on the picture, detailed editing";
+"点击头像，详细编辑" = "Click on the picture, detaled editing";
 "人员信息不可为空" = "Personnel information cannot be empty";
 "小时" = "hour";
 "提醒内容不能为空" = "content of remind cannot be empty";
@@ -104,3 +104,4 @@
 "你确定要关闭后台测量体温?" = "Are you sure you want to shut down the background temperature? Shut down, only in the current application interface temperature, there will be no cycles in the background measurement temperature. This condition does not affect the consumption of mobile phone battery.";
 "你确定要开启后台测量体温?" = "Are you sure you want to open the background temperature? After open, the program will be set up according to the background of cycle in the background cycle measurement temperature. The condition of the battery power consumption is big, proposed to the background measurement cycle up.";
 "使用" = "use";
+"目前体温已经超过报警值，请采取降温措施" = "The current temperature alarm value, please take measures to cool!";
