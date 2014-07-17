@@ -144,6 +144,10 @@
 }
 -(void)saveButtonPressed
 {
+    if (_isNew) {
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:NSLocalizedString(@"添加新用户后，请重新扫描设备并选定作为测量温度计。",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+        [alertView show];
+    }
     [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_PersonDetailChanged object:nil];
     [self.navigationController popViewControllerAnimated:YES];
     //[self performSelector:@selector(savesssssss)];

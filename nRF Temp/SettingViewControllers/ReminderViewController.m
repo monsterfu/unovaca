@@ -138,6 +138,9 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        if (indexPath.row >= _allEventReminderModelArray.count) {
+            return;
+        }
         [EventReminderModel deleteEventReminder:[_allEventReminderModelArray objectAtIndex:indexPath.row]];
         [_allEventReminderModelArray removeObjectAtIndex:indexPath.row];
         _localNotice = [_allEventNoticationArray objectAtIndex:indexPath.row];
@@ -166,7 +169,7 @@
 {
     if ([_allEventNoticationArray count] > index) {
         _localNotice = [_allEventNoticationArray objectAtIndex:index];
-        
+        _allEventReminderModelArray = [EventReminderModel allEventReminderModel];
         EventReminderModel * eventReminderModel = [_allEventReminderModelArray objectAtIndex:index];
         if (on) {
             eventReminderModel.open = [NSNumber numberWithBool:YES];

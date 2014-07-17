@@ -150,7 +150,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TemperatureReadingCell" forIndexPath:indexPath];
     
-    TemperatureReading *reading = [_readings objectAtIndex:[indexPath row]];
+    TemperatureReading *reading = [_readings objectAtIndex:_readings.count - [indexPath row] -1];
     [cell.textLabel setText:[NSString stringWithFormat:@"%.01f ℃", [reading.value floatValue]]];
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];

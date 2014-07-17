@@ -16,6 +16,8 @@
     PersonInfoCell* _personInfoCell;
 //    PersonDetailInfo* _detailInfo;
     NSUInteger _selectedIndex;
+    
+    UIImageView* _selectView;
 }
 @property(nonatomic,retain)PersonDetailInfo* detailInfo;
 @property(nonatomic,retain)NSMutableArray* personFobsArray;

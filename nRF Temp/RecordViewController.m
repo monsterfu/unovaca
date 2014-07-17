@@ -49,7 +49,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     NSDate* todayDate;
     NSUInteger year = [USER_DEFAULT integerForKey:KEY_SELECTED_YEAR];

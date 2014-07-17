@@ -156,15 +156,13 @@ static ConnectionManager *sharedConnectionManager;
                 [alertView show];
                 
                 
-                if (!_localOutOfRangeNotice) {
-                    _localOutOfRangeNotice = [[UILocalNotification alloc] init];
-                }
+                _localOutOfRangeNotice = [[UILocalNotification alloc] init];
                 if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {
                     _localOutOfRangeNotice.applicationIconBadgeNumber = 1;
                     _localOutOfRangeNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
                     _localOutOfRangeNotice.timeZone = [NSTimeZone defaultTimeZone];
                     _localOutOfRangeNotice.soundName = @"4031.wav";
-                    _localOutOfRangeNotice.repeatInterval = NSDayCalendarUnit;
+                    _localOutOfRangeNotice.repeatInterval = NSYearCalendarUnit;
                     
                     _localOutOfRangeNotice.alertBody = [NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)];
                     

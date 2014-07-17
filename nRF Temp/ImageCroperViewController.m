@@ -86,7 +86,10 @@
         [self.view addSubview:self.preview];
     }
     
-    UIButton* saveButton = [[UIButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2, 10, 100, 30)];
+    UIButton* saveButton = [[UIButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 100/2, 20, 100, 40)];
+    [saveButton showsTouchWhenHighlighted];
+    [saveButton setBackgroundImage:[UIImage imageNamed:@"split_off"] forState:UIControlStateNormal];
+    [saveButton setBackgroundImage:[UIImage imageNamed:@"split_on"] forState:UIControlStateHighlighted];
     [saveButton setTitle:NSLocalizedString(@"使用",nil) forState:UIControlStateNormal];
     [self.view addSubview:saveButton];
     [saveButton addTarget:self action:@selector(useImage) forControlEvents:UIControlEventTouchUpInside];

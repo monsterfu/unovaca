@@ -105,3 +105,4 @@
 "你确定要开启后台测量体温?" = "Are you sure you want to open the background temperature? After open, the program will be set up according to the background of cycle in the background cycle measurement temperature. The condition of the battery power consumption is big, proposed to the background measurement cycle up.";
 "使用" = "use";
 "目前体温已经超过报警值，请采取降温措施" = "The current temperature alarm value, please take measures to cool!";
+"添加新用户后，请重新扫描设备并选定作为测量温度计。" = "After adding a new user, please scan again the device and the selected as measuring thermometer.";

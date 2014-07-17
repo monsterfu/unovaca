@@ -47,6 +47,8 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     
+    _selectView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 36, 36)];
+    [_selectView setImage:[UIImage imageNamed:@"single_item_selector_icon_normal.png"]];
 }
 
 -(void)backButtonPressed
@@ -115,7 +117,8 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
     // Configure the cell...
     [self configureCell:_personInfoCell atIndexPath:indexPath];
     if (indexPath.row == _selectedIndex) {
-        _personInfoCell.accessoryType = UITableViewCellAccessoryCheckmark;
+//        _personInfoCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        _personInfoCell.accessoryView = _selectView;
     }
     
     
@@ -226,8 +229,8 @@ static NSString *kAddPersonSegueID = @"firstPersonDetail";
                                                     inManagedObjectContext:self.managedObjectContext];
         _detailInfo.personId = [NSString randomStr];
         _detailInfo.image = [UIImage imageNamed:@"default_head"];
-        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-3*365*24*60*60];
-        _detailInfo.weight = [NSNumber numberWithFloat:23.0f];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-2*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithFloat:14.0f];
         PersonViewController *addController = (PersonViewController *)segue.destinationViewController;
         addController.detailInfo = _detailInfo;
         addController.isNew = YES;
