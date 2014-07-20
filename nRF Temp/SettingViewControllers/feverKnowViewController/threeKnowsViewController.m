@@ -44,7 +44,13 @@
         if ([views isKindOfClass:[UIImageView class]]) {
             [views removeFromSuperview];
         }
+        if ([views isKindOfClass:[threeView class]]) {
+            threeView* viewR = (threeView*)views;
+            viewR.delegate = self;
+        }
     }
+    
+    
 }
 
 
@@ -83,5 +89,14 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     NSLog(@"scrollViewDidEndDragging");
+}
+
+#pragma mark - delegate
+
+-(void)threeViewTouched:(NSUInteger)index
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(threeKnowsViewTouch:)]) {
+        [self.delegate threeKnowsViewTouch:index];
+    }
 }
 @end

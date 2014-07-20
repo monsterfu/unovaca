@@ -10,11 +10,20 @@
 #import "PublicDefine.h"
 #import "threeView.h"
 
-@interface threeKnowsViewController : UIViewController<UIScrollViewDelegate>
+@protocol threeKnowsViewControllerDelegate <NSObject>
+-(void)threeKnowsViewTouch:(NSUInteger)index;
+@end
+
+@interface threeKnowsViewController : UIViewController<UIScrollViewDelegate,threeViewDelegate>
 {
     threeView* _subView;
 }
 
+@property (nonatomic, assign)id<threeKnowsViewControllerDelegate>delegate;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
+
 
 @end

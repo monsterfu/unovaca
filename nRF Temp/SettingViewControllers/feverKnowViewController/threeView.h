@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol threeViewDelegate <NSObject>
+-(void)threeViewTouched:(NSUInteger)index;
+@end
+
 @interface threeView : UIView
+
+@property(nonatomic,assign)id<threeViewDelegate>delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *age;

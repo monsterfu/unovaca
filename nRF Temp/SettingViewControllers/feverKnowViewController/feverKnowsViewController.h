@@ -13,8 +13,9 @@
 #import "threeKnowsViewController.h"
 #import "fourTableViewController.h"
 #import "fourDetalViewController.h"
+#import "ThreeDetailViewController.h"
 
-@interface feverKnowsViewController : UIViewController<fourTableViewControllerDelegate>
+@interface feverKnowsViewController : UIViewController<fourTableViewControllerDelegate,threeKnowsViewControllerDelegate>
 {
     NSDictionary* _knowsMutableDic;
     
@@ -28,6 +29,10 @@
     threeKnowsViewController* _threeKnowViewController;
     fourTableViewController* _fourKnowViewController;
     fourDetalViewController* _fourDetailViewController;
+    
+    ThreeDetailViewController* _threeDetailViewController;
+    NSArray* _diseaseArray;
+    NSArray* _dissarray1;
 }
 
 - (IBAction)segmentedControlSelected:(UISegmentedControl *)sender;

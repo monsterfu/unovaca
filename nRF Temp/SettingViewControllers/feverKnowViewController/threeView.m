@@ -27,5 +27,11 @@
     // Drawing code
 }
 */
-
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touchesEnded,self.tag:%d",self.tag);
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(threeViewTouched:)]) {
+        [self.delegate threeViewTouched:self.tag];
+    }
+}
 @end

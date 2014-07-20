@@ -86,100 +86,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nRF Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-            timestampString = "421492068.225545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[threeKnowsViewController viewDidLoad]"
-                  moduleName = "nRF Temp"
-                  urlString = "file:///Users/fuxin/Documents/%E5%A4%96%E5%8C%85/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/0507/nrf_temp0511/nRF%20Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-                  timestampString = "421491389.703319"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2596">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[threeKnowsViewController viewDidLoad]"
-                  moduleName = "nRF Temp"
-                  urlString = "file:///Users/fuxin/Documents/%E5%A4%96%E5%8C%85/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/0507/nrf_temp0511/nRF%20Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-                  timestampString = "421491392.241596"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2590">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nRF Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-            timestampString = "421492068.225545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-scrollViewWillBeginDragging:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nRF Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-            timestampString = "421492068.225545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-scrollViewWillEndDragging:withVelocity:targetContentOffset:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "nRF Temp/SettingViewControllers/feverKnowViewController/threeKnowsViewController.m"
-            timestampString = "421492068.225545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-scrollViewDidEndDragging:willDecelerate:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -189,38 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "-viewDidDisappear:"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DeviceDetailViewController viewWillAppear:]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/fuxin/Documents/%E5%A4%96%E5%8C%85/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/unovaca/nRF%20Temp/DeviceDetailViewController.m"
-                  timestampString = "427302082.53394"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DeviceDetailViewController viewWillAppear:]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/fuxin/Documents/%E5%A4%96%E5%8C%85/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/unovaca/nRF%20Temp/DeviceDetailViewController.m"
-                  timestampString = "427302084.445108"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "608">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -348,6 +224,22 @@
             startingLineNumber = "100"
             endingLineNumber = "100"
             landmarkName = "-useImage"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nRF Temp/ThreeDetailViewController.m"
+            timestampString = "427536114.910231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

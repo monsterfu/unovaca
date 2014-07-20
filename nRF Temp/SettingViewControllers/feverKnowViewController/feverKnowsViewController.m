@@ -48,6 +48,7 @@
     [_twoView addSubview:_twoKnowViewController.view];
     
     _threeKnowViewController = [[threeKnowsViewController alloc]initWithNibName:@"threeKnowsViewController" bundle:nil];
+    _threeKnowViewController.delegate = self;
     [_threeView addSubview:_threeKnowViewController.view];
     
     _fourKnowViewController = [[fourTableViewController alloc]initWithNibName:@"fourTableViewController" bundle:nil];
@@ -70,6 +71,37 @@
     UIBarButtonItem* _cancelButton = [[UIBarButtonItem alloc]initWithImage:[backImg scaleToSize:backImg size:CGSizeMake(40, 40)] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
+    
+    
+    NSError* error;
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"medicine-2" ofType:nil];
+    NSString *jsonData = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:&error];
+    NSString* dataStr = [self getCorrectStrData:jsonData];
+    NSData* datttt = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+    _diseaseArray = [NSJSONSerialization JSONObjectWithData:datttt options:NSJSONReadingMutableContainers error:&error];
+    
+    jsonPath = [[NSBundle mainBundle] pathForResource:@"medicine_card" ofType:nil];
+    jsonData = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:&error];
+    dataStr = [self getCorrectStrData:jsonData];
+    datttt = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+    _dissarray1 = [NSJSONSerialization JSONObjectWithData:datttt options:NSJSONReadingMutableContainers error:&error];
+}
+
+
+-(NSString*)getCorrectStrData:(NSString*)inputString
+//- (NSString *)stringByRemovingControlCharacters: (NSString *)inputString
+{
+    NSCharacterSet *controlChars = [NSCharacterSet controlCharacterSet];
+    NSRange range = [inputString rangeOfCharacterFromSet:controlChars];
+    if (range.location != NSNotFound) {
+        NSMutableString *mutable = [NSMutableString stringWithString:inputString];
+        while (range.location != NSNotFound) {
+            [mutable deleteCharactersInRange:range];
+            range = [mutable rangeOfCharacterFromSet:controlChars];
+        }
+        return mutable;
+    }
+    return inputString;
 }
 
 -(void)backButtonPressed
@@ -143,4 +175,14 @@
     [self.navigationController pushViewController:_fourDetailViewController animated:YES];
     
 }
+#pragma mark - 
+-(void)threeKnowsViewTouch:(NSUInteger)index
+{
+    _threeDetailViewController = [[ThreeDetailViewController alloc]initWithNibName:@"ThreeDetailViewController" bundle:nil];
+    _threeDetailViewController.detailArray = [_diseaseArray objectAtIndex:index];
+    _threeDetailViewController.datailArray1 = [_dissarray1 objectAtIndex:index];
+    _threeDetailViewController.number = index;
+    [self.navigationController pushViewController:_threeDetailViewController animated:YES];
+}
+
 @end

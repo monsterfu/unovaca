@@ -95,6 +95,8 @@
 		0FBC5795191F9385006AEA01 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC5794191F9385006AEA01 /* DeviceDetailViewController.m */; };
 		0FBC5798191FC690006AEA01 /* recordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC5797191FC690006AEA01 /* recordCell.m */; };
 		0FBC579B191FC74A006AEA01 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC579A191FC74A006AEA01 /* RecordViewController.m */; };
+		0FD4ECAB197B89FB009AFEA5 /* ThreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD4ECA9197B89FB009AFEA5 /* ThreeDetailViewController.m */; };
+		0FD4ECAC197B89FB009AFEA5 /* ThreeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4ECAA197B89FB009AFEA5 /* ThreeDetailViewController.xib */; };
 		5EBDB76F18E9711E00491B74 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */; };
 		5EBDB77218E9747700491B74 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB77118E9747700491B74 /* MainViewController.m */; };
 		6405B5F0195278BB0081A8CD /* umeng_update_close_bg_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6405B5EF195278BB0081A8CD /* umeng_update_close_bg_normal.png */; };
@@ -182,7 +184,7 @@
 		649A85771921FF0300ED7445 /* PersonDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A85761921FF0300ED7445 /* PersonDetailInfo.m */; };
 		649B060F1929A380002B642E /* NSDate+JBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 649B060E1929A380002B642E /* NSDate+JBCommon.m */; };
 		649B7210190F7E6D005E4F2E /* disease in Resources */ = {isa = PBXBuildFile; fileRef = 649B720F190F7E6D005E4F2E /* disease */; };
-		649B7212190F8872005E4F2E /* medicine_card.txt in Resources */ = {isa = PBXBuildFile; fileRef = 649B7211190F8872005E4F2E /* medicine_card.txt */; };
+		649B7212190F8872005E4F2E /* medicine_card in Resources */ = {isa = PBXBuildFile; fileRef = 649B7211190F8872005E4F2E /* medicine_card */; };
 		649B722D190F8F59005E4F2E /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 649B7215190F8F59005E4F2E /* NSObject+SBJson.m */; };
 		649B722E190F8F59005E4F2E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 649B7218190F8F59005E4F2E /* SBJsonParser.m */; };
 		649B722F190F8F59005E4F2E /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 649B721A190F8F59005E4F2E /* SBJsonStreamParser.m */; };
@@ -354,6 +356,9 @@
 		0FBC5797191FC690006AEA01 /* recordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recordCell.m; sourceTree = "<group>"; };
 		0FBC5799191FC74A006AEA01 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		0FBC579A191FC74A006AEA01 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		0FD4ECA8197B89FB009AFEA5 /* ThreeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDetailViewController.h; sourceTree = "<group>"; };
+		0FD4ECA9197B89FB009AFEA5 /* ThreeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeDetailViewController.m; sourceTree = "<group>"; };
+		0FD4ECAA197B89FB009AFEA5 /* ThreeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreeDetailViewController.xib; sourceTree = "<group>"; };
 		5EBDB76D18E9711E00491B74 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoCell.h; sourceTree = "<group>"; };
 		5EBDB76E18E9711E00491B74 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
 		5EBDB77018E9747700491B74 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -466,7 +471,7 @@
 		649B060D1929A380002B642E /* NSDate+JBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JBCommon.h"; path = "NSDate+JBCommon/NSDate+JBCommon.h"; sourceTree = "<group>"; };
 		649B060E1929A380002B642E /* NSDate+JBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JBCommon.m"; path = "NSDate+JBCommon/NSDate+JBCommon.m"; sourceTree = "<group>"; };
 		649B720F190F7E6D005E4F2E /* disease */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = disease; sourceTree = "<group>"; };
-		649B7211190F8872005E4F2E /* medicine_card.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = medicine_card.txt; sourceTree = "<group>"; };
+		649B7211190F8872005E4F2E /* medicine_card */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = medicine_card; sourceTree = "<group>"; };
 		649B7214190F8F59005E4F2E /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		649B7215190F8F59005E4F2E /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		649B7216190F8F59005E4F2E /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -915,6 +920,9 @@
 				640D9CBD1919FF690097386B /* threeKnowsViewController.h */,
 				640D9CBE1919FF690097386B /* threeKnowsViewController.m */,
 				640D9CBF1919FF690097386B /* threeKnowsViewController.xib */,
+				0FD4ECA8197B89FB009AFEA5 /* ThreeDetailViewController.h */,
+				0FD4ECA9197B89FB009AFEA5 /* ThreeDetailViewController.m */,
+				0FD4ECAA197B89FB009AFEA5 /* ThreeDetailViewController.xib */,
 				0F40EEBA191A7D720054894B /* threeView.h */,
 				0F40EEBB191A7D720054894B /* threeView.m */,
 				640D9CB81919F9290097386B /* twoKnowsViewController.h */,
@@ -931,7 +939,7 @@
 			isa = PBXGroup;
 			children = (
 				0F02E1F6191936C000722AFA /* medicine-2 */,
-				649B7211190F8872005E4F2E /* medicine_card.txt */,
+				649B7211190F8872005E4F2E /* medicine_card */,
 				649B720F190F7E6D005E4F2E /* disease */,
 				0F02E1F81919440100722AFA /* disease-2 */,
 				64D7978A190F506F007442CE /* strings.xml */,
@@ -1212,7 +1220,7 @@
 				0FB517D819212B760070344F /* battery_80@2x.png in Resources */,
 				6405B5F0195278BB0081A8CD /* umeng_update_close_bg_normal.png in Resources */,
 				0F19CAB11913E44700BF9312 /* a返回.png in Resources */,
-				649B7212190F8872005E4F2E /* medicine_card.txt in Resources */,
+				649B7212190F8872005E4F2E /* medicine_card in Resources */,
 				0F77AFE31951E389005F1063 /* ic_titlebar_save_remind_pressed.png in Resources */,
 				64097C6319050AEC00C0E49D /* 512.png in Resources */,
 				0F19CAA81913E44700BF9312 /* a帮助icon.png in Resources */,
@@ -1322,6 +1330,7 @@
 				64D79779190F3CAC007442CE /* over@2x.png in Resources */,
 				0F19CAA91913E44700BF9312 /* a保存.png in Resources */,
 				0F19CAB91913E44700BF9312 /* a刻度.png in Resources */,
+				0FD4ECAC197B89FB009AFEA5 /* ThreeDetailViewController.xib in Resources */,
 				64097C5F19050AEC00C0E49D /* 6.png in Resources */,
 				641A721719061C2500CC7041 /* deletehl@2x.png in Resources */,
 				64E1E2511908FE2200D274A1 /* ble_app_template_button.bin in Resources */,
@@ -1427,6 +1436,7 @@
 				640670B91950419E00928CAB /* ReminderViewDetailController.m in Sources */,
 				64E1E2421908FC5700D274A1 /* DeviceInformationCell.m in Sources */,
 				64252E8519261D2900D454D4 /* GraphView.m in Sources */,
+				0FD4ECAB197B89FB009AFEA5 /* ThreeDetailViewController.m in Sources */,
 				649B7235190F8F59005E4F2E /* SBJsonStreamWriterState.m in Sources */,
 				649B722E190F8F59005E4F2E /* SBJsonParser.m in Sources */,
 				64E1E2461908FC5700D274A1 /* HelpViewController.m in Sources */,

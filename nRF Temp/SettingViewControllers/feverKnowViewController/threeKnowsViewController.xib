@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="535"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-5r-bh5" customClass="threeView">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-5r-bh5" customClass="threeView">
                             <rect key="frame" x="0.0" y="0.0" width="160" height="68"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -71,7 +71,7 @@
                                 <outlet property="pingjia" destination="pJI-uh-G10" id="Mwm-z1-9T4"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apt-BY-9UJ" customClass="threeView">
+                        <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apt-BY-9UJ" customClass="threeView">
                             <rect key="frame" x="0.0" y="135" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -123,7 +123,7 @@
                                 <outlet property="pingjia" destination="bxe-6T-gUI" id="LKg-gN-e1Z"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxC-li-ia4" customClass="threeView">
+                        <view tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxC-li-ia4" customClass="threeView">
                             <rect key="frame" x="160" y="135" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -175,7 +175,7 @@
                                 <outlet property="pingjia" destination="UE6-nK-cbz" id="OOc-HJ-4FX"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGu-Pt-nzw" customClass="threeView">
+                        <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGu-Pt-nzw" customClass="threeView">
                             <rect key="frame" x="0.0" y="67" width="160" height="68"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -227,7 +227,7 @@
                                 <outlet property="pingjia" destination="hmv-cw-sSA" id="EqQ-hd-Tm8"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Hw-Xj-Icl" customClass="threeView">
+                        <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Hw-Xj-Icl" customClass="threeView">
                             <rect key="frame" x="160" y="0.0" width="160" height="68"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -279,7 +279,7 @@
                                 <outlet property="pingjia" destination="P6L-0G-T0z" id="c8I-6E-4j6"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdE-gV-VaS" customClass="threeView">
+                        <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdE-gV-VaS" customClass="threeView">
                             <rect key="frame" x="160" y="67" width="160" height="68"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -331,7 +331,7 @@
                                 <outlet property="pingjia" destination="NGu-9y-MXX" id="the-Vj-7Uz"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NX9-7N-zRF" customClass="threeView">
+                        <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NX9-7N-zRF" customClass="threeView">
                             <rect key="frame" x="0.0" y="219" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -383,7 +383,7 @@
                                 <outlet property="pingjia" destination="ud0-As-xaH" id="Nkn-7S-5yw"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-dC-Ltk" customClass="threeView">
+                        <view tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-dC-Ltk" customClass="threeView">
                             <rect key="frame" x="160" y="219" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -435,7 +435,7 @@
                                 <outlet property="pingjia" destination="EZW-8S-rmw" id="Tl7-9L-vGA"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-wP-txW" customClass="threeView">
+                        <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-wP-txW" customClass="threeView">
                             <rect key="frame" x="0.0" y="305" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -487,7 +487,7 @@
                                 <outlet property="pingjia" destination="83y-jD-pbo" id="hAw-UZ-43Z"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-St-F45" customClass="threeView">
+                        <view tag="9" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-St-F45" customClass="threeView">
                             <rect key="frame" x="160" y="305" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -539,7 +539,7 @@
                                 <outlet property="pingjia" destination="OkE-Wa-161" id="8Mn-aT-FcR"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7R-Td-dhP" customClass="threeView">
+                        <view tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7R-Td-dhP" customClass="threeView">
                             <rect key="frame" x="0.0" y="392" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -591,7 +591,7 @@
                                 <outlet property="pingjia" destination="WfH-3M-13T" id="YgP-qK-mOV"/>
                             </connections>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-15-9bI" customClass="threeView">
+                        <view tag="11" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-15-9bI" customClass="threeView">
                             <rect key="frame" x="160" y="392" width="160" height="87"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
