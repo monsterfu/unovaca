@@ -117,7 +117,9 @@
 - (UIImage *) currentSignalStrengthImage
 {
     NSString *imageName;
-    if (self.signalStrength.floatValue > -40.0)
+    if (self.signalStrength.floatValue == 0) {
+        imageName = @"ic_signal_0.png";
+    }else if (self.signalStrength.floatValue > -40.0)
         imageName = @"ic_signal_3.png";
     else if (self.signalStrength.floatValue > -60.0)
         imageName = @"ic_signal_2.png";

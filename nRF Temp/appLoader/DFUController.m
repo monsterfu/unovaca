@@ -88,30 +88,30 @@
     switch (state)
     {
         case INIT:
-            return @"Init";
+            return NSLocalizedString(@"Init", nil);
         
         case DISCOVERING:
-            return @"Discovering";
+            return NSLocalizedString(@"Discovering", nil);
             
         case IDLE:
-            return @"Ready";
+            return NSLocalizedString(@"Ready", nil);
             
         case SEND_NOTIFICATION_REQUEST:
         case SEND_START_COMMAND:
         case SEND_RECEIVE_COMMAND:
         case SEND_FIRMWARE_DATA:
         case WAIT_RECEIPT:
-            return @"Uploading";
+            return NSLocalizedString(@"Uploading", nil);
             
         case SEND_VALIDATE_COMMAND:
         case SEND_RESET:
-            return @"Finishing";
+            return NSLocalizedString(@"Finishing", nil);
             
         case FINISHED:
-            return @"Finished";
+            return NSLocalizedString(@"Finished", nil);
             
         case CANCELED:
-            return @"Canceled";
+            return NSLocalizedString(@"Canceled", nil);
     }
     return nil;
 }

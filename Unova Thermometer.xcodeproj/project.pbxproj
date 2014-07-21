@@ -118,6 +118,7 @@
 		640670C81950659900928CAB /* EventReminderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670C71950659900928CAB /* EventReminderModel.m */; };
 		6407987318ED33BA00A21F74 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987218ED33BA00A21F74 /* PersonViewController.m */; };
 		6407987618ED39B900A21F74 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987518ED39B900A21F74 /* PersonListViewController.m */; };
+		640851F2197D0917004409F1 /* ble_app_template_ic.bin in Resources */ = {isa = PBXBuildFile; fileRef = 640851F1197D0916004409F1 /* ble_app_template_ic.bin */; };
 		64097C5919050AEC00C0E49D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2519050AEC00C0E49D /* 0.png */; };
 		64097C5A19050AEC00C0E49D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2619050AEC00C0E49D /* 1.png */; };
 		64097C5B19050AEC00C0E49D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2719050AEC00C0E49D /* 2.png */; };
@@ -393,6 +394,7 @@
 		6407987418ED39B900A21F74 /* PersonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListViewController.h; sourceTree = "<group>"; };
 		6407987518ED39B900A21F74 /* PersonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListViewController.m; sourceTree = "<group>"; };
 		6407987718ED6D2C00A21F74 /* PublicDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefine.h; sourceTree = "<group>"; };
+		640851F1197D0916004409F1 /* ble_app_template_ic.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_ic.bin; sourceTree = "<group>"; };
 		64097C2519050AEC00C0E49D /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		64097C2619050AEC00C0E49D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		64097C2719050AEC00C0E49D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -976,6 +978,7 @@
 		64E1E2491908FC9F00D274A1 /* embedded_firmwares */ = {
 			isa = PBXGroup;
 			children = (
+				640851F1197D0916004409F1 /* ble_app_template_ic.bin */,
 				64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */,
 				64E1E24A1908FC9F00D274A1 /* binary_list.json */,
 				64E1E24B1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin */,
@@ -1282,6 +1285,7 @@
 				0F3E0FDA19553E8C00F86FCC /* ic_number_status_37.png in Resources */,
 				0F77AFEE1951E47A005F1063 /* ic_titlebar_setting_normal.png in Resources */,
 				64097C7319050AEC00C0E49D /* 间隔icon.png in Resources */,
+				640851F2197D0917004409F1 /* ble_app_template_ic.bin in Resources */,
 				0FB517D319212B760070344F /* battery_100@2x.png in Resources */,
 				0F19CAC91913E44700BF9312 /* a自定义提醒icon.png in Resources */,
 				0FA93B6A19780F0000956B4C /* split_on.png in Resources */,

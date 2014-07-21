@@ -106,3 +106,17 @@
 "使用" = "use";
 "目前体温已经超过报警值，请采取降温措施" = "The current temperature alarm value, please take measures to cool!";
 "添加新用户后，请重新扫描设备并选定作为测量温度计。" = "After adding a new user, please scan again the device and the selected as measuring thermometer.";
+"The upload completed successfully" = "The upload completed successfully, thermometer has been reset and now runs";
+"更新" = "upload";
+"Init" = "Init";
+"Discovering" = "Discovering";
+"Ready" = "Ready";
+"Uploading" = "Uploading";
+"Finishing" = "Finishing";
+"Finished" = "Finished";
+"Canceled" = "Canceled";
+"Finished upload!" = "Finished upload!";
+"The upload was cancelled" = "The upload was cancelled. thermometer has been reset, and runs its original application.";
+"Canceled upload" = "Canceled upload";
+"Connection lost" = "Connection lost";
+"The connection was lost, with error description" = "The connection was lost, with error description";

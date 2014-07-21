@@ -106,3 +106,17 @@
 "使用" = "使用";
 "目前体温已经超过报警值，请采取降温措施" = "目前体温已经超过报警值，请采取降温措施!";
 "添加新用户后，请重新扫描设备并选定作为测量温度计。" = "添加新用户后，请重新扫描设备并选定作为测量温度计。";
+"The upload completed successfully" = "更新成功，温度计已经重启并开始运行！";
+"更新" = "更新";
+"Init" = "初始化";
+"Discovering" = "发现中";
+"Ready" = "就绪";
+"Uploading" = "更新中";
+"Finishing" = "完成中";
+"Finished" = "已完成";
+"Canceled" = "已取消";
+"Finished upload!" = "更新完成!";
+"The upload was cancelled" = "取消更新，温度计已经重启并运行原始软件！";
+"Canceled upload" = "取消更新";
+"Connection lost" = "连接丢失";
+"The connection was lost, with error description" = "连接已丢失，丢失原因:";

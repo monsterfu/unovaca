@@ -69,13 +69,13 @@
     {
         self.isTransferring = YES;
         [self.dfuController startTransfer];
-        [self.uploadButton setTitle:@"Cancel" forState:UIControlStateNormal];
+        [self.uploadButton setTitle:NSLocalizedString(@"取消", nil) forState:UIControlStateNormal];
     }
     else
     {
         self.isTransferring = NO;
         [self.dfuController cancelTransfer];
-        [self.uploadButton setTitle:@"Upload" forState:UIControlStateNormal];
+        [self.uploadButton setTitle:NSLocalizedString(@"更新", nil) forState:UIControlStateNormal];
     }
 }
 
@@ -87,8 +87,8 @@
 
 - (void) didFinishTransfer
 {
-    NSString *message = [NSString stringWithFormat:@"The upload completed successfully, %@ has been reset and now runs %@.", self.dfuController.targetName, self.dfuController.appName];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finished upload!" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *message = NSLocalizedString(@"The upload completed successfully", nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Finished upload!",nil) message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alert show];
 
     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -96,8 +96,8 @@
 
 - (void) didCancelTransfer
 {
-    NSString *message = [NSString stringWithFormat:@"The upload was cancelled. %@ has been reset, and runs its original application.", self.dfuController.targetName];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Canceled upload" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *message = NSLocalizedString(@"The upload was cancelled",nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Canceled upload",nil) message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alert show];
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -105,8 +105,8 @@
 
 - (void) didDisconnect:(NSError *)error
 {
-    NSString *message = [NSString stringWithFormat:@"The connection was lost, with error description: %@", error.description];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection lost" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *message = [NSString stringWithFormat:@"%@%@",NSLocalizedString(@"The connection was lost, with error description", nil), error.description];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connection lost",nil) message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alert show];
     
     [self.navigationController popViewControllerAnimated:YES];
