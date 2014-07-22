@@ -101,7 +101,7 @@ static ConnectionManager *sharedConnectionManager;
          ![serviceData objectForKey:[TemperatureFob batteryServiceUUID]]))
     {
 //        NSLog(@"Discovered unknown device, %@", [peripheral name]);
-        return;
+        //return;
     }
     
     NSLog(@"Discovered peripheral, name %@, data: %@, RSSI: %f, peripheral.identifier:%@", [peripheral name], advertisementData, RSSI.floatValue,peripheral.identifier);

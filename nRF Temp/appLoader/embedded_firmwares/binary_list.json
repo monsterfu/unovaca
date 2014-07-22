@@ -14,5 +14,12 @@
                  "size": 19608,
                  "kit": "nRF6310",
                  },
+                 {
+                 "title": "ble_app_new",
+                 "filename": "ble_app_template_ic(1)",
+                 "extension": "bin",
+                 "size": 19596,
+                 "kit": "nRF6310",
+                 },
                 ],
 }

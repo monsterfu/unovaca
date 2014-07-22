@@ -177,6 +177,7 @@
 		64252E7F1925F8CC00D454D4 /* RecordDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */; };
 		64252E821926116800D454D4 /* NewGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E811926116800D454D4 /* NewGraphViewController.m */; };
 		64252E8519261D2900D454D4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E8419261D2900D454D4 /* GraphView.m */; };
+		6496CBB7197E5EEE00481618 /* ble_app_template_ic(1).bin in Resources */ = {isa = PBXBuildFile; fileRef = 6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */; };
 		649A505818F67D21001FD7D5 /* LimitWarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505718F67D21001FD7D5 /* LimitWarningViewController.m */; };
 		649A505B18F69657001FD7D5 /* LastHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505A18F69657001FD7D5 /* LastHistoryCell.m */; };
 		649A856F1921E3BD00ED7445 /* a开关1.png in Resources */ = {isa = PBXBuildFile; fileRef = 649A856C1921E3BD00ED7445 /* a开关1.png */; };
@@ -460,6 +461,7 @@
 		64252E811926116800D454D4 /* NewGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGraphViewController.m; sourceTree = "<group>"; };
 		64252E8319261D2900D454D4 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		64252E8419261D2900D454D4 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ble_app_template_ic(1).bin"; sourceTree = "<group>"; };
 		649A505518F63804001FD7D5 /* TemperatureAppModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TemperatureAppModels.xcdatamodel; sourceTree = "<group>"; };
 		649A505618F67D21001FD7D5 /* LimitWarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LimitWarningViewController.h; path = SettingViewControllers/LimitWarningViewController.h; sourceTree = "<group>"; };
 		649A505718F67D21001FD7D5 /* LimitWarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LimitWarningViewController.m; path = SettingViewControllers/LimitWarningViewController.m; sourceTree = "<group>"; };
@@ -978,6 +980,7 @@
 		64E1E2491908FC9F00D274A1 /* embedded_firmwares */ = {
 			isa = PBXGroup;
 			children = (
+				6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */,
 				640851F1197D0916004409F1 /* ble_app_template_ic.bin */,
 				64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */,
 				64E1E24A1908FC9F00D274A1 /* binary_list.json */,
@@ -1328,6 +1331,7 @@
 				64097C6919050AEC00C0E49D /* 常识icon.png in Resources */,
 				0FB517D919212B760070344F /* graph_main_bg@2x.png in Resources */,
 				0F77AFEF1951E47A005F1063 /* ic_titlebar_setting_pressed.png in Resources */,
+				6496CBB7197E5EEE00481618 /* ble_app_template_ic(1).bin in Resources */,
 				0F3E0FDE1955508D00F86FCC /* history_day_bg.png in Resources */,
 				0FB517D419212B760070344F /* battery_10@2x.png in Resources */,
 				0F19CAAC1913E44700BF9312 /* a吃药提醒icon.png in Resources */,
