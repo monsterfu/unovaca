@@ -179,7 +179,11 @@
 -(void)threeKnowsViewTouch:(NSUInteger)index
 {
     _threeDetailViewController = [[ThreeDetailViewController alloc]initWithNibName:@"ThreeDetailViewController" bundle:nil];
-    _threeDetailViewController.detailArray = [_diseaseArray objectAtIndex:index];
+    if (index == 9||index == 10||index == 11) {
+        _threeDetailViewController.detailArray = [_diseaseArray objectAtIndex:index+1];
+    }else{
+        _threeDetailViewController.detailArray = [_diseaseArray objectAtIndex:index];
+    }
     _threeDetailViewController.datailArray1 = [_dissarray1 objectAtIndex:index];
     _threeDetailViewController.number = index;
     [self.navigationController pushViewController:_threeDetailViewController animated:YES];

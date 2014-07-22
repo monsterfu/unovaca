@@ -95,7 +95,6 @@
             
         case IDLE:
             return NSLocalizedString(@"Ready", nil);
-            
         case SEND_NOTIFICATION_REQUEST:
         case SEND_START_COMMAND:
         case SEND_RECEIVE_COMMAND:
