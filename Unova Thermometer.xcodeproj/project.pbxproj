@@ -118,7 +118,6 @@
 		640670C81950659900928CAB /* EventReminderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640670C71950659900928CAB /* EventReminderModel.m */; };
 		6407987318ED33BA00A21F74 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987218ED33BA00A21F74 /* PersonViewController.m */; };
 		6407987618ED39B900A21F74 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407987518ED39B900A21F74 /* PersonListViewController.m */; };
-		640851F2197D0917004409F1 /* ble_app_template_ic.bin in Resources */ = {isa = PBXBuildFile; fileRef = 640851F1197D0916004409F1 /* ble_app_template_ic.bin */; };
 		64097C5919050AEC00C0E49D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2519050AEC00C0E49D /* 0.png */; };
 		64097C5A19050AEC00C0E49D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2619050AEC00C0E49D /* 1.png */; };
 		64097C5B19050AEC00C0E49D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C2719050AEC00C0E49D /* 2.png */; };
@@ -223,9 +222,6 @@
 		64E1E2471908FC5700D274A1 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1E23D1908FC5700D274A1 /* ProgressViewController.m */; };
 		64E1E2481908FC5700D274A1 /* TargetSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E1E23F1908FC5700D274A1 /* TargetSelectionViewController.m */; };
 		64E1E24D1908FC9F00D274A1 /* binary_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 64E1E24A1908FC9F00D274A1 /* binary_list.json */; };
-		64E1E24E1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64E1E24B1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin */; };
-		64E1E24F1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64E1E24C1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin */; };
-		64E1E2511908FE2200D274A1 /* ble_app_template_button.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */; };
 		64E9021B18EE47BD00E9E72B /* PersonDetailSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */; };
 		64E9021E18EEA49C00E9E72B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E9021D18EEA49C00E9E72B /* SettingViewController.m */; };
 		64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA4338195C12B3005502D8 /* ic_launcher.png */; };
@@ -238,6 +234,9 @@
 		64F4CEB019777510007F9E1D /* setting_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F4CEAF19777510007F9E1D /* setting_about.png */; };
 		64F4CEB31977761C007F9E1D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F4CEB21977761C007F9E1D /* AboutViewController.m */; };
 		64F4EE9B1962803500D696F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64F4EE9D1962803500D696F4 /* Localizable.strings */; };
+		64FED0BA1985E955000F608B /* ble_app_template_07281013.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0B91985E955000F608B /* ble_app_template_07281013.bin */; };
+		64FED0BC1985F279000F608B /* ble_app_template_07281051.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */; };
+		64FED0E5198643D2000F608B /* ble_app_template_07281533.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */; };
 		931D1AA5162D9994007F8617 /* TemperatureFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AA4162D9994007F8617 /* TemperatureFobCell.m */; };
 		931D1ABC162E9150007F8617 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931D1ABB162E9150007F8617 /* CoreBluetooth.framework */; };
 		931D1ABD162E93FB007F8617 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AB7162E8B0A007F8617 /* ConnectionManager.m */; };
@@ -395,7 +394,6 @@
 		6407987418ED39B900A21F74 /* PersonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListViewController.h; sourceTree = "<group>"; };
 		6407987518ED39B900A21F74 /* PersonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListViewController.m; sourceTree = "<group>"; };
 		6407987718ED6D2C00A21F74 /* PublicDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefine.h; sourceTree = "<group>"; };
-		640851F1197D0916004409F1 /* ble_app_template_ic.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_ic.bin; sourceTree = "<group>"; };
 		64097C2519050AEC00C0E49D /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		64097C2619050AEC00C0E49D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		64097C2719050AEC00C0E49D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -538,9 +536,6 @@
 		64E1E23E1908FC5700D274A1 /* TargetSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TargetSelectionViewController.h; path = appLoader/TargetSelectionViewController.h; sourceTree = "<group>"; };
 		64E1E23F1908FC5700D274A1 /* TargetSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TargetSelectionViewController.m; path = appLoader/TargetSelectionViewController.m; sourceTree = "<group>"; };
 		64E1E24A1908FC9F00D274A1 /* binary_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = binary_list.json; sourceTree = "<group>"; };
-		64E1E24B1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_hrs_nrf6310.bin; sourceTree = "<group>"; };
-		64E1E24C1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_rscs_nrf6310.bin; sourceTree = "<group>"; };
-		64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_button.bin; sourceTree = "<group>"; };
 		64E9021918EE47BD00E9E72B /* PersonDetailSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailSetViewController.h; sourceTree = "<group>"; };
 		64E9021A18EE47BD00E9E72B /* PersonDetailSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailSetViewController.m; sourceTree = "<group>"; };
 		64E9021C18EEA49C00E9E72B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -560,6 +555,9 @@
 		64F4EE981962609D00D696F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		64F4EE9C1962803500D696F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64F4EE9E1962803800D696F4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		64FED0B91985E955000F608B /* ble_app_template_07281013.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281013.bin; sourceTree = "<group>"; };
+		64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281051.bin; sourceTree = "<group>"; };
+		64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281533.bin; sourceTree = "<group>"; };
 		931D1AA3162D9994007F8617 /* TemperatureFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureFobCell.h; sourceTree = "<group>"; };
 		931D1AA4162D9994007F8617 /* TemperatureFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureFobCell.m; sourceTree = "<group>"; };
 		931D1AB6162E8B0A007F8617 /* ConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
@@ -980,12 +978,11 @@
 		64E1E2491908FC9F00D274A1 /* embedded_firmwares */ = {
 			isa = PBXGroup;
 			children = (
+				64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */,
+				64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */,
+				64FED0B91985E955000F608B /* ble_app_template_07281013.bin */,
 				6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */,
-				640851F1197D0916004409F1 /* ble_app_template_ic.bin */,
-				64E1E2501908FE2200D274A1 /* ble_app_template_button.bin */,
 				64E1E24A1908FC9F00D274A1 /* binary_list.json */,
-				64E1E24B1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin */,
-				64E1E24C1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin */,
 			);
 			name = embedded_firmwares;
 			path = appLoader/embedded_firmwares;
@@ -1169,7 +1166,7 @@
 				LastUpgradeCheck = 0450;
 				TargetAttributes = {
 					93E4E1E3162D5E2000974286 = {
-						DevelopmentTeam = 8C87933EV5;
+						DevelopmentTeam = ASVNZ4QE2D;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1206,7 +1203,6 @@
 				64EA4345195C1737005502D8 /* ic_number_status_39.png in Resources */,
 				64097C5A19050AEC00C0E49D /* 1.png in Resources */,
 				0F02E1F91919440100722AFA /* disease-2 in Resources */,
-				64E1E24E1908FC9F00D274A1 /* ble_app_hrs_nrf6310.bin in Resources */,
 				0F19CAC11913E44700BF9312 /* a提醒icon.png in Resources */,
 				64EA433C195C12B3005502D8 /* logo_512X512 - 副本.png in Resources */,
 				0F77AFED1951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png in Resources */,
@@ -1256,6 +1252,7 @@
 				0F2AF3F01915438100B71443 /* aplot@2x.png in Resources */,
 				0FB517DB19212F700070344F /* morehl@2x.png in Resources */,
 				0F19CAB81913E44700BF9312 /* a结束按钮2.png in Resources */,
+				64FED0E5198643D2000F608B /* ble_app_template_07281533.bin in Resources */,
 				64D6F8CD190E47980070F8C5 /* 1024.png in Resources */,
 				0F19CA811913E2F200BF9312 /* a5.png in Resources */,
 				0F19CA7E1913E2F200BF9312 /* a2.png in Resources */,
@@ -1269,7 +1266,6 @@
 				0F3E0FDB19553E8C00F86FCC /* ic_number_status_38.png in Resources */,
 				64097C6C19050AEC00C0E49D /* 点击头像状态.png in Resources */,
 				640670AC1950315300928CAB /* default_head.png in Resources */,
-				64E1E24F1908FC9F00D274A1 /* ble_app_rscs_nrf6310.bin in Resources */,
 				64097C6419050AEC00C0E49D /* Default@2x.png in Resources */,
 				64097C5D19050AEC00C0E49D /* 4.png in Resources */,
 				0F2AF3EE1915436B00B71443 /* plot@2x.png in Resources */,
@@ -1288,7 +1284,6 @@
 				0F3E0FDA19553E8C00F86FCC /* ic_number_status_37.png in Resources */,
 				0F77AFEE1951E47A005F1063 /* ic_titlebar_setting_normal.png in Resources */,
 				64097C7319050AEC00C0E49D /* 间隔icon.png in Resources */,
-				640851F2197D0917004409F1 /* ble_app_template_ic.bin in Resources */,
 				0FB517D319212B760070344F /* battery_100@2x.png in Resources */,
 				0F19CAC91913E44700BF9312 /* a自定义提醒icon.png in Resources */,
 				0FA93B6A19780F0000956B4C /* split_on.png in Resources */,
@@ -1299,6 +1294,7 @@
 				64097C6619050AEC00C0E49D /* 宝贝体温记录-20140411.png in Resources */,
 				64097C5919050AEC00C0E49D /* 0.png in Resources */,
 				0F19CABF1913E44700BF9312 /* a时间刻度.png in Resources */,
+				64FED0BA1985E955000F608B /* ble_app_template_07281013.bin in Resources */,
 				0F40EEB9191A78050054894B /* 4031.wav in Resources */,
 				640D9CC6191A0F650097386B /* fourTableViewController.xib in Resources */,
 				0F19CAC21913E44700BF9312 /* a头像.png in Resources */,
@@ -1339,9 +1335,9 @@
 				0F19CAA91913E44700BF9312 /* a保存.png in Resources */,
 				0F19CAB91913E44700BF9312 /* a刻度.png in Resources */,
 				0FD4ECAC197B89FB009AFEA5 /* ThreeDetailViewController.xib in Resources */,
+				64FED0BC1985F279000F608B /* ble_app_template_07281051.bin in Resources */,
 				64097C5F19050AEC00C0E49D /* 6.png in Resources */,
 				641A721719061C2500CC7041 /* deletehl@2x.png in Resources */,
-				64E1E2511908FE2200D274A1 /* ble_app_template_button.bin in Resources */,
 				0F19CA821913E2F200BF9312 /* a6.png in Resources */,
 				0F77AFEB1951E47A005F1063 /* ic_titlebar_add_kid_pressed.png.png in Resources */,
 				64097C6D19050AEC00C0E49D /* 点击状态.png in Resources */,
@@ -1548,8 +1544,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xin fu (MC3BQTMFTZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin fu (MC3BQTMFTZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";

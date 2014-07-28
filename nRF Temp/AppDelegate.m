@@ -94,7 +94,9 @@
         NSLog(@"Saving failed: %@", error);
     }
     if (!_scanTimer&&[USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
-        _scanTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(backgroundScanBle) userInfo:nil repeats:YES];
+        
+        [[ConnectionManager sharedInstance]startScanForFobsBackGround];
+        _scanTimer = [NSTimer timerWithTimeInterval:20.0f target:self selector:@selector(backgroundScanBle) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop]addTimer:_scanTimer forMode:NSRunLoopCommonModes];
     }
 }
@@ -108,7 +110,6 @@
     {
         NSLog(@"Saving failed: %@", error);
     }
-    [[ConnectionManager sharedInstance]startScanForFobsBackGround];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
