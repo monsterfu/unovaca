@@ -30,8 +30,9 @@
     TemperatureReading *lastReading = [info lastReadingBodyTemperature_person:person];
     if (lastReading) {
         
-        NSDate* date = [NSDate dateWithTimeInterval:8*4*60*60 sinceDate:[lastReading date]];
-        NSString* dateStr = [date.description substringToIndex:16];
+        NSLocale *cnTime = [[NSLocale alloc]initWithLocaleIdentifier:[[USER_DEFAULT objectForKey:@"AppleLanguages"]objectAtIndex:0]];
+        
+        NSString* dateStr = [[[lastReading date] descriptionWithLocale:cnTime]substringToIndex:10];
         
         _tempLabel.text = [NSString stringWithFormat:@"%.01f ℃", lastReading.value.floatValue];
         _timeLabel.text = [NSString stringWithFormat:@"(%@)",dateStr];

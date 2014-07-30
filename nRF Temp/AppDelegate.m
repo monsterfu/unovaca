@@ -94,9 +94,8 @@
         NSLog(@"Saving failed: %@", error);
     }
     if (!_scanTimer&&[USER_DEFAULT boolForKey:KEY_BACKGROUND_OPEN]) {
-        
         [[ConnectionManager sharedInstance]startScanForFobsBackGround];
-        _scanTimer = [NSTimer timerWithTimeInterval:20.0f target:self selector:@selector(backgroundScanBle) userInfo:nil repeats:YES];
+        _scanTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(backgroundScanBle) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop]addTimer:_scanTimer forMode:NSRunLoopCommonModes];
     }
 }
@@ -105,11 +104,7 @@
 {
     NSLog(@"Saving all fobs...");
     
-    NSError *error;
-    if (![self.managedObjectContext save:&error])
-    {
-        NSLog(@"Saving failed: %@", error);
-    }
+    [[ConnectionManager sharedInstance]startScanForFobsBackGround];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -118,6 +113,12 @@
     if (_scanTimer) {
         [_scanTimer invalidate];
         _scanTimer = nil;
+    }
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
+    {
+        NSLog(@"Saving failed: %@", error);
     }
 }
 

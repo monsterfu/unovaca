@@ -1,3 +1,4 @@
+
 //
 //  TemperatureFob.m
 //  nRF Temp
@@ -74,12 +75,12 @@
     [self.delegate didUpdateData:self];
     
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
-        if ([now timeIntervalSinceDate:[self.lastReading date]] < 2*60)
+        if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
         {
             return false;
         }
     }else if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-        if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
+        if ([now timeIntervalSinceDate:[self.lastReading date]] < 60)
         {
             return false;
         }

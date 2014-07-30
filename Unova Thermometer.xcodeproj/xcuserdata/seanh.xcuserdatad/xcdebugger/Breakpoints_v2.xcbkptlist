@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/TemperatureFob.m"
-            timestampString = "427625427.083963"
+            timestampString = "428405677.557999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "-lastReadingsSince:"
             landmarkType = "5">
          </BreakpointContent>
@@ -493,7 +493,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "-viewDidAppear:"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -599,13 +599,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "nRF Temp/ConnectionManager.m"
-            timestampString = "428230364.916847"
+            filePath = "nRF Temp/TemperatureFob.m"
+            timestampString = "428405677.557999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-centralManager:didDiscoverPeripheral:advertisementData:RSSI:"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-addReadingWithRawData:person:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -616,12 +616,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/ConnectionManager.m"
-            timestampString = "428230406.494361"
+            timestampString = "428404861.584092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "-centralManager:didDiscoverPeripheral:advertisementData:RSSI:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-startScanForFobsBackGround"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nRF Temp/TemperatureFob.m"
+            timestampString = "428405677.557999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-addReadingWithRawData:person:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
