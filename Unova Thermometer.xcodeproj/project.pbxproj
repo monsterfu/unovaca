@@ -176,7 +176,6 @@
 		64252E7F1925F8CC00D454D4 /* RecordDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */; };
 		64252E821926116800D454D4 /* NewGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E811926116800D454D4 /* NewGraphViewController.m */; };
 		64252E8519261D2900D454D4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E8419261D2900D454D4 /* GraphView.m */; };
-		6496CBB7197E5EEE00481618 /* ble_app_template_ic(1).bin in Resources */ = {isa = PBXBuildFile; fileRef = 6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */; };
 		649A505818F67D21001FD7D5 /* LimitWarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505718F67D21001FD7D5 /* LimitWarningViewController.m */; };
 		649A505B18F69657001FD7D5 /* LastHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505A18F69657001FD7D5 /* LastHistoryCell.m */; };
 		649A856F1921E3BD00ED7445 /* a开关1.png in Resources */ = {isa = PBXBuildFile; fileRef = 649A856C1921E3BD00ED7445 /* a开关1.png */; };
@@ -234,8 +233,18 @@
 		64F4CEB019777510007F9E1D /* setting_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F4CEAF19777510007F9E1D /* setting_about.png */; };
 		64F4CEB31977761C007F9E1D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F4CEB21977761C007F9E1D /* AboutViewController.m */; };
 		64F4EE9B1962803500D696F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64F4EE9D1962803500D696F4 /* Localizable.strings */; };
-		64FED0BA1985E955000F608B /* ble_app_template_07281013.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0B91985E955000F608B /* ble_app_template_07281013.bin */; };
-		64FED0BC1985F279000F608B /* ble_app_template_07281051.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */; };
+		64FA0BA4198F9D0200F4E336 /* fuckZYQ1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B98198F9D0200F4E336 /* fuckZYQ1.png */; };
+		64FA0BA5198F9D0200F4E336 /* fuckZYQ2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B99198F9D0200F4E336 /* fuckZYQ2.png */; };
+		64FA0BA6198F9D0200F4E336 /* fuckZYQ3.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9A198F9D0200F4E336 /* fuckZYQ3.png */; };
+		64FA0BA7198F9D0200F4E336 /* fuckZYQ4.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9B198F9D0200F4E336 /* fuckZYQ4.png */; };
+		64FA0BA8198F9D0200F4E336 /* fuckZYQ5.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9C198F9D0200F4E336 /* fuckZYQ5.png */; };
+		64FA0BA9198F9D0200F4E336 /* fuckZYQ6.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9D198F9D0200F4E336 /* fuckZYQ6.png */; };
+		64FA0BAA198F9D0200F4E336 /* fuckZYQ7.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9E198F9D0200F4E336 /* fuckZYQ7.png */; };
+		64FA0BAB198F9D0200F4E336 /* fuckZYQ8.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0B9F198F9D0200F4E336 /* fuckZYQ8.png */; };
+		64FA0BAC198F9D0200F4E336 /* fuckZYQ9.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0BA0198F9D0200F4E336 /* fuckZYQ9.png */; };
+		64FA0BAD198F9D0200F4E336 /* fuckZYQ10.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0BA1198F9D0200F4E336 /* fuckZYQ10.png */; };
+		64FA0BAE198F9D0200F4E336 /* fuckZYQ11.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0BA2198F9D0200F4E336 /* fuckZYQ11.png */; };
+		64FA0BAF198F9D0200F4E336 /* fuckZYQ12.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FA0BA3198F9D0200F4E336 /* fuckZYQ12.png */; };
 		64FED0E5198643D2000F608B /* ble_app_template_07281533.bin in Resources */ = {isa = PBXBuildFile; fileRef = 64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */; };
 		931D1AA5162D9994007F8617 /* TemperatureFobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 931D1AA4162D9994007F8617 /* TemperatureFobCell.m */; };
 		931D1ABC162E9150007F8617 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931D1ABB162E9150007F8617 /* CoreBluetooth.framework */; };
@@ -459,7 +468,6 @@
 		64252E811926116800D454D4 /* NewGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGraphViewController.m; sourceTree = "<group>"; };
 		64252E8319261D2900D454D4 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		64252E8419261D2900D454D4 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
-		6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ble_app_template_ic(1).bin"; sourceTree = "<group>"; };
 		649A505518F63804001FD7D5 /* TemperatureAppModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TemperatureAppModels.xcdatamodel; sourceTree = "<group>"; };
 		649A505618F67D21001FD7D5 /* LimitWarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LimitWarningViewController.h; path = SettingViewControllers/LimitWarningViewController.h; sourceTree = "<group>"; };
 		649A505718F67D21001FD7D5 /* LimitWarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LimitWarningViewController.m; path = SettingViewControllers/LimitWarningViewController.m; sourceTree = "<group>"; };
@@ -555,8 +563,18 @@
 		64F4EE981962609D00D696F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		64F4EE9C1962803500D696F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64F4EE9E1962803800D696F4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		64FED0B91985E955000F608B /* ble_app_template_07281013.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281013.bin; sourceTree = "<group>"; };
-		64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281051.bin; sourceTree = "<group>"; };
+		64FA0B98198F9D0200F4E336 /* fuckZYQ1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ1.png; sourceTree = "<group>"; };
+		64FA0B99198F9D0200F4E336 /* fuckZYQ2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ2.png; sourceTree = "<group>"; };
+		64FA0B9A198F9D0200F4E336 /* fuckZYQ3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ3.png; sourceTree = "<group>"; };
+		64FA0B9B198F9D0200F4E336 /* fuckZYQ4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ4.png; sourceTree = "<group>"; };
+		64FA0B9C198F9D0200F4E336 /* fuckZYQ5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ5.png; sourceTree = "<group>"; };
+		64FA0B9D198F9D0200F4E336 /* fuckZYQ6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ6.png; sourceTree = "<group>"; };
+		64FA0B9E198F9D0200F4E336 /* fuckZYQ7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ7.png; sourceTree = "<group>"; };
+		64FA0B9F198F9D0200F4E336 /* fuckZYQ8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ8.png; sourceTree = "<group>"; };
+		64FA0BA0198F9D0200F4E336 /* fuckZYQ9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ9.png; sourceTree = "<group>"; };
+		64FA0BA1198F9D0200F4E336 /* fuckZYQ10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ10.png; sourceTree = "<group>"; };
+		64FA0BA2198F9D0200F4E336 /* fuckZYQ11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ11.png; sourceTree = "<group>"; };
+		64FA0BA3198F9D0200F4E336 /* fuckZYQ12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuckZYQ12.png; sourceTree = "<group>"; };
 		64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ble_app_template_07281533.bin; sourceTree = "<group>"; };
 		931D1AA3162D9994007F8617 /* TemperatureFobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureFobCell.h; sourceTree = "<group>"; };
 		931D1AA4162D9994007F8617 /* TemperatureFobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureFobCell.m; sourceTree = "<group>"; };
@@ -624,6 +642,18 @@
 		0FB517CB19212B760070344F /* new */ = {
 			isa = PBXGroup;
 			children = (
+				64FA0B98198F9D0200F4E336 /* fuckZYQ1.png */,
+				64FA0B99198F9D0200F4E336 /* fuckZYQ2.png */,
+				64FA0B9A198F9D0200F4E336 /* fuckZYQ3.png */,
+				64FA0B9B198F9D0200F4E336 /* fuckZYQ4.png */,
+				64FA0B9C198F9D0200F4E336 /* fuckZYQ5.png */,
+				64FA0B9D198F9D0200F4E336 /* fuckZYQ6.png */,
+				64FA0B9E198F9D0200F4E336 /* fuckZYQ7.png */,
+				64FA0B9F198F9D0200F4E336 /* fuckZYQ8.png */,
+				64FA0BA0198F9D0200F4E336 /* fuckZYQ9.png */,
+				64FA0BA1198F9D0200F4E336 /* fuckZYQ10.png */,
+				64FA0BA2198F9D0200F4E336 /* fuckZYQ11.png */,
+				64FA0BA3198F9D0200F4E336 /* fuckZYQ12.png */,
 				0FB517CC19212B760070344F /* battery_100@2x.png */,
 				0FB517CD19212B760070344F /* battery_10@2x.png */,
 				0FB517CE19212B760070344F /* battery_20@2x.png */,
@@ -979,9 +1009,6 @@
 			isa = PBXGroup;
 			children = (
 				64FED0E4198643D1000F608B /* ble_app_template_07281533.bin */,
-				64FED0BB1985F279000F608B /* ble_app_template_07281051.bin */,
-				64FED0B91985E955000F608B /* ble_app_template_07281013.bin */,
-				6496CBB6197E5EEE00481618 /* ble_app_template_ic(1).bin */,
 				64E1E24A1908FC9F00D274A1 /* binary_list.json */,
 			);
 			name = embedded_firmwares;
@@ -1224,6 +1251,7 @@
 				0F19CAB11913E44700BF9312 /* a返回.png in Resources */,
 				649B7212190F8872005E4F2E /* medicine_card in Resources */,
 				0F77AFE31951E389005F1063 /* ic_titlebar_save_remind_pressed.png in Resources */,
+				64FA0BAB198F9D0200F4E336 /* fuckZYQ8.png in Resources */,
 				64097C6319050AEC00C0E49D /* 512.png in Resources */,
 				0F19CAA81913E44700BF9312 /* a帮助icon.png in Resources */,
 				64097C8619050AEC00C0E49D /* 温度警报icon.png in Resources */,
@@ -1236,12 +1264,15 @@
 				64097C7919050AEC00C0E49D /* 开关3.png in Resources */,
 				64EA433D195C12B3005502D8 /* ic_launcher - 副本.png in Resources */,
 				0F19CAC31913E44700BF9312 /* a温度警报icon.png in Resources */,
+				64FA0BAC198F9D0200F4E336 /* fuckZYQ9.png in Resources */,
 				0F19CA851913E2F200BF9312 /* a9.png in Resources */,
+				64FA0BA6198F9D0200F4E336 /* fuckZYQ3.png in Resources */,
 				0FB517D519212B760070344F /* battery_20@2x.png in Resources */,
 				640670A019501DF400928CAB /* ic_signal_1.png in Resources */,
 				64097C6019050AEC00C0E49D /* 7.png in Resources */,
 				641A720F190616C200CC7041 /* save@2x.png in Resources */,
 				0F77AFDE1951E389005F1063 /* ic_back_normal.png in Resources */,
+				64FA0BAE198F9D0200F4E336 /* fuckZYQ11.png in Resources */,
 				64097C8219050AEC00C0E49D /* 提醒2icon.png in Resources */,
 				640670AA195022BF00928CAB /* btn_radio_on.png in Resources */,
 				641A721819061C2500CC7041 /* temperatureGap@2x.png in Resources */,
@@ -1255,6 +1286,7 @@
 				64FED0E5198643D2000F608B /* ble_app_template_07281533.bin in Resources */,
 				64D6F8CD190E47980070F8C5 /* 1024.png in Resources */,
 				0F19CA811913E2F200BF9312 /* a5.png in Resources */,
+				64FA0BAF198F9D0200F4E336 /* fuckZYQ12.png in Resources */,
 				0F19CA7E1913E2F200BF9312 /* a2.png in Resources */,
 				0F19CABE1913E44700BF9312 /* a设置.png in Resources */,
 				640D9CB71919E3770097386B /* oneKnowsViewController.xib in Resources */,
@@ -1276,6 +1308,7 @@
 				0F19CAB51913E44700BF9312 /* a间隔icon.png in Resources */,
 				64EA4346195C1737005502D8 /* ic_number_status_45.png in Resources */,
 				64097C5C19050AEC00C0E49D /* 3.png in Resources */,
+				64FA0BAA198F9D0200F4E336 /* fuckZYQ7.png in Resources */,
 				0F19CAC51913E44700BF9312 /* a新增提醒icon.png in Resources */,
 				64097C8519050AEC00C0E49D /* 头像蒙版.png in Resources */,
 				0F19CAAD1913E44700BF9312 /* a单选对勾.png in Resources */,
@@ -1294,7 +1327,6 @@
 				64097C6619050AEC00C0E49D /* 宝贝体温记录-20140411.png in Resources */,
 				64097C5919050AEC00C0E49D /* 0.png in Resources */,
 				0F19CABF1913E44700BF9312 /* a时间刻度.png in Resources */,
-				64FED0BA1985E955000F608B /* ble_app_template_07281013.bin in Resources */,
 				0F40EEB9191A78050054894B /* 4031.wav in Resources */,
 				640D9CC6191A0F650097386B /* fourTableViewController.xib in Resources */,
 				0F19CAC21913E44700BF9312 /* a头像.png in Resources */,
@@ -1309,6 +1341,7 @@
 				64D7978B190F506F007442CE /* strings.xml in Resources */,
 				64097C7B19050AEC00C0E49D /* 刻度页面.png in Resources */,
 				0F19CABC1913E44700BF9312 /* a删除.png in Resources */,
+				64FA0BA8198F9D0200F4E336 /* fuckZYQ5.png in Resources */,
 				649B7210190F7E6D005E4F2E /* disease in Resources */,
 				0F77AFE11951E389005F1063 /* ic_titlebar_graph_history_pressed.png in Resources */,
 				64D7977C190F412C007442CE /* panel@2x.png in Resources */,
@@ -1327,15 +1360,15 @@
 				64097C6919050AEC00C0E49D /* 常识icon.png in Resources */,
 				0FB517D919212B760070344F /* graph_main_bg@2x.png in Resources */,
 				0F77AFEF1951E47A005F1063 /* ic_titlebar_setting_pressed.png in Resources */,
-				6496CBB7197E5EEE00481618 /* ble_app_template_ic(1).bin in Resources */,
 				0F3E0FDE1955508D00F86FCC /* history_day_bg.png in Resources */,
 				0FB517D419212B760070344F /* battery_10@2x.png in Resources */,
 				0F19CAAC1913E44700BF9312 /* a吃药提醒icon.png in Resources */,
+				64FA0BA7198F9D0200F4E336 /* fuckZYQ4.png in Resources */,
 				64D79779190F3CAC007442CE /* over@2x.png in Resources */,
 				0F19CAA91913E44700BF9312 /* a保存.png in Resources */,
 				0F19CAB91913E44700BF9312 /* a刻度.png in Resources */,
+				64FA0BA5198F9D0200F4E336 /* fuckZYQ2.png in Resources */,
 				0FD4ECAC197B89FB009AFEA5 /* ThreeDetailViewController.xib in Resources */,
-				64FED0BC1985F279000F608B /* ble_app_template_07281051.bin in Resources */,
 				64097C5F19050AEC00C0E49D /* 6.png in Resources */,
 				641A721719061C2500CC7041 /* deletehl@2x.png in Resources */,
 				0F19CA821913E2F200BF9312 /* a6.png in Resources */,
@@ -1350,6 +1383,7 @@
 				0F19CAB61913E44700BF9312 /* a箭头.png in Resources */,
 				640670A219501DF400928CAB /* ic_signal_3.png in Resources */,
 				6406709F19501DF400928CAB /* ic_signal_0.png in Resources */,
+				64FA0BA9198F9D0200F4E336 /* fuckZYQ6.png in Resources */,
 				0F40EEC9191A963B0054894B /* fourDetalViewController.xib in Resources */,
 				0F19CAB01913E44700BF9312 /* a度.png in Resources */,
 				64F4CEB019777510007F9E1D /* setting_about.png in Resources */,
@@ -1359,7 +1393,9 @@
 				64097C7419050AEC00C0E49D /* 箭头.png in Resources */,
 				0F19CACE1913E4AC00BF9312 /* a宝贝体温记录-20140411.psd in Resources */,
 				0F19CAD71914001200BF9312 /* MainStoryboard.storyboard in Resources */,
+				64FA0BAD198F9D0200F4E336 /* fuckZYQ10.png in Resources */,
 				0F77AFEC1951E47A005F1063 /* ic_titlebar_delete_remind_normal.png in Resources */,
+				64FA0BA4198F9D0200F4E336 /* fuckZYQ1.png in Resources */,
 				0F19CAB71913E44700BF9312 /* a结束按钮.png in Resources */,
 				64D7977A190F3CAC007442CE /* overhl@2x.png in Resources */,
 				0F19CAAA1913E44700BF9312 /* a保存2.png in Resources */,

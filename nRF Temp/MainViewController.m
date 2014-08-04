@@ -119,6 +119,12 @@
     [_temperaturePanel setHidden:YES];
     [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
+    
+    UILabel* _visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, 100, 30)];
+    _visionLabel.text = @"1.23";
+    _visionLabel.backgroundColor = [UIColor clearColor];
+    _visionLabel.textColor = [UIColor blackColor];
+    [self.view addSubview:_visionLabel];
 }
 -(void)updatePersonDetail
 {
@@ -144,7 +150,7 @@
     _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
     
     //KEY_SELECED_FOB
-    if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
+    if ([USER_DEFAULT stringForKey:[NSString fobKey]]) {
         _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
         _fob.active = NO;
         
@@ -154,7 +160,7 @@
         }
     }else{
         NSArray* arry;
-        arry = [_detailInfo allStoredFobs];
+        arry = [_detailInfo allStoredFobsPerson];
         if ([arry count]) {
             _fob = [arry objectAtIndex:0];
             _fob.active = NO;

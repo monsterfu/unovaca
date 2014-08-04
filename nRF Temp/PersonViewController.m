@@ -144,6 +144,17 @@
 }
 -(void)saveButtonPressed
 {
+    if ([USER_DEFAULT stringForKey:KEY_NICKNAME_STR] == nil) {
+        if (_detailInfo.name) {
+            [USER_DEFAULT setObject:_detailInfo.name forKey:KEY_NICKNAME_STR];
+            [USER_DEFAULT synchronize];
+        }else{
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil) message:NSLocalizedString(@"昵称不能为空",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        return;
+    }
+    
     if (_isNew) {
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:NSLocalizedString(@"添加新用户后，请重新扫描设备并选定作为测量温度计。",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
         [alertView show];

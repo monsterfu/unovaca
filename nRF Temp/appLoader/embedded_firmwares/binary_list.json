@@ -2,27 +2,6 @@
     "binaries": [
                  {
                  "title": "ble_app_new",
-                 "filename": "ble_app_template_ic(1)",
-                 "extension": "bin",
-                 "size": 19596,
-                 "kit": "nRF6310",
-                 },
-                 {
-                 "title": "ble_app_new",
-                 "filename": "ble_app_template_07281013",
-                 "extension": "bin",
-                 "size": 19584,
-                 "kit": "nRF6310",
-                 },
-                 {
-                 "title": "ble_app_new",
-                 "filename": "ble_app_template_07281051",
-                 "extension": "bin",
-                 "size": 19592,
-                 "kit": "nRF6310",
-                 },
-                 {
-                 "title": "ble_app_new",
                  "filename": "ble_app_template_07281533",
                  "extension": "bin",
                  "size": 19592,

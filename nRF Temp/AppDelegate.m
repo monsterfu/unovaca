@@ -29,8 +29,6 @@
         [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
         [USER_DEFAULT setInteger:5 forKey:KEY_MOST_STR];
         
-        
-        
         NSError *error = nil;
         
         if (![_detailInfo.managedObjectContext save:&error]) {
@@ -120,6 +118,8 @@
     {
         NSLog(@"Saving failed: %@", error);
     }
+    [[ConnectionManager sharedInstance]startScanForFobs];
+    [application setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -130,7 +130,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSError *error;
+    if (![self.managedObjectContext save:&error])
+    {
+        NSLog(@"Saving failed: %@", error);
+    }
     [[ConnectionManager sharedInstance]startScanForFobs];
+    
 }
 
 #pragma mark - Core Data stack
