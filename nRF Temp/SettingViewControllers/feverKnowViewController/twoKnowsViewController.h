@@ -10,4 +10,5 @@
 
 @interface twoKnowsViewController : UIViewController
 
+//@property (weak, nonatomic) IBOutlet UIView *fuckZYQ;
 @end

@@ -44,7 +44,7 @@ static ConnectionManager *sharedConnectionManager;
 - (void) startScanForFobsBackGround
 {
     // Make sure we start scan from scratch
-    if ([USER_DEFAULT objectForKey:[NSString fobKey]]) {
+    if ([USER_DEFAULT objectForKey:KEY_SELECED_FOB]) {
         [self.cm stopScan];
         [self.cm scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"1809"]]
                                         options:@{

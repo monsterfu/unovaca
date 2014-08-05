@@ -7,6 +7,7 @@
 //
 
 #import "twoKnowsViewController.h"
+#import "PublicDefine.h"
 
 @interface twoKnowsViewController ()
 
@@ -27,6 +28,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+//    if ( ![[[USER_DEFAULT objectForKey : @"AppleLanguages"]objectAtIndex:0] isEqualToString:@"en"]) {
+//        [_fuckZYQ setHidden:YES];
+//    }
 }
 
 - (void)didReceiveMemoryWarning

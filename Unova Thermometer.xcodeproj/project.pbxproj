@@ -155,9 +155,7 @@
 		64097C8B19050AEC00C0E49D /* 状态底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C5719050AEC00C0E49D /* 状态底图.png */; };
 		64097C8C19050AEC00C0E49D /* 自定义提醒icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 64097C5819050AEC00C0E49D /* 自定义提醒icon.png */; };
 		640D9CB61919E3770097386B /* oneKnowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640D9CB41919E3770097386B /* oneKnowsViewController.m */; };
-		640D9CB71919E3770097386B /* oneKnowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640D9CB51919E3770097386B /* oneKnowsViewController.xib */; };
 		640D9CBB1919F9290097386B /* twoKnowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640D9CB91919F9290097386B /* twoKnowsViewController.m */; };
-		640D9CBC1919F9290097386B /* twoKnowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640D9CBA1919F9290097386B /* twoKnowsViewController.xib */; };
 		640D9CC01919FF690097386B /* threeKnowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640D9CBE1919FF690097386B /* threeKnowsViewController.m */; };
 		640D9CC11919FF690097386B /* threeKnowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640D9CBF1919FF690097386B /* threeKnowsViewController.xib */; };
 		640D9CC6191A0F650097386B /* fourTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640D9CC4191A0F650097386B /* fourTableViewController.xib */; };
@@ -202,6 +200,8 @@
 		649BB779190A091D0049E5C8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649BB777190A091D0049E5C8 /* EventKitUI.framework */; };
 		649E5FA618F54FD00057E235 /* TimeGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649E5FA518F54FD00057E235 /* TimeGapViewController.m */; };
 		64AAE3C918F3D90900036D0F /* PersonPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AAE3C818F3D90900036D0F /* PersonPhotoCell.m */; };
+		64AD073D1990B2F800C1088B /* oneKnowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64AD073F1990B2F800C1088B /* oneKnowsViewController.xib */; };
+		64AD07411990B33200C1088B /* twoKnowsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64AD07431990B33200C1088B /* twoKnowsViewController.xib */; };
 		64D6F8CD190E47980070F8C5 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F891190E47980070F8C5 /* 1024.png */; };
 		64D6F8E2190E47980070F8C5 /* 启动.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D6F8A6190E47980070F8C5 /* 启动.png */; };
 		64D79779190F3CAC007442CE /* over@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D79777190F3CAC007442CE /* over@2x.png */; };
@@ -441,10 +441,8 @@
 		64097C5819050AEC00C0E49D /* 自定义提醒icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自定义提醒icon.png"; sourceTree = "<group>"; };
 		640D9CB31919E3770097386B /* oneKnowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oneKnowsViewController.h; path = SettingViewControllers/feverKnowViewController/oneKnowsViewController.h; sourceTree = "<group>"; };
 		640D9CB41919E3770097386B /* oneKnowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = oneKnowsViewController.m; path = SettingViewControllers/feverKnowViewController/oneKnowsViewController.m; sourceTree = "<group>"; };
-		640D9CB51919E3770097386B /* oneKnowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = oneKnowsViewController.xib; path = SettingViewControllers/feverKnowViewController/oneKnowsViewController.xib; sourceTree = "<group>"; };
 		640D9CB81919F9290097386B /* twoKnowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = twoKnowsViewController.h; path = SettingViewControllers/feverKnowViewController/twoKnowsViewController.h; sourceTree = "<group>"; };
 		640D9CB91919F9290097386B /* twoKnowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = twoKnowsViewController.m; path = SettingViewControllers/feverKnowViewController/twoKnowsViewController.m; sourceTree = "<group>"; };
-		640D9CBA1919F9290097386B /* twoKnowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = twoKnowsViewController.xib; path = SettingViewControllers/feverKnowViewController/twoKnowsViewController.xib; sourceTree = "<group>"; };
 		640D9CBD1919FF690097386B /* threeKnowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threeKnowsViewController.h; path = SettingViewControllers/feverKnowViewController/threeKnowsViewController.h; sourceTree = "<group>"; };
 		640D9CBE1919FF690097386B /* threeKnowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = threeKnowsViewController.m; path = SettingViewControllers/feverKnowViewController/threeKnowsViewController.m; sourceTree = "<group>"; };
 		640D9CBF1919FF690097386B /* threeKnowsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = threeKnowsViewController.xib; path = SettingViewControllers/feverKnowViewController/threeKnowsViewController.xib; sourceTree = "<group>"; };
@@ -515,6 +513,10 @@
 		649E5FA518F54FD00057E235 /* TimeGapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeGapViewController.m; path = SettingViewControllers/TimeGapViewController.m; sourceTree = "<group>"; };
 		64AAE3C718F3D90900036D0F /* PersonPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonPhotoCell.h; sourceTree = "<group>"; };
 		64AAE3C818F3D90900036D0F /* PersonPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonPhotoCell.m; sourceTree = "<group>"; };
+		64AD07401990B30100C1088B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/oneKnowsViewController.xib"; sourceTree = "<group>"; };
+		64AD07441990B33700C1088B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/twoKnowsViewController.xib"; sourceTree = "<group>"; };
+		64AD07451990BCBE00C1088B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/oneKnowsViewController.xib; sourceTree = "<group>"; };
+		64AD07461990BCC500C1088B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/twoKnowsViewController.xib; sourceTree = "<group>"; };
 		64D6F891190E47980070F8C5 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024.png; sourceTree = "<group>"; };
 		64D6F8A6190E47980070F8C5 /* 启动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动.png"; sourceTree = "<group>"; };
 		64D79777190F3CAC007442CE /* over@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "over@2x.png"; sourceTree = "<group>"; };
@@ -959,10 +961,10 @@
 				0F40EEBB191A7D720054894B /* threeView.m */,
 				640D9CB81919F9290097386B /* twoKnowsViewController.h */,
 				640D9CB91919F9290097386B /* twoKnowsViewController.m */,
-				640D9CBA1919F9290097386B /* twoKnowsViewController.xib */,
+				64AD07431990B33200C1088B /* twoKnowsViewController.xib */,
 				640D9CB31919E3770097386B /* oneKnowsViewController.h */,
 				640D9CB41919E3770097386B /* oneKnowsViewController.m */,
-				640D9CB51919E3770097386B /* oneKnowsViewController.xib */,
+				64AD073F1990B2F800C1088B /* oneKnowsViewController.xib */,
 			);
 			name = tabbar;
 			sourceTree = "<group>";
@@ -1235,7 +1237,7 @@
 				0F77AFED1951E47A005F1063 /* ic_titlebar_delete_remind_pressed.png in Resources */,
 				0F77AFEA1951E47A005F1063 /* ic_titlebar_add_kid_normal.png in Resources */,
 				0F19CABA1913E44700BF9312 /* a历史记录icon.png in Resources */,
-				640D9CBC1919F9290097386B /* twoKnowsViewController.xib in Resources */,
+				64AD07411990B33200C1088B /* twoKnowsViewController.xib in Resources */,
 				64097C6519050AEC00C0E49D /* 帮助icon.png in Resources */,
 				0F19CAB21913E44700BF9312 /* a返回2.png in Resources */,
 				0F19CA7D1913E2F200BF9312 /* a1.png in Resources */,
@@ -1289,7 +1291,7 @@
 				64FA0BAF198F9D0200F4E336 /* fuckZYQ12.png in Resources */,
 				0F19CA7E1913E2F200BF9312 /* a2.png in Resources */,
 				0F19CABE1913E44700BF9312 /* a设置.png in Resources */,
-				640D9CB71919E3770097386B /* oneKnowsViewController.xib in Resources */,
+				64AD073D1990B2F800C1088B /* oneKnowsViewController.xib in Resources */,
 				641A720E190616C200CC7041 /* addnew@2x.png in Resources */,
 				64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */,
 				64EA4344195C1737005502D8 /* ic_number_status_35.png in Resources */,
@@ -1497,6 +1499,26 @@
 				64F4EE981962609D00D696F4 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		64AD073F1990B2F800C1088B /* oneKnowsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64AD07401990B30100C1088B /* zh-Hans */,
+				64AD07451990BCBE00C1088B /* en */,
+			);
+			name = oneKnowsViewController.xib;
+			path = SettingViewControllers/feverKnowViewController;
+			sourceTree = "<group>";
+		};
+		64AD07431990B33200C1088B /* twoKnowsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64AD07441990B33700C1088B /* zh-Hans */,
+				64AD07461990BCC500C1088B /* en */,
+			);
+			name = twoKnowsViewController.xib;
+			path = SettingViewControllers/feverKnowViewController;
 			sourceTree = "<group>";
 		};
 		64F4EE9D1962803500D696F4 /* Localizable.strings */ = {

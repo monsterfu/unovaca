@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *content4;
 @property (weak, nonatomic) IBOutlet UILabel *content5;
 
+//@property (weak, nonatomic) IBOutlet UIView *fuckZYQ;
 
 
 @end
