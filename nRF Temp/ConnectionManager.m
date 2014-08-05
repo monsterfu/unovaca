@@ -129,51 +129,59 @@ static ConnectionManager *sharedConnectionManager;
         NSLog(@"Threw away reading, too little time since last.");
     }
     
-    if ([[[peripheral identifier]UUIDString] isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]]) {
-        
-        uint32_t raw;
-        NSData* rawData = [serviceData objectForKey:[TemperatureFob thermometerServiceUUID]];
-        [rawData getBytes:&raw length:4];
-        
-        int8_t exponent = (raw & 0xFF000000) >> 24;
-        int32_t mantissa = (raw & 0x00FFFFFF);
-        if (mantissa & 0x00800000)
-        {
-            mantissa |= (0xFF000000);
-        }
-        
-        CGFloat value = mantissa * pow(10.0, exponent);
-        
-        if (YES == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
-        {
-            NSInteger savedTemp = [USER_DEFAULT integerForKey:KEY_MOST_STR] +37;
-            NSLog(@"saveTemp ================================================>%d",savedTemp);
-            if (value > savedTemp)
-            {
-                if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {
-                    _localOutOfRangeNotice = [[UILocalNotification alloc] init];
-                    _localOutOfRangeNotice.applicationIconBadgeNumber = 1;
-                    _localOutOfRangeNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
-                    _localOutOfRangeNotice.timeZone = [NSTimeZone defaultTimeZone];
-                    _localOutOfRangeNotice.soundName = @"4031.wav";
-                    _localOutOfRangeNotice.repeatInterval = NSYearCalendarUnit;
+    if ([[[peripheral identifier]UUIDString] isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]])
+    {
+        NSArray* arry;
+        arry = [personInfo allStoredFobsPerson];
+        for (TemperatureFob* forFob in arry) {
+            if (forFob) {
+                if ([forFob.uuid isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]]) {
+                    uint32_t raw;
+                    NSData* rawData = [serviceData objectForKey:[TemperatureFob thermometerServiceUUID]];
+                    [rawData getBytes:&raw length:4];
                     
-                    _localOutOfRangeNotice.alertBody = [NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)];
+                    int8_t exponent = (raw & 0xFF000000) >> 24;
+                    int32_t mantissa = (raw & 0x00FFFFFF);
+                    if (mantissa & 0x00800000)
+                    {
+                        mantissa |= (0xFF000000);
+                    }
                     
-                    [[UIApplication sharedApplication] presentLocalNotificationNow:_localOutOfRangeNotice];
+                    CGFloat value = mantissa * pow(10.0, exponent);
                     
-                }else{
-                
-                    [[soundVibrateManager sharedInstance]playAlertSound];
-                    [[soundVibrateManager sharedInstance]vibrate];
-                    alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@%d%@",NSLocalizedString(@"目前体温已经超过",nil), savedTemp, NSLocalizedString(@"℃报警值！",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
-                    [alertView show];
+                    if (YES == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
+                    {
+                        NSInteger savedTemp = [USER_DEFAULT integerForKey:KEY_MOST_STR] +37;
+                        NSLog(@"saveTemp ================================================>%d",savedTemp);
+                        if (value > savedTemp)
+                        {
+                            if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {
+                                _localOutOfRangeNotice = [[UILocalNotification alloc] init];
+                                _localOutOfRangeNotice.applicationIconBadgeNumber = 1;
+                                _localOutOfRangeNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
+                                _localOutOfRangeNotice.timeZone = [NSTimeZone defaultTimeZone];
+                                _localOutOfRangeNotice.soundName = @"4031.wav";
+                                _localOutOfRangeNotice.repeatInterval = NSYearCalendarUnit;
+                                
+                                _localOutOfRangeNotice.alertBody = [NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)];
+                                
+                                [[UIApplication sharedApplication] presentLocalNotificationNow:_localOutOfRangeNotice];
+                                
+                            }else{
+                                
+                                [[soundVibrateManager sharedInstance]playAlertSound];
+                                [[soundVibrateManager sharedInstance]vibrate];
+                                alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@%d%@",NSLocalizedString(@"目前体温已经超过",nil), savedTemp, NSLocalizedString(@"℃报警值！",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+                                [alertView show];
+                            }
+                        }
+                    }
+                    
+                    fob.active = YES;
+                    [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
                 }
-            }
+    }
         }
-        
-        fob.active = YES;
-        [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
     }
 }
 @end
