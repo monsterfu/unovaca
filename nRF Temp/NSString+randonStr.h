@@ -11,4 +11,6 @@
 @interface NSString (randonStr)
 
 +(NSString*)randomStr;
+
++(NSString*)fobKey;
 @end

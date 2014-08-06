@@ -18,6 +18,7 @@
     CGSize  size;
     
     UITextView* _textField1;
+    UIImageView* _imageView;
     NSString* _text1;
     CGSize  size1;
     
@@ -26,7 +27,7 @@
 
 @property(nonatomic, retain)NSDictionary* detailArray;
 @property(nonatomic, retain)NSDictionary* datailArray1;
-@property(nonatomic, assign)NSUInteger* number;
+@property(nonatomic, assign)NSUInteger number;
 
 
 @property (weak, nonatomic) IBOutlet UITextView *shiyong;

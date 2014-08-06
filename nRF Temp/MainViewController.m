@@ -119,6 +119,12 @@
     [_temperaturePanel setHidden:YES];
     [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
+    
+    UILabel* _visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, 100, 30)];
+    _visionLabel.text = @"1.23";
+    _visionLabel.backgroundColor = [UIColor clearColor];
+    _visionLabel.textColor = [UIColor blackColor];
+//    [self.view addSubview:_visionLabel];
 }
 -(void)updatePersonDetail
 {
@@ -145,16 +151,51 @@
     
     //KEY_SELECED_FOB
     if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
-        _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
-        _fob.active = NO;
         
-        if (!_checkStatusTimer) {
-            _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
-            [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
+        NSArray* arry;
+        arry = [_detailInfo allStoredFobsPerson];
+        if ([arry count] == 0) {
+            _fob = nil;
+            [_temperaturePanel setHidden:YES];
+            [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
+            _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
+            return;
         }
+        for (TemperatureFob* forFob in arry) {
+            if (forFob) {
+                if ([forFob.uuid isEqualToString:[USER_DEFAULT stringForKey:KEY_SELECED_FOB]]) {
+                    _fob = [_detailInfo foundFobWithUUid:[USER_DEFAULT stringForKey:KEY_SELECED_FOB] isSave:YES];
+                    _fob.active = NO;
+                    
+                    [_temperaturePanel setHidden:YES];
+                    [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
+                    _textLabel.text = NSLocalizedString(@"没有检测到正常体温",nil);
+                    
+                    if (!_checkStatusTimer) {
+                        _checkStatusTimer = [NSTimer timerWithTimeInterval:30 target:self selector:@selector(checkStatusResult) userInfo:nil repeats:YES];
+                        [[NSRunLoop currentRunLoop]addTimer:_checkStatusTimer forMode:NSDefaultRunLoopMode];
+                    }
+                    
+                    
+                    if (_fob) {
+                        _fob.delegate = self;
+                    }
+                    [self reloadData];
+                    return;
+                }
+            }
+        }
+        
+        _fob = nil;
+        [_temperaturePanel setHidden:YES];
+        [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
+        _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
+
+        
+        
     }else{
         NSArray* arry;
-        arry = [_detailInfo allStoredFobs];
+        arry = [_detailInfo allStoredFobsPerson];
         if ([arry count]) {
             _fob = [arry objectAtIndex:0];
             _fob.active = NO;
@@ -173,10 +214,6 @@
         }
     }
     
-    if (_fob) {
-        _fob.delegate = self;
-    }
-    [self reloadData];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -242,7 +279,7 @@
         if (_fob) {
             _textLabel.text = NSLocalizedString(@"未检测到正常体温",nil);
         }else{
-            _textLabel.text = NSLocalizedString(@"请扫描并绑定温度计！",nil);
+            _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
         }
     }else{
         _textLabel.text = NSLocalizedString(@"未打开蓝牙",nil);

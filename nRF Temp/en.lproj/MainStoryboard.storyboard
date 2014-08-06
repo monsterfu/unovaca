@@ -594,8 +594,39 @@
                                     <segue destination="7RQ-1y-97C" kind="push" id="YiR-on-dww"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" textLabel="WxK-DU-0EU" detailTextLabel="gtb-wq-FAd" imageView="kpw-dK-Y9i" style="IBUITableViewCellStyleValue1" id="Wgt-Bj-wiB">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" textLabel="xoj-dL-tL1" detailTextLabel="nkk-1L-4ZH" imageView="RnE-EL-8UI" style="IBUITableViewCellStyleValue1" id="182-gu-4RI">
                                 <rect key="frame" x="0.0" y="259" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="182-gu-4RI" id="6BP-Am-4Ed">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Knowledge of fever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xoj-dL-tL1">
+                                            <rect key="frame" x="72" y="11" width="153" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nkk-1L-4ZH">
+                                            <rect key="frame" x="241" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="a常识icon.png" id="RnE-EL-8UI">
+                                            <rect key="frame" x="15" y="0.0" width="42" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YHJ-V4-J7k" kind="push" id="qBy-6z-KZc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell5" textLabel="WxK-DU-0EU" detailTextLabel="gtb-wq-FAd" imageView="kpw-dK-Y9i" style="IBUITableViewCellStyleValue1" id="Wgt-Bj-wiB">
+                                <rect key="frame" x="0.0" y="303" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wgt-Bj-wiB" id="ygG-dS-kUS">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -625,15 +656,15 @@
                                     <segue destination="gMh-t2-RII" kind="push" id="7nT-UW-2Ba"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell5" textLabel="POP-oX-JbB" detailTextLabel="L7i-po-oLJ" imageView="DqC-7Y-gK9" style="IBUITableViewCellStyleValue1" id="0mm-Gj-YJa">
-                                <rect key="frame" x="0.0" y="303" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell6" textLabel="POP-oX-JbB" detailTextLabel="L7i-po-oLJ" imageView="DqC-7Y-gK9" style="IBUITableViewCellStyleValue1" id="0mm-Gj-YJa">
+                                <rect key="frame" x="0.0" y="347" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mm-Gj-YJa" id="J3K-cu-c9j">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="POP-oX-JbB">
-                                            <rect key="frame" x="73" y="11" width="51" height="22"/>
+                                            <rect key="frame" x="72" y="11" width="51" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -647,7 +678,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="setting_about.png" id="DqC-7Y-gK9">
-                                            <rect key="frame" x="15" y="0.0" width="43" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="42" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -760,7 +791,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vah-QJ-Txs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="1306"/>
+            <point key="canvasLocation" x="1095" y="1600"/>
         </scene>
         <!--Fever Knows View Controller-->
         <scene sceneID="bsm-dg-Tlo">
@@ -777,162 +808,12 @@
                                 <segments>
                                     <segment title="Measuring way"/>
                                     <segment title="Physical cooling"/>
-                                    <segment title="antipyretics"/>
-                                    <segment title="Fever related diseases"/>
                                 </segments>
                                 <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmentedControlSelected:" destination="YHJ-V4-J7k" eventType="valueChanged" id="byQ-zf-0gA"/>
                                 </connections>
                             </segmentedControl>
-                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" id="ZzQ-fi-tlw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="适当升高的体温可以提高患者免疫力，帮助人体抵御入侵的病原体。如果体温低于38.5℃，患者精神状况很好，不需服用退热药。可用物理降温:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8bl-ae-gpp">
-                                        <rect key="frame" x="2" y="0.0" width="316" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" red="0.98114636479999995" green="0.53215964090000001" blue="0.1940180836" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------------------湿敷降温---------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RMY-j4-RCI">
-                                        <rect key="frame" x="2" y="33" width="316" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在额头上敷一条湿凉毛巾，经常更换。湿敷帮助降低体温。热的湿敷可退烧。但是当病人觉得热得很不舒服时，应以冷湿敷取代。在额头、手腕、小腿上各放一湿冷毛巾，其他部位应以衣物盖住。体温上升到39.4C以上，切勿使用热敷退烧。应以冷敷处理，以免体温继续升高。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LHT-DA-t1e">
-                                        <rect key="frame" x="2" y="55" width="316" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------------------酒精擦浴---------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ruT-lr-mHe">
-                                        <rect key="frame" x="2" y="111" width="316" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="现在这种方法用得比较少，需要注意的是酒精浓度在25%~50%为宜，否则容易刺激皮肤，吸收表皮大量的水分，对皮肤造成伤害。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ylt-xn-JPN">
-                                        <rect key="frame" x="2" y="133" width="316" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------------------补充液体---------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0l-lG-07O">
-                                        <rect key="frame" x="2" y="159" width="316" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发烧了，身体会关闭汗腺，以阻止进一步的水分流失。这使你更难对付发烧。解决之道就是补充液体。可选用白开水、果菜汁、草茶、菩提花茶、柳树皮（茶）、黑接骨木等。大量的水不仅可以满足机体高代谢的需要，而且可以在体表发汗或排泄时带走大量的热量，帮助人体降温。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WCb-e4-8gH">
-                                        <rect key="frame" x="2" y="181" width="316" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------------------------------多增加营养-------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ded-Bb-g5R">
-                                        <rect key="frame" x="2" y="237" width="316" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三餐食物品种多一些，清淡一些即可。" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jc3-Wd-7Zs">
-                                        <rect key="frame" x="2" y="259" width="316" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" id="Jqb-Nl-QfY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腋温(37℃以上算发烧)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GSS-4c-zr3">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.12211017220000001" green="0.12211017220000001" blue="0.12211017220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均测量值低于中心体温约0.8℃,37℃以上算发烧.一般玻璃制水银体温计要测量3-10分钟读取数据.本产品适用测量腋温,连续测量无需取出体温计." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WXv-qC-BzC">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肛温(37.5℃以上算发烧)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EDg-eP-GoJ">
-                                        <rect key="frame" x="0.0" y="268" width="320" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.12211017220000001" green="0.12211017220000001" blue="0.12211017220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肛温与中心温度接近.清洁体温计后伸入肛门1.5至2.5厘米,测量温度38℃以上算发烧" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCU-e8-737">
-                                        <rect key="frame" x="0.0" y="285" width="320" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="额温(38℃以上算发烧)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bg3-NA-Vaj">
-                                        <rect key="frame" x="0.0" y="205" width="320" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.12211017220000001" green="0.12211017220000001" blue="0.12211017220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在额头测量表皮温度时,均有低于中心体温的现象.一般额温枪比较容易受环境因素干扰,测量时多注意探头与皮肤表面的距离,室温变化等因素.请在10℃-40℃环境温度下测量" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXO-4Q-mwd">
-                                        <rect key="frame" x="0.0" y="222" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="口温(38℃以上算发烧)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uce-0q-L3f">
-                                        <rect key="frame" x="0.0" y="128" width="320" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.12211017220000001" green="0.12211017220000001" blue="0.12211017220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="口温平均值低于中心体温约0.5℃.测量口温需要宝宝配合,不适合较小婴儿使用.禁止使用玻璃制水银温度计测量口温,以免温度计破裂发生意外.注意测量前15分钟不要饮用热/冷水以免出现误差." lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fPf-5d-nrk">
-                                        <rect key="frame" x="0.0" y="147" width="320" height="59"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="耳温(38℃以上算发烧)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYd-qu-kL1">
-                                        <rect key="frame" x="0.0" y="65" width="320" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.7985020183" blue="0.48740390220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.12211017220000001" green="0.12211017220000001" blue="0.12211017220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="由于耳膜位于头骨肉接近体温调节中枢-下视区的位置,且与颈动脉的血流相通,所以量耳温可以说是人体中的中心体温.但三月以下婴儿与中心体温关系不大,不建议使用." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7WD-0Z-PMa">
-                                        <rect key="frame" x="0.0" y="83" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -943,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKK-Pm-o94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="2004"/>
+            <point key="canvasLocation" x="979" y="1921"/>
         </scene>
         <!--Person List View Controller - Baby list-->
         <scene sceneID="0y0-hT-YQr">
@@ -2292,7 +2173,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v1T-0b-d0s">
                                 <rect key="frame" x="20" y="96" width="280" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">This software by shenzhen new innovation technology co., LTD. Is responsible for research and development, is based on IOS 7.0 and above a application software system development, with the company production and sales of intelligent thermometer. Mainly used for receiving intelligent thermometer real-time monitoring to the temperature data, for your baby health navigation!</mutableString>
+                                <string key="text">This software by shenzhen new innovation technology co., LTD. Is responsible for research and development, is based on IOS 7.0 and above a application software system development, with the company production and sales of intelligent thermometer. Mainly used for receiving intelligent thermometer real-time monitoring to the temperature data, for your baby health navigation!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2325,6 +2206,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="8.png" width="62" height="106"/>
         <image name="addnew.png" width="40" height="40"/>
         <image name="a吃药提醒icon.png" width="80" height="81"/>
+        <image name="a常识icon.png" width="80" height="81"/>
         <image name="a提醒icon.png" width="80" height="81"/>
         <image name="a时间刻度.png" width="488" height="13"/>
         <image name="a温度警报icon.png" width="80" height="81"/>
@@ -2341,7 +2223,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="panel.png" width="320" height="320"/>
         <image name="plot.png" width="36" height="36"/>
         <image name="reminder_alarm.png" width="84" height="84"/>
-        <image name="setting_about.png" width="84" height="84"/>
+        <image name="setting_about.png" width="80" height="81"/>
         <image name="历史记录icon.png" width="80" height="81"/>
         <image name="头像.png" width="126" height="126"/>
         <image name="度.png" width="100" height="86"/>
@@ -2354,7 +2236,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gIL-tL-4g8"/>
+        <segue reference="FMO-oH-s3s"/>
         <segue reference="qGK-1n-xtn"/>
     </inferredMetricsTieBreakers>
 </document>

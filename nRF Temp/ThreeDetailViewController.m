@@ -47,7 +47,7 @@
     _textField.selectable = NO;
     _textField.editable = NO;
     _textField.scrollEnabled = NO;
-    _textField.text = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@",[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[成分]: ", nil),[_detailArray objectForKey:@"ingredient"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[用药人群]: ", nil),[_detailArray objectForKey:@"intendPepole"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[禁忌]: ", nil),[_detailArray objectForKey:@"taboo"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[不良反应]: ", nil),[_detailArray objectForKey:@"untowardEffect"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[用法用量]: ", nil),[_detailArray objectForKey:@"usage"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[适应症]: ", nil),[_detailArray objectForKey:@"adaptDisease"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[优点]: ", nil),[_detailArray objectForKey:@"advantage"]]];
+    _textField.text = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@%@",[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[成分]: ", nil),[_detailArray objectForKey:@"ingredient"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[用药人群]: ", nil),[_detailArray objectForKey:@"intendPepole"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[禁忌]: ", nil),[_detailArray objectForKey:@"taboo"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[不良反应]: ", nil),[_detailArray objectForKey:@"untowardEffect"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[用法用量]: ", nil),[_detailArray objectForKey:@"usage"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[适应症]: ", nil),[_detailArray objectForKey:@"adaptDisease"]],[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"[优点]: ", nil),[_detailArray objectForKey:@"advantage"]],[NSString stringWithFormat:@"%@",[_detailArray objectForKey:@"shortcoming"]]];
     
     _textField1 = [[UITextView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 300)];
     _textField1.backgroundColor = [UIColor clearColor];
@@ -59,13 +59,19 @@
     _textField1.text = [_detailArray objectForKey:@"attention"];
     
     
+    
     size = [_textField.text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(DEVICE_WIDTH, DEVICE_HEIGHT*2) lineBreakMode:NSLineBreakByWordWrapping];
     
     [_textField setFrame:CGRectMake(0, 0, DEVICE_WIDTH, size.height+60)];
     size1 = [_textField1.text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(DEVICE_WIDTH, DEVICE_HEIGHT*2) lineBreakMode:NSLineBreakByWordWrapping];
     [_textField1 setFrame:CGRectMake(0, 0, DEVICE_WIDTH, size1.height+60)];
 }
-
+-(void)setNumber:(NSUInteger)number
+{
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(60, 5, 200, 100)];
+    NSLog(@"------%d",number +1);
+    [_imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fuckZYQ%d",number+1]]];
+}
 -(void)backButtonPressed
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -79,7 +85,7 @@
 #pragma mark - uitableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -90,8 +96,10 @@
 {
     if (indexPath.section == 0) {
         return size.height + 60;
-    }else{
+    }else if (indexPath.section == 1){
         return size1.height + 60;
+    }else{
+        return 110;
     }
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -102,8 +110,10 @@
     headerView.font = [UIFont systemFontOfSize:13];
     if (section == 0) {
         headerView.text = NSLocalizedString(@"  基本信息", nil);
-    }else{
+    }if (section == 1) {
         headerView.text = NSLocalizedString(@"  注意事项", nil);
+    }else{
+        headerView.text = NSLocalizedString(@"  ", nil);
     }
     return headerView;
 }
@@ -120,13 +130,20 @@ indexPath
             cell.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
         }
     
-    }else{
+    }else if (indexPath.section == 1){
         cell = [tableView dequeueReusableCellWithIdentifier:@"zhuyishixiang"];
         if (cell == nil) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"zhuyishixiang"];
             [cell addSubview:_textField1];
             cell.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
             }
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"zhaopian"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"zhaopian"];
+            [cell addSubview:_imageView];
+            cell.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1.0];
+        }
     }
     return cell;
 }

@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = NSLocalizedString(@"发烧一点通", nil);
     _oneView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];
     _oneView.backgroundColor = [UIColor clearColor];
     _twoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];

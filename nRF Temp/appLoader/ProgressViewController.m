@@ -109,7 +109,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connection lost",nil) message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alert show];
     
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) didChangeState:(DFUControllerState)state
