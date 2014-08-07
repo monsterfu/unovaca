@@ -19,7 +19,8 @@
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}
-
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ?YES:NO)
 #define DEVICE_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define DEVICE_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]

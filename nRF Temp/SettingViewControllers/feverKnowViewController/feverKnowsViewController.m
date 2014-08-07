@@ -32,13 +32,13 @@
     // Do any additional setup after loading the view.
     
     self.title = NSLocalizedString(@"发烧一点通", nil);
-    _oneView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];
+    _oneView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, BOTTOM_HEIGHT)];
     _oneView.backgroundColor = [UIColor clearColor];
-    _twoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];
+    _twoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, BOTTOM_HEIGHT)];
     _twoView.backgroundColor = [UIColor clearColor];
-    _threeView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];
+    _threeView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, BOTTOM_HEIGHT)];
     _threeView.backgroundColor = [UIColor clearColor];
-    _fourView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, BOTTOM_HEIGHT)];
+    _fourView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, BOTTOM_HEIGHT)];
     _fourView.backgroundColor = [UIColor clearColor];
     
     

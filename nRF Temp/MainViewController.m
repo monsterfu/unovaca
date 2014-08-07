@@ -75,7 +75,7 @@
     _lowPanelView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(45));
     [_lowPanelView setHidden:YES];
     
-    _lowPanel2View = [[UIView alloc]initWithFrame:CGRectMake(0, -40, 320, 320)];
+    _lowPanel2View = [[UIView alloc]initWithFrame:CGRectMake(0, -40, DEVICE_WIDTH, DEVICE_WIDTH)];
     _lowPanel2View.userInteractionEnabled = NO;
     _lowPanel2View.backgroundColor = [UIColor clearColor];
     UIImageView* testImageView = [[UIImageView alloc]initWithFrame:CGRectMake(138, 235, 42, 42)];
@@ -105,7 +105,7 @@
         oldRect.origin.y += 20;
         [_deviceButton setFrame:oldRect];
     }
-    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:9];
+    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:10];
     NSDate* today = [NSDate date];
     if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
         abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse
@@ -120,11 +120,6 @@
     [_statusButton setTitle:NSLocalizedString(@"检测中...",nil) forState:UIControlStateDisabled];
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
     
-    UILabel* _visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, 100, 30)];
-    _visionLabel.text = @"1.23";
-    _visionLabel.backgroundColor = [UIColor clearColor];
-    _visionLabel.textColor = [UIColor blackColor];
-//    [self.view addSubview:_visionLabel];
 }
 -(void)updatePersonDetail
 {

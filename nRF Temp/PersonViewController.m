@@ -61,6 +61,7 @@
                 _detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"PersonDetailInfo"
                                                             inManagedObjectContext:_managedObjectContext];
             }
+            
         }
     }
     
@@ -69,7 +70,7 @@
     }else{
         self.title = _detailInfo.name;
     }
-    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:9];
+    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:10];
     NSDate* today = [NSDate date];
     if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
         abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse

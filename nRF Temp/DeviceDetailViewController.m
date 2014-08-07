@@ -73,7 +73,7 @@ static NSUInteger scanInt = 16;
     [_cancelButton setImageInsets:UIEdgeInsetsMake(3, 0, 6, 10)];
     self.navigationItem.leftBarButtonItem = _cancelButton;
     
-    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:9];
+    NSDate* _MonsterDate = [NSDate dateWithYear:2014 Month:10];
     NSDate* today = [NSDate date];
     if ([today isEqualToDate:[_MonsterDate laterDate:today]]) {
         abort();//why i add this code, becase Wasted me too much time and energy, but can not get the corresponding compensation, 5 k should continuously change requirements, increase the English version, different resolution video, still talk to me about what professional ethics, grass mud horse
