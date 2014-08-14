@@ -174,7 +174,6 @@
 		64252E7F1925F8CC00D454D4 /* RecordDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */; };
 		64252E821926116800D454D4 /* NewGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E811926116800D454D4 /* NewGraphViewController.m */; };
 		64252E8519261D2900D454D4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E8419261D2900D454D4 /* GraphView.m */; };
-		645D5D2F19934A04001ABEC1 /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645D5D2D19934A04001ABEC1 /* MainStoryboard-iPad.storyboard */; };
 		649A505818F67D21001FD7D5 /* LimitWarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505718F67D21001FD7D5 /* LimitWarningViewController.m */; };
 		649A505B18F69657001FD7D5 /* LastHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 649A505A18F69657001FD7D5 /* LastHistoryCell.m */; };
 		649A856F1921E3BD00ED7445 /* a开关1.png in Resources */ = {isa = PBXBuildFile; fileRef = 649A856C1921E3BD00ED7445 /* a开关1.png */; };
@@ -467,7 +466,6 @@
 		64252E811926116800D454D4 /* NewGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGraphViewController.m; sourceTree = "<group>"; };
 		64252E8319261D2900D454D4 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		64252E8419261D2900D454D4 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
-		645D5D2E19934A04001ABEC1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
 		649A505518F63804001FD7D5 /* TemperatureAppModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TemperatureAppModels.xcdatamodel; sourceTree = "<group>"; };
 		649A505618F67D21001FD7D5 /* LimitWarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LimitWarningViewController.h; path = SettingViewControllers/LimitWarningViewController.h; sourceTree = "<group>"; };
 		649A505718F67D21001FD7D5 /* LimitWarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LimitWarningViewController.m; path = SettingViewControllers/LimitWarningViewController.m; sourceTree = "<group>"; };
@@ -762,14 +760,6 @@
 			children = (
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		645D5D2C1993453F001ABEC1 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				645D5D2D19934A04001ABEC1 /* MainStoryboard-iPad.storyboard */,
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 		649B060C1929A33D002B642E /* NSDate+JBCommon */ = {
@@ -1095,7 +1085,6 @@
 		93E4E1D9162D5E2000974286 = {
 			isa = PBXGroup;
 			children = (
-				645D5D2C1993453F001ABEC1 /* iPad */,
 				93E4E1EE162D5E2000974286 /* nRF Temp */,
 				93E4E1E7162D5E2000974286 /* Frameworks */,
 				93E4E1E5162D5E2000974286 /* Products */,
@@ -1304,7 +1293,6 @@
 				0F19CABE1913E44700BF9312 /* a设置.png in Resources */,
 				64AD073D1990B2F800C1088B /* oneKnowsViewController.xib in Resources */,
 				641A720E190616C200CC7041 /* addnew@2x.png in Resources */,
-				645D5D2F19934A04001ABEC1 /* MainStoryboard-iPad.storyboard in Resources */,
 				64EA433B195C12B3005502D8 /* ic_launcher.png in Resources */,
 				64EA4344195C1737005502D8 /* ic_number_status_35.png in Resources */,
 				0F19CABD1913E44700BF9312 /* a删除2.png in Resources */,
@@ -1513,14 +1501,6 @@
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
-		645D5D2D19934A04001ABEC1 /* MainStoryboard-iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				645D5D2E19934A04001ABEC1 /* zh-Hans */,
-			);
-			name = "MainStoryboard-iPad.storyboard";
-			sourceTree = "<group>";
-		};
 		64AD073F1990B2F800C1088B /* oneKnowsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1621,14 +1601,13 @@
 		93E4E20C162D5E2000974286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1638,7 +1617,7 @@
 				PRODUCT_NAME = "Unova Thermometer";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1646,14 +1625,13 @@
 		93E4E20D162D5E2000974286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Smit (HK) Limited";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Smit (HK) Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nRF Temp/Unova Thermometer-Prefix.pch";
 				INFOPLIST_FILE = "nRF Temp/Unova Thermometer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1663,7 +1641,7 @@
 				PRODUCT_NAME = "Unova Thermometer";
 				PROVISIONING_PROFILE = "A38114EF-FFD7-473B-8448-3CF706A68E69";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A38114EF-FFD7-473B-8448-3CF706A68E69";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
