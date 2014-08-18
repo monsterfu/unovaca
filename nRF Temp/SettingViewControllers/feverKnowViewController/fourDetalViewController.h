@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImage+scaleToSize.h"
+#import "PublicDefine.h"
 
 @interface fourDetalViewController : UIViewController
-
-
-@property (weak, nonatomic) IBOutlet UILabel *top;
-@property (weak, nonatomic) IBOutlet UILabel *zhiliao;
-@property (weak, nonatomic) IBOutlet UILabel *yifajijie;
-@property (weak, nonatomic) IBOutlet UILabel *yufangcuoshi;
-
+{
+    NSMutableArray* _contentArray;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic, retain)NSDictionary* contentDic;
 
