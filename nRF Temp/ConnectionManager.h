@@ -21,6 +21,7 @@
 {
     UIAlertView* alertView;
     UILocalNotification* _localOutOfRangeNotice;
+    BOOL warningSigh;
 }
 @property BOOL acceptNewFobs;
 @property id<ConnectionManagerDelegate> delegate;

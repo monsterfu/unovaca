@@ -64,11 +64,6 @@
 }
 
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:NSNotificationCenter_EventReminderChanged object:nil];

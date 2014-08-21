@@ -121,7 +121,7 @@
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
     
     UILabel* visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 70, 100, 30)];
-    visionLabel.text = @"1.30";
+    visionLabel.text = @"1.31";
     [self.view addSubview:visionLabel];
     
 }

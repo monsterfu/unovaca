@@ -37,6 +37,9 @@ static ConnectionManager *sharedConnectionManager;
         _acceptNewFobs = NO;
         
         _cm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        warningSigh = NO;
+        NSTimer* warningTimer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(fuckSBzdm) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:warningTimer forMode:NSRunLoopCommonModes];
     }
     return self;
 }
@@ -155,25 +158,9 @@ static ConnectionManager *sharedConnectionManager;
                         NSLog(@"saveTemp ================================================>%d",savedTemp);
                         if (value > savedTemp)
                         {
-                            if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {
-                                _localOutOfRangeNotice = [[UILocalNotification alloc] init];
-                                _localOutOfRangeNotice.applicationIconBadgeNumber = 1;
-                                _localOutOfRangeNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
-                                _localOutOfRangeNotice.timeZone = [NSTimeZone defaultTimeZone];
-                                _localOutOfRangeNotice.soundName = @"4031.wav";
-                                _localOutOfRangeNotice.repeatInterval = NSYearCalendarUnit;
-                                
-                                _localOutOfRangeNotice.alertBody = [NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)];
-                                
-                                [[UIApplication sharedApplication] presentLocalNotificationNow:_localOutOfRangeNotice];
-                                
-                            }else{
-                                
-                                [[soundVibrateManager sharedInstance]playAlertSound];
-                                [[soundVibrateManager sharedInstance]vibrate];
-                                alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@%d%@",NSLocalizedString(@"目前体温已经超过",nil), savedTemp, NSLocalizedString(@"℃报警值！",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
-                                [alertView show];
-                            }
+                            warningSigh = YES;
+                        }else{
+                            warningSigh = NO;
                         }
                     }
                     
@@ -182,6 +169,32 @@ static ConnectionManager *sharedConnectionManager;
                 }
     }
         }
+    }
+}
+
+-(void)fuckSBzdm
+{
+    if (!warningSigh) {
+        return;
+    }
+    if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {
+        _localOutOfRangeNotice = [[UILocalNotification alloc] init];
+        _localOutOfRangeNotice.applicationIconBadgeNumber = 1;
+        _localOutOfRangeNotice.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
+        _localOutOfRangeNotice.timeZone = [NSTimeZone defaultTimeZone];
+        _localOutOfRangeNotice.soundName = @"4031.wav";
+        _localOutOfRangeNotice.repeatInterval = NSYearCalendarUnit;
+        
+        _localOutOfRangeNotice.alertBody = [NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)];
+        
+        [[UIApplication sharedApplication] presentLocalNotificationNow:_localOutOfRangeNotice];
+        
+    }else{
+        
+        [[soundVibrateManager sharedInstance]playAlertSound];
+        [[soundVibrateManager sharedInstance]vibrate];
+        alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+        [alertView show];
     }
 }
 @end
