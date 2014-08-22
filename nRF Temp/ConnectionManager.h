@@ -17,9 +17,9 @@
 -(void) recentUpdateData:(NSData*)rawData;
 @end
 
-@interface ConnectionManager : NSObject <CBCentralManagerDelegate>
+@interface ConnectionManager : NSObject <CBCentralManagerDelegate,UIAlertViewDelegate>
 {
-    UIAlertView* alertView;
+    UIAlertView* _alertView;
     UILocalNotification* _localOutOfRangeNotice;
     BOOL warningSigh;
 }

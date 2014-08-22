@@ -38,7 +38,7 @@ static ConnectionManager *sharedConnectionManager;
         
         _cm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
         warningSigh = NO;
-        NSTimer* warningTimer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(fuckSBzdm) userInfo:nil repeats:YES];
+        NSTimer* warningTimer = [NSTimer timerWithTimeInterval:6 target:self selector:@selector(fuckSBzdm) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop]addTimer:warningTimer forMode:NSRunLoopCommonModes];
     }
     return self;
@@ -105,6 +105,10 @@ static ConnectionManager *sharedConnectionManager;
     {
 //        NSLog(@"Discovered unknown device, %@", [peripheral name]);
         //return;
+    }
+    BOOL connectable = [[advertisementData objectForKey:@"kCBAdvDataIsConnectable"]boolValue];
+    if (connectable) {
+        return;
     }
     NSLog(@"Discovered peripheral, name %@, data: %@, RSSI: %f, peripheral.identifier:%@", [peripheral name], advertisementData, RSSI.floatValue,peripheral.identifier);
 
@@ -193,9 +197,17 @@ static ConnectionManager *sharedConnectionManager;
         
         [[soundVibrateManager sharedInstance]playAlertSound];
         [[soundVibrateManager sharedInstance]vibrate];
-        alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
-        [alertView show];
+        if (_alertView) {
+            return;
+        }
+        _alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"温馨提示",nil) message:[NSString stringWithFormat:@"%@",NSLocalizedString(@"目前体温已经超过报警值，请采取降温措施",nil)] delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+        [_alertView show];
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    _alertView = nil;
 }
 @end
 

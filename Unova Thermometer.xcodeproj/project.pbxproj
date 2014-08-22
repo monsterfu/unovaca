@@ -450,6 +450,7 @@
 		640D9CCC191A210D0097386B /* soundVibrateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundVibrateManager.h; sourceTree = "<group>"; };
 		640D9CCD191A210D0097386B /* soundVibrateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soundVibrateManager.m; sourceTree = "<group>"; };
 		640D9CCF191A217D0097386B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6419DBD219A6F0F700D0F74B /* TemperatureAppModels4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TemperatureAppModels4.xcdatamodel; sourceTree = "<group>"; };
 		641A720A190615EA00CC7041 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		641A720C190616C200CC7041 /* addnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addnew@2x.png"; sourceTree = "<group>"; };
 		641A720D190616C200CC7041 /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
@@ -1675,12 +1676,13 @@
 		93449C43162FE0E80061440A /* TemperatureAppModels.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				6419DBD219A6F0F700D0F74B /* TemperatureAppModels4.xcdatamodel */,
 				9380A98817DDE14000DDB73E /* TemperatureAppModels 1.1.xcdatamodel */,
 				93449C44162FE0E80061440A /* TemperatureAppModels2.xcdatamodel */,
 				64E98A4318F51AFE00AE419B /* TemperatureAppModels3.xcdatamodel */,
 				649A505518F63804001FD7D5 /* TemperatureAppModels.xcdatamodel */,
 			);
-			currentVersion = 93449C44162FE0E80061440A /* TemperatureAppModels2.xcdatamodel */;
+			currentVersion = 6419DBD219A6F0F700D0F74B /* TemperatureAppModels4.xcdatamodel */;
 			path = TemperatureAppModels.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

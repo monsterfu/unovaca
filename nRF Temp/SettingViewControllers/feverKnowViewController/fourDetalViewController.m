@@ -64,6 +64,7 @@
     [_contentArray addObject:[contentDic objectForKey:@"treatment"]];
     [_contentArray addObject:[contentDic objectForKey:@"incidentSeason"]];
     [_contentArray addObject:[contentDic objectForKey:@"precautionarMeasures"]];
+    [_contentArray addObject:[contentDic objectForKey:@"prognosisMeasures"]];
     
 }
 
@@ -131,12 +132,14 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == 1) {
+    if (section == 1)
         return @"治疗";
-    }else if(section == 2)
+    else if(section == 2)
         return @"易发季节";
     else if (section == 3)
         return @"预防措施";
+    else if(section == 4)
+        return @"预后措施";
     return nil;
 }
 /*
