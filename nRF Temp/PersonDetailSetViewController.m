@@ -139,8 +139,14 @@
     switch (_selectItem) {
         case PersonInfoNickName:
         {
-            [USER_DEFAULT setObject:_textfieldLabel.text forKey: KEY_NICKNAME_STR];
-            _detailInfo.name = _textfieldLabel.text;
+            if (_textfieldLabel.text.length) {
+                [USER_DEFAULT setObject:_textfieldLabel.text forKey: KEY_NICKNAME_STR];
+                _detailInfo.name = _textfieldLabel.text;
+            }else{
+                UIAlertView* alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"警告",nil) message:NSLocalizedString(@"昵称不能为空",nil) delegate:self cancelButtonTitle:NSLocalizedString(@"确定",nil) otherButtonTitles:nil, nil];
+                [alert show];
+                return;
+            }
             break;
         }
         case PersonInfoBirthday:

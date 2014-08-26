@@ -87,7 +87,7 @@
     NSString* text = [_contentArray objectAtIndex:indexPath.section];
     if (text) {
         CGSize size =  [text sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(DEVICE_WIDTH, DEVICE_HEIGHT*2) lineBreakMode:NSLineBreakByWordWrapping];
-        return size.height+40;
+        return size.height+60;
     }
     return 30;
 }
