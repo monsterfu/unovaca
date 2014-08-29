@@ -121,9 +121,8 @@
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
     
     UILabel* visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 70, 100, 30)];
-    visionLabel.text = @"1.33";
+    visionLabel.text = @"1.34";
     [self.view addSubview:visionLabel];
-    
 }
 -(void)updatePersonDetail
 {
@@ -147,7 +146,9 @@
         
     //取默认的用户名
     _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
-    
+    if (_detailInfo == nil) {
+        _detailInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONIDDF]];
+    }
     //KEY_SELECED_FOB
     if ([USER_DEFAULT stringForKey:KEY_SELECED_FOB]) {
         
@@ -211,6 +212,7 @@
             [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
             _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
         }
+        [self reloadData];
     }
 }
 - (void)didReceiveMemoryWarning

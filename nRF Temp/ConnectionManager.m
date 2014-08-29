@@ -171,7 +171,7 @@ static ConnectionManager *sharedConnectionManager;
                     fob.active = YES;
                     [self.delegate recentUpdateData:[serviceData objectForKey:[TemperatureFob thermometerServiceUUID]]];
                 }
-    }
+            }
         }
     }
 }
@@ -179,6 +179,10 @@ static ConnectionManager *sharedConnectionManager;
 -(void)fuckSBzdm
 {
     if (!warningSigh) {
+        return;
+    }
+    if (NO == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
+    {
         return;
     }
     if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateBackground) {

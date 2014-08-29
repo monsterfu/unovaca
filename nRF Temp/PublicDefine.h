@@ -38,6 +38,7 @@
 //main
 #define KEY_USERNAME       @"key_username"
 #define KEY_PERSONID       @"key_personid"
+#define KEY_PERSONIDDF       @"key_personiddf"
 #define KEY_FOBNAME       @"key_fobname"
 #define KEY_FOBUUID         @"key_fobuuid"
 
