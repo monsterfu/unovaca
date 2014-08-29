@@ -121,7 +121,7 @@
     _textLabel.text = NSLocalizedString(@"没有检测到体温",nil);
     
     UILabel* visionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 70, 100, 30)];
-    visionLabel.text = @"1.34";
+    visionLabel.text = @"1.35";
     [self.view addSubview:visionLabel];
 }
 -(void)updatePersonDetail
@@ -159,6 +159,7 @@
             [_temperaturePanel setHidden:YES];
             [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
             _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
+            [self reloadData];
             return;
         }
         for (TemperatureFob* forFob in arry) {
@@ -212,8 +213,8 @@
             [_statusButton setTitle:NSLocalizedString(@"离线",nil) forState:UIControlStateDisabled];
             _textLabel.text = NSLocalizedString(@"请扫描并添加体温计",nil);
         }
-        [self reloadData];
     }
+    [self reloadData];
 }
 - (void)didReceiveMemoryWarning
 {
