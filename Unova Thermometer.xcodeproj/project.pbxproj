@@ -171,6 +171,7 @@
 		641A721919061C2500CC7041 /* timerGap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A721419061C2400CC7041 /* timerGap@2x.png */; };
 		641A721B1906382D00CC7041 /* backhl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A721A1906382D00CC7041 /* backhl@2x.png */; };
 		641A72241906556600CC7041 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641A72231906556600CC7041 /* more@2x.png */; };
+		641B7E8819B43FB4009F1EFA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B7E8719B43FB4009F1EFA /* AVFoundation.framework */; };
 		64252E7F1925F8CC00D454D4 /* RecordDateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */; };
 		64252E821926116800D454D4 /* NewGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E811926116800D454D4 /* NewGraphViewController.m */; };
 		64252E8519261D2900D454D4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64252E8419261D2900D454D4 /* GraphView.m */; };
@@ -461,6 +462,7 @@
 		641A721419061C2400CC7041 /* timerGap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timerGap@2x.png"; sourceTree = "<group>"; };
 		641A721A1906382D00CC7041 /* backhl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backhl@2x.png"; sourceTree = "<group>"; };
 		641A72231906556600CC7041 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		641B7E8719B43FB4009F1EFA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		64252E7D1925F8CC00D454D4 /* RecordDateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDateSelectViewController.h; sourceTree = "<group>"; };
 		64252E7E1925F8CC00D454D4 /* RecordDateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDateSelectViewController.m; sourceTree = "<group>"; };
 		64252E801926116800D454D4 /* NewGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGraphViewController.h; sourceTree = "<group>"; };
@@ -618,6 +620,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641B7E8819B43FB4009F1EFA /* AVFoundation.framework in Frameworks */,
 				640D9CD0191A217D0097386B /* AudioToolbox.framework in Frameworks */,
 				64D79785190F5042007442CE /* libxml2.dylib in Frameworks */,
 				649BB778190A091D0049E5C8 /* EventKit.framework in Frameworks */,
@@ -1103,6 +1106,7 @@
 		93E4E1E7162D5E2000974286 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				641B7E8719B43FB4009F1EFA /* AVFoundation.framework */,
 				640D9CCF191A217D0097386B /* AudioToolbox.framework */,
 				64D79784190F5042007442CE /* libxml2.dylib */,
 				649BB776190A091D0049E5C8 /* EventKit.framework */,
