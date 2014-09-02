@@ -13,6 +13,10 @@
 {
     NSTimer* _scanTimer;
     UITableViewCell* _scanTableViewCell;
+    UITextField* _textField;
+    UIImageView* _imgView;
+    UIImageView* _sigalImgView;
+    UILabel* _label;
 }
 @property (readwrite, nonatomic)TemperatureFob *fob;
 @property(readwrite, nonatomic)PersonDetailInfo* person;

@@ -122,7 +122,7 @@ static NSUInteger scanInt = 16;
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"Cell%d",indexPath.row]];
     
     if (indexPath.row == 0) {
-        UITextField* _textField = [[UITextField alloc]initWithFrame:CGRectMake(120, 12, 185, 30)];
+        _textField = [[UITextField alloc]initWithFrame:CGRectMake(120, 12, 185, 30)];
         _textField.enabled = YES;
         
         if ([USER_DEFAULT objectForKey:_fob.uuid]) {
@@ -142,22 +142,22 @@ static NSUInteger scanInt = 16;
     }
     else if(indexPath.row == 2)
     {
-        UIImageView* imgView = [[UIImageView alloc]initWithImage:[_fob currentBatteryImage]];
-        [imgView setFrame:CGRectMake(270, 12, 40, 20)];
-        UILabel* label = [[UILabel alloc]initWithFrame:imgView.frame];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setFont:[UIFont systemFontOfSize:10]];
-        [label setTextAlignment:NSTextAlignmentCenter];
-        [label setText:[NSString stringWithFormat:@"%d%%",[_fob.batteryLevel intValue]]];
-        [label setTextColor:[UIColor whiteColor]];
-        [cell addSubview:imgView];
-        [cell addSubview:label];
+        _imgView = [[UIImageView alloc]initWithImage:[_fob currentBatteryImage]];
+        [_imgView setFrame:CGRectMake(270, 12, 40, 20)];
+        _label = [[UILabel alloc]initWithFrame:_imgView.frame];
+        [_label setBackgroundColor:[UIColor clearColor]];
+        [_label setFont:[UIFont systemFontOfSize:10]];
+        [_label setTextAlignment:NSTextAlignmentCenter];
+        [_label setText:[NSString stringWithFormat:@"%d%%",[_fob.batteryLevel intValue]]];
+        [_label setTextColor:[UIColor whiteColor]];
+        [cell addSubview:_imgView];
+        [cell addSubview:_label];
     }else if(indexPath.row == 3)
     {
-        UIImageView* imgView = [[UIImageView alloc]initWithImage:[_fob currentSignalStrengthImage]];
-        [imgView setFrame:CGRectMake(270, 12, 24, 18)];
+        _sigalImgView = [[UIImageView alloc]initWithImage:[_fob currentSignalStrengthImage]];
+        [_sigalImgView setFrame:CGRectMake(270, 12, 24, 18)];
         
-        [cell addSubview:imgView];
+        [cell addSubview:_sigalImgView];
     }
     
     return cell;
@@ -215,7 +215,18 @@ static NSUInteger scanInt = 16;
     [textField resignFirstResponder];
     return YES;
 }
-
+-(void)updatefob:(TemperatureFob*)fob
+{
+    if (_imgView) {
+        [_imgView setImage:[fob currentBatteryImage]];
+    }
+    if (_label) {
+         [_label setText:[NSString stringWithFormat:@"%d%%",[fob.batteryLevel intValue]]];
+    }
+    if (_sigalImgView) {
+        [_sigalImgView setImage:[fob currentSignalStrengthImage]];
+    }
+}
 #pragma mark - Fobdelegate
 - (void) didUpdateData:(TemperatureFob *) fob
 {
@@ -223,7 +234,7 @@ static NSUInteger scanInt = 16;
         _scanTableViewCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"在线",nil)];
         [_scanTimer invalidate];
         _scanTimer = nil;
-        [self.tableView reloadData];
+        [self updatefob:fob];
     }
 }
 @end

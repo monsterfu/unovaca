@@ -516,7 +516,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nRF Temp/MainViewController.m"
@@ -527,36 +527,6 @@
             endingLineNumber = "89"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController viewDidLoad]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/seanh/Documents/otherApp/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/nrf_temp0520/nRF%20Temp/MainViewController.m"
-                  timestampString = "430973301.595246"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "3446">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController viewDidLoad]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/seanh/Documents/otherApp/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/nrf_temp0520/nRF%20Temp/MainViewController.m"
-                  timestampString = "430973303.572586"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "3438">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -589,36 +559,6 @@
             endingLineNumber = "183"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController viewWillAppear:]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/seanh/Documents/otherApp/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/nrf_temp0520/nRF%20Temp/MainViewController.m"
-                  timestampString = "430973301.597181"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "3322">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController viewWillAppear:]"
-                  moduleName = "Unova Thermometer"
-                  urlString = "file:///Users/seanh/Documents/otherApp/%E8%93%9D%E7%89%99%E6%B8%A9%E5%BA%A6%E8%AE%A1/nrf_temp0520/nRF%20Temp/MainViewController.m"
-                  timestampString = "430973303.573775"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "3324">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
