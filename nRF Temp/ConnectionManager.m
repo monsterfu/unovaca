@@ -181,6 +181,7 @@ static ConnectionManager *sharedConnectionManager;
     if (!warningSigh) {
         return;
     }
+    warningSigh = NO;
     if (NO == [USER_DEFAULT boolForKey:KEY_WARNING_OPEN])
     {
         return;
